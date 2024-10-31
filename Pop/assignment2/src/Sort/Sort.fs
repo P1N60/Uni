@@ -15,3 +15,5 @@ let rec isortRec (l: int list): int list =
     | _ -> headInsert l.Head (isortRec l.Tail)
 
 // 3.b
+let isortRec' l =
+    List.foldBack l 

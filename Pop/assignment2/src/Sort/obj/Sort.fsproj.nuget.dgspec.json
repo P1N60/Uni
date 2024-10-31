@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/victor/Documents/VS Code/Pop/assignment2/src/Sort/Sort.fsproj": {}
+    "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/Sort.fsproj": {}
   },
   "projects": {
-    "/Users/victor/Documents/VS Code/Pop/assignment2/src/Sort/Sort.fsproj": {
+    "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/Sort.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/victor/Documents/VS Code/Pop/assignment2/src/Sort/Sort.fsproj",
+        "projectUniqueName": "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/Sort.fsproj",
         "projectName": "Sort",
-        "projectPath": "/Users/victor/Documents/VS Code/Pop/assignment2/src/Sort/Sort.fsproj",
+        "projectPath": "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/Sort.fsproj",
         "packagesPath": "/Users/victor/.nuget/packages/",
-        "outputPath": "/Users/victor/Documents/VS Code/Pop/assignment2/src/Sort/obj/",
+        "outputPath": "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/victor/.nuget/NuGet/NuGet.Config"
