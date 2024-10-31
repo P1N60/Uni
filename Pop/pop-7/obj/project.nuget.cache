@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "L2/S9szjxIE=",
+  "success": true,
+  "projectFilePath": "/Users/victor/Documents/VS Code/Pop/pop-7/modules.fsproj",
+  "expectedPackageFiles": [
+    "/Users/victor/.nuget/packages/fsharp.core/8.0.400/fsharp.core.8.0.400.nupkg.sha512"
+  ],
+  "logs": []
+}

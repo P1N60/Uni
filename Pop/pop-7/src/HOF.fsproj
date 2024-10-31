@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="HOF.fs" />
+    <Compile Include="Number.fs" />
+    <Compile Include="NumberTest.fs" />
+    <Compile Include="Examples.fsx" />
+  </ItemGroup>
+
+</Project>
