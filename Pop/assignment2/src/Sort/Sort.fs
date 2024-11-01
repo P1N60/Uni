@@ -16,6 +16,25 @@ let rec isortRec (l: int list): int list =
 let isortRec' (l: int list) =
     match List.length l with
     | 0 | 1 -> l
-    | _ -> 
-        head :: tail
-        List.foldBack tail head
+    | _ -> List.foldBack headInsert l []
+
+// 3.c
+let rec isortIter' (xs: int list) (ys: int list): int list =
+    match ys with
+    | [] -> xs
+    | h :: t -> isortIter' (headInsert h xs) t
+
+let isortIter (ys: int list): int list = 
+    isortIter' [] ys
+
+// 3.e 
+let isortImp (A: int array): int array =
+    let n = Array.length A
+    let mutable e = 0
+    for i = 0 to n - 1 do
+        for j = n - 1 downto i + 1 do
+            if A[j] < A[j - 1] then 
+                e <- A[j]
+                A[j] <- A[j - 1]
+                A[j - 1] <- e
+    A
