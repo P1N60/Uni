@@ -12,4 +12,4 @@ printfn "%A sorted = %A" [7; 1; 13; 0; -1] (isortRec [7; 1; 13; 0; -1])
 [7; 1; 13; 0; -1] sorted = [-1; 0; 1; 7; 13]
 *)
 
-printfn "List.foldBack %A  = %A" [7; 1; 13; 0; -1] (isortRec' )
+printfn "List.foldBack %A  = %A" [7; 1; 13; 0; -1] (isortRec' [7; 1; 13; 0; -1])
