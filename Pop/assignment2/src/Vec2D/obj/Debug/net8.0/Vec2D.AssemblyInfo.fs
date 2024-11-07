@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("Vec2D")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3ccd1a765d6088f190164fba30dff977d4486f4")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07b1c40693b9a1100856b29bdbb32f9d2bc82db8")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("Vec2D")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("Vec2D")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
