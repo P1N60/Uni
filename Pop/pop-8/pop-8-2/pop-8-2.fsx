@@ -6,7 +6,7 @@ let rec toList (cl: ConsList<'a>): 'a list =
     | Nil -> []
     | Cons (e, nl) -> e :: toList nl
 
-// printfn "%A" (toList (Cons(true, Cons(false, Nil))))
+printfn "%A" (toList (Cons(true, Cons(false, Nil))))
 
 // * b)
 let genConsList (n: int): ConsList<int> = 
@@ -20,5 +20,5 @@ let genConsList (n: int): ConsList<int> =
             cl <- Cons (i, cl)
         cl
 
-// printfn "%A" (genConsList 5)
+printfn "%A" (genConsList 5)
 
