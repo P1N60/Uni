@@ -2,15 +2,7 @@
 fordelingspolitisk = 53
 værdipolitisk = 45
 
-# SF
-sff = 30
-sfv = 65
-
-# SF
-laf = 85
-lav = 44
-
-# Mig
+# Tegning af plot, samt akser og mit punkt
 plot(fordelingspolitisk, 
      værdipolitisk,
      xlim = c(1, 100),
@@ -20,19 +12,41 @@ plot(fordelingspolitisk,
      type = "b",
      axes = TRUE)
 
-lines(c(1,50), c(50,50), col="red", type = "b")
-lines(c(50,100), c(50,50), col="blue", type = "b")
-lines(c(50,50), c(1,50), col="green", type = "b")
-lines(c(50,50), c(50,100), col="pink", type = "b")
+plotType = "b"
+# Afstand mellem punkt og partinavn i pixels
+partinavnoffset <- 3
+
+lines(c(1,50), c(50,50), col="red", type = plotType)
+lines(c(50,100), c(50,50), col="blue", type = plotType)
+lines(c(50,50), c(1,50), col="green", type = plotType)
+lines(c(50,50), c(50,100), col="purple", type = plotType)
 
 text(fordelingspolitisk,
-     værdipolitisk - 6,
+     værdipolitisk - partinavnoffset,
      labels = "Mig")
 
-# SF
-lines(sff, sfv, col = "red", type = "b")
-text(sff, sfv - 6, col = "red", labels = "SF")
+# Andre
+partiFordeling = 
+  c(12,      30,   40,    42,      47,      52,       55,      60,      85)
+partiVærdi = 
+  c(83,      75,   65,    91,      87,      55,       42,      52,      45)
+partiInitial = 
+  c("E",    "SF",  "A",   "Å",    "RV",     "M",      "C",     "V",    "LA")
+partiFarve = 
+  c("red", "red", "red", "green", "purple", "purple", "green", "blue", "cyan")
 
-# LA
-lines(laf, lav, col = "cyan", type = "b")
-text(laf, lav - 6, col = "cyan", labels = "LA")
+i <- 1
+while (i <= length(partiInitial)) {
+  lines(partiFordeling[i], partiVærdi[i], col = partiFarve[i], type = "b")
+  text(partiFordeling[i], partiVærdi[i] - partinavnoffset, col = partiFarve[i], labels = partiInitial[i])
+  i <- i + 1
+}
+
+
+
+
+
+
+
+
+
