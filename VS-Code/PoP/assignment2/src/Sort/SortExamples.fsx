@@ -23,3 +23,14 @@ printfn "%A sorted = %A" [7; 1; 13; 0; -1] (isortIter [7; 1; 13; 0; -1])
 [-1; -3] sorted = [-3; -1]
 [7; 1; 13; 0; -1] sorted = [-1; 0; 1; 7; 13]
 *)
+
+printfn "%A sorted = %A" [9] (isortImp [|9|])
+printfn "%A sorted = %A" [] (isortImp [||])
+printfn "%A sorted = %A" [-1; -3] (isortImp [|-1; -3|])
+printfn "%A sorted = %A" [7; 1; 13; 0; -1] (isortImp [|7; 1; 13; 0; -1|])
+(* prints:
+[9] sorted = [9]
+[] sorted = []
+[-1; -3] sorted = [-3; -1]
+[7; 1; 13; 0; -1] sorted = [-1; 0; 1; 7; 13]
+*)

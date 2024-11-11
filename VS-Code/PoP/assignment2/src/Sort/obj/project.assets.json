@@ -108,25 +108,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/victor/.nuget/packages/": {}
+    "C:\\Users\\Gamer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/Sort.fsproj",
+      "projectUniqueName": "C:\\Users\\Gamer\\Documents\\GitHub\\VS-Code\\PoP\\assignment2\\src\\Sort\\Sort.fsproj",
       "projectName": "Sort",
-      "projectPath": "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/Sort.fsproj",
-      "packagesPath": "/Users/victor/.nuget/packages/",
-      "outputPath": "/Users/victor/Documents/GitHub/VS-Code/PoP/assignment2/src/Sort/obj/",
+      "projectPath": "C:\\Users\\Gamer\\Documents\\GitHub\\VS-Code\\PoP\\assignment2\\src\\Sort\\Sort.fsproj",
+      "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gamer\\Documents\\GitHub\\VS-Code\\PoP\\assignment2\\src\\Sort\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/victor/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/sdk/8.0.401/FSharp/library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\8.0.402\\FSharp\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -168,7 +168,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

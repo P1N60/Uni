@@ -29,12 +29,13 @@ let isortIter (ys: int list): int list =
 
 // 3.e 
 let isortImp (A: int array): int array =
-    let n = Array.length A
-    let mutable e = 0
-    for i = 0 to n - 1 do
-        for j = n - 1 downto i + 1 do
-            if A[j] < A[j - 1] then 
-                e <- A[j]
-                A[j] <- A[j - 1]
-                A[j - 1] <- e
+    let mutable i = 0
+    while i <= Array.length A do
+        let mutable j = i
+        while A[i - j] > A[i] do
+            j <- j + 1
+        A[i - j] <- A[i]
+        i <- i + 1
     A
+
+    
