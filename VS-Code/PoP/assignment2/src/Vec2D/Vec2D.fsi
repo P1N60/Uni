@@ -13,3 +13,6 @@ neg = (-x, -y)
 scale = (k * x, k * y)
 zero = (0, 0)
 *)
+
+// System.Double.NaN som float violater specificationen for scale
+// System.Double.PositiveInfinity som float violater specificationen for scale
