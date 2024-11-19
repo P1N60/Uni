@@ -1,7 +1,11 @@
 open System.IO
+open System
 
-let txt = File.CreateText "out.txt"
+Console.Write "lol"
 
-txt.Write "Lol"
+let test = File.CreateText "test.txt"
 
-txt.Close
+let e = Console.ReadLine
+printfn "%A" e
+
+test.Close
