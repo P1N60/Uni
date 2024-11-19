@@ -1,9 +1,5 @@
-open System
+open System.IO
 
-Console.Write "lol"
+let txt = File.CreateText "out.txt"
 
-let read = Console.ReadLine()
-
-printfn "-"
-
-Console.WriteLine read
+File.OpenText "txt"
