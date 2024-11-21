@@ -1,3 +1,4 @@
+// Error values and exceptions
 type 'a option = Some of 'a | None
 let floatDiv (x: float) (y: float) : float option = 
     match y with 
@@ -24,7 +25,6 @@ let floatDiv' (x: float) (y: float) : Result<float,string> =
 printfn "%A" (floatDiv' 2.0 2.0)
 printfn "%A" (floatDiv' 1.0 0.0)
 
-// Results in Error for some reason
 exception ZeroDiv of float
 let floatDiv'' (x: float) (y: float) : float =
     match y with
@@ -32,4 +32,26 @@ let floatDiv'' (x: float) (y: float) : float =
     | _ -> x / y
 
 printfn "%A" (floatDiv'' 2.0 2.0)
-printfn "%A" (floatDiv'' 1.0 0.0)
+// Results in Error, which is intended
+// printfn "%A" (floatDiv'' 1.0 0.0)
+
+// Standard I/O
+printfn "%s" "Standard I/O:"
+
+open System
+let convertBack () =
+    let F = (float (Console.ReadLine())) * 1.8
+    Console.WriteLine (string F)
+
+// 3. File I/O
+open System.IO
+let cp (file1: string) (file2: string) : unit =
+    File.WriteAllText(file2, File.ReadAllText(file1))
+
+cp "f1.txt" "f2.txt"
+
+let cpUp (file1: string) (file2: string) : unit =
+    let s = File.ReadAllText(file1)
+    File.WriteAllText(file2, s.ToUpper())
+
+cpUp "f1.txt" "f2.txt"
