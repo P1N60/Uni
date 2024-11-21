@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="DisjointUnion.fs" />
+    <Compile Include="Stack.fsi" />
+    <Compile Include="Stack.fs" />
+    <Compile Include="Instruction.fsi" />
+    <Compile Include="Instruction.fs" />
+    <Compile Include="Examples.fsx" />
+  </ItemGroup>
+
+</Project>
