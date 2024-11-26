@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>asteroids</name></assembly>
+<members>
+<member name="T:Asteroids.Asteroids.State`1">
+ <summary>
+ Represents the state of the game, consisting of a set of objects.
+ </summary>
+</member>
+<member name="T:Asteroids.Asteroids.Object`1">
+ <summary>
+ Represents an object in the game.
+ </summary>
+ <typeparam name="'T">The type of the shape associated with the object.</typeparam>
+ <param name="Kind">The kind of the object (e.g., SpaceShip, Bullet, or Asteroid).</param>
+ <param name="Shape">The shape of the object, wrapped in an IComparableWrapper.</param>
+ <param name="Position">The position of the object as a vector.</param>
+ <param name="Orientation">The orientation of the object in radians.</param>
+ <param name="Heading">The heading direction of the object in radians.</param>
+ <param name="Speed">The speed of the object.</param>
+ <param name="Acceleration">The acceleration of the object.</param>
+ <param name="Radius">The collision radius of the object.</param>
+ <param name="Age">The age of the object in time units.</param>
+</member>
+<member name="T:Asteroids.Asteroids.Kind">
+ <summary>
+ Represents the different kinds of objects in the game.
+ </summary>
+</member>
+<member name="T:Asteroids.Asteroids.Vec">
+ <summary>
+ Alias for a 2D vector type from the Vectors module.
+ </summary>
+</member>
+<member name="M:Asteroids.Asteroids.detectCollisions``1(Microsoft.FSharp.Collections.FSharpSet{System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double}})">
+ <summary>
+ Detects collisions between objects in the game state and returns collided pairs and remaining objects.
+ </summary>
+</member>
+<member name="M:Asteroids.Asteroids.move``1(System.Double,System.Double,System.Double,System.Double,System.Double,Microsoft.FSharp.Collections.FSharpSet{System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double}})">
+ <summary>
+ Returns a new state, where all objects have been moved based on their speed, acceleration, orientation, and heading. No collision handling is performed.
+ </summary>
+ <param name="dt">The forward step size in time.</param>
+ <param name="xLim">The limits in the first coordinate direction.</param>
+ <param name="yLim">The limits in the second coordinate direction.</param>
+ <returns>The new state.</returns>
+</member>
+<member name="M:Asteroids.Asteroids.asteroidsExist``1(Microsoft.FSharp.Collections.FSharpSet{System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double}})">
+ <summary>Checks if any asteroids exist in the game state.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.partitionShip``1(Microsoft.FSharp.Collections.FSharpSet{System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double}})">
+ <summary>Partitions the game state into a optional spaceship and the remaining objects.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.rotate``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy where the orientation is dOrient larger than the old.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.accelerate``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy where the acceleration is da larger than the old within limits.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.isAlive``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Determines whether an object has a postive radius hence alive.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.updateAge``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy where the age is dAge larger than the old.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setAge``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new age.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.age``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the age of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setRadius``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>SReturns a copy of the old with a new radius.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.radius``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the collision radius of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setAcceleration``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new acceleration.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.acceleration``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the acceleration of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setSpeed``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new speed.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.speed``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the speed of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setHeading``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new heading.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.heading``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the heading of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setOrientation``1(System.Double,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new orientation.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.orientation``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the orientation of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setPosition``1(System.Tuple{System.Double,System.Double},System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new position.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.position``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the position of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setShape``1(``0,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new shape.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.shape``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the shape of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.setKind``1(Asteroids.Asteroids.Kind,System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Returns a copy of the old with a new kind.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.kind``1(System.Tuple{Asteroids.Asteroids.Kind,Asteroids.Asteroids.IComparableWrapper{``0},System.Tuple{System.Double,System.Double},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double})">
+ <summary>Gets the kind of an object.</summary>
+</member>
+<member name="M:Asteroids.Asteroids.makeObject``1(Asteroids.Asteroids.Kind,``0,System.Double)">
+ <summary>
+ Creates a new game object.
+ </summary>
+ <param name="k">The kind of the object.</param>
+ <param name="s">The shape of the object.</param>
+ <param name="r">The collision radius of the object.</param>
+ <returns>The created game object.</returns>
+</member>
+<member name="M:Asteroids.Asteroids.cyclic(System.Double,System.Double,System.Double)">
+ <summary>
+ Cycles a value within a given range, wrapping around if necessary.
+ </summary>
+ <param name="vMin">The minimum value of the range.</param>
+ <param name="vMax">The maximum value of the range.</param>
+ <param name="v">The value to be cycled.</param>
+ <returns>The cyclically constrained value.</returns>
+</member>
+<member name="P:Asteroids.Asteroids.maxSpeed">
+ <summary>
+ The maximum speed for objects in the game.
+ </summary>
+</member>
+<member name="P:Asteroids.Asteroids.maxBulletSpeed">
+ <summary>
+ The maximum speed for bullets.
+ </summary>
+</member>
+<member name="T:Asteroids.Asteroids.GameOver">
+ <summary>
+ Exception that indicates the game is over.
+ </summary>
+</member>
+<member name="T:Asteroids.Asteroids">
+ <summary>
+ A module for handling game objects and operations in the Asteroids game.
+ </summary>
+</member>
+<member name="M:Asteroids.RandomGenerator.GetRandomUnitVector">
+ <summary>
+ Generates a random unit vector.
+ </summary>
+ <returns>A random unit vector with a length of 1.</returns>
+</member>
+<member name="M:Asteroids.RandomGenerator.GetRandomPosition(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Generates a random position within the specified x and y bounds.
+ </summary>
+ <param name="n11">The lower bound for the x-coordinate.</param>
+ <param name="n12">The upper bound for the x-coordinate.</param>
+ <param name="n21">The lower bound for the y-coordinate.</param>
+ <param name="n22">The upper bound for the y-coordinate.</param>
+ <returns>A random vector (x, y) within the specified bounds.</returns>
+</member>
+<member name="M:Asteroids.RandomGenerator.GetRandomRange(System.Double,System.Double)">
+ <summary>
+ Generates a random number within a specified range.
+ </summary>
+ <param name="n1">The lower bound of the range.</param>
+ <param name="n2">The upper bound of the range.</param>
+ <returns>A random float between n1 and n2.</returns>
+</member>
+<member name="M:Asteroids.RandomGenerator.GetRandomNum(System.Double)">
+ <summary>
+ Generates a random number between 0 and n.
+ </summary>
+ <param name="n">The upper bound for the random number.</param>
+ <returns>A random float between 0 and n.</returns>
+</member>
+<member name="T:Asteroids.RandomGenerator">
+ <summary>
+ A module for generating random numbers and vectors for use in the Asteroids game.
+ </summary>
+</member>
+<member name="T:Asteroids.Vectors.Vec">
+ <summary>
+ Defines a 2D vector as a tuple of two floating-point numbers (x, y).
+ </summary>
+</member>
+<member name="M:Asteroids.Vectors.ang(System.Double,System.Double)">
+ <summary>
+ Calculates the angle in radians of a 2D vector from the positive x-axis.
+ </summary>
+ <param name="v">The vector (vx, vy) whose angle is to be calculated.</param>
+ <returns>The angle in radians between the vector and the positive x-axis.</returns>
+</member>
+<member name="M:Asteroids.Vectors.norm(System.Double,System.Double)">
+ <summary>
+ Normalizes a 2D vector to have a length of 1.
+ </summary>
+ <param name="v">The vector (vx, vy) to normalize.</param>
+ <returns>
+ A new vector that is the normalized version of v.
+ If the length of v is zero, returns (infinity, infinity).
+ </returns>
+</member>
+<member name="M:Asteroids.Vectors.len(System.Double,System.Double)">
+ <summary>
+ Calculates the length (magnitude) of a 2D vector.
+ </summary>
+ <param name="v">The vector (vx, vy) whose length is to be calculated.</param>
+ <returns>The length of the vector.</returns>
+</member>
+<member name="M:Asteroids.Vectors.dist(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Calculates the Euclidean distance between two 2D vectors.
+ </summary>
+ <param name="v1">The first vector (v1x, v1y).</param>
+ <param name="v2">The second vector (v2x, v2y).</param>
+ <returns>The distance between v1 and v2.</returns>
+</member>
+<member name="M:Asteroids.Vectors.rot(System.Double,System.Double,System.Double)">
+ <summary>
+ Rotates a 2D vector by a given angle in radians.
+ </summary>
+ <param name="v">The vector (vx, vy) to rotate.</param>
+ <param name="r">The angle in radians to rotate the vector.</param>
+ <returns>A new vector that is the result of rotating v by r radians.</returns>
+</member>
+<member name="M:Asteroids.Vectors.div(System.Double,System.Double,System.Double)">
+ <summary>
+ Divides a 2D vector by a given constant.
+ </summary>
+ <param name="v">The vector (vx, vy) to divide.</param>
+ <param name="c">The constant to divide the vector by.</param>
+ <returns>
+ A new vector that is the result of dividing v by c. 
+ If c is zero, returns (infinity, infinity).
+ </returns>
+</member>
+<member name="M:Asteroids.Vectors.scale(System.Double,System.Double,System.Double)">
+ <summary>
+ Scales a 2D vector by a given constant.
+ </summary>
+ <param name="v">The vector (vx, vy) to scale.</param>
+ <param name="c">The constant to scale the vector by.</param>
+ <returns>A new vector that is the result of scaling v by c.</returns>
+</member>
+<member name="M:Asteroids.Vectors.sub(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Subtracts the second 2D vector from the first vector component-wise.
+ </summary>
+ <param name="v1">The first vector (v1x, v1y).</param>
+ <param name="v2">The second vector (v2x, v2y).</param>
+ <returns>A new vector that is the difference between v1 and v2.</returns>
+</member>
+<member name="M:Asteroids.Vectors.add(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Adds two 2D vectors component-wise.
+ </summary>
+ <param name="v1">The first vector (v1x, v1y).</param>
+ <param name="v2">The second vector (v2x, v2y).</param>
+ <returns>A new vector that is the sum of v1 and v2.</returns>
+</member>
+<member name="T:Asteroids.Vectors">
+ <summary>
+ A module containing functions and types for performing operations on 2D vectors.
+ </summary>
+</member>
+</members>
+</doc>
