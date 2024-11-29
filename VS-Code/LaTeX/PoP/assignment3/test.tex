@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{standalone}
+\usepackage{amsmath} % Package for advanced math typesetting
+\input{../../sty/setup.sty} % Assuming these files exist and are correctly referenced
+\graphicspath{ {../../pictures/PoP/assignment2}} % Assuming a pictures folder has been made and is correctly referenced
+
+% \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
+
+\begin{document}
+% \includepdf[pages=-]{../../pictures/forside}
+
+\title{Københavns Universitet\\
+PoP Assignment 3}
+\input{../../sty/cover.sty} % Assuming this file contains the cover page setup
+\input{../../sty/header.sty} % Assuming this file contains the header setup
+\maketitle % This command will actually insert the title into the document
+
+% Question 1 - Reflections on group work and sources (20 points)
+\section{Question 1 - Reflections on group work and sources}
+
+\subsection{Who are the members of your group that participated in the assignment.}
+Udover mig selv, har jeg udarbejdet opgaven i gruppe med:\\
+- Daniel Friis-Hasché - rcb933\\
+- Aksel Mannstaedt Rasmussen - qfl561
+
+\subsection{Compare how your group worked on assignment 3 with the way you worked on assignment 2. Describe similarities and differences.}
+
+\subsection{Give a list of the external sources you used during the assignment and how you used them.}
+
+% Question 2 - Simulation of Moths (80 points)
+\section{Question 2 - Simulation of Moths}
+\begin{itemize}
+    \item[] \textbf{You are to make a simulator of 5 moths that fly randomly on a cyclic domain until the light is turned on in the middle of the image, at which time the moths will move toward the light.\\
+The solution must include a class with the following signature:\\
+\lstinline{type Moth =}\\
+\lstinline{new: pos: Vec * hdng: float -> Moth}\\
+\lstinline{member heading: float}\\
+\lstinline{member pos: Vec}\\
+\lstinline{member draw: unit -> PrimitiveTree}\\
+where Vec is a float*float pair denoting the moth's position, and hdng is its initial direction in radians. The draw function produces a DIKU-Canvas PrimitiveTree that represents the moth object at position pos. The type Vec is defined in the asteroid library presented at the lecture in Week 10, which contains helpful functionality for vector algebra and other things.\\
+The moths never stop flying. The space, in which the moths fly, is to be cyclic meaning that when the moth flies out of the window on the right-hand side, then it reenters on the left and similarly for the other sides of the window. The light is to be turned on and off by pressing space. In each simulator step, a moth moves a small constant distance in the direction of its heading. When the light is on, a moth's heading is the direction of the light, and otherwise, the heading is updated in each step by adding a random number in the range of [-10,10] degrees to it.}
+\end{itemize}
+
+\subsection{Describe how your solution relies on the object-oriented programming paradigm.}
+
+\subsection{Describe the type Vec and explain how your solution makes use it.}
+
+\subsection{Using your code, detail what is happening in a simulator step. }
+
+
+
+\end{document}
+
