@@ -6,11 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="mothApp.fsx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="asteroids/asteroids.fsproj" /> 
+    <Compile Include="moth.fsx" />
   </ItemGroup>
 
   <ItemGroup>

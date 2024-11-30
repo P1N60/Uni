@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("Stack2")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+801cbe7038d878bafb4ddd8675deb403830413a2")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+058690d37f362bf926040ea8847993dbdbeace11")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("Stack2")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("Stack2")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
