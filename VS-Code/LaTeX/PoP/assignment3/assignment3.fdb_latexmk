@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1732971602.28237 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment3/assignment3.tex" "assignment3.pdf" "assignment3" 1732971603.39927 0
+["pdflatex"] 1732986460.78436 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment3/assignment3.tex" "assignment3.pdf" "assignment3" 1732986461.95936 0
   "../../sty/cover.sty" 1731329878.96481 146 8b61d294e7d189b71bcc6923b15fd47c ""
   "../../sty/header.sty" 1731329878.96508 248 ffacf07cd7fe2200603a7c95ec90e89a ""
   "../../sty/setup.sty" 1731329878.96522 9782 03cf9996fe1f1519140c2e0d6557d0c0 ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment3/assignment3.tex" 1732971601.33143 3145 fb039e694c2f7969cde22d888cd0b679 ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment3/assignment3.tex" 1732986460.502 3147 c7567d6677fdcda3563ef76880351764 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -268,9 +268,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "assignment3.aux" 1732971603.29319 8913 b503cacf5529142d6e58360567d39cc9 "pdflatex"
-  "assignment3.tex" 1732971601.33143 3145 fb039e694c2f7969cde22d888cd0b679 ""
-  "assignment3.toc" 1732971603.29507 1080 b8682ba753313551d75d616f8ba8e465 "pdflatex"
+  "assignment3.aux" 1732986461.84832 8913 b503cacf5529142d6e58360567d39cc9 "pdflatex"
+  "assignment3.tex" 1732986460.502 3147 c7567d6677fdcda3563ef76880351764 ""
+  "assignment3.toc" 1732986461.85032 1080 b8682ba753313551d75d616f8ba8e465 "pdflatex"
   (generated)
   "assignment3.aux"
   "assignment3.log"
