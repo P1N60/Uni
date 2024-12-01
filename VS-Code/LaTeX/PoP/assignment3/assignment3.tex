@@ -37,7 +37,7 @@ The solution must include a class with the following signature:\\
 \lstinline{member heading: float}\\
 \lstinline{member pos: Vec}\\
 \lstinline{member draw: unit -> PrimitiveTree}\\
-where Vec is a float*float pair denoting the moth's position, and hdng is its initial direction in radians. The draw function produces a DIKU-Canvas PrimitiveTree that represents the moth object at position pos. The type Vec is defined in the asteroid library presented at the lecture in Week 10, which contains helpful functionality for vector algebra and other things.\\
+where Vec is a float * float pair denoting the moth's position, and hdng is its initial direction in radians. The draw function produces a DIKU-Canvas PrimitiveTree that represents the moth object at position pos. The type Vec is defined in the asteroid library presented at the lecture in Week 10, which contains helpful functionality for vector algebra and other things.\\
 The moths never stop flying. The space, in which the moths fly, is to be cyclic meaning that when the moth flies out of the window on the right-hand side, then it reenters on the left and similarly for the other sides of the window. The light is to be turned on and off by pressing space. In each simulator step, a moth moves a small constant distance in the direction of its heading. When the light is on, a moth's heading is the direction of the light, and otherwise, the heading is updated in each step by adding a random number in the range of [-10,10] degrees to it.}
 \end{itemize}
 
