@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("mothApp")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98ac0fbb7a36e453b1136cc5decdc2c63c198a22")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a842387cb3d75ac676f79ae2635397b41b1b6c4")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("mothApp")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("mothApp")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

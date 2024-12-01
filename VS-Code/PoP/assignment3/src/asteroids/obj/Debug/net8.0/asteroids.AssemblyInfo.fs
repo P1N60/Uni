@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("asteroids")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+058690d37f362bf926040ea8847993dbdbeace11")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a842387cb3d75ac676f79ae2635397b41b1b6c4")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("asteroids")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("asteroids")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
