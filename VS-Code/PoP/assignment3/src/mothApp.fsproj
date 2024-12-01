@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="mothApp.fsx" />
+    <Compile Include="moth.fsx" />
   </ItemGroup>
 
   <ItemGroup>

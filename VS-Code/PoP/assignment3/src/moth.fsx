@@ -20,7 +20,7 @@ type Moth(startPos: float * float) =
             y <- y + mothSpeed
         pos <- (x,y)
     
-    member this.drawTime(initialState) =
+    member this.drawMoth(initialState) =
         let radius = 7.0
 
         let drawHand j = 
@@ -45,4 +45,4 @@ type Moth(startPos: float * float) =
     
 let Moth1 = Moth (55.0, 100.0)
 
-Moth1.drawTime(Moth1)
+Moth1.drawMoth(Moth1)
