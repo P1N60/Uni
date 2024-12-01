@@ -2,14 +2,13 @@
 open Canvas
 open Color
 
-type Hand(startPos: float * float) =
+type Moth(startPos: float * float) =
     let w = 1400
     let h = w / 2
     let mothSpeed = 4.0
-
     let mutable pos = startPos
-
-    member this.inc() =
+    
+    member this.nextPos() =
         let mutable (x,y) = pos
         if (x + mothSpeed > w) then
             x <- 0
@@ -30,20 +29,20 @@ type Hand(startPos: float * float) =
             let coords = [0.0..0.1..2.0*System.Double.Pi + 0.1] |> List.map (fun x -> pointPolar pos (radius,x)) 
             piecewiseAffine white 4.0 coords
 
-        let react (j: Hand) (ev: Event) : Hand option = 
+        let react (j: Moth) (ev: Event) : Moth option = 
             match ev with
             | Event.TimerTick -> 
-                j.inc()
+                j.nextPos()
                 Some (j)
             | _ -> None
 
-        let animation (j: Hand) = 
+        let animation (j: Moth) = 
             let seconds = pos
             make (drawHand seconds)
 
         // the simulation updates 60 times pr. second.
         interact "Moth Simulation:" w h (Some (1000/60)) animation react initialState
     
-let Hand1 = Hand (55.0, 100.0)
+let Moth1 = Moth (55.0, 100.0)
 
-Hand1.drawTime(Hand1)
+Moth1.drawTime(Moth1)

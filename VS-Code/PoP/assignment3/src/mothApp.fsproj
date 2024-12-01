@@ -6,12 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="mothApp.fsx" />
-=======
-    <Compile Include="moth.fs" />
-    <Compile Include="moth.fsx" />
->>>>>>> 584511ad820ccf2c69052956322e47555693d55d
   </ItemGroup>
 
   <ItemGroup>
