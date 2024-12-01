@@ -2,7 +2,6 @@
 open Canvas
 open Color
 
-// 1.
 type Hand(startPos: float * float) =
     let w = 1400
     let h = w / 2
@@ -22,7 +21,6 @@ type Hand(startPos: float * float) =
             y <- y + mothSpeed
         pos <- (x,y)
     
-    // 2.
     member this.drawTime(initialState) =
         let radius = 7.0
 
