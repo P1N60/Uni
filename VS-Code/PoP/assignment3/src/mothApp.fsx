@@ -16,6 +16,8 @@ type Moth(startPos: Vec, startHeading: float) =
 
     let mothSpeed = 5.0
 
+    new () = Moth (GetRandomPosition 0.0 (float w) 0.0 (float h), GetRandomRange 0.0 (2.0 * System.Double.Pi))
+
     member this.nextPos(lightOn: bool, lightPos: Vec option) = 
         let targetHeading =
             match lightOn, lightPos with
@@ -53,9 +55,7 @@ type Light() =
             |> List.map (fun x -> pointPolar this.pos (radius, x))
         piecewiseAffine yellow 100.0 coords
 
-let moths = 
-    [ for _ in 1..5 -> 
-        Moth(GetRandomPosition 0.0 (float w) 0.0 (float h), GetRandomRange 0.0 (2.0 * System.Double.Pi)) ]
+let moths = [for e in 1..500 do Moth ()]
 
 let centerLight = Light()
 
