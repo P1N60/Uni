@@ -14,7 +14,7 @@ type Moth(startPos: Vec, startHeading: float) =
     let mutable currentPos = startPos
     let mutable heading = startHeading
 
-    let mothSpeed = 3.0
+    let mothSpeed = 5.0
 
     member this.nextPos(lightOn: bool, lightPos: Vec option) = 
         let targetHeading =
@@ -32,13 +32,13 @@ type Moth(startPos: Vec, startHeading: float) =
 
     // I made this in week 10 thursday worksheet (with animation)
     member this.draw() =
-        let radius = 7.0
+        let radius = 10.0
         let pointPolar (x1, x2) (r, t) =
             (x1 + r * cos t, x2 + r * sin t)
         let coords = 
             [0.0 .. 0.1 .. 2.0 * System.Double.Pi + 0.1] 
             |> List.map (fun x -> pointPolar currentPos (radius, x))
-        piecewiseAffine white 4.0 coords
+        piecewiseAffine white 6.0 coords
 
     member this.pos = currentPos
 
