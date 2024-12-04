@@ -13,7 +13,6 @@ let h = w / 2
 type Moth(startPos: Vec, startHeading: float) =
     let mutable currentPos = startPos
     let mutable heading = startHeading
-
     let mothSpeed = 5.0
 
     new () = Moth (GetRandomPosition 0.0 (float w) 0.0 (float h), GetRandomRange 0.0 (2.0 * System.Double.Pi))
@@ -26,13 +25,12 @@ type Moth(startPos: Vec, startHeading: float) =
 
         heading <- targetHeading
 
-        // Calculate velocity using explicit trigonometric functions
         let velocity = (mothSpeed * cos heading, mothSpeed * sin heading)
 
         let mutable (x,y) = currentPos
         currentPos <- add (cyclic 0.0 w x, cyclic 0.0 h y) velocity
 
-    // I made this in week 10 thursday worksheet (with animation)
+    // Made this in week 10 thursday worksheet (with animation)
     member this.draw() =
         let radius = 10.0
         let pointPolar (x1, x2) (r, t) =
@@ -55,7 +53,7 @@ type Light() =
             |> List.map (fun x -> pointPolar this.pos (radius, x))
         piecewiseAffine yellow 100.0 coords
 
-let moths = [for e in 1..500 do Moth ()]
+let moths = [for e in 1..5 do Moth ()]
 
 let centerLight = Light()
 
