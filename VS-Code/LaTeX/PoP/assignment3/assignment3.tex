@@ -24,8 +24,42 @@ Udover mig selv, har jeg udarbejdet opgaven i gruppe med:\\
 - Aksel Mannstaedt Rasmussen - qfl561
 
 \subsection{Compare how your group worked on assignment 3 with the way you worked on assignment 2. Describe similarities and differences.}
+Resten af min gruppe kom senere i gang med afleveringen, da de syntes, at afleveringen var meget svær, derudover havde vi andre afleveringer for i samme tidsramme som denne, vi havde derfor, alle sammen arbejdet på forskellige tidspunkter af afleveringsperioden.\\
+Dette var ikke et problem som sådan, andet end at vi alle var på forskellige steder af afleveringen, da vi skulle tale om den. Vi talte om hvordan vi hver havde gjort brug af DIKU-Canvas, men udover det, havde vi bare talt om den basale opsetning af afleveringen. Afleveringens struktur gjorde det i højere grad svære at kommunikere om spicifikke opgaver, da selve afleveringen ikke var opdelt i opgaver.
 
 \subsection{Give a list of the external sources you used during the assignment and how you used them.}
+Jeg har benyttet \href{https://claude.ai}{Claude 3.5 Sonnet} til at genere koden til at beregne næste position:
+\begin{lstlisting}
+    member this.nextPos(lightOn: bool, lightPos: Vec option) = 
+        let mothSpeed = 5.0
+
+        let targetHeading =
+            match lightOn, lightPos with
+            | true, Some lp -> ang (sub lp this.pos)
+            | _ -> this.heading + GetRandomRange -0.174 0.174 // random heading of -10 to 10 degrees in radians
+
+        this.heading <- targetHeading
+
+        let velocity = (mothSpeed * cos this.heading, mothSpeed * sin this.heading)
+
+        let mutable (x, y) = this.pos
+        this.pos <- add (cyclic 0.0 w x, cyclic 0.0 h y) velocity
+\end{lstlisting}
+\url{https://claude.ai} | Dato: 03/12/2024\\
+\\
+Jeg har også benyttet \href{https://claude.ai}{Claude 3.5 Sonnet} til at genere noget af koden i denne del:
+\begin{lstlisting}
+    let react (state: Moth list * bool) (ev: Event) : (Moth list * bool) option =
+    let (mothList, lightOn) = state
+    match ev with
+    | Key ' ' -> Some (mothList, not lightOn)
+    | TimerTick -> 
+        reactAllMoths mothList lightOn
+        Some (mothList, lightOn)
+    | _ -> Some state
+\end{lstlisting}
+\url{https://claude.ai} | Dato: 03/12/2024\\
+Alt den generede kode er derefter blevet redigeret og verificeret af mig, og resten af afleveringen er skrevet af mig selv i samarbejde med min gruppe.
 
 % Question 2 - Simulation of Moths (80 points)
 \section{Question 2 - Simulation of Moths}
@@ -42,12 +76,27 @@ The moths never stop flying. The space, in which the moths fly, is to be cyclic 
 \end{itemize}
 
 \subsection{Describe how your solution relies on the object-oriented programming paradigm.}
+Ifølge min forståelse af OOP, har jeg benyttet classes, som Moth og Light, der er i stand til, at have bestemte functioner og members dannet til kun det objekt. Members gør det muligt, at kalde på bestemte funktioner, som ellers ikke bliver kørt.\\
+Disse objekter bevares, og opdateres når vi animerer, ved brug af DIKU-Canvas. Eksempelvis kalder jeg på en member "nextPos," som beregner næste position hver frame.
 
 \subsection{Describe the type Vec and explain how your solution makes use it.}
+Jeg åbner Vectors fra asteroids namespac'et i asteroids-folderen, ved at bruge "open Asteroids.Vectors."\\
+Herfra kan vi nu bruge type'en Vec og andre funktioner fra Vectors modulet. Jeg bruger selvfølgelig Vec som type af float * float, men derudover også "add" og "cyclic" til at lave skærm-grænserne.
 
 \subsection{Using your code, detail what is happening in a simulator step. }
-
-
+Der sker rigtig meget på bare et step, men her er en overordnet liste af ting der sker:
+\begin{itemize}
+    \item Hvis der trykkes på space, tændes lyset hvis det ikke er tændt, ellers slukkes lyset.
+    \item Hvis lyset er tændt, beregner moth'en en ny retning $\brr {targetHeading}$, der peger mod lyset.
+    \item Hvis lyset er slukket, tilføjes en tilfældig "drejning" til moth'ens retning for at simulere tilfældig bevægelse.
+    \item Ud fra retningen beregnes en ny position baseret på moth'ens hastighed.
+    \item Positionen opdateres, og moth'en bevæger sig på en måde, der sikrer, at den bliver inden for skærmens grænser (ved hjælp af cyclic).
+    \item Hver moth tegnes ved at lave en cirkel omkring dens nuværende position
+    \item Hvis lyset er tændt, tegnes en stor gul cirkel i midten af skærmen.
+    \item Alle moth'nes tegninger kombineres, og lyset tilføjes, hvis det er tændt.
+    \item Den samlede tegning (alle moths og lyset) opdagteres og vises på skærmen.
+\end{itemize}
+Alt dette sker $\frac{60}{1000}$ gange pr. sekundt, og da der efter standard går 1000 ticks for 1 sekundt, svarer dette til 60 gentagelser pr. sekundt.
 
 \end{document}
 

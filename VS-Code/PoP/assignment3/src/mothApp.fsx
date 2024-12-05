@@ -11,36 +11,43 @@ let w = 1400
 let h = w / 2
 
 type Moth(startPos: Vec, startHeading: float) =
-    let mutable currentPos = startPos
-    let mutable heading = startHeading
-    let mothSpeed = 5.0
+    let mutable _heading = startHeading
+    let mutable _pos = startPos
 
-    new () = Moth (GetRandomPosition 0.0 (float w) 0.0 (float h), GetRandomRange 0.0 (2.0 * System.Double.Pi))
+    new() = Moth (GetRandomPosition 0.0 (float w) 0.0 (float h), GetRandomRange 0.0 (2.0 * System.Double.Pi))
+
+    // get and set was taken from the week 11 tuesday "powerBankClamp.fsx" file in order to mutate this.heading and this.pos
+    member this.heading
+        with get() = _heading
+        and set(c) = _heading <- c
+
+    member this.pos
+        with get() = _pos
+        and set(c) = _pos <- c
 
     member this.nextPos(lightOn: bool, lightPos: Vec option) = 
+        let mothSpeed = 5.0
+
         let targetHeading =
             match lightOn, lightPos with
-            | true, Some lp -> ang (sub lp currentPos) // Point toward the light
-            | _ -> heading + GetRandomRange -0.174 0.174 // Random jitter (-10 to 10 degrees in radians)
+            | true, Some lp -> ang (sub lp this.pos)
+            | _ -> this.heading + GetRandomRange -0.174 0.174 // random heading of -10 to 10 degrees in radians
 
-        heading <- targetHeading
+        this.heading <- targetHeading
 
-        let velocity = (mothSpeed * cos heading, mothSpeed * sin heading)
+        let velocity = (mothSpeed * cos this.heading, mothSpeed * sin this.heading)
 
-        let mutable (x,y) = currentPos
-        currentPos <- add (cyclic 0.0 w x, cyclic 0.0 h y) velocity
+        let mutable (x, y) = this.pos
+        this.pos <- add (cyclic 0.0 w x, cyclic 0.0 h y) velocity
 
-    // Made this in week 10 thursday worksheet (with animation)
     member this.draw() =
         let radius = 10.0
         let pointPolar (x1, x2) (r, t) =
             (x1 + r * cos t, x2 + r * sin t)
         let coords = 
             [0.0 .. 0.1 .. 2.0 * System.Double.Pi + 0.1] 
-            |> List.map (fun x -> pointPolar currentPos (radius, x))
+            |> List.map (fun x -> pointPolar this.pos (radius, x))
         piecewiseAffine white 6.0 coords
-
-    member this.pos = currentPos
 
 type Light() = 
     member this.pos = (float w / 2.0, float h / 2.0)
@@ -49,7 +56,7 @@ type Light() =
         let pointPolar (x1, x2) (r, t) =
             (x1 + r * cos t, x2 + r * sin t)
         let coords = 
-            [0.0 .. 0.1 .. 2.0 * System.Double.Pi + 0.1 + 0.2] // I don't know why the circle does not get filled all the way from 0.0 .. 2.0 
+            [0.0 .. 0.1 .. 2.0 * System.Double.Pi + 0.1 + 0.2] // I don't know why the circle does not get filled all the way from 0.0 .. 2.0 * Pi
             |> List.map (fun x -> pointPolar this.pos (radius, x))
         piecewiseAffine yellow 100.0 coords
 
@@ -59,11 +66,14 @@ let centerLight = Light()
 
 let drawAllMoths (mothList: Moth list) =
     mothList
-    |> List.map (fun m -> m.draw())
-    |> List.reduce (fun acc tree -> onto acc tree)
+    |> List.fold (fun acc m -> onto acc (m.draw())) emptyTree
 
 let reactAllMoths (mothList: Moth list) (lightOn: bool) =
-    let lightPos = if lightOn then Some centerLight.pos else None
+    let lightPos = 
+        if lightOn then 
+            Some centerLight.pos
+        else 
+            None
     mothList |> List.iter (fun m -> m.nextPos(lightOn, lightPos))
 
 let react (state: Moth list * bool) (ev: Event) : (Moth list * bool) option =
