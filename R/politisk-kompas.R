@@ -1,5 +1,5 @@
 # Min orientering fra 1-100:
-fordelingspolitisk = 53
+fordelingspolitisk = 90
 værdipolitisk = 45
 
 # Tegning af plot, samt akser og mit punkt
@@ -14,7 +14,7 @@ plot(fordelingspolitisk,
 
 plotType = "b"
 # Afstand mellem punkt og partinavn i pixels
-partinavnoffset <- 3
+partinavnoffset <- 4
 
 lines(c(1,50), c(50,50), col="red", type = plotType)
 lines(c(50,100), c(50,50), col="blue", type = plotType)
@@ -27,13 +27,13 @@ text(fordelingspolitisk,
 
 # Andre
 partiFordeling = 
-  c(12,      30,   40,    42,      47,      52,       55,      60,      85)
+  c(12,      30,   40,    42,      47,      52,       55,      60,     70,     82,     92,     90)
 partiVærdi = 
-  c(83,      75,   65,    91,      87,      55,       42,      52,      45)
+  c(83,      80,   65,    91,      87,      55,       42,      52,     20,     10,     55,     25)
 partiInitial = 
-  c("E",    "SF",  "A",   "Å",    "RV",     "M",      "C",     "V",    "LA")
+  c("E",    "SF",  "A",   "Å",    "RV",     "M",      "C",     "V",    "DF",   "D",    "LA",   "Æ")
 partiFarve = 
-  c("red", "red", "red", "green", "purple", "purple", "green", "blue", "cyan")
+  c("red", "red", "red", "green", "purple", "purple", "green", "blue", "blue", "navy", "cyan", "navy")
 
 i <- 1
 while (i <= length(partiInitial)) {
