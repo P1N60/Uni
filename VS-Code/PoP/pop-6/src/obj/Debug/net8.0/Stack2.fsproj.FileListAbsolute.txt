@@ -1,5 +1,0 @@
-/Users/victor/Documents/GitHub/VS-Code/PoP/pop-6/src/obj/Debug/net8.0/Stack2.fsproj.AssemblyReference.cache
-/Users/victor/Documents/GitHub/VS-Code/PoP/pop-6/src/obj/Debug/net8.0/Stack2.AssemblyInfoInputs.cache
-/Users/victor/Documents/GitHub/VS-Code/PoP/pop-6/src/obj/Debug/net8.0/Stack2.AssemblyInfo.fs
-/Users/victor/Documents/GitHub/VS-Code/PoP/pop-6/src/obj/Debug/net8.0/Stack2.fsproj.CoreCompileInputs.cache
-/Users/victor/Documents/GitHub/VS-Code/PoP/pop-6/src/obj/Debug/net8.0/Stack2.sourcelink.json
