@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Feedback on Question 2}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.a}Prøv at ændre Moth klassen så den har den samme signatur som i opgavebeskrivelsen, dvs. kun de methods og properties der er beskrevet.}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Feedback on question 2B}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.a}[-] The relation between the signature and implementation file is understood}{3}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Feedback on question 2C}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.a}The description demonstrates the role of the update step in the diku-canvas interact function\\ - Her er det en god ide at tilføje noget kode til din forklaring, da det gør det nemmere at forstå.}{3}{subsection.3.1}%
