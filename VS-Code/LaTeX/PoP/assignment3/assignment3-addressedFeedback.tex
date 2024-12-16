@@ -20,17 +20,36 @@ PoP Assignment 3 - Adressed Feedback}
 
 \subsection{Prøv at ændre Moth klassen så den har den samme signatur som i opgavebeskrivelsen, dvs. kun de
 methods og properties der er beskrevet.}
+Jeg har forsøgt, at flytte positions-beregningen ud af moth klassen, så den kun indeholder de nødtvendige members.\\
+Til dette har jeg defineret en ny funktion:
+\begin{lstlisting}
+let moveMoth (moth: Moth) (lightOn: bool) (lightPos: Vec option) =
+    let mothSpeed = 5.0
+
+    let targetHeading =
+        match lightOn, lightPos with
+        | true, Some lp -> ang (sub lp moth.pos)
+        | _ -> moth.heading + GetRandomRange -0.174 0.174 // random heading of -10 to 10 degrees in radians
+
+    moth.heading <- targetHeading
+
+    let velocity = (mothSpeed * cos moth.heading, mothSpeed * sin moth.heading)
+
+    let mutable (x, y) = moth.pos
+    moth.pos <- add (cyclic 0.0 w x, cyclic 0.0 h y) velocity
+\end{lstlisting}
 
 % Feedback on question 2B
 \section{Feedback on question 2B}
 
 \subsection{[-] The relation between the signature and implementation file is understood}
+Såvidt jeg har forstået, bruger vi signature og implementation filerne i asteroids, hvor implementation filen indeholder funktionsdefinationerne, og signature filen indeholder valuations og andre types.
 
 % Feedback on question 2C
 \section{Feedback on question 2C}
 
-\subsection{The description demonstrates the role of the update step in the diku-canvas interact function\\
-- Her er det en god ide at tilføje noget kode til din forklaring, da det gør det nemmere at forstå.}
+\subsection{The description demonstrates the role of the update step in the diku-canvas interact function. Her er det en god ide at tilføje noget kode til din forklaring, da det gør det nemmere at forstå.}
+Jeg har nu tilføjet en del flere kommentarer i min kode.
 
 \end{document}
 
