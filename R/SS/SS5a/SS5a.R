@@ -33,3 +33,15 @@ abline(logPayAverage, logPaySampleDeviation, col="red", lwd=2.2, lty=2)
 integrate(f1, 100000, max(data$Pay))
 # uden normalfordelingsantagelse
 length(data$Pay[data$Pay>=100000])/length(data$Pay)
+
+# 7. Opgave
+simX <- rnorm(10000, 0, 1.5)
+simY <- exp(simX)
+# Vi beregner middelværdien for simulationerne for Y
+mean(simY)
+# Vi beregner middelværdien for alle andre givne mulige udtryk, og tager differencen
+abs(exp(0)-mean(simY))
+abs(exp(0 - (1.5^2))-mean(simY))
+abs(exp(0 + (1.5^2))-mean(simY))
+abs(exp(0 + (1.5^2) / 2)-mean(simY))
+abs(exp(0 + 1.5)-mean(simY))
