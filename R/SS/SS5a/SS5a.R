@@ -1,4 +1,4 @@
-setwd("~/GitHub/R/SS/SS5a")
+setwd("~/Documents/GitHub/R/SS/SS5a")
 data <- read.table("paydata2017.txt", header=TRUE)
 data <- transform(data, logPay=log(Pay))
 
