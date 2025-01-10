@@ -1,0 +1,121 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{standalone}
+\usepackage{amsmath} % Package for advanced math typesetting
+\input{../../sty/setup.sty} % Assuming these files exist and are correctly referenced
+\graphicspath{ {../../pictures/PoP/assignment2}} % Assuming a pictures folder has been made and is correctly referenced
+
+% \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
+
+\begin{document}
+% \includepdf[pages=-]{../../pictures/forside}
+
+\title{Københavns Universitet\\
+PoP Assignment 4}
+\input{../../sty/cover.sty} % Assuming this file contains the cover page setup
+\input{../../sty/header.sty} % Assuming this file contains the header setup
+\maketitle % This command will actually insert the title into the document
+
+% Question 1 - (max 1/2 page)
+\section{Question 1}
+
+\subsection{Give a list of the external sources you used during the assignment and how you used them.
+If you use a generative AI tool (e.g., copilot, chatGPT, AITutor, \ldots) you should keep a log of all the prompts you use.}
+
+% Question 2 - (max 4 pages)
+\section{Question 2}
+
+\subsection{What is a data type?\\
+Explain what it is using the definitions given in PoP.
+Illustrate the role data types play when representing data in Python, using examples from the thursday worksheets in week 13, 14 or 15.}
+
+En datatype er en form for struktur, som bestemmer hvordan data skal repræsenteres.\\
+Disse strukturer har begrænsninger for, hvordan deres data kan defineres.\\
+\begin{lstlisting}
+class Repeater:
+    "Creates a list with 'num' elements of value: 'input'"
+
+    def __init__(self, num):
+        self.num = num
+    
+    def apply(self, input):
+        l = []
+        i = self.num
+        if i <= 0:
+            return l
+        else:
+            while i > 0:
+                l.append(input)
+                i += -1
+            return l
+
+print(Repeater.__doc__)
+print(Repeater(0).apply(10))
+print(Repeater(5).apply(20))
+// OUTPUT:
+Creates a list with 'num' elements of value: 'input'
+[]
+[20, 20, 20, 20, 20]
+\end{lstlisting}
+I det viste kode eksempel fra torsdags worksheet i uge 15, har jeg eksempelvis brugt den datatype, der kaldes for 'int' i python er int ræprsenteret som 32-bit integers.
+
+\subsection{Representing colours\\
+Consider the colouring problem that Ken introduced in class (you can refer to the announcement describing the problem and to his F\# solution Download F\# solution).
+In the context of this problem, describe three possible way to represent colour in Python.
+Explain in detail how the different representations impact the canExtendColour function (both its signature and its body).}
+
+
+
+\subsection{URepresenting NeighbourRelation\\
+Consider the colouring problem that Ken introduced in class (you can refer to the announcement describing the problem and to his F\# solution Download F\# solution).
+In Ken's solution, the type NeighbourRelation is a list of pairs of Countries.
+A list of pairs is a way to represent a graph (each pair represents an edge between the components of the pair that are vertices).
+Define a NeighbourRelation type as a recursive data structure, in Python.}
+
+
+\subsection{Colouring problem\\
+Give your solution to the colouring problem in Python. For each function, describe its specification as a docstring.}
+
+% Question 3 - (max 2 1/2 pages)
+\section{Question 3\\
+Consider a grid of the following form, where DIKU is written horizontally, vertically, diagonally, backwards, or even overlapping other words:}
+\begin{itemize}
+    \item[] \textbf{\\
+    \lstinline{..D...}\\
+    \lstinline{.UKID.}\\
+    \lstinline{.K..K.}\\
+    \lstinline{DIKU.U}\\
+    \lstinline{.D....}}
+\end{itemize}
+
+\subsection{Write a program that finds all the instances of DIKU in this file Download this file.
+Follow Ken's method and give the specification of each function that you define as a docstring.}
+
+\subsection{What programming paradigm dominates in your program. Why?}
+
+\subsection{Explain how you test your program.}
+
+% Question 4 - (max 3 pages)
+\section{Question 4\\
+Consider the following problem involving a collection of cards.
+Each card has two lists of numbers separated by a vertical bar (|): a list of winning numbers and then a list of numbers you have.
+The first winning number you have is worth one point. Every other winning number doubles your number of points.
+For example:}
+\begin{itemize}
+    \item[] \textbf{\\
+    \lstinline{Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53}\\
+    \lstinline{Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19}\\
+    \lstinline{Card 3: 31 18 13 56 72 | 74 77 10 23 35 67 36 11}\\
+    Card 1 is worth 8 points. Card 2 is worth 2 points. Card 3 is worth no points.}
+\end{itemize}
+
+\subsection{Write a program that counts the total number of points for all the cards in this input fileDownload this input file
+Follow Ken's method and give the specification of each function that you define as a docstring.}
+
+\subsection{What programming paradigm dominates in your program. Why?}
+
+\subsection{Explain how you test your program.}
+
+\subsection{Explain the role of all variables in your program, using the role of variables framework introduced in PoP.}
+
+\end{document}
+
