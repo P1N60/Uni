@@ -1,6 +1,3 @@
-
-
-
 % Basic
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -10,8 +7,6 @@
 \titleformat{\subsection}
   {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
 
-% Changes sections from 1.1 to 1.a
-\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 
 % ------------------------------------------------------------ %
 
@@ -299,23 +294,22 @@
 \usepackage{upquote}
 \usepackage{xcolor}
 
-\lstdefinelanguage{Python}
-{
-  keywords={typeof, null, catch, switch, in, int, str, float, self},
-  keywordstyle=\color{blue}\bfseries,
-  ndkeywords={boolean, throw, import},
-  ndkeywords={return, class, if ,elif, endif, while, do, else, True, False , catch, def},
-  ndkeywordstyle=\color{cyan}\bfseries,
-  identifierstyle=\color{black},
-  sensitive=false,
-  comment=[l]{\#},
-  morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
+\lstdefinelanguage{Python}%
+{morekeywords={def, return, lambda, if, elif, else, for, while, break, continue, pass, import, from, as, with, try, except, finally, raise, class, global, nonlocal, assert, yield, True, False, None, and, or, not, is, in},
+  keywordstyle=\color{bluekeywords},
+  sensitive=true,
+  basicstyle=\ttfamily,
+  breaklines=true,
+  xleftmargin=\parindent,
+  aboveskip=\bigskipamount,
+  tabsize=4,
+  morecomment=[l][\color{greencomments}]{\#},
+  stringstyle=\color{redstrings},
+  showstringspaces=false,
 }
 
 \lstset
-{ %Formatting for code in appendix
+{ % Formatting for Python code
     language=Python,
     numbers=left,
     stepnumber=1,
@@ -325,7 +319,10 @@
     breakatwhitespace=false,
     backgroundcolor=\color{bgcolor},  % Background color
     basicstyle=\ttfamily\footnotesize, % Code font size and style
+    keywordstyle=\color{bluekeywords}, % Keyword color
+    commentstyle=\color{greencomments}, % Comment color
+    stringstyle=\color{redstrings}, % String color
     frame=single,                    % Adds a frame around the code
     rulecolor=\color{bgcolor},       % Frame color
-    breaklines=true,                 % Breaks long lines
+    breaklines=true                  % Breaks long lines
 }

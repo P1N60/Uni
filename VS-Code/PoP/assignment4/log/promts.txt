@@ -1,0 +1,32 @@
+CHAT #1:
+Promt 1:
+-------------------------------
+Is this how you define a type in python? I am used to doing so in F#:
+type Country = str
+type NeighbourRelation = list[(Country * Country)]
+type Colour = list[Country]
+type Colouring = list[Colour]
+-------------------------------
+
+Svar kode til promt 1:
+-------------------------------
+from typing import List, Tuple
+Country = str
+NeighbourRelation = List[Tuple[Country, Country]]
+Colour = List[Country]
+Colouring = List[Colour]
+-------------------------------
+
+Promt 2:
+-------------------------------
+Can you do it without the module?
+-------------------------------
+
+Svar kode til promt 2:
+-------------------------------
+Country = str
+NeighbourRelation = list[tuple[Country, Country]]
+Colour = list[Country]
+Colouring = list[Colour]
+-------------------------------
+
