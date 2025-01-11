@@ -44,12 +44,11 @@ def involved():
 def isNeighbour(nr: NeighbourRelation, c1: Country, c2: Country) -> bool:
     return any(pair == (c1, c2) or pair == (c2, c1) for pair in nr)
 
-
 # canExtendColour: NeighbourRelation -> Country -> Colour -> bool
 #    Example:
 #      canExtendColour simple "da" ["de"] ===> false
-def canExtendColour(nr: NeighbourRelation, country: Country, colour: Colour) -> bool:
-    return all(not isNeighbour(nr, c, country) for c in colour)
+def canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) -> bool:
+    return all(not isNeighbour(nr, country1, country2) for country2 in colour)
 
 # giveColour : NR -> Country -> Colouring -> Colouring
 
@@ -69,11 +68,11 @@ def giveColour(nr: NeighbourRelation, country: Country, colouring: Colouring) ->
 #        colourContries: (string * string) list -> (string * rgb) list)
 # val colourContries: NeighbourRelation -> Colouring
 def countries(nr: NeighbourRelation) -> Colour:
-    return list({c for pair in nr for c in pair})
+    return ({c for pair in nr for c in pair})
 
 def colourCountries(nr: NeighbourRelation) -> Colouring:
     cs = countries(nr)
-    colouring: Colouring = []
+    colouring = []
     for c in cs:
         colouring = giveColour(nr, c, colouring)
     return colouring
