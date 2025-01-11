@@ -80,7 +80,6 @@ let isNieghbour nr c1 c2 =
 let canExtendColour nr country colour =
     List.forall (fun c -> not (isNieghbour nr c country)) colour
 
-
 (*
  giveColour : NR -> Country -> Colouring -> Colouring
 
