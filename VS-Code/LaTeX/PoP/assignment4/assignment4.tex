@@ -6,6 +6,9 @@
 
 % \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
 
+% Changes sections from 1.1 to 1.a
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
 \begin{document}
 % \includepdf[pages=-]{../../pictures/forside}
 
@@ -65,7 +68,27 @@ Consider the colouring problem that Ken introduced in class.
 In the context of this problem, describe three possible way to represent colour in Python.
 Explain in detail how the different representations impact the canExtendColour function (both its signature and its body).}
 
+\subsubsection*{1. Strings}
+Farver kan repræsenteres som strings, hvor hver farve er en unik strings, eksempelvis: "rød", "grøn", og "blå".
+\begin{itemize}
+    \item Signaturen forbliver canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) -> bool.
+    \item Funktionens body kræver ingen ændringer, da Colour allerede er en liste af strings.
+\end{itemize}
 
+\subsubsection*{2. RGB-list}
+Endnu en måde er at repræsentere farver som RGB-værdier, eksempelvis: [255, 0, 0] for rød, [0, 255, 0] for grøn, og [0, 0, 255] for blå. Dette giver mulighed for at arbejde med mere præcise farver.
+\begin{itemize}
+    \item Signaturen ændres til canExtendColour(nr: NeighbourRelation, country1: Country, colour: list[list[int, int, int]]) -> bool, hvor Colour er en liste med RGB-lister.
+    \item Funktionens body skal opdateres til at sammenligne RGB-lister i stedet for strings.
+\end{itemize}
+
+\subsubsection*{3. Heltal}
+Man kunne også repræsentere farver som unikke heltal, hvor eksempelvis: 1 er rød, 2 er grøn, og 3 er blå.
+\begin{itemize}
+    \item Signaturen ændres til canExtendColour(nr: NeighbourRelation, country1: Country, colour: list[int]) -> bool
+    \\Hvor Colour er en liste af heltal.
+    \item Funktionens body skal opdateres til at sammenligne heltal i stedet for strings.
+\end{itemize}
 
 \subsection{URepresenting NeighbourRelation\\
 Consider the colouring problem that Ken introduced in class.
@@ -76,6 +99,8 @@ Define a NeighbourRelation type as a recursive data structure, in Python.}
 
 \subsection{Colouring problem\\
 Give your solution to the colouring problem in Python. For each function, describe its specification as a docstring.}
+
+Omskrivningen af funktionerne samt deres specifications kan findes i "../src/colouring.py"
 
 % Question 3 - (max 2 1/2 pages)
 \section{Question 3\\

@@ -42,6 +42,8 @@ def involved():
 
 # val isNieghbour: NeighbourRelation -> Country -> Country -> bool
 def isNeighbour(nr: NeighbourRelation, c1: Country, c2: Country) -> bool:
+    "does something"
+
     return any(pair == (c1, c2) or pair == (c2, c1) for pair in nr)
 
 # canExtendColour: NeighbourRelation -> Country -> Colour -> bool
