@@ -50,7 +50,7 @@ def isNeighbour(nr: NeighbourRelation, country1: Country, country2: Country) -> 
 #    Example:
 #      canExtendColour simple "da" ["de"] ===> false
 def canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) -> bool:
-    "Checks whether the given countries are neighbours"
+    ""
 
     return all(not isNeighbour(nr, country1, country2) for country2 in colour)
 
