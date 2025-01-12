@@ -74,12 +74,15 @@ class Card:
         return points
     
     def cardStats(self):
-        "Gives important information about a given card"
+        "Gives information about a given card by running the members of Card"
 
-        # I know this mixes computation and actions, but it gives a nice overview
         print(self.card)
         print(f"Card numbers: {self.cardNumbers()}")
         print(f"Winning numbers: {self.winningNumbers()}")
         print(f"Points: {self.cardPoints()}")
 
-Card(cardRows[6]).cardStats()
+cardNumber = 1
+
+for card in cardRows:
+    print(f"Card {cardNumber}: {Card(card).cardPoints()} points")
+    cardNumber += 1
