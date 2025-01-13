@@ -38,6 +38,7 @@ def rowsToDiagonals():
             i += 1
         j += 1
     j = 2*len(rows)-1
+    print(result)
     # Diagonal from left to right
     for row in rows:
         result.append("")
