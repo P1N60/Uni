@@ -11,6 +11,6 @@
 \contentsline {subsection}{\numberline {3.c}Explain how you test your program.}{7}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Question 4\\ Consider the following problem involving a collection of cards. Each card has two lists of numbers separated by a vertical bar (|): a list of winning numbers and then a list of numbers you have. The first winning number you have is worth one point. Every other winning number doubles your number of points. For example:}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.a}Write a program that counts the total number of points for all the cards in "cards.txt". Follow Ken's method and give the specification of each function that you define as a docstring.}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.b}What programming paradigm dominates in your program. Why?}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.c}Explain how you test your program.}{7}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.d}Explain the role of all variables in your program, using the role of variables framework introduced in PoP.}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.b}What programming paradigm dominates in your program. Why?}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.c}Explain how you test your program.}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.d}Explain the role of all variables in your program, using the role of variables framework introduced in PoP.}{8}{subsection.4.4}%
