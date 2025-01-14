@@ -1,5 +1,5 @@
 def lineReader(path):
-    "Reads every line of a txt-file, and stores each row as a list"
+    """Reads every line of a txt-file, and stores each row as a list"""
 
     with open(path, 'r') as file:
         lines = file.readlines()
@@ -8,7 +8,7 @@ def lineReader(path):
 rows = lineReader("../data/diku.txt")
 
 def rowsToColumns():
-    "Converts list of letters in rows to list of letters in columns"
+    """Converts list of letters in rows to list of letters in columns"""
 
     result = []
     i = 0
@@ -23,7 +23,7 @@ def rowsToColumns():
 columns = rowsToColumns()
 
 def rowsToDiagonals():
-    "Converts list of letters in rows to list of letters in diagonals"
+    """Converts list of letters in rows to list of letters in diagonals"""
 
     # Diagonal from right to left
     result = []

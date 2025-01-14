@@ -42,7 +42,7 @@ def involved():
 
 # val isNieghbour: NeighbourRelation -> Country -> Country -> bool
 def isNeighbour(nr: NeighbourRelation, country1: Country, country2: Country) -> bool:
-    "Checks whether the given countries are a part of a NeighbourRelation"
+    """Checks whether the given countries are a part of a NeighbourRelation"""
 
     return any(pair == (country1, country2) or pair == (country2, country1) for pair in nr)
 
@@ -50,7 +50,7 @@ def isNeighbour(nr: NeighbourRelation, country1: Country, country2: Country) -> 
 #    Example:
 #      canExtendColour simple "da" ["de"] ===> false
 def canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) -> bool:
-    ""
+    """  """
 
     return all(not isNeighbour(nr, country1, country2) for country2 in colour)
 
@@ -58,6 +58,8 @@ def canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) ->
 
 # giveColour simple "da" [["de","se"]; ["no"]] ===> [["de","se"]; ["no"]; ["da"]]
 def giveColour(nr: NeighbourRelation, country: Country, colouring: Colouring) -> Colouring:
+    """  """
+
     if not colouring:
         return [[country]]
     
@@ -72,9 +74,13 @@ def giveColour(nr: NeighbourRelation, country: Country, colouring: Colouring) ->
 #        colourContries: (string * string) list -> (string * rgb) list)
 # val colourContries: NeighbourRelation -> Colouring
 def countries(nr: NeighbourRelation) -> Colour:
+    """  """
+
     return ({c for pair in nr for c in pair})
 
 def colourCountries(nr: NeighbourRelation) -> Colouring:
+    """  """
+
     cs = countries(nr)
     colouring = []
     for c in cs:
@@ -84,3 +90,14 @@ def colourCountries(nr: NeighbourRelation) -> Colouring:
 # Et par eksempler på brug
 print(colourCountries(simple()))
 print(colourCountries(involved()))
+
+class NeighbourRelation:
+    def __init__(self, country1: Country, country2: Country, rest=None):
+        self.pair = (country1, country2)
+        self.rest = rest
+
+    def __repr__(self):
+        return f"{self.pair}, {self.rest}"
+    
+nr = NeighbourRelation("de", "da", NeighbourRelation("da", "se", NeighbourRelation("se", "no")))
+print(nr)

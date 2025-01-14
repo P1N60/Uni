@@ -1,5 +1,5 @@
 def lineReader(path):
-    "Reads every line of a txt-file, and stores each row as a list"
+    """Reads every line of a txt-file, and stores each row as a list"""
 
     with open(path, 'r') as file:
         lines = file.readlines()
@@ -12,7 +12,7 @@ class Card:
         self.card = card
     
     def cardRemover(self):
-        "Removes the word 'Card' and the card number from a card row"
+        """Removes the word 'Card' and the card number from a card row"""
 
         result = self.card
         i = 0
@@ -24,7 +24,7 @@ class Card:
         return result
 
     def cardNumbers(self):
-        "Returns a list with the numbers that are being matched with the winning numbers of the card"
+        """Returns a list with the numbers that are being matched with the winning numbers of the card"""
 
         numbers = self.cardRemover()
         i = 0
@@ -43,7 +43,7 @@ class Card:
         return [number for number in numbers if number != " "]
     
     def winningNumbers(self):
-        "Returns a list with the winning numbers of the card"
+        """Returns a list with the winning numbers of the card"""
 
         numbers = self.cardRemover()
         i = 0
@@ -63,7 +63,7 @@ class Card:
         return [number for number in numbers if number != " "]
     
     def cardPoints(self):
-        "Counts the amount of card numbers that match the winning numbers"
+        """Counts the amount of card numbers that match the winning numbers"""
 
         points = 0
         for number in self.cardNumbers():
@@ -76,7 +76,7 @@ class Card:
         return points
     
     def cardStats(self):
-        "Gives information about a given card by running the members of Card"
+        """Gives information about a given card by running the members of Card"""
 
         print(self.card)
         print(f"Card numbers: {self.cardNumbers()}")
