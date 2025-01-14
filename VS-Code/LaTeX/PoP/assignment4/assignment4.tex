@@ -220,43 +220,27 @@ Kun den sidste input forårsager en specification violation.
 \subsection{Explain the role of all variables in your program, using the role of variables framework introduced in PoP.}
 
 \subsubsection*{Fixed Value}
-    \begin{itemize}
-        \item cardNumber: Denne variabel bruges til at holde det aktuelle kortnummer. Selvom værdien ændres i løbet af programmet, har den en fast opdateringslogik (inkrementering med 1).
-    \end{itemize}
+cardRows er konstant, da det indeholder alle kortdata, som er læst fra en fil, og ændres ikke under programudførelse.\\
+cardNumber bruges til at holde det aktuelle kortnummer. Selvom værdien ændres i løbet af programmet opdateres den med det samme (inkrementering med 1).
 
 \subsubsection*{Stepper}
-    \begin{itemize}
-        \item 
-    \end{itemize}
-
-\subsubsection*{Walker}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+"i" Bruges i flere loops til at iterere gennem elementer i lister, eksempelvis i cardRemover, cardNumbers og winningNumbers.
 
 \subsubsection*{Most Recent Holder}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+"result" holder den nuværende værdi af kortdata under iterering i cardRemover.\\
+head og tail holder starten og resten af listen, der bliver itereret i cardRemover.
 
 \subsubsection*{Most Wanted Holder}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+points holder den aktuelle score, der matches med kortets winningNumbers.
 
 \subsubsection*{Container}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+numbers manipulerer lister af tal fra kortdata i cardNumbers og winningNumbers.
 
 \subsubsection*{Organizer}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+numbers bruges også til at omskrive talene i methodsne.
 
 \subsubsection*{Temporary}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+head og tail bruges kun midlertidigt i cardRemover til at ændre kortdata.\\
+result holder midlertidigt det ændrede kort i cardRemover.
 
 \end{document}
