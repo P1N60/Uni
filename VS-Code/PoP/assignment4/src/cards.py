@@ -110,6 +110,7 @@ class Card:
                         points = points * 2
         return points
     
+    # I know this mixes computations and actions, but I thought it was usefull
     def cardStats(self):
         """
         Gives information about a given card by running the members of Card.
@@ -130,3 +131,10 @@ cardNumber = 1
 for card in cardRows:
     print(f"Card {cardNumber}: {Card(card).cardPoints()} points")
     cardNumber += 1
+
+# Test cases
+#print(Card("Card   7: 51 64 21 49 30 93 60  4 10 44 |").cardStats()) # No winning numbers
+#print(Card("Card   8:  | 58 64 83 41 69 63 11 30 73 28 75 87 76 15  6  2 10 51 20 47 82 48 61 46 53").cardStats()) # No card numbers numbers
+#print(Card("Card   9:  | ").cardStats()) # Only vertical bar
+#print(Card("Card   10000: 49 98 13  3 61 66 16 46 22 44 | 58 26 35 75 96 64 18  9 92 45 94 67 49 89 84 20 48 39 43 38 55 90  6 69 30").cardStats()) # Large card index
+#print(Card("Card   9: ").cardStats()) # Empty card

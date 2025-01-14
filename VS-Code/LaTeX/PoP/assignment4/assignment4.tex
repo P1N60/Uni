@@ -36,7 +36,7 @@ Explain what it is using the definitions given in PoP.
 Illustrate the role data types play when representing data in Python, using examples from the thursday worksheets in week 13, 14 or 15.}
 
 En datatype er en form for struktur, som bestemmer hvordan data skal repræsenteres.\\
-Disse strukturer har begrænsninger for, hvordan deres data kan defineres.\\
+Disse strukturer har begrænsninger for, hvordan deres data kan defineres.
 \begin{lstlisting}
 class Repeater:
     "Creates a list with 'num' elements of value: 'input'"
@@ -76,7 +76,7 @@ Explain in detail how the different representations impact the canExtendColour f
 Farver kan repræsenteres som strings, hvor hver farve er en unik strings, eksempelvis: "rød", "grøn", og "blå".
 Signaturen forbliver:
 \begin{lstlisting}
-    canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) -> bool
+canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) -> bool
 \end{lstlisting}
 Funktionens body kræver ingen ændringer, da Colour allerede er en liste af strings.
 
@@ -192,9 +192,9 @@ Follow Ken's method and give the specification of each function that you define 
 Programmet bør kunne læse txt-filen "cards.txt" i mappen "data", beregne antallet af points for hvert card, og write resultatet til terminalen.\\
 Eksempler på inputs og tilsvarende outputs kunne være dem som er givet i opgaven:
 \begin{lstlisting}
-    Card 1: 41 48 83 86 17 | 83 86 6 31 17 9 48 53 # 8 Points
-    Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19 # 2 Points
-    Card 3: 31 18 13 56 72 | 74 77 10 23 35 67 36 11 # 0 Points
+Card 1: 41 48 83 86 17 | 83 86 6 31 17 9 48 53 # 8 Points
+Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19 # 2 Points
+Card 3: 31 18 13 56 72 | 74 77 10 23 35 67 36 11 # 0 Points
 \end{lstlisting} 
 Jeg har valgt, at definere en class "Card", der indtager en tekst-række som input (på den måde vist i eksempel inputsne).\\
 Class'en har nogle members, der behandler data'en, og omskriver det på en måde, så vi kan tjekke, om værdierne af kortet matche vinderværdierne.\\
@@ -207,9 +207,56 @@ Hvis jeg havde benyttet flere classes, ville object-orienteret programmering fyl
 
 \subsection{Explain how you test your program.}
 
-En af mine members hedder "cardStats". Denne member tager et kort, og viser resultatet af de fleste andre members. Dette gjorde jeg, fordi jeg så selv kunne regne efter, om værdierne stemte overens med hvad, der blev printet.
+En af mine members hedder "cardStats". Denne member tager et kort, og viser resultatet af de fleste andre members. Jeg valgte at lave denne member, da jeg så kunne fodre den nogle inputs, og se om/hvor der sker errors.
+\begin{lstlisting}
+print(Card("Card   7: 51 64 21 49 30 93 60  4 10 44 |").cardStats()) # No winning numbers
+print(Card("Card   8:  | 58 64 83 41 69 63 11 30 73 28 75 87 76 15  6  2 10 51 20 47 82 48 61 46 53").cardStats()) # No card numbers numbers
+print(Card("Card   9:  | ").cardStats()) # Only vertical bar
+print(Card("Card   10000: 49 98 13  3 61 66 16 46 22 44 | 58 26 35 75 96 64 18  9 92 45 94 67 49 89 84 20 48 39 43 38 55 90  6 69 30").cardStats()) # Large card index
+print(Card("Card   9: ").cardStats()) # Empty card
+\end{lstlisting}
+Kun den sidste input forårsager en specification violation. 
 
 \subsection{Explain the role of all variables in your program, using the role of variables framework introduced in PoP.}
 
-\end{document}
+\subsubsection*{Fixed Value}
+    \begin{itemize}
+        \item cardNumber: Denne variabel bruges til at holde det aktuelle kortnummer. Selvom værdien ændres i løbet af programmet, har den en fast opdateringslogik (inkrementering med 1).
+    \end{itemize}
 
+\subsubsection*{Stepper}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\subsubsection*{Walker}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\subsubsection*{Most Recent Holder}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\subsubsection*{Most Wanted Holder}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\subsubsection*{Container}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\subsubsection*{Organizer}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\subsubsection*{Temporary}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\end{document}
