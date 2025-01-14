@@ -1,6 +1,13 @@
 def lineReader(path):
-    """Reads every line of a txt-file, and stores each row as a list"""
+    """
+    Reads every line of a txt-file, and stores each row as a list.
+    
+    Inputs:
+        path to file.
 
+    Outputs:
+        list[str]: with each row in the txt-file as a string.
+    """
     with open(path, 'r') as file:
         lines = file.readlines()
     return [line.strip() for line in lines]
@@ -12,8 +19,15 @@ class Card:
         self.card = card
     
     def cardRemover(self):
-        """Removes the word 'Card' and the card number from a card row"""
+        """
+        Removes the word 'Card' and the card number from a card row.
+        
+        Inputs: 
+            card row as a string.
 
+        Outputs:
+            same card row in a string without 'Card num:'.
+        """
         result = self.card
         i = 0
         while i <= 9:
@@ -24,8 +38,15 @@ class Card:
         return result
 
     def cardNumbers(self):
-        """Returns a list with the numbers that are being matched with the winning numbers of the card"""
+        """
+        Returns a list with the numbers that are being matched with the winning numbers of the card.
+        
+        Inputs:
+            card row containing just the card numbers, vertical bar and the winning numbers as a list[str].
 
+        Outputs:
+            same card row but only the card numbers as a string.
+        """
         numbers = self.cardRemover()
         i = 0
         # Adds numbers with multiple digits to the same element of the list
@@ -43,8 +64,15 @@ class Card:
         return [number for number in numbers if number != " "]
     
     def winningNumbers(self):
-        """Returns a list with the winning numbers of the card"""
+        """
+        Returns a list with the winning numbers of the card.
+        
+        Inputs:
+            card row containing just the card numbers, vertical bar and the winning numbers in a string.
 
+        Outputs:
+            same card row, but only containing the winning numbers as a list[str].  
+        """
         numbers = self.cardRemover()
         i = 0
         # Get the index of the "|"
@@ -63,8 +91,15 @@ class Card:
         return [number for number in numbers if number != " "]
     
     def cardPoints(self):
-        """Counts the amount of card numbers that match the winning numbers"""
-
+        """
+        Counts the amount of card numbers that match the winning numbers
+        
+        Inputs: 
+            card row as a str.
+        
+        Outputs:
+            int: with the amount of points that the card is worth.
+        """
         points = 0
         for number in self.cardNumbers():
             for winningNum in self.winningNumbers():
@@ -76,15 +111,22 @@ class Card:
         return points
     
     def cardStats(self):
-        """Gives information about a given card by running the members of Card"""
-
+        """
+        Gives information about a given card by running the members of Card.
+        
+        Inputs:
+            str: card row.
+        
+        Outputs:
+            prints the card row, result of cardNumbers, winningNumbers and cardPoints on the given card row.
+        """
         print(self.card)
         print(f"Card numbers: {self.cardNumbers()}")
         print(f"Winning numbers: {self.winningNumbers()}")
         print(f"Points: {self.cardPoints()}")
 
+# Print the point-amount for each card
 cardNumber = 1
-
 for card in cardRows:
     print(f"Card {cardNumber}: {Card(card).cardPoints()} points")
     cardNumber += 1

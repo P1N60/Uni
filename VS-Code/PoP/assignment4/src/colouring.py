@@ -1,4 +1,4 @@
-# Ved ikke om dette er rigtigt defineret
+# Not sure if this is correct
 Country = str
 NeighbourRelation = list[tuple[Country, Country]]
 Colour = list[Country]

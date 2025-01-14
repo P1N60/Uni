@@ -1,15 +1,27 @@
 def lineReader(path):
-    """Reads every line of a txt-file, and stores each row as a list"""
+    """
+    Reads every line of a txt-file, and stores each row as a list.
+    
+    Inputs:
+        path to file.
 
+    Outputs:
+        list[str]: with each row in the txt-file as a string.
+    """
     with open(path, 'r') as file:
         lines = file.readlines()
     return [line.strip() for line in lines]
 
-rows = lineReader("../data/diku.txt")
+def rowsToColumns(rows):
+    """
+    Converts list of letters in rows to list of letters in columns.
+    
+    Inputs:
+        list[str]: of rows of letters.
 
-def rowsToColumns():
-    """Converts list of letters in rows to list of letters in columns"""
-
+    Outputs:
+        list[str]: of columns of letters.
+    """
     result = []
     i = 0
     for row in rows:
@@ -20,11 +32,16 @@ def rowsToColumns():
         i += 1
     return result
 
-columns = rowsToColumns()
-
-def rowsToDiagonals():
-    """Converts list of letters in rows to list of letters in diagonals"""
-
+def rowsToDiagonals(rows):
+    """
+    Converts list of letters in rows to list of letters in diagonals.
+    
+    Inputs:
+        list[str]: with rows of letters.
+    
+    Outputs:
+        list[str]: with diagonals of letters.
+    """
     # Diagonal from right to left
     result = []
     j = 0
@@ -50,20 +67,42 @@ def rowsToDiagonals():
         j += 1
     return result
 
-diagonals = rowsToDiagonals()
+def dikuCounter(rows):
+    """
+    Counts the amount of "DIKU" forwards, backwards, vertically, horizontally and diagonally.
 
-# Count all points
-dikuCount = 0
-for row in rows:
-    # In rows as normal and backwards
-    dikuCount += row.count("DIKU") + row.count("UKID")
+    Inputs:
+        list[str]: with letters.
+    
+    Outputs:
+        int: with the amount of "DIKU" present.
+    """
+    dikuCount = 0
+    for row in rows:
+        # In rows as normal and backwards
+        dikuCount += row.count("DIKU") + row.count("UKID")
 
-for column in columns:
-    # In columns as normal and backwards
-    dikuCount += column.count("DIKU") + column.count("UKID")
+    columns = rowsToColumns(rows)
+    for column in columns:
+        # In columns as normal and backwards
+        dikuCount += column.count("DIKU") + column.count("UKID")
 
-for diagonal in diagonals:
-    # In diagonals as normal and backwards
-    dikuCount += diagonal.count("DIKU") + diagonal.count("UKID")
+    diagonals = rowsToDiagonals(rows)
+    for diagonal in diagonals:
+        # In diagonals as normal and backwards
+        dikuCount += diagonal.count("DIKU") + diagonal.count("UKID")
+    return dikuCount
 
-print(dikuCount)
+print(dikuCounter(lineReader("../data/diku.txt")))
+
+# Test cases
+#print(dikuCounter([]))
+#print(dikuCounter(
+#    [
+#        "DDKUD",
+#        "IIKUD",
+#        "IDKUD",
+#        "IDKUD",
+#        "IDKUD"
+#    ]))
+#print(dikuCounter([" "," "," ",]))
