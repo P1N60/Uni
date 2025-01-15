@@ -21,17 +21,17 @@ PoP Assignment 4}
 % Question 1 - (max 1/2 page)
 \section{Question 1}
 
-\subsection{Give a list of the external sources you used during the assignment and how you used them.
+\subsection[External sources]{Give a list of the external sources you used during the assignment and how you used them.
 If you use a generative AI tool (e.g., copilot, chatGPT, AITutor, \ldots) you should keep a log of all the prompts you use.}
 
 Alle mine promts og den generede kode kan findes i "promts.txt".\\
-Jeg har benyttet ChatGPT4o til at opskrive type definitions'ne i "colouring.py," da vi ikke havde lært, at lave ADTs i python til forelæsningen.
-
+Jeg har benyttet ChatGPT4o til at opskrive type definitions'ne i "colouring.py," da jeg havde glemt hvordan dette bør gøres i python.\\
+Derudover har jeg brugt Claude 3.5 Sonnet til at forklare hvad mine inputs og outputs i "colouring.py" har af betydning. Dette har jeg brugt til at lave mine specifications for funktionerne i "colouring.py".
 
 % Question 2 - (max 4 pages)
 \section{Question 2}
 
-\subsection{What is a data type?\\
+\subsection[What is a data type?]{What is a data type?\\
 Explain what it is using the definitions given in PoP.
 Illustrate the role data types play when representing data in Python, using examples from the thursday worksheets in week 13, 14 or 15.}
 
@@ -64,10 +64,11 @@ Creates a list with 'num' elements of value: 'input'
 [20, 20, 20, 20, 20]
 \end{lstlisting}
 I det viste kode eksempel fra torsdags worksheet i uge 15, har jeg eksempelvis brugt den datatype, der kaldes for 'int', hvilket i python er int ræprsenteret som 32-bit heltal.\\
-I mange tilfælde kan sådanne datatyper ikke interagere med hinanden, uden at blive konverteret til en af samme type først.
+Vi ser også, at der er angivet en kort docstring, som beskriver funktionens specification. Dette er af typen 'string', og tillader alle tegn, dog skal dette angives i citationstegn, for at markere det som en string.\\
+I mange tilfælde kan sådanne datatyper ikke interagere med hinanden, uden at blive konverteret til en af samme type først. Dette håndteres dog automatisk i python.
 
 
-\subsection{Representing colours\\
+\subsection[Representing colours]{Representing colours\\
 Consider the colouring problem that Ken introduced in class.
 In the context of this problem, describe three possible way to represent colour in Python.
 Explain in detail how the different representations impact the canExtendColour function (both its signature and its body).}
@@ -98,7 +99,7 @@ canExtendColour(nr: NeighbourRelation, country1: Country, colour: list[int]) -> 
 hvor Colour er en liste med heltal.\\
 Funktionens body skal opdateres til at sammenligne heltal i stedet for strings.
 
-\subsection{URepresenting NeighbourRelation\\
+\subsection[Representing NeighbourRelation]{Representing NeighbourRelation\\
 Consider the colouring problem that Ken introduced in class.
 In Ken's solution, the type NeighbourRelation is a list of pairs of Countries.
 A list of pairs is a way to represent a graph (each pair represents an edge between the components of the pair that are vertices).
@@ -120,13 +121,13 @@ print(nr)
 \end{lstlisting}
 
 
-\subsection{Colouring problem\\
+\subsection[Colouring problem]{Colouring problem\\
 Give your solution to the colouring problem in Python. For each function, describe its specification as a docstring.}
 
 Omskrivningen af funktionerne samt deres specifications kan findes i "../src/colouring.py"
 
 % Question 3 - (max 2 1/2 pages)
-\section{Question 3\\
+\section[Question 3 - DIKU]{Question 3\\
 Consider a grid of the following form, where DIKU is written horizontally, vertically, diagonally, backwards, or even overlapping other words:}
 \begin{itemize}
     \item[] \textbf{\\
@@ -137,7 +138,7 @@ Consider a grid of the following form, where DIKU is written horizontally, verti
     \lstinline{.D....}}
 \end{itemize}
 
-\subsection{Write a program that finds all the instances of DIKU in this file Download this file.
+\subsection[Write a program that finds all the instances of DIKU]{Write a program that finds all the instances of DIKU in this file Download this file.
 Follow Ken's method and give the specification of each function that you define as a docstring.}
 \textbf{
 \begin{center}
@@ -155,25 +156,29 @@ Follow Ken's method and give the specification of each function that you define 
 }
 
 Programmet bør kunne læse en given teks-fil for bogstaver, og beregne mængden af "DIKU" både horisontalt, vertikalt og baglæns. Herefter skal programmet printe mængden af "DIKU" til terminalen.\\
-Eksempelvis skal programmet kunne læse bogstaverne:\\
-\begin{center}
-    \textbf{IIIUDDIKUI}
-\end{center}
+Eksempelvis skal programmet kunne læse bogstaverne:
+\begin{lstlisting}
+DDKUD
+IIKUD
+IDKUD
+IDKUD
+IDKUD
+\end{lstlisting}
 og beregne mængden af "DIKU" til 1.\\
 Ideelt bør programmet læse disse rækker af bogstaver som string elementer i en liste, som kan gives til en funktion, der kan tælle mængden af "DIKU".\\
 
-\subsection{What programming paradigm dominates in your program. Why?}
+\subsection[What programming paradigm dominates in your program]{What programming paradigm dominates in your program. Why?}
 
 Funktionel programmering fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne og sortere dem i forskellige lister.\\
 Imperativ programmering bruges til at tælle mængden af "DIKU" i hvert af disse lister.
 
-\subsection{Explain how you test your program.}
+\subsection[Explain how you test your program]{Explain how you test your program.}
 
 Neders i min "diku.py" fil, har jeg skrevet nogle test cases, der gør brug af input partitioning, for at finde inputs, der udløser en specification violation.\\
 Jeg fandt bland andet en violation, når man giver en liste, der ikke har samme antal elementer, som elementernes string længde.
 
 % Question 4 - (max 3 pages)
-\section{Question 4\\
+\section[Question 4 - Cards]{Question 4\\
 Consider the following problem involving a collection of cards.
 Each card has two lists of numbers separated by a vertical bar (|): a list of winning numbers and then a list of numbers you have.
 The first winning number you have is worth one point. Every other winning number doubles your number of points.
@@ -186,7 +191,7 @@ For example:}
     Card 1 is worth 8 points. Card 2 is worth 2 points. Card 3 is worth no points.}
 \end{itemize}
 
-\subsection{Write a program that counts the total number of points for all the cards in "cards.txt".
+\subsection[Write a program that counts the total number of points for all the cards]{Write a program that counts the total number of points for all the cards in "cards.txt".
 Follow Ken's method and give the specification of each function that you define as a docstring.}
 
 Programmet bør kunne læse txt-filen "cards.txt" i mappen "data", beregne antallet af points for hvert card, og write resultatet til terminalen.\\
@@ -200,12 +205,12 @@ Jeg har valgt, at definere en class "Card", der indtager en tekst-række som inp
 Class'en har nogle members, der behandler data'en, og omskriver det på en måde, så vi kan tjekke, om værdierne af kortet matche vinderværdierne.\\
 Antallet af points beregnes, og printes til terminalen for hvert kort.
 
-\subsection{What programming paradigm dominates in your program. Why?}
+\subsection[What programming paradigm dominates in your program]{What programming paradigm dominates in your program. Why?}
 
 Jeg vil sige, at funktionel programmering domminerer i mit program, da jeg sagtens kunne have undgået, at lave funktionerne i mit object Card.\\
 Hvis jeg havde benyttet flere classes, ville object-orienteret programmering fylde mere. 
 
-\subsection{Explain how you test your program.}
+\subsection[Explain how you test your program]{Explain how you test your program.}
 
 En af mine members hedder "cardStats". Denne member tager et kort, og viser resultatet af de fleste andre members. Jeg valgte at lave denne member, da jeg så kunne fodre den nogle inputs, og se om/hvor der sker errors.
 \begin{lstlisting}
@@ -217,10 +222,10 @@ print(Card("Card   9: ").cardStats()) # Empty card
 \end{lstlisting}
 Kun den sidste input forårsager en specification violation. 
 
-\subsection{Explain the role of all variables in your program, using the role of variables framework introduced in PoP.}
+\subsection[Explain the role of all variables in your program]{Explain the role of all variables in your program, using the role of variables framework introduced in PoP.}
 
 \subsubsection*{Fixed Value}
-cardRows er konstant, da det indeholder alle kortdata, som er læst fra en fil, og ændres ikke under programudførelse.\\
+cardRows er konstant, da det indeholder alle kortdata, som er læst fra en fil, og ændres ikke.\\
 cardNumber bruges til at holde det aktuelle kortnummer. Selvom værdien ændres i løbet af programmet opdateres den med det samme (inkrementering med 1).
 
 \subsubsection*{Stepper}
@@ -234,7 +239,7 @@ head og tail holder starten og resten af listen, der bliver itereret i cardRemov
 points holder den aktuelle score, der matches med kortets winningNumbers.
 
 \subsubsection*{Container}
-numbers manipulerer lister af tal fra kortdata i cardNumbers og winningNumbers.
+numbers ændrer lister af tal fra kortdata i cardNumbers og winningNumbers.
 
 \subsubsection*{Organizer}
 numbers bruges også til at omskrive talene i methodsne.

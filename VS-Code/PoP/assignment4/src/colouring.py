@@ -42,24 +42,51 @@ def involved():
 
 # val isNieghbour: NeighbourRelation -> Country -> Country -> bool
 def isNeighbour(nr: NeighbourRelation, country1: Country, country2: Country) -> bool:
-    """Checks whether the given countries are a part of a NeighbourRelation"""
-
+    """
+    Checks if two countries are neighbors in the given neighbor relation.
+    
+    Inputs:
+        nr: NeighbourRelation: list of tuples representing neighboring countries.
+        country1: Country: first country to check.
+        country2: Country: second country to check.
+    
+    Outputs: 
+        bool: True if the countries are neighbors, False otherwise.
+    """
     return any(pair == (country1, country2) or pair == (country2, country1) for pair in nr)
 
 # canExtendColour: NeighbourRelation -> Country -> Colour -> bool
 #    Example:
 #      canExtendColour simple "da" ["de"] ===> false
 def canExtendColour(nr: NeighbourRelation, country1: Country, colour: Colour) -> bool:
-    """  """
-
+    """
+    Checks if a country can be added to an existing color group without violating the constraint that neighboring countries cannot share the same color.
+    
+    Inputs:
+        nr: NeighbourRelation: list of tuples representing neighboring countries.
+        country1: Country: country to potentially add to the color group.
+        colour: Colour: list of countries already assigned this color.
+    
+    Outputs: 
+        bool: True if the country can be added to the color group, False otherwise.
+    """
     return all(not isNeighbour(nr, country1, country2) for country2 in colour)
 
 # giveColour : NR -> Country -> Colouring -> Colouring
 
 # giveColour simple "da" [["de","se"]; ["no"]] ===> [["de","se"]; ["no"]; ["da"]]
 def giveColour(nr: NeighbourRelation, country: Country, colouring: Colouring) -> Colouring:
-    """  """
-
+    """
+    Assigns a country to an appropriate color group in the existing coloring, creating a new color group if necessary.
+    
+    Inputs:
+        nr: NeighbourRelation: list of tuples representing neighboring countries.
+        country: Country: country to be assigned a color.
+        colouring: Colouring: existing list of color groups (each group is a list of countries).
+    
+    Outputs: 
+        Colouring: updated list of color groups including the new country.
+    """
     if not colouring:
         return [[country]]
     
@@ -74,23 +101,38 @@ def giveColour(nr: NeighbourRelation, country: Country, colouring: Colouring) ->
 #        colourContries: (string * string) list -> (string * rgb) list)
 # val colourContries: NeighbourRelation -> Colouring
 def countries(nr: NeighbourRelation) -> Colour:
-    """  """
-
+    """
+    Extracts all unique countries from a neighbor relation.
+    
+    Inputs:
+        nr: NeighbourRelation: list of tuples representing neighboring countries
+    
+    Outputs: 
+        Colour: set of all countries mentioned in the neighbor relation.
+    """
     return ({c for pair in nr for c in pair})
 
 def colourCountries(nr: NeighbourRelation) -> Colouring:
-    """  """
-
+    """
+    Creates a valid coloring for all countries in the neighbor relation, ensuring that no neighboring countries share the same color.
+    
+    Inputs:
+        nr: NeighbourRelation: list of tuples representing neighboring countries.
+    
+    Outputs: 
+        Colouring: list of color groups, where each group is a list of countries that can safely share the same color.
+    """
     cs = countries(nr)
     colouring = []
     for c in cs:
         colouring = giveColour(nr, c, colouring)
     return colouring
 
-# Et par eksempler på brug
-print(colourCountries(simple()))
-print(colourCountries(involved()))
+# A few examples
+#print(colourCountries(simple()))
+#print(colourCountries(involved()))
 
+# Resursive datatype
 class NeighbourRelation:
     def __init__(self, country1: Country, country2: Country, rest=None):
         self.pair = (country1, country2)
@@ -100,4 +142,4 @@ class NeighbourRelation:
         return f"{self.pair}, {self.rest}"
     
 nr = NeighbourRelation("de", "da", NeighbourRelation("da", "se", NeighbourRelation("se", "no")))
-print(nr)
+#print(nr)
