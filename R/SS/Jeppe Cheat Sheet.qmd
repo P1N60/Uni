@@ -1,0 +1,238 @@
+---
+  title: "R-guide"
+format: html
+---
+
+\# R Guide
+
+Denne guide gennemgår, hvordan man analyserer data i R ved hjælp af t-tests og lineære regressioner.
+
+### Tegne i opgave 1
+
+Først indlæses den relevante pakke og data:
+
+``` r
+plot_region_with_bounds <- function(x_min, 
+                                  x_max, 
+                                  y_min_func, 
+                                  y_max_func, 
+                                  x_points = 100, 
+                                  region_color = rgb(0, 0, 1, 0.3)) {
+# Define x values
+x_vals <- seq(x_min, x_max, length.out = x_points)
+
+# Calculate y_min and y_max values
+y_min_vals <- sapply(x_vals, y_min_func)  # Ensure output matches input length
+y_max_vals <- sapply(x_vals, y_max_func)
+
+# Check that y_min_vals and y_max_vals lengths match x_vals
+if (length(y_min_vals) != length(x_vals) || length(y_max_vals) != length(x_vals)) {
+  stop("The lengths of y_min or y_max do not match the length of x_vals.")
+}
+
+# Create an empty plot with appropriate limits
+plot(0, 0, type = "n", xlim = c(x_min, x_max), ylim = c(0, max(y_max_vals)), 
+     xlab = "x", ylab = "y", main = "Region A: y_min < y < y_max")
+
+# Draw the curves y_min(x) and y_max(x) using lines
+lines(x_vals, y_min_vals, col = "red", lwd = 2, lty = 2)
+lines(x_vals, y_max_vals, col = "blue", lwd = 2)
+
+# Shade the region between y_min and y_max
+polygon(c(x_vals, rev(x_vals)), c(y_max_vals, rev(y_min_vals)), 
+        col = region_color, border = NA)
+
+
+}
+
+# Call the function with specific bounds
+plot_region_with_bounds(
+x_min = 0, 
+x_max = 1, 
+y_min_func = function(x) 0, 
+y_max_func = function(x) sqrt(x)
+)
+```
+
+### Skitser mængden {(x, y) ∈R2 \|y \> 2x}∩A som opgave
+
+``` r
+plot_intersection <- function(x_min, 
+                              x_max, 
+                              y_min_func, 
+                              y_max_func, 
+                              g_func, 
+                              x_points = 100, 
+                              region_color = rgb(0, 0, 1, 0.3), 
+                              intersection_color = rgb(1, 0, 0, 0.3)) {
+  # Generate x values
+  x_vals <- seq(x_min, x_max, length.out = x_points)
+  
+  # Calculate y_min, y_max, and g(x) values
+  y_min_vals <- sapply(x_vals, y_min_func)
+  y_max_vals <- sapply(x_vals, y_max_func)
+  g_vals <- sapply(x_vals, g_func)
+  
+  # Create an empty plot
+  plot(0, 0, type = "n", xlim = c(x_min, x_max), 
+       ylim = c(0, max(c(y_max_vals, g_vals))), 
+       xlab = "x", ylab = "y", 
+       main = "Intersection: A ∩ B")
+  
+  # Draw the boundaries of A
+  lines(x_vals, y_min_vals, col = "blue", lwd = 2, lty = 2)  # y_min
+  lines(x_vals, y_max_vals, col = "blue", lwd = 2)           # y_max
+  
+  # Draw the boundary of B (y > g(x))
+  lines(x_vals, g_vals, col = "red", lwd = 2)
+  
+  # Fill region A
+  polygon(c(x_vals, rev(x_vals)), c(y_max_vals, rev(y_min_vals)), 
+          col = region_color, border = NA)
+  
+  # Highlight the intersection (A ∩ B)
+  intersection_y_min <- pmax(y_min_vals, g_vals)
+  intersection_y_max <- pmin(y_max_vals, g_vals)
+  valid_indices <- which(intersection_y_min <= intersection_y_max)
+  
+  polygon(c(x_vals[valid_indices], rev(x_vals[valid_indices])), 
+          c(intersection_y_max[valid_indices], 
+            rev(intersection_y_min[valid_indices])), 
+          col = intersection_color, border = NA)
+  
+  # Add a legend
+  legend("topleft", legend = c("A: y_min, y_max", "B: y > g(x)", "A ∩ B"), 
+         col = c("blue", "red", "red"), lty = c(1, 1, NA), 
+         lwd = c(2, 2, NA), pch = c(NA, NA, 15), pt.cex = 2, 
+         bg = "white", fill = c(NA, NA, intersection_color))
+}
+
+
+# Example 3: A = {0 < x < 1, 0 < y < x^2}, B = {y > 2x}
+plot_intersection(
+  x_min = 0, 
+  x_max = 1, 
+  y_min_func = function(x) 0, 
+  y_max_func = function(x) sqrt(x), 
+  g_func = function(x) x^2
+)
+```
+
+## Indlæsning af data
+
+Først indlæses den relevante pakke og data:
+
+``` r
+library(MASS)
+data("birthwt")  # Indlæs data fra MASS-pakken
+```
+
+### Beregning af median og varians
+
+Median og varians kan beregnes som følgende:
+
+``` r
+median(birthwt$bwt)  # Beregner medianen af fødselsvægten
+var(birthwt$bwt)     # Beregner variansen af fødselsvægten
+```
+
+### T-test
+
+En t-test sammenligner fødselsvægten (`bwt`) mellem rygere og ikke-rygere (`smoke`).
+
+-   **`bwt ~ smoke`**: `bwt` afhænger af `smoke`, dvs. den afhængige variabel (`bwt`) forklares af den uafhængige variabel (`smoke`).
+-   **`var.equal = TRUE`**: Tester under antagelsen om ens varians mellem grupperne.
+
+``` r
+t.test(bwt ~ smoke, data = birthwt, var.equal = TRUE)
+```
+
+### Konfidensinterval for middelværdien
+
+For at finde 95%-konfidensintervallet for middelværdien af fødselsvægten for børn af ikke-rygere (`smoke = 0`):
+
+``` r
+data_no_smoke <- subset(birthwt, smoke == 0)
+t.test(data_no_smoke$bwt, conf.level = 0.95)
+```
+
+### Lineær regressionsmodel
+
+For at analysere sammenhængen mellem variablerne bruger vi en lineær regressionsmodel.
+
+### Modeltilpasning
+
+Tilpasning af en lineær model, hvor `bwt` forklares af `smoke`:
+
+``` r
+lm_model <- lm(bwt ~ smoke, data = birthwt)
+summary(lm_model)
+```
+
+### Residual standard error
+
+I modelopsummeringen (`summary`), kan residual standard error bruges som spredningsestimat (sigma\^2).
+
+### Konfidensinterval for hældning
+
+For at finde konfidensintervallet for hældningen i en lineær regressionsmodel, der analyserer sammenhængen mellem `bwt` og `lwt` (moderens vægt):
+
+``` r
+confint(lm(bwt ~ lwt, data = birthwt))
+```
+
+### Estimat og konfidensinterval for en given værdi
+
+For at estimere og finde 95%-konfidensintervallet for `bwt`, når moderens vægt (`lwt`) er 160:
+
+``` r
+predict(lm(bwt ~ lwt, data = birthwt), newdata = data.frame(lwt = 160), interval = "confidence")
+```
+
+### Et del-datasæt, som består af datalinjer fra et given værdi og lav en normalfordelt stikprøve for at bestemme 95% interval
+
+Lav et del-datasæt af hills, der kun består af datalinjer fra løb på 6 engelske mil, dvs. dist=6. Brug modellen for en enkelt normalfordelt stikprøve til at bestemme et 95% konfidensinterval for den forventede vindertid for tilsvarende løb med en distance på 6 engelske miles
+
+``` r
+hills6 <- subset(hills, dist == 6)
+t.test(hills6$time)
+```
+
+### For et del-datasæt med en given prædiktorværdi, brug en lineær regressionsmodel til at forudsige responsvariablen og beregn et 95% konfidensinterval for den forudsagte værdi.
+
+Efter indsamlingen af datasættet brugte lægerne på Baystate Medical Center resultaterne fra den lineære regression til at forudsige et barns fødselsvægt for en kvinde med lwt=140. Angiv et interval, som med 95% sandsynlighed vil indeholde barnets fødselsvægt.
+
+``` r
+predict(lm(bwt~lwt,data=birthwt),newdata=data.frame(lwt=140),interval="prediction")
+```
+
+### Tegne en lineær regression
+
+Udfør modelkontrol for den lineære regressionsmodel.
+
+``` r
+plot(fitted(lm_model), rstandard(lm_model))
+abline(h=0, lty=2)
+qqnorm(rstandard(lm_model))
+abline(0,1,lty=2)
+```
+
+### Tegne et residualplot af en lineær regression
+
+Udfør modelkontrol for den lineære regressionsmodel.
+
+``` r
+plot(fitted(lm_model),residuals(lm_model))
+abline(h=0,lty=2)
+```
+
+### Tegne et QQ-plot
+
+Tegne et QQplot
+
+``` r
+qqnorm(data$forskel)
+qqline(data$forskel, col = "red", lwd = 2, lty=2) 
+```
+
+### 

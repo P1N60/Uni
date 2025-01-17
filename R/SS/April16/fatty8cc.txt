@@ -1,0 +1,17 @@
+type absorp
+creamCheese 110.25
+creamCheese 122.474
+creamCheese 131.156
+creamCheese 132.335
+creamCheese 137.661
+creamCheese 169.539
+creamCheese 182.707
+creamCheese 238.072
+cream 159.806
+cream 176.206
+cream 188.506
+cream 189.015
+cream 203.87
+cream 209.509
+cream 247.675
+cream 270.16
