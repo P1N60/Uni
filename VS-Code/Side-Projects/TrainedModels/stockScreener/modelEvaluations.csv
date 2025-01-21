@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:88cd540ffe9432730b7172afae663ebe9d13448941ed44e5bffb0a692fcf19ed
-size 255
+Model Name,Timestamp,MAE,RMSE,R2,Training Size,Test Size,Epochs,Cat Names,Cont Names,Unnamed: 10
+stockScreenerV1.0,2025-01-21 16:17,0.675,1.02,-1.767,400,500,10,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV2.0,2025-01-21 19:37,0.641,0.853,-1.632,10,10,3,"['Industry', 'EV/EBIT_na', 'ROIC_na']","['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV3.0,2025-01-21 19:42,0.293,0.361,-9.707,10,10,3,['Date'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV4.0,2025-01-21 19:57,0.245,0.316,0.042,30,200,3,"['Date', 'EV/EBIT_na', 'ROIC_na']","['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV4.1,2025-01-21 20:34,0.385,0.737,-0.052,60,220,3,"['Date', 'EV/EBIT_na', 'ROIC_na']","['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV5.0,2025-01-21 21:03,0.237,0.302,-0.002,80,220,3,"['Date', 'EV/EBIT_na', 'ROIC_na']","['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
