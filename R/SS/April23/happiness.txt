@@ -1,0 +1,39 @@
+"Country","score","tax","log_GDP_per_capita"
+"Australia",7.09,47,10.82
+"Austria",7.1,55,10.9
+"Belgium",6.86,52.88,10.84
+"Canada",6.96,53.53,10.77
+"Chile",6.33,40,10.11
+"Colombia",5.63,33,9.58
+"Costa Rica",6.61,25,9.95
+"Czechia",6.85,23,10.61
+"Denmark",7.59,55.9,10.96
+"Estonia",6.46,20,10.54
+"Finland",7.8,51.27,10.79
+"France",6.66,55.37,10.7
+"Germany",6.89,47.48,10.88
+"Greece",5.93,44,10.29
+"Hungary",6.04,15,10.42
+"Iceland",7.53,46.25,10.9
+"Ireland",6.91,48,11.53
+"Israel",7.47,50,10.64
+"Italy",6.4,47.23,10.63
+"Japan",6.13,55.94,10.62
+"South Korea",5.95,49.5,10.69
+"Latvia",6.21,31,10.37
+"Lithuania",6.76,32,10.57
+"Luxembourg",7.23,45.78,11.66
+"Mexico",6.33,35,9.85
+"Netherlands",7.4,49.5,10.94
+"New Zealand",7.12,39,10.66
+"Norway",7.32,38.2,11.09
+"Poland",6.26,32,10.45
+"Portugal",5.97,53,10.43
+"Slovakia",6.47,25,10.35
+"Slovenia",6.65,50,10.59
+"Spain",6.44,45.5,10.54
+"Sweden",7.4,52.27,10.88
+"Switzerland",7.24,41.67,11.16
+"Turkiye",4.61,40.76,10.31
+"United Kingdom",6.8,45,10.7
+"United States",6.89,43.65,11.05
