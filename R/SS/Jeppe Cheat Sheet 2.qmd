@@ -1,0 +1,297 @@
+---
+title: "R-guide"
+format: html
+---
+
+R Guide
+
+Denne guide gennemgår, hvordan man analyserer data i R ved hjælp af t-tests, lineære regressioner og sandsynlighedsberegninger. For hver metode beskrives dens formål, eksempler på anvendelse, og hvilken type spørgsmål fra eksamenssæt, metoden kan bruges til.
+
+### Tegne mængder og områder i opgave 1
+
+#### Plot region A
+
+**Beskrivelse**: Dette plot bruges til at visualisere et område defineret af matematiske funktioner og grænser. Det kan bruges til at forstå sammenhænge mellem variable i en todimensionel kontekst.
+
+**Eksempel**: Visualisering af sandsynlighedstætheder i opgaver, hvor funktioner som (p(x, y)) er givet.
+
+``` r
+plot_region_with_bounds <- function(x_min, 
+                                    x_max, 
+                                    y_min_func, 
+                                    y_max_func, 
+                                    x_points = 100, 
+                                    region_color = rgb(0, 0, 1, 0.3)) {
+  x_vals <- seq(x_min, x_max, length.out = x_points)
+  y_min_vals <- sapply(x_vals, y_min_func)
+  y_max_vals <- sapply(x_vals, y_max_func)
+  plot(0, 0, type = "n", xlim = c(x_min, x_max), ylim = c(0, max(y_max_vals)), 
+       xlab = "x", ylab = "y", main = "Region A: y_min < y < y_max")
+  lines(x_vals, y_min_vals, col = "red", lwd = 2, lty = 2)
+  lines(x_vals, y_max_vals, col = "blue", lwd = 2)
+  polygon(c(x_vals, rev(x_vals)), c(y_max_vals, rev(y_min_vals)), 
+          col = region_color, border = NA)
+}
+
+plot_region_with_bounds(
+  x_min = 0, 
+  x_max = 1, 
+  y_min_func = function(x) 0, 
+  y_max_func = function(x) sqrt(x)
+)
+```
+
+#### Plot mængden A ∩ B
+
+**Beskrivelse**: Dette plot bruges til at illustrere overlappet mellem to områder (f.eks. A og B). Det er nyttigt til at forstå komplekse interaktioner.
+
+**Eksempel**: Bruges i opgaver, der kræver visualisering af mængdesnit mellem to sandsynlighedstætheder.
+
+``` r
+plot_intersection <- function(x_min, 
+                              x_max, 
+                              y_min_func, 
+                              y_max_func, 
+                              g_func, 
+                              x_points = 100, 
+                              region_color = rgb(0, 0, 1, 0.3), 
+                              intersection_color = rgb(1, 0, 0, 0.3)) {
+  x_vals <- seq(x_min, x_max, length.out = x_points)
+  y_min_vals <- sapply(x_vals, y_min_func)
+  y_max_vals <- sapply(x_vals, y_max_func)
+  g_vals <- sapply(x_vals, g_func)
+  plot(0, 0, type = "n", xlim = c(x_min, x_max), 
+       ylim = c(0, max(c(y_max_vals, g_vals))), 
+       xlab = "x", ylab = "y", 
+       main = "Intersection: A ∩ B")
+  lines(x_vals, y_min_vals, col = "blue", lwd = 2, lty = 2)
+  lines(x_vals, y_max_vals, col = "blue", lwd = 2)
+  lines(x_vals, g_vals, col = "red", lwd = 2)
+  polygon(c(x_vals, rev(x_vals)), c(y_max_vals, rev(y_min_vals)), 
+          col = region_color, border = NA)
+  intersection_y_min <- pmax(y_min_vals, g_vals)
+  intersection_y_max <- pmin(y_max_vals, g_vals)
+  valid_indices <- which(intersection_y_min <= intersection_y_max)
+  polygon(c(x_vals[valid_indices], rev(x_vals[valid_indices])), 
+          c(intersection_y_max[valid_indices], 
+            rev(intersection_y_min[valid_indices])), 
+          col = intersection_color, border = NA)
+}
+
+plot_intersection(
+  x_min = 0, 
+  x_max = 1, 
+  y_min_func = function(x) 0, 
+  y_max_func = function(x) sqrt(x), 
+  g_func = function(x) 2 * x
+)
+```
+
+### Dataanalyse med R
+
+#### Indlæsning af data
+
+**Beskrivelse**: Indlæsning af datasæt til analyse i R. Datasættet `birthwt` bruges som eksempel, og der importeres data fra en fil ved hjælp af `read.csv`.
+
+``` r
+library(MASS)
+data("birthwt")
+
+cement <- read.csv("~/Desktop/R-kode til eksammensæt/cement.txt", sep = "", header = TRUE)
+str(cement)
+```
+
+#### Beregning af median og varians
+
+**Beskrivelse**: Beregning af centrale tendenser (median, gennemsnit) og spredningsmål (varians, standardafvigelse) for datasættet.
+
+``` r
+median(birthwt$bwt)  # Median
+sd(birthwt$bwt)      # Stikprøvespredning 
+var(birthwt$bwt)     # Varians 
+mean(birthwt$bwt)    # Gennemsnit
+```
+
+#### T-test
+
+**Beskrivelse**: Udførelse af en t-test for at undersøge forskellen mellem to grupper (f.eks. røgende og ikke-røgende mødre).
+
+``` r
+t.test(bwt ~ smoke, data = birthwt, var.equal = TRUE)
+```
+
+#### Konfidensinterval for middelværdi
+
+**Beskrivelse**: Beregning af et 95% konfidensinterval for middelværdien for ikke-røgende mødre.
+
+``` r
+data_no_smoke <- subset(birthwt, smoke == 0)
+t.test(data_no_smoke$bwt, conf.level = 0.95, var.equal = TRUE)
+```
+
+### Finde P-værdi
+
+**Beskrivelse**: Beregning af P-værdi for forskellen mellem to grupper ved hjælp af en t-test.
+
+``` r
+t.test(bwt ~ smoke, data = birthwt, var.equal = TRUE, conf.level = 0.95)
+```
+
+### Lineær regressionsanalyse
+
+**Beskrivelse**: Udfør lineær regression for at modellere sammenhængen mellem afhængige og uafhængige variable.
+
+``` r
+lm_model <- lm(bwt ~ smoke, data = birthwt)
+summary(lm_model, conf.level = 0.95)
+```
+
+**Beskrivelse**: Lav en lineær regression med **score** som responsvariabel og **tax** som forklarende variabel. Angiv et estimat og et 95%-konfidensinterval for hældningen mht. tax, og giv en fortolkning af fortegnet på denne hældning.
+
+``` r
+lm_model <- lm(score ~ tax, data = happiness)
+confint(lm_model)["tax", ]
+coef(lm_model)["tax"]
+
+# returns
+confint(lm_model)["tax", ]
+       2.5 %       97.5 % 
+# 7.466086e-05 3.758214e-02 
+       
+coef(lm_model)["tax"]
+      tax 
+# 0.0188284 
+      
+# Dermed fås estimat β = 0.0188284 med 95pct konfidensinterval [0.00007466; 0.037582]. At β >0 betyder, at modellen prædikterer er der en en større lykke i lande med højere højeste personskatteprocent.
+```
+
+#### Konfidensinterval for hældning
+
+**Beskrivelse**: Beregning af konfidensintervallet for regressionskoefficienterne. Første række er for skæringspunktet ($\alpha$), og anden række er for hældningen ($\beta$).
+
+``` r
+confint(lm_model, conf.level = 0.95)
+```
+
+#### Estimation og prediction
+
+**Beskrivelse**: Estimer middelværdi og 95%-konfidensinterval for den afhængige variabel baseret på en specifik værdi af den uafhængige variabel.
+
+``` r
+predict(lm_model, newdata = data.frame(lwt = 160), interval = "confidence")
+```
+
+**Beskrivelse**: Lav en forudsigelse og beregn 95%-konfidensinterval for den afhængige variabel baseret på en specifik værdi af den uafhængige variabel.
+
+``` r
+predict(lm_model, newdata = data.frame(lwt = 140), interval = "prediction")
+```
+
+#### Ekstraktion af modelkoefficienter
+
+**Beskrivelse**: Ekstrahér regressionskoefficienterne fra modellen.
+
+``` r
+coef(lm_model, conf.level = 0.95)  # Hent koefficienterne fra den lineære model
+```
+
+### Tegne en lineær regression og QQplot
+
+**Beskrivelse**: Visualisering af modelkontrol ved hjælp af residual plots og QQ-plot.
+
+``` r
+plot(fitted(lm_model), rstandard(lm_model))
+abline(h = 0, lty = 2)
+qqnorm(rstandard(lm_model))
+abline(0, 1, lty = 2)
+```
+
+### Bestem et 95% konfidensinterval for en normalfordeling ud fra værdien af gennemsnit og stikprøvespredning
+
+**Beskrivelse**: Beregn et 95% konfidensinterval for middelværdien af en normalfordeling givet gennemsnit og standardafvigelse.
+
+``` r
+n1 <- 500
+s1 <- 0.155 
+m1 <- 3.293
+
+lower <- m1 - qt(0.975, df = n1 - 1) * (s1) / sqrt(n1)
+upper <- m1 + qt(0.975, df = n1 - 1) * (s1) / sqrt(n1)
+c(lower, upper)
+```
+
+### Bestem estimatet for spredningen σ
+
+**Beskrivelse**: Beregn estimatet for spredningen $\sigma$ for to stikprøver med forskellige standardafvigelser og stikprøvestørrelser.
+
+``` r
+n1 <- 500 
+n2 <- 1000 
+n <- n1 + n2 
+m1 <- 3.293 
+m2 <- 3.210
+s1 <- 0.155 
+s2 <- 0.149 
+
+s_xy <- ((n1 - 1) * s1^2 + (n2 - 1) * s2^2) / (n - 2)
+sqrt(s_xy)
+```
+
+### Bestem et 95% konfidensinterval for forskellen af to uafhængige normalfordelinger
+
+**Beskrivelse**: Beregn et 95% konfidensinterval for forskellen mellem middelværdierne af to uafhængige normalfordelinger.
+
+``` r
+s <- sqrt(s_xy)
+SE <- s * sqrt(1 / n1 + 1 / n2)
+lower <- m1 - m2 - qt(0.975, df = n - 2) * SE
+upper <- m1 - m2 + qt(0.975, df = n - 2) * SE
+c(lower, upper)
+```
+
+### Bestemme p-værdien for 2 uafhængige stikprøver
+
+``` r
+n1 <- 152
+n2 <- 174
+m1 <- 3.676
+m2 <- 3.518
+s <- sqrt(0.3251)
+SE <- s * sqrt(1/n1 + 1/n2)
+Tobs <- (m1 - m2) / SE
+p_value <- 2 * pt(-Tobs, df = n1 + n2 - 2)
+c(Tobs, p_value)
+```
+
+### Bestem forskel mellem to punkter ved lineær regression
+
+Den generelle fremgangsmåde til at beregne forskellen mellem to punkter ved hjælp af lineær regression er som følger:
+
+1.  Udfør lineær regression for at finde hældningskoefficienten $\hat{\beta}$.
+2.  Beregn forskellen mellem punkterne med $\Delta Y = \hat{\beta} \cdot \Delta x$.
+
+Matematisk model:\
+- Lineær regressionsligning: $Y = \hat{\alpha} + \hat{\beta} \cdot x$ - Forskel mellem to punkter: $\Delta Y = \hat{\beta} \cdot \Delta x$
+
+R-implementering:
+
+**Eksempel på opgave**
+
+I Danmark og Finland er den højeste personskatteprocent på henholdsvis 55.90% og 51.27%. Brug den lineære regression fra spørgsmål 3.1 til at prædiktere forskellen i lykkescoren mellem Danmark og Finland. Lav også et 95%-konfidensinterval for den prædikterede forskel.
+
+``` r
+# Eksempel
+
+# Datasæt: Fødselsvægt (bwt) og moderens vægt (lwt)
+lm_model <- lm(score ~ tax, data = happiness)
+
+# Estimat for forskel ved lwt = 120 vs 110
+diff_estimat <- (55.90 - 51.27) * coef(lm_model)["tax"]  
+
+# Konfidensinterval for forskel
+konfidensinterval <- (55.90 - 51.27) * confint(lm_model)["tax", ]  
+
+# Resultater
+diff_estimat
+konfidensinterval
+```
