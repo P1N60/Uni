@@ -23,3 +23,5 @@ koef
 # 95%-konfidensinterval: [0.0003456798, 0.1740053171]
 
 # 
+qqnorm(data$score)
+qqnorm(data$tax)

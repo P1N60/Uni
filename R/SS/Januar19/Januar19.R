@@ -5,7 +5,6 @@ mean(sqrt(sin(X)))
 0.04+0.17+0.07+0.13+0.1+0.05+0.08+0.03+0.02+0.01
 
 # opgave 3.1
-setwd("~/Documents/GitHub/R/SS/Januar19")
 data <- filmdata$Ratio
 mean(data)
 sd(data)
@@ -16,6 +15,9 @@ sqrt((0.2434*(1-0.2434))/length((data)))
 # opgave 3.3
 linreg <- lm(LogRevenue ~ LogBudget, data=filmdata)
 summary(linreg)
+
+qqnorm(filmdata$Revenue)
+qqnorm(filmdata$LogBudget)
 
 # opgave 3.4 
 # kan opserveres i summary
