@@ -8,4 +8,5 @@ stockScreenerV5.0,2025-01-21 21:03,0.237,0.302,-0.002,80,74,3,"['Date', 'EV/EBIT
 stockScreenerV5.1,2025-01-22 10:31,0.38,0.556,-0.534,80,74,5,['Date'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
 stockScreenerV5.2,2025-01-22 10:45,0.364,0.571,-0.614,80,157,7,['Date'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
 stockScreenerV5.3,2025-01-22 11:05,0.376,0.576,-0.647,80,152,9,['Date'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
-stockScreenerV5.4,2025-01-22 11:49,0.364,0.508,-0.280,80,163,2,['Date'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV5.4,2025-01-22 11:49,0.364,0.508,-0.28,80,163,2,['Date'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV8.0,2025-01-25 06:59,1.323,1.627,-12.121,30,61,20,['Date'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
