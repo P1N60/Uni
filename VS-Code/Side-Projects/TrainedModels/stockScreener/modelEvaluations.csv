@@ -2,3 +2,6 @@ Model Name,Timestamp,MAE,RMSE,R2,Training Size,Test Size,Epochs,Cat Names,Cont N
 stockScreenerV1.0,2025-01-26 11:04,0.45,0.887,-0.327,300,200,35,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
 stockScreenerV1.1,2025-01-26 11:53,0.393,0.91,-2.938,300,200,25,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
 stockScreenerV1.2,2025-01-26 12:32,0.477,0.642,-0.616,300,200,30,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV1.3,2025-01-26 14:46,0.441,0.561,-0.297,300,200,23,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV1.4,2025-01-26 16:38,0.586,3.969,-76.743,300,290,25,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV1.5,2025-01-26 17:19,0.542,0.797,-0.313,300,10,3,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
