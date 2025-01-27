@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{standalone}
+\usepackage{amsmath} % Package for advanced math typesetting
+\input{../../sty/setup.sty} % Assuming these files exist and are correctly referenced
+\graphicspath{ {../../pictures/PoP/assignment2}} % Assuming a pictures folder has been made and is correctly referenced
+
+% \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
+
+\begin{document}
+% \includepdf[pages=-]{../../pictures/forside}
+
+\title{Københavns Universitet\\
+PoP Assignment 4 - Adressed Feedback}
+\input{../../sty/cover.sty} % Assuming this file contains the cover page setup
+\input{../../sty/header.sty} % Assuming this file contains the header setup
+\maketitle % This command will actually insert the title into the document
+
+% Feedback on Question 2
+\section{Feedback on Question 2}
+
+\subsection*{2B - Forklar hvorfor du har valgt specifikt disse 3 måder.}
+Jeg har uddybet med:\\
+"Jeg har valgt disse 3 måder at repræsentere farver på, at det var dem jeg højst sandsynligt selv ville havde benyttet, hvis det var mig der havde lavet colour.\\
+Jeg kan især godt lide RGB-listen, da det giver mulighed for at arbejde med mere præcise farver, og kanExtendColour ville kunne bruges til at sammenligne farver, der er meget tæt på hinanden."
+
+
+\subsection*{2C - Du skal ikke definere en NeighbourRelation klasse, men en Country klasse. Dvs. klassen skal repræsentere et land, og land skal opbevare en liste over landets naboer.}
+Jeg har rettet min repræsentation til følgende:
+
+\begin{lstlisting}
+class Country:
+    def __init__(self, name: str):
+        self.name = name
+        self.neighbours = []
+
+    def addNeighbour(self, neighbour: "Country"):
+        if neighbour not in self.neighbours:
+            self.neighbours.append(neighbour)
+            neighbour.addNeighbour(self)
+
+    def __repr__(self):
+        return f"{self.name}: {[neighbour.name for neighbour in self.neighbours]}"
+
+de = Country("de")
+da = Country("da")
+se = Country("se")
+no = Country("no")
+
+# Not sure if 'no' and 'da' should be neighbours
+de.addNeighbour(da)
+da.addNeighbour(se)
+se.addNeighbour(no)
+
+print(de)
+print(da)
+print(se)
+print(no)
+# Output:
+de: ['da']
+da: ['de', 'se']
+se: ['da', 'no']
+no: ['se']
+\end{lstlisting}
+
+% Feedback on question 3
+\section{Feedback on question 3}
+
+\subsection*{3A - Du mangler at forklare hvordan du har fulgt Kens metode.}
+
+Jeg har uddybet, hvordan jeg har fulgt Kens method i rapporten.
+
+\subsection*{3B - Forklar mere specifikt hvordan du bruger paradigmet/paradigmerne.}
+
+Min besvarelse er nu som følgende:\\
+"Funktionel programmering fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne og sortere dem i forskellige lister.\\
+Imperativ programmering bruges til at tælle mængden af "DIKU" i hvert af disse lister, men fylder ud over dette ikke meget.\\
+Nu når jeg ser tilbage på opgaven, bør jeg nok havde brugt imperativ programmering i højere grad, da jeg fra forelæsningen havde hørt, at er bedst til små opgaver. Jeg havde dog troet, at funktionel programmering ville være bedst, da det skulle være bedst, når man har meget data, hvilket ikke var tilfældet i denne opgave i samme grad, som jeg havde troet."
+
+
+\subsection*{3C - Du skal teste programmet lidt mere eksplicit og inkludere testene.}
+
+
+\subsection*{3C - Tænk mere over hvordan de forskellige inputs kunne se ud.}
+
+
+\subsection*{3C - Representative inputs are defined.}
+
+
+% Feedback on question 4
+\section{Feedback on question 4}
+
+\subsection*{4A - Programmet skal beregne det totale antal point for alle kortene tilsammen.}
+
+
+\subsection*{4A - Forklar gerne hvordan du har fulgt Kens metode her.}
+
+
+\subsection*{4B - Card klassen i din kode dominerer ret meget, da næsten alle funktioner er lavet som metoder i klassen.
+Genovervej hvilket paradigme dominerer her.}
+Jeg var klar over, at OOP fyldte mest, men havde glemt, at skrive det, da jeg opfattede members'ne som en del af funktionel programmering.
+
+
+\subsection*{4C - Du skal teste programmet mere eksplicit.}
+
+
+\subsection*{4C - Forklar hvordan du har opdelt inputtet.}
+
+
+\subsection*{4C - Input partitions are correctly defined. }
+
+
+\subsection*{4C - Representative inputs are defined.}
+
+
+\end{document}
+

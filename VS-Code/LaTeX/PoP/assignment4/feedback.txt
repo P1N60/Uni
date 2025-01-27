@@ -1,0 +1,78 @@
+# Instructions for resubmission
+0 / 0 points
+Questions to be completed:
+Questions to be reworked: 2B, 2C, 3, 4A, 4B, 4C
+
+# Feedback on Question 2A
+5 / 5 points
+[+] The definition of data type is correct. 
+[+] The examples are correct.
+
+# Feedback on Question 2B
+3 / 5 points
+[+] 3 representations for colours are provided. 
+[+] The choice of representations is clearly motivated. 
+  - Forklar hvorfor du har valgt specifikt disse 3 måder.
+
+# Feedback on Question 2C
+4 / 10 points
+[+] The recursive data structure is defined. 
+  - Du skal ikke definere en NeighbourRelation klasse, men en Country klasse.
+    Dvs. klassen skal repræsentere et land, og land skal opbevare en liste over landets naboer.
+
+# Feedback on question 2D
+10 / 10 points
+[+] The solution is described.
+[+] The specifications are clear 
+[+] The specifications are given for all relevant functions
+
+# Feedback on question 3A
+13 / 15 points
+[+] The program is correct 
+  - Du mangler at forklare hvordan du har fulgt Kens metode.
+[+] The specifications are clear 
+[+] The specifications are given for all relevant functions
+
+# Feedback on question 3B
+3 / 5 points
+[+] The programming paradigms are defined 
+[-] The arguments about progamming paradigms are correct 
+  - Forklar mere specifikt hvordan du bruger paradigmet/paradigmerne.
+
+# Feedback on question 3C
+5 / 10 points
+[+] The program is tested. 
+  - Du skal teste programmet lidt mere eksplicit og inkludere testene.
+[+] Input partitioning is used. 
+  - Tænk mere over hvordan de forskellige inputs kunne se ud.
+[-] Input partitions are correctly defined. 
+  - Skriv specifikt hvordan du har opdelt inputtene.
+[-] Representative inputs are defined.
+
+# Feedback on question 4A
+13 / 15 points
+[+] The program is correct 
+  - Programmet skal beregne det totale antal point for alle kortene tilsammen.
+  - Igen, forklar gerne hvordan du har fulgt Kens metode her.
+[+] The specifications are clear 
+[+] The specifications are given for all relevant functions
+
+# Feedback on question 4B
+2 / 5 points
+[+] The programming paradigms are defined 
+[-] The arguments about progamming paradigms are correct 
+  - Card klassen i din kode dominerer ret meget, da næsten alle funktioner er lavet som metoder i klassen.
+    Genovervej hvilket paradigme dominerer her.
+
+# Feedback on question 4C
+1 / 5 points
+[+] The program is tested. 
+  - Igen skal du teste programmet mere eksplicit.
+[-] Input partitioning is used. 
+  - Forklar hvordan du har opdelt inputtet.
+[-] Input partitions are correctly defined. 
+[-] Representative inputs are defined.
+
+# Feedback on question 4D
+5 / 5 points
+[+] Roles of variables are properly defined.

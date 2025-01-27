@@ -133,13 +133,30 @@ def colourCountries(nr: NeighbourRelation) -> Colouring:
 #print(colourCountries(involved()))
 
 # Resursive datatype
-class NeighbourRelation:
-    def __init__(self, country1: Country, country2: Country, rest=None):
-        self.pair = (country1, country2)
-        self.rest = rest
+class Country:
+    def __init__(self, name: str):
+        self.name = name
+        self.neighbours = []
+
+    def addNeighbour(self, neighbour: "Country"):
+        if neighbour not in self.neighbours:
+            self.neighbours.append(neighbour)
+            neighbour.addNeighbour(self)
 
     def __repr__(self):
-        return f"{self.pair}, {self.rest}"
-    
-nr = NeighbourRelation("de", "da", NeighbourRelation("da", "se", NeighbourRelation("se", "no")))
-#print(nr)
+        return f"{self.name}: {[neighbour.name for neighbour in self.neighbours]}"
+
+de = Country("de")
+da = Country("da")
+se = Country("se")
+no = Country("no")
+
+# Not sure if 'no' and 'da' should be neighbours
+de.addNeighbour(da)
+da.addNeighbour(se)
+se.addNeighbour(no)
+
+#print(de)
+#print(da)
+#print(se)
+#print(no)

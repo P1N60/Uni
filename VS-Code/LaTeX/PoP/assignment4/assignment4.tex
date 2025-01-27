@@ -97,7 +97,10 @@ Signaturen ændres til:
 canExtendColour(nr: NeighbourRelation, country1: Country, colour: list[int]) -> bool
 \end{lstlisting}
 hvor Colour er en liste med heltal.\\
-Funktionens body skal opdateres til at sammenligne heltal i stedet for strings.
+Funktionens body skal opdateres til at sammenligne heltal i stedet for strings.\\
+\\
+Jeg har valgt disse 3 måder at repræsentere farver på, at det var dem jeg højst sandsynligt selv ville havde benyttet, hvis det var mig der havde lavet colour.\\
+Jeg kan især godt lide RGB-listen, da det giver mulighed for at arbejde med mere præcise farver, og kanExtendColour ville kunne bruges til at sammenligne farver, der er meget tæt på hinanden.
 
 \subsection[Representing NeighbourRelation]{Representing NeighbourRelation\\
 Consider the colouring problem that Ken introduced in class.
@@ -106,18 +109,38 @@ A list of pairs is a way to represent a graph (each pair represents an edge betw
 Define a NeighbourRelation type as a recursive data structure, in Python.}
 
 \begin{lstlisting}
-class NeighbourRelation:
-    def __init__(self, country1: Country, country2: Country, rest=None):
-        self.pair = (country1, country2)
-        self.rest = rest
-
-    def __repr__(self):
-        return f"{self.pair}, {self.rest}"
+class Country:
+    def __init__(self, name: str):
+        self.name = name
+        self.neighbours = []
     
-nr = NeighbourRelation("de", "da", NeighbourRelation("da", "se", NeighbourRelation("se", "no")))
-print(nr)
-#OUTPUT:
-('de', 'da'), ('da', 'se'), ('se', 'no'), None
+    def addNeighbour(self, neighbour: "Country"):
+        if neighbour not in self.neighbours:
+            self.neighbours.append(neighbour)
+            neighbour.addNeighbour(self)
+    
+    def __repr__(self):
+        return f"{self.name}: {[neighbour.name for neighbour in self.neighbours]}"
+    
+de = Country("de")
+da = Country("da")
+se = Country("se")
+no = Country("no")
+    
+# Not sure if 'no' and 'da' should be neighbours
+de.addNeighbour(da)
+da.addNeighbour(se)
+se.addNeighbour(no)
+    
+print(de)
+print(da)
+print(se)
+print(no)
+# Output:
+de: ['da']
+da: ['de', 'se']
+se: ['da', 'no']
+no: ['se']
 \end{lstlisting}
 
 
@@ -155,6 +178,8 @@ Follow Ken's method and give the specification of each function that you define 
 \end{enumerate}
 }
 
+Nedeunder har jeg i forbindelse med Kens method skrevet en kort beskrivelse af, hvad mit program skal kunne gøre, hvordan det skal gøres, hvilke inputs og outputs der er, og hvordan det skal testes.\\
+
 Programmet bør kunne læse en given teks-fil for bogstaver, og beregne mængden af "DIKU" både horisontalt, vertikalt og baglæns. Herefter skal programmet printe mængden af "DIKU" til terminalen.\\
 Eksempelvis skal programmet kunne læse bogstaverne:
 \begin{lstlisting}
@@ -170,7 +195,8 @@ Ideelt bør programmet læse disse rækker af bogstaver som string elementer i e
 \subsection[What programming paradigm dominates in your program]{What programming paradigm dominates in your program. Why?}
 
 Funktionel programmering fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne og sortere dem i forskellige lister.\\
-Imperativ programmering bruges til at tælle mængden af "DIKU" i hvert af disse lister.
+Imperativ programmering bruges til at tælle mængden af "DIKU" i hvert af disse lister, men fylder ud over dette ikke meget.\\
+Nu når jeg ser tilbage på opgaven, bør jeg nok havde brugt imperativ programmering i højere grad, da jeg fra forelæsningen havde hørt, at er bedst til små opgaver. Jeg havde dog troet, at funktionel programmering ville være bedst, da det skulle være bedst, når man har meget data, hvilket ikke var tilfældet i denne opgave i samme grad, som jeg havde troet.
 
 \subsection[Explain how you test your program]{Explain how you test your program.}
 
@@ -207,8 +233,8 @@ Antallet af points beregnes, og printes til terminalen for hvert kort.
 
 \subsection[What programming paradigm dominates in your program]{What programming paradigm dominates in your program. Why?}
 
-Jeg vil sige, at funktionel programmering domminerer i mit program, da jeg sagtens kunne have undgået, at lave funktionerne i mit object Card.\\
-Hvis jeg havde benyttet flere classes, ville object-orienteret programmering fylde mere. 
+Jeg vil mene, at objekt-orienteret programmering dominerer i mit program, da jeg har valgt at lave en class, der indeholder alle members, som behandler data'en.\\
+Jeg ville kunne havde lavet alle mine members uden for class'en, hvilket ville få funktionel programmering til at dominere.
 
 \subsection[Explain how you test your program]{Explain how you test your program.}
 

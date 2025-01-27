@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  27 JAN 2025 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  27 JAN 2025 13:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment4/assignment4.tex
-(/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment4/assignment4.tex
+**/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment4/assignment4-addressedFeedback.tex
+(/Users/victor/Documents/GitHub/VS-Code/LaTeX/PoP/assignment4/assignment4-addressedFeedback.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -953,27 +953,27 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-))) (./assignment4.aux)
-\openout1 = `assignment4.aux'.
+))) (./assignment4-addressedFeedback.aux)
+\openout1 = `assignment4-addressedFeedback.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count397
@@ -1027,7 +1027,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring OFF on input line 9.
 \c@lstlisting=\count403
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
 
@@ -1047,62 +1047,42 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 7.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )) (../../sty/header.sty [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./assignment4.toc)
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./assignment4-addressedFeedback.toc)
 \tf@toc=\write4
-\openout4 = `assignment4.toc'.
+\openout4 = `assignment4-addressedFeedback.toc'.
 
  [2])
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 40.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 30.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 42.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 49.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 99--104
-
+Overfull \hbox (17.73117pt too wide) in paragraph at lines 74--78
+\T1/cmr/m/n/12 "Funktionel pro-gram-mer-ing fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne
  []
 
-[4]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 161.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 161.
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--194
-
- []
-
-
-Overfull \hbox (11.8576pt too wide) in paragraph at lines 197--200
-[]\T1/cmr/m/n/12 Funktionel pro-gram-mer-ing fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne
- []
-
-[6] [7] [8] [9] (./assignment4.aux)
+[4] (./assignment4-addressedFeedback.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41762 strings out of 474116
- 936635 string characters out of 5743681
- 2103187 words of memory out of 5000000
- 63311 multiletter control sequences out of 15000+600000
- 571844 words of font info for 80 fonts, out of 8000000 for 9000
+ 41604 strings out of 474116
+ 935046 string characters out of 5743681
+ 2099187 words of memory out of 5000000
+ 63233 multiletter control sequences out of 15000+600000
+ 567003 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,11n,121p,1036b,1370s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,11n,121p,889b,1410s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on assignment4.pdf (9 pages, 170548 bytes).
+Output written on assignment4-addressedFeedback.pdf (4 pages, 137429 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
- 113 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
