@@ -127,14 +127,28 @@ class Card:
         print(f"Points: {self.cardPoints()}")
 
 # Print the point-amount for each card
-cardNumber = 1
+totalPoints = 0
 for card in cardRows:
-    print(f"Card {cardNumber}: {Card(card).cardPoints()} points")
-    cardNumber += 1
+    totalPoints += Card(card).cardPoints()
+print(totalPoints)
+
+# Test function
+def testFun(testCase):
+    try:
+        return Card(testCase).cardPoints()
+    except:
+        return Exception
 
 # Test cases
-#print(Card("Card   7: 51 64 21 49 30 93 60  4 10 44 |").cardStats()) # No winning numbers
-#print(Card("Card   8:  | 58 64 83 41 69 63 11 30 73 28 75 87 76 15  6  2 10 51 20 47 82 48 61 46 53").cardStats()) # No card numbers numbers
-#print(Card("Card   9:  | ").cardStats()) # Only vertical bar
-#print(Card("Card   10000: 49 98 13  3 61 66 16 46 22 44 | 58 26 35 75 96 64 18  9 92 45 94 67 49 89 84 20 48 39 43 38 55 90  6 69 30").cardStats()) # Large card index
-#print(Card("Card   9: ").cardStats()) # Empty card
+print("Test Cases:")
+print(testFun("Card 1: 41 48 83 86 17 | 83 86 6 31 17 9 48 53")) # Test Case 1: Sample input from assignment. Expected Output: 8
+print(testFun("Card 2: 7 8 9 | 7 8 9")) # Test Case 2: Header cut into numbers. Expected Output: 1
+print(testFun("Card 100: 1 2 3 | 4 5 6")) # Test Case 3: Long header that is cut short. Expected Output: 0
+print(testFun("Card 9:")) # Test Case 4: Empty Card. Expected Output: 0
+print(testFun("Card 123: 10 20 | 10 20")) # Test Case 5: Multi-Digit Numbers After Truncation. Expected Output: 1
+print(testFun("Card 4: | 1 2 3")) # Test Case 6: No winning Numbers. Expected Output: 0
+print(testFun("Card 5: 1 2 3 |")) # Test Case 7: No your Numbers. Expected Output: 0
+print(testFun("Card 6: 5 | 5 5 5")) # Test Case 8: Duplicate Numbers. Expected Output: 4
+print(testFun("Card 7: 1 2 3 | 3 2 1")) # Test Case 9: All Numbers Match but reversed. Expected Output: 4
+print(testFun("Card 8: 100 200 | 100 200")) # Test Case 10: Multi-Digit Parsing. Expected Output: 1
+print(testFun("Card 999: 41 48 | 83 86")) # Test Case 11: Overlapping Truncation. Expected Output: 0

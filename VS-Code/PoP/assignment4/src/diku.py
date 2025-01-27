@@ -93,16 +93,25 @@ def dikuCounter(rows):
         dikuCount += diagonal.count("DIKU") + diagonal.count("UKID")
     return dikuCount
 
-print(dikuCounter(lineReader("../data/diku.txt")))
+print(f"DIKU amount: {dikuCounter(lineReader("../data/diku.txt"))}")
+
+# Testing
+def testFun(testCase):
+    try:
+        return dikuCounter(testCase)
+    except:
+        return Exception
 
 # Test cases
-#print(dikuCounter([]))
-#print(dikuCounter(
-#    [
-#        "DDKUD",
-#        "IIKUD",
-#        "IDKUD",
-#        "IDKUD",
-#        "IDKUD"
-#    ]))
-#print(dikuCounter([" "," "," ",]))
+print("Test Cases:")
+print(testFun(lineReader("../data/dikuTest1.txt"))) # Test Case 1: Horizontal forward
+print(testFun(lineReader("../data/dikuTest2.txt"))) # Test Case 2: Vertical forward
+print(testFun(lineReader("../data/dikuTest3.txt"))) # Test Case 3: Horizontal backward
+print(testFun(lineReader("../data/dikuTest4.txt"))) # Test Case 4: Vertical backward
+print(testFun(lineReader("../data/dikuTest5.txt"))) # Test Case 5: Sample input from assignment 
+print(testFun(lineReader("../data/dikuTest6.txt"))) # Test Case 6: Row and column
+print(testFun(lineReader("../data/dikuTest7.txt"))) # Test Case 7: Overlapping in row
+print(testFun(lineReader("../data/dikuTest8.txt"))) # Test Case 8: Row and Backward in another row
+print(testFun(lineReader("../data/dikuTest9.txt"))) # Test Case 9: No occurrences
+print(testFun(lineReader("../data/dikuTest10.txt"))) # Test Case 10: Empty grid
+print(testFun([])) # Test Case 11: Empty list

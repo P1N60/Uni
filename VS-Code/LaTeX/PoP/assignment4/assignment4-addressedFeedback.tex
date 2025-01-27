@@ -79,38 +79,66 @@ Nu når jeg ser tilbage på opgaven, bør jeg nok havde brugt imperativ programm
 
 \subsection*{3C - Du skal teste programmet lidt mere eksplicit og inkludere testene.}
 
+Jeg har forbedret min metode jeg tester på, ved at blandt andet lave en funktion, der raiser en exception hvis inputten laver en specification violation.\\
+Derudover har jeg lavet nogle test-filer, som indeholde nogle af test case'ne.
 
 \subsection*{3C - Tænk mere over hvordan de forskellige inputs kunne se ud.}
 
+Jeg har lavet nogle mere repræsentative test cases, der bliver partitioned af den lavede test-function. Disse cases tester nogle af de nævnte måder man kan 'læse' DIKU på, som nævnt i opgaven.
 
-\subsection*{3C - Representative inputs are defined.}
+\subsection*{3C - Representative inputs are not defined.}
 
+Jeg henviser til svaret ovenover
 
 % Feedback on question 4
 \section{Feedback on question 4}
 
 \subsection*{4A - Programmet skal beregne det totale antal point for alle kortene tilsammen.}
 
+Jeg misfortolkede opgaven. Dette er rettet nu.
 
 \subsection*{4A - Forklar gerne hvordan du har fulgt Kens metode her.}
 
+Jeg har givet samme gennemgang af Kens method som tidligere.
 
 \subsection*{4B - Card klassen i din kode dominerer ret meget, da næsten alle funktioner er lavet som metoder i klassen.
 Genovervej hvilket paradigme dominerer her.}
 Jeg var klar over, at OOP fyldte mest, men havde glemt, at skrive det, da jeg opfattede members'ne som en del af funktionel programmering.
 
 
-\subsection*{4C - Du skal teste programmet mere eksplicit.}
+\subsection*{4C\\
+- Du skal teste programmet mere eksplicit.\\
+- Forklar hvordan du har opdelt inputtet.\\
+- Input partitions are not correctly defined.\\
+- Representative inputs are not defined.}
 
+Jeg er ikke helt sikker på, hvad der menes med 'eksplicit' i denne sammenhæng, men jeg har forsøgt, at gøre mine indkludere mine tests mere.\\
+Jeg har forsøgt, at lave mine tests, så de indkluderer de features, der skal brues til at løse opgaven. Som der nu forklares i min rapport, testes der for 'Card.cardPoints', da dette er member'en, vi bruger til at beregne det samlede antal points for hvert kort.\\
+Der er en ny funktion, der raiser en exception, hvis inputten, som bliver kørt i 'Card.cardPoints', er ugyldig.\\
+Den nye måde der testes:
 
-\subsection*{4C - Forklar hvordan du har opdelt inputtet.}
-
-
-\subsection*{4C - Input partitions are correctly defined. }
-
-
-\subsection*{4C - Representative inputs are defined.}
-
+\begin{lstlisting}
+# Test function
+def testFun(testCase):
+    try:
+        return Card(testCase).cardPoints()
+    except:
+        return Exception
+    
+# Test cases
+print("Test Cases:")
+print(testFun("Card 1: 41 48 83 86 17 | 83 86 6 31 17 9 48 53")) # Test Case 1: Sample input from assignment. Expected Output: 8
+print(testFun("Card 2: 7 8 9 | 7 8 9")) # Test Case 2: Header cut into numbers. Expected Output: 1
+print(testFun("Card 100: 1 2 3 | 4 5 6")) # Test Case 3: Long header that is cut short. Expected Output: 0
+print(testFun("Card 9:")) # Test Case 4: Empty Card. Expected Output: 0
+print(testFun("Card 123: 10 20 | 10 20")) # Test Case 5: Multi-Digit Numbers After Truncation. Expected Output: 1
+print(testFun("Card 4: | 1 2 3")) # Test Case 6: No winning Numbers. Expected Output: 0
+print(testFun("Card 5: 1 2 3 |")) # Test Case 7: No your Numbers. Expected Output: 0
+print(testFun("Card 6: 5 | 5 5 5")) # Test Case 8: Duplicate Numbers. Expected Output: 4
+print(testFun("Card 7: 1 2 3 | 3 2 1")) # Test Case 9: All Numbers Match but reversed. Expected Output: 4
+print(testFun("Card 8: 100 200 | 100 200")) # Test Case 10: Multi-Digit Parsing. Expected Output: 1
+print(testFun("Card 999: 41 48 | 83 86")) # Test Case 11: Overlapping Truncation. Expected Output: 0
+\end{lstlisting}
 
 \end{document}
 
