@@ -10,3 +10,4 @@ stockScreenerV1.7,2025-01-27 08:45,0.328,0.739,0.077,1200,174,30,['Industry'],"[
 stockScreenerV1.8,2025-01-27 12:25,0.363,0.78,-0.007,1400,394,33,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
 stockScreenerV1.9,2025-01-27 18:40,0.37,0.632,-0.053,2000,500,36,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
 stockScreenerV1.10,2025-01-27 19:32,0.405,0.688,-0.165,2000,392,43,['Industry'],"['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
+stockScreenerV2.0,2025-01-28 16:42,0.371,0.605,-0.081,200,200,20,"['Industry', 'Date']","['Open', 'Close', 'Volume', 'Dividends', 'Stock Splits', 'EV/EBIT', 'ROIC']",
