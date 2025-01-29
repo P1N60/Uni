@@ -97,6 +97,15 @@ print(f"DIKU amount: {dikuCounter(lineReader("../data/diku.txt"))}")
 
 # Testing
 def testFun(testCase):
+    """
+    Runs testcases for 'dikuCounter'.
+
+    Inputs:
+        list[str]: of letters.
+    
+    Outputs:
+        int: DIKU amount, or exception if input invalid.
+    """
     try:
         return dikuCounter(testCase)
     except:
