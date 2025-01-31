@@ -1,4 +1,0 @@
-/Users/victor/Documents/VS Code/Pop/pop-6/pop-6-2/obj/Debug/net8.0/modules.fsproj.AssemblyReference.cache
-/Users/victor/Documents/VS Code/Pop/pop-6/pop-6-2/obj/Debug/net8.0/modules.AssemblyInfoInputs.cache
-/Users/victor/Documents/VS Code/Pop/pop-6/pop-6-2/obj/Debug/net8.0/modules.AssemblyInfo.fs
-/Users/victor/Documents/VS Code/Pop/pop-6/pop-6-2/obj/Debug/net8.0/modules.fsproj.CoreCompileInputs.cache

@@ -49,8 +49,6 @@ Tobs <- (m1 - m2) / SE
 p_value <- 2 * pt(-Tobs, df = n1 + n2 - 2)
 c(Tobs, p_value)
 
-# Opgave 3.2
-X <- runif(10000,-1,1)
-Y <- runif(10000,-1,1)
-Z <- (3/2)*(X+Y)^2
-plot(X[Z],Y[Z])
+# Tests
+# Pearson's Correlation Coefficient
+cov(data$alder, data$reaktionstid)/(sd(data$alder)*sd(data$reaktionstid))
