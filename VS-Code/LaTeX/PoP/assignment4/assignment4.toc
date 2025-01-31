@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2}Question 2}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.a}What is a data type?}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.b}Representing colours}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.c}Representing NeighbourRelation}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.c}Representing Neighbour Relation}{5}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.d}Colouring problem}{5}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Question 3 - DIKU}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.a}Write a program that finds all the instances of DIKU}{6}{subsection.3.1}%

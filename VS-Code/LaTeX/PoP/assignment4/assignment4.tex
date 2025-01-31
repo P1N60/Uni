@@ -102,27 +102,27 @@ Funktionens body skal opdateres til at sammenligne heltal i stedet for strings.\
 Jeg har valgt disse 3 måder at repræsentere farver på, at det var dem jeg højst sandsynligt selv ville havde benyttet, hvis det var mig der havde lavet colour.\\
 Jeg kan især godt lide RGB-listen, da det giver mulighed for at arbejde med mere præcise farver, og kanExtendColour ville kunne bruges til at sammenligne farver, der er meget tæt på hinanden.
 
-\subsection[Representing NeighbourRelation]{Representing NeighbourRelation\\
-Consider the colouring problem that Ken introduced in class.
+\subsection[Representing Neighbour Relation]{Representing Neighbour Relation\\
+Consider the colouring problem that Ken introduced in class (you can refer to the announcement describing the problem and to his F\# solution Download F\# solution).
 In Ken's solution, the type NeighbourRelation is a list of pairs of Countries.
 A list of pairs is a way to represent a graph (each pair represents an edge between the components of the pair that are vertices).
-Define a NeighbourRelation type as a recursive data structure, in Python.}
+Define a Country type as a recursive data structure, in Python that represents the same graph as NeighbourRelation.}
 
 Nederst i 'colouring.py', har jeg lavet følgende:
 
 \begin{lstlisting}
 class Country:
-    def __init__(self, name: str):
-        self.name = name
+    def __init__(self, countryName: str):
+        self.countryName = countryName
         self.neighbours = []
     
-    def addNeighbour(self, neighbour: "Country"):
+    def addNeighbour(self, neighbour):
         if neighbour not in self.neighbours:
             self.neighbours.append(neighbour)
             neighbour.addNeighbour(self)
     
     def __repr__(self):
-        return f"{self.name}: {[neighbour.name for neighbour in self.neighbours]}"
+        return f"{self.countryName}: {[neighbour.countryName for neighbour in self.neighbours]}"
     
 de = Country("de")
 da = Country("da")
