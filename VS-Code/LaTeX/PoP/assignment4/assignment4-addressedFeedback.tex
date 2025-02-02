@@ -29,28 +29,49 @@ Jeg har rettet min repræsentation til følgende:
 
 \begin{lstlisting}
 class Country:
-    def __init__(self, name: str):
-        self.name = name
-        self.neighbours = []
+    """
+    Represents a country with a name and a list of neighboring countries.
+    """
+    def __init__(self, countryName: str):
+        """
+        Starts with a Country with the given name and an empty list of neighbors.
 
-    def addNeighbour(self, neighbour: "Country"):
+        Inputs:
+            str: countryName with the name of the country.
+        """
+        self.countryName = countryName
+        self.neighbours = []
+    
+    def addNeighbour(self, neighbour):
+        """
+        Adds a neighbor Country to this country's list of neighbors.
+
+        Inputs:
+            Country: the Country object to be added as a neighbor.
+        """
         if neighbour not in self.neighbours:
             self.neighbours.append(neighbour)
             neighbour.addNeighbour(self)
-
-    def __repr__(self):
-        return f"{self.name}: {[neighbour.name for neighbour in self.neighbours]}"
-
+    
+    def __repr__(self) -> str:
+        """
+        Returns a string of the Country.
+        
+        Outputs:
+            str: with "CountryName: [Neighbour1, Neighbour2, ...]".
+        """
+        return f"{self.countryName}: {[neighbour.countryName for neighbour in self.neighbours]}"
+    
 de = Country("de")
 da = Country("da")
 se = Country("se")
 no = Country("no")
-
+    
 # Not sure if 'no' and 'da' should be neighbours
 de.addNeighbour(da)
 da.addNeighbour(se)
 se.addNeighbour(no)
-
+    
 print(de)
 print(da)
 print(se)

@@ -4,13 +4,13 @@
 \contentsline {subsection}{\numberline {2.a}What is a data type?}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.b}Representing colours}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.c}Representing Neighbour Relation}{5}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.d}Colouring problem}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.d}Colouring problem}{6}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Question 3 - DIKU}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.a}Write a program that finds all the instances of DIKU}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.b}What programming paradigm dominates in your program}{7}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.c}Explain how you test your program}{7}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Question 4 - Cards}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.a}Write a program that counts the total number of points for all the cards}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.a}Write a program that counts the total number of points for all the cards}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.b}What programming paradigm dominates in your program}{8}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.c}Explain how you test your program}{8}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.d}Explain the role of all variables in your program}{9}{subsection.4.4}%

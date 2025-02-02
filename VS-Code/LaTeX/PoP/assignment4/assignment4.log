@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  31 JAN 2025 13:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  31 JAN 2025 19:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1064,50 +1064,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--104
 
  []
 
-[4]
+[4] [5]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 163.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 184.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 163.
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 184.
 
- []
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
-
- []
-
-
-Overfull \hbox (11.8576pt too wide) in paragraph at lines 199--202
-[]\T1/cmr/m/n/12 Funktionel pro-gram-mer-ing fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 215--217
 
  []
 
-[7] [8] [9] [10] (./assignment4.aux)
+
+Overfull \hbox (11.8576pt too wide) in paragraph at lines 220--223
+[]\T1/cmr/m/n/12 Funktionel pro-gram-mer-ing fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+[8] [9] [10] (./assignment4.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41816 strings out of 474116
- 937380 string characters out of 5743681
- 2246187 words of memory out of 5000000
- 63327 multiletter control sequences out of 15000+600000
+ 41860 strings out of 474116
+ 937954 string characters out of 5743681
+ 2287187 words of memory out of 5000000
+ 63350 multiletter control sequences out of 15000+600000
  571844 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,12n,121p,1036b,1987s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,1036b,1989s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on assignment4.pdf (10 pages, 177456 bytes).
+Output written on assignment4.pdf (10 pages, 179728 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 302 compressed objects within 4 object streams
- 151 named destinations out of 1000 (max. 500000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 172 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

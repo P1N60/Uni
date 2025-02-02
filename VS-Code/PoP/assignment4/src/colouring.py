@@ -134,16 +134,37 @@ def colourCountries(nr: NeighbourRelation) -> Colouring:
 
 # Resursive datatype
 class Country:
+    """
+    Represents a country with a name and a list of neighboring countries.
+    """
     def __init__(self, countryName: str):
+        """
+        Starts with a Country with the given name and an empty list of neighbors.
+
+        Inputs:
+            str: countryName with the name of the country.
+        """
         self.countryName = countryName
         self.neighbours = []
     
     def addNeighbour(self, neighbour):
+        """
+        Adds a neighbor Country to this country's list of neighbors.
+
+        Inputs:
+            Country: the Country object to be added as a neighbor.
+        """
         if neighbour not in self.neighbours:
             self.neighbours.append(neighbour)
             neighbour.addNeighbour(self)
     
-    def __repr__(self):
+    def __repr__(self) -> str:
+        """
+        Returns a string of the Country.
+        
+        Outputs:
+            str: with "CountryName: [Neighbour1, Neighbour2, ...]".
+        """
         return f"{self.countryName}: {[neighbour.countryName for neighbour in self.neighbours]}"
     
 de = Country("de")

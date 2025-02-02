@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  31 JAN 2025 13:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  31 JAN 2025 19:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1056,38 +1056,38 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 30
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 49.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 47.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (17.73117pt too wide) in paragraph at lines 74--78
+Overfull \hbox (17.73117pt too wide) in paragraph at lines 95--99
 \T1/cmr/m/n/12 "Funktionel pro-gram-mer-ing fylder en del, da det er det, jeg bruger til at læse bogstavrækkerne
  []
 
-
-Overfull \hbox (27.4203pt too wide) in paragraph at lines 115--119
+[4]
+Overfull \hbox (27.4203pt too wide) in paragraph at lines 136--140
 \T1/cmr/m/n/12 Der er en ny funk-tion, der raiser en ex-cep-tion, hvis in-put-ten, som bliver kørt i 'Card.cardPoints',
  []
 
-[4] [5] [6] (./assignment4-addressedFeedback.aux)
+[5] [6] (./assignment4-addressedFeedback.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41672 strings out of 474116
- 935935 string characters out of 5743681
- 2318187 words of memory out of 5000000
- 63256 multiletter control sequences out of 15000+600000
+ 41716 strings out of 474116
+ 936516 string characters out of 5743681
+ 2224187 words of memory out of 5000000
+ 63279 multiletter control sequences out of 15000+600000
  567003 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,12n,121p,889b,1987s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,12n,121p,889b,2026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on assignment4-addressedFeedback.pdf (6 pages, 151134 bytes).
+Output written on assignment4-addressedFeedback.pdf (6 pages, 154538 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 107 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
