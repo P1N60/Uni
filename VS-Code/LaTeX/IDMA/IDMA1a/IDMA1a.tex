@@ -18,27 +18,154 @@ Introduktion til diskret matematik og algoritmer - Problem set 1}
 \input{../../sty/header.sty} % Assuming this file contains the header setup
 \maketitle % This command will actually insert the title into the document
 
-% Question 1 - (max 1/2 page)
-\section{Question 1}
+% Question 1
+\section[Question 1]{Question 1 - In the following snippet of code A and B are arrays indexed from 1 to n that contain numbers. }
 
-\subsection[External sources]{}
+\begin{lstlisting}
+for i := 1 upto n { 
+    B[i] := 1 
+    for j := 1 upto i {
+        B[i] := B[i] * A[j] 
+    }
+} 
+\end{lstlisting}
 
-
-
-% Question 2 - (max 4 pages)
-\section{Question 2}
-
-\subsection[What is a data type?]{}
-
-
-
-% Question 3 - (max 2 1/2 pages)
-\section[Question 3 - DIKU]{}
+\subsection[]{Explain in plain language what the algorithm above does. In particular, what is the meaning of the entries B [i] after the algorithm has terminated? }
 
 
 
-% Question 4 - (max 3 pages)
-\section[Question 4 - Cards]{}
+\subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That is, state how the worst-case running time scales with n, focusing only on the highest-order term, and ignoring the constant factor in front of this term.)}
+
+
+
+\subsection[]{Can you improve the code to run faster while retaining the same functionality? How
+much faster can you get the algorithm to run? Analyse the time complexity of your new
+algorithm. Can you prove that it is asymptotically optimal? (That is, that no algorithm
+solving this problem can run faster except possibly for a constant factor in the highest-order
+term or improvements in lower-order terms. )}
+
+
+% Question 2
+\section[Question 2]{Question 2 - In the following snippet of code A is an array indexed from 1 to n that contain elements
+that can be compared}
+
+\begin{lstlisting}
+j := n
+good := TRUE
+while (j > 1 and good)
+    i := j - 1
+    while (i >= 1 and good)
+        if (A[i] > A[j])
+            good := FALSE
+        i := i - 1
+    j := j - 1
+if (good)
+    return "success"
+else
+    return "failure"
+\end{lstlisting}
+    
+\subsection[]{Explain in plain language what the algorithm above does. In particular, what do we know
+about the array A when "success" or "failure" is returned, respectively?}
+    
+    
+    
+\subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
+is, state how the worst-case running time scales with n, focusing only on the highest-order
+term, and ignoring the constant factor in front of this term.)}
+    
+    
+
+\subsection[]{Can you improve the code to run faster while retaining the same functionality? How
+much faster can you get the algorithm to run? Analyse the time complexity of your new
+algorithm. Can you prove that it is asymptotically optimal? (That is, that no algorithm
+solving this problem can run faster except possibly for a constant factor in the highest-order
+term or improvements in lower-order terms. )}
+
+
+
+% Question 3
+\section[Question 3]{Question 3 - In the following snippet of code A is an array indexed from 1 to n that contains integers,
+and B is an auxiliary array, also indexed from 1 to n, that is meant to contain Boolean values.}
+
+\begin{lstlisting}
+for i := 1 upto n {
+    if (A[i] < 1 or A[i] > n)
+        return "failure"
+}
+i := 1
+found := -1
+while (i <= n and found < 0) {
+    for j := 1 upto n {
+        B[j] := false
+    }
+    j := 1
+    while (B[j] == false) {
+        B[j] := true
+        j := A[j]
+    }
+    if (A[A[j]] == j)
+        found := j
+    i := i + 1
+}
+reutn found
+\end{lstlisting}
+    
+\subsection[]{Explain in plain language what the algorithm above does. In particular, when does it
+return a positive value, and, if it does, what is the meaning of this value?}
+    
+    
+    
+\subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
+is, state how the worst-case running time scales with n, focusing only on the highest-order
+term, and ignoring the constant factor in front of this term.)}
+    
+    
+
+\subsection[]{Can you improve the code to run faster while retaining the same functionality? How
+much faster can you get the algorithm to run? Analyse the time complexity of your new
+algorithm. Can you prove that it is asymptotically optimal?}
+
+
+
+% Question 4
+\section[Question 4]{Question 4 - In the following snippet of code A is an array indexed from 1 to n > 2 containing integers.}
+
+\begin{lstlisting}
+search (A, lo, hi)
+    if (A[lo] >= A[hi])
+        return "failure"
+    else if (lo + 1 == hi)
+        return lo
+    else 
+        mid = floor ((lo + hi) / 2)
+        if (A[mid] > A[lo])
+            search (A, lo mid)
+        else
+            search (A, mid, hi)
+\end{lstlisting}
+
+\begin{itemize}
+    \item[] \textbf{The first call to the algorithm is search (A, 1, n), where n is whatever size (at least 2) the
+    array has.}
+\end{itemize}
+
+\subsection[]{Explain in plain language what the algorithm above does. If the algorithm returns some-
+thing other than "failure", then what is the meaning of the value returned?}
+    
+    
+    
+\subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n.}
+    
+    
+
+\subsection[]{Could it be the case that recursive calls of the algorithm also return "failure", or would it
+be sufficient to check just once before making the first recursive call? If we get the additional
+guarantee that all elements in the array are distinct, could we remove the "failure" check
+completely, since we would be guaranteed to never have this answer returned anyway?
+What about if we get the additional guarantee that the array is sorted in increasing order?
+What if both of these extra guarantees apply?}
+
 
 
 
