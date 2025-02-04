@@ -32,7 +32,7 @@ for i := 1 upto n {
 
 \subsection[]{Explain in plain language what the algorithm above does. In particular, what is the meaning of the entries B [i] after the algorithm has terminated? }
 
-
+Algoritmet ændrer hvert element i array'en B til produktet af alle elementer i A op til samme nummer element.
 
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That is, state how the worst-case running time scales with n, focusing only on the highest-order term, and ignoring the constant factor in front of this term.)}
 
@@ -67,14 +67,16 @@ else
     
 \subsection[]{Explain in plain language what the algorithm above does. In particular, what do we know
 about the array A when "success" or "failure" is returned, respectively?}
-    
-    
+
+Algoritmet retunerer "success" eller "failure", afhængigt af om alle elementers værdi i array'en A øges i tagt med elementnummeret, eller har samme værdi.
+Når "success" er retuneret, ved vi, at array'en A kun indeholder elementer, der har samme eller højere værdi end elementet før for hvert element i A. Sagt med andre ord er elle elementer i A sorteret fra laveste til højeste værdi, hvis "success" er retuneret.\\
+Når "failure" er retuneret, er der et eller flere elementer, hvis værdi ikke øges i tagt med elementnummeret eller ikke er den samme. Med andre ord er array'en ikke sorteret.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
 is, state how the worst-case running time scales with n, focusing only on the highest-order
 term, and ignoring the constant factor in front of this term.)}
     
-    
+
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
