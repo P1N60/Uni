@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  4 FEB 2025 12:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  4 FEB 2025 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/victor/Documents/GitHub/VS-Code/LaTeX/SS/SS2a/ss2a.tex
-(/Users/victor/Documents/GitHub/VS-Code/LaTeX/SS/SS2a/ss2a.tex
+**/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex
+(/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -953,27 +953,27 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-))) (./ss2a.aux)
-\openout1 = `ss2a.aux'.
+))) (./IDMA1a.aux)
+\openout1 = `IDMA1a.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count397
@@ -1027,7 +1027,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 12.
 \c@lstlisting=\count403
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
 
@@ -1047,43 +1047,29 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 7.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )) (../../sty/header.sty [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./ss2a.toc)
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./IDMA1a.toc)
 \tf@toc=\write4
-\openout4 = `ss2a.toc'.
+\openout4 = `IDMA1a.toc'.
 
- [2])
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 72.
-<../../pictures/PoP/assignment2/bruh skull.png, id=29, 231.86626pt x 265.99374pt>
-File: ../../pictures/PoP/assignment2/bruh skull.png Graphic file (type png)
-<use ../../pictures/PoP/assignment2/bruh skull.png>
-Package pdftex.def Info: ../../pictures/PoP/assignment2/bruh skull.png  used on input line 76.
-(pdftex.def)             Requested size: 92.74484pt x 106.3956pt.
-File: ../../pictures/PoP/assignment2/bruh skull.png Graphic file (type png)
-<use ../../pictures/PoP/assignment2/bruh skull.png>
-Package pdftex.def Info: ../../pictures/PoP/assignment2/bruh skull.png  used on input line 80.
-(pdftex.def)             Requested size: 92.74484pt x 106.3956pt.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 84.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [3] [4 <../../pictures/PoP/assignment2/bruh skull.png>] (./ss2a.aux)
+ [2]) [3] (./IDMA1a.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41620 strings out of 474116
- 934901 string characters out of 5743681
- 1943187 words of memory out of 5000000
- 63273 multiletter control sequences out of 15000+600000
- 574341 words of font info for 87 fonts, out of 8000000 for 9000
+ 41249 strings out of 474116
+ 930737 string characters out of 5743681
+ 1929187 words of memory out of 5000000
+ 62912 multiletter control sequences out of 15000+600000
+ 570158 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,12n,121p,856b,1157s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on ss2a.pdf (4 pages, 300877 bytes).
+ 125i,11n,121p,862b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on IDMA1a.pdf (3 pages, 76001 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 50 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
