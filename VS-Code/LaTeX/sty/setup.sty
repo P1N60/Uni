@@ -294,35 +294,37 @@
 \usepackage{upquote}
 \usepackage{xcolor}
 
-\lstdefinelanguage{Python}%
-{morekeywords={def, return, lambda, if, elif, else, for, while, break, continue, pass, import, from, as, with, try, except, finally, raise, class, global, nonlocal, assert, yield, True, False, None, and, or, not, is, in},
-  keywordstyle=\color{bluekeywords},
+% Code Listing for Pseudocode
+\definecolor{codekeywords}{rgb}{0.13,0.13,1}
+\definecolor{codecomments}{rgb}{0,0.5,0}
+\definecolor{codestrings}{rgb}{0.9,0,0}
+\definecolor{codebg}{rgb}{0.95,0.94,0.94}
+\definecolor{codecomputations}{RGB}{255,121,0}
+
+% Code Listing for Pseudocode
+\definecolor{codekeywords}{rgb}{0.13,0.13,1}
+\definecolor{codecomments}{rgb}{0,0.5,0}
+\definecolor{codestrings}{rgb}{0.9,0,0}
+\definecolor{codebg}{rgb}{0.95,0.94,0.94}
+% \definecolor{codecomputations}{RGB}{255,121,0} % Orange colour if needed
+
+\lstdefinelanguage{Pseudocode}{
+  morekeywords={BEGIN, Begin, begin, END, End, end, IF, If, if, THEN, Then, then, ELSE, Else, else, ELIF, Elif, elif, RETURN, Return, return, FUNCTION, Function, function, PROCEDURE, Procedure, procedure, PRINT, Print, print, INPUT, Input, input, OUTPUT, Output, output, BREAK, Break, break, UPTO, Upto, upto, FOR, For, for, WHILE, While, while, LOOP, Loop, loop, APPLY, Apply, apply, COMPUTE, Compute, compute, CALCULATE, Calculate, calculate, PROCESS, Process, process},
+  keywordstyle=\color{codekeywords}\bfseries,
   sensitive=true,
-  basicstyle=\ttfamily,
+  basicstyle=\ttfamily\footnotesize,
   breaklines=true,
   xleftmargin=\parindent,
   aboveskip=\bigskipamount,
   tabsize=4,
-  morecomment=[l][\color{greencomments}]{\#},
-  stringstyle=\color{redstrings},
+  morecomment=[l][\color{codecomments}]{//},
+  morestring=[b]",
+  morestring=[b]',
+  stringstyle=\color{codestrings},
   showstringspaces=false,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  rulecolor=\color{codebg},
 }
 
-\lstset
-{ % Formatting for Python code
-    language=Python,
-    numbers=left,
-    stepnumber=1,
-    showstringspaces=false,
-    tabsize=1,
-    breaklines=true,
-    breakatwhitespace=false,
-    backgroundcolor=\color{bgcolor},  % Background color
-    basicstyle=\ttfamily\footnotesize, % Code font size and style
-    keywordstyle=\color{bluekeywords}, % Keyword color
-    commentstyle=\color{greencomments}, % Comment color
-    stringstyle=\color{redstrings}, % String color
-    frame=single,                    % Adds a frame around the code
-    rulecolor=\color{bgcolor},       % Frame color
-    breaklines=true                  % Breaks long lines
-}
+\lstset{language=Pseudocode}

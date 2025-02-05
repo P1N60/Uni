@@ -110,13 +110,15 @@ while (i <= n and found < 0) {
         found := j
     i := i + 1
 }
-reutn found
+return found
 \end{lstlisting}
     
 \subsection[]{Explain in plain language what the algorithm above does. In particular, when does it
 return a positive value, and, if it does, what is the meaning of this value?}
     
-    
+Algoritmet søgerer først for, at alle elementer i array'en A kun indeholder værdier der er imellem 1 og længden (antallet af elementer) af array'en.\\
+
+Kort sagt retunerer algoritmet "failure" hvis A har elementer, der er mindre end 1, eller værdier, som er større end nummeret af elementer. Hvis algoritmet ikke retunerer "failure", retunerer den -1 hvis der ikke er nogle elementer, der har samme værdi som dens index, ellers retunerer den pladsen af elementer, der har samme værdi som dens index.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
 is, state how the worst-case running time scales with n, focusing only on the highest-order
