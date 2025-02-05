@@ -144,7 +144,7 @@ search (A, lo, hi)
     else 
         mid = floor ((lo + hi) / 2)
         if (A[mid] > A[lo])
-            search (A, lo mid)
+            search (A, lo, mid)
         else
             search (A, mid, hi)
 \end{lstlisting}
