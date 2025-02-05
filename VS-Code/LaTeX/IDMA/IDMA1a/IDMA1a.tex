@@ -38,14 +38,13 @@ Algoritmet ændrer hvert element i array'en B til produktet af alle elementer i 
 
 Lad os kigge på hvordan running time fordeles i vores algoritme:
 \begin{lstlisting}
-for i := 1 upto n {         //O(n) running time units
+for i := 1 upto n {         //n running time units
     B[i] := 1               //1 running time unit
-    for j := 1 upto i {     //O(n) running time units
+    for j := 1 upto i {     //n running time units
         B[i] := B[i] * A[j] //1 running time unit
     }
 }
 \end{lstlisting}
-
 Vi ser, at vi har n gentagelser af for-loop'et, som indeholder n gentagelser i endnu et for-loop. Dette resulterer i en worst-case $O(n^2)$
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
@@ -54,6 +53,15 @@ algorithm. Can you prove that it is asymptotically optimal? (That is, that no al
 solving this problem can run faster except possibly for a constant factor in the highest-order
 term or improvements in lower-order terms. )}
 
+For at gøre vores algoritme betydligt hurtigere, bør vi se, om vi kan få en worst-case asymptotic time complexcity på n eller bedre.\\
+(Bemærk at jeg bruger en anden snytax for min egen pseudokode)
+\begin{lstlisting}
+B[1] := A[1]               //1 running time unit
+for i := 2 upto n          //n running time units
+    B[i] := B[i-1] * A[i]  //1 running time unit
+\end{lstlisting} 
+Dette nye algortime vedholder samme funktionalitet som det tidlige, og kører i $O(n)$ asymptotic running time, hvilket er hurtigere, da dette skalerer lineært.\\
+Jeg vil selv mene, at dette er "asymptotically optimal", da jeg ikke ser en anden måde, hvorpå man kan iterere gennem hvert element i en array, som er hurtigere end lineær running time.
 
 % Question 2
 \section[Question 2]{Question 2 - In the following snippet of code A is an array indexed from 1 to n that contain elements
@@ -86,7 +94,21 @@ Når "failure" er retuneret, er der et eller flere elementer, hvis værdi ikke �
 is, state how the worst-case running time scales with n, focusing only on the highest-order
 term, and ignoring the constant factor in front of this term.)}
     
-
+\begin{lstlisting}
+j := n                      //1 running time unit
+good := TRUE                //1 running time unit
+while (j > 1 and good)      //n running time units
+    i := j - 1              //1 running time unit
+    while (i >= 1 and good) //n running time units
+        if (A[i] > A[j])    //1 running time unit
+            good := FALSE   //1 running time unit
+        i := i - 1          //1 running time unit
+    j := j - 1              //1 running time unit
+if (good)                   //1 running time unit
+    return "success"        //1 running time unit
+else                        //1 running time unit
+    return "failure"        //1 running time unit
+\end{lstlisting}
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
