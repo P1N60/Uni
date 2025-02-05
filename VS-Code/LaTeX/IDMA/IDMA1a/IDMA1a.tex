@@ -32,11 +32,21 @@ for i := 1 upto n {
 
 \subsection[]{Explain in plain language what the algorithm above does. In particular, what is the meaning of the entries B [i] after the algorithm has terminated? }
 
-Algoritmet ændrer hvert element i array'en B til produktet af alle elementer i A op til samme nummer element.
+Algoritmet ændrer hvert element i array'en B til produktet af alle elementer i A op til samme nummer element (i).
 
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That is, state how the worst-case running time scales with n, focusing only on the highest-order term, and ignoring the constant factor in front of this term.)}
 
+Lad os kigge på hvordan running time fordeles i vores algoritme:
+\begin{lstlisting}
+for i := 1 upto n {         //O(n) running time units
+    B[i] := 1               //1 running time unit
+    for j := 1 upto i {     //O(n) running time units
+        B[i] := B[i] * A[j] //1 running time unit
+    }
+}
+\end{lstlisting}
 
+Vi ser, at vi har n gentagelser af for-loop'et, som indeholder n gentagelser i endnu et for-loop. Dette resulterer i en worst-case $O(n^2)$
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
