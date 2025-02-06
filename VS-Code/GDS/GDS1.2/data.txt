@@ -1,0 +1,8 @@
+# Measurements started
+Sep 9, 9:05, T=22deg
+SEP 9, 10:15, T=25deg
+# Taking a coffee break
+Sep 9, 11:15, T=-10deg
+# Weekend
+Sept 12, 09:00AM, T=32deg
+Oct12 13:00, T=32degr
