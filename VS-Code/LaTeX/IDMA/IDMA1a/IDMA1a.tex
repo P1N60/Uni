@@ -38,10 +38,10 @@ Algoritmet ændrer hvert element i array'en B til produktet af alle elementer i 
 
 Lad os kigge på hvordan running time fordeles i vores algoritme:
 \begin{lstlisting}
-for i := 1 upto n {         //n running time units
-    B[i] := 1               //1 running time unit
-    for j := 1 upto i {     //n running time units
-        B[i] := B[i] * A[j] //1 running time unit
+for i := 1 upto n {         //O(n^2)
+    B[i] := 1               //O(1)
+    for j := 1 upto i {     //O(n)
+        B[i] := B[i] * A[j] //O(1)
     }
 }
 \end{lstlisting}
@@ -56,9 +56,9 @@ term or improvements in lower-order terms. )}
 For at gøre vores algoritme betydligt hurtigere, bør vi se, om vi kan få en worst-case asymptotic time complexcity på n eller bedre.\\
 (Bemærk at jeg bruger en anden snytax for min egen pseudokode)
 \begin{lstlisting}
-B[1] := A[1]               //1 running time unit
-for i := 2 upto n          //n running time units
-    B[i] := B[i-1] * A[i]  //1 running time unit
+B[1] := A[1]               //O(1)
+for i := 2 upto n          //O(n)
+    B[i] := B[i-1] * A[i]  //O(1)
 \end{lstlisting} 
 Dette nye algortime vedholder samme funktionalitet som det tidlige, og kører i: $cn + c \Rightarrow O(n)$ asymptotic running time, hvilket er hurtigere, da dette skalerer lineært.\\
 Jeg vil selv mene, at dette er "asymptotically optimal", da jeg ikke ser en anden måde, hvorpå man kan iterere gennem hvert element i en array, som er hurtigere end lineær running time.\\
@@ -96,19 +96,19 @@ is, state how the worst-case running time scales with n, focusing only on the hi
 term, and ignoring the constant factor in front of this term.)}
     
 \begin{lstlisting}
-j := n                      //1 running time unit
-good := TRUE                //1 running time unit
-while (j > 1 and good)      //n running time units
-    i := j - 1              //1 running time unit
-    while (i >= 1 and good) //n running time units
-        if (A[i] > A[j])    //1 running time unit
-            good := FALSE   //1 running time unit
-        i := i - 1          //1 running time unit
-    j := j - 1              //1 running time unit
-if (good)                   //1 running time unit
-    return "success"        //1 running time unit
-else                        //1 running time unit
-    return "failure"        //1 running time unit
+j := n                      //O(1)
+good := TRUE                //O(1)
+while (j > 1 and good)      //O(n^2)
+    i := j - 1              //O(1)
+    while (i >= 1 and good) //O(n)
+        if (A[i] > A[j])    //O(1)
+            good := FALSE   //O(1)
+        i := i - 1          //O(1)
+    j := j - 1              //O(1)
+if (good)                   //O(1)
+    return "success"        //O(1)
+else                        //O(1)
+    return "failure"        //O(1)
 \end{lstlisting}
 $cn^2 + cn + c \Rightarrow O(n^2)$
 
@@ -121,14 +121,14 @@ term or improvements in lower-order terms. )}
 Min forbedrede version af algoritmet er som følgende:\\
 (Bemærk at snytax'en for pseudokoden ikke er den samme som i opgaven)
 \begin{lstlisting}
-sorted := True          //1 running time unit
-for i := 1 upto n-1     //n running time units
-    if (A[i] > A[i+1])  //1 running time unit
-        sorted := False //1 running time unit
-if (sorted)             //1 running time unit
-    return "success"    //1 running time unit
-else                    //1 running time unit
-    return "failure"    //1 running time unit
+sorted := True          //O(1)
+for i := 1 upto n-1     //O(n)
+    if (A[i] > A[i+1])  //O(1)
+        sorted := False //O(1)
+if (sorted)             //O(1)
+    return "success"    //O(1)
+else                    //O(1)
+    return "failure"    //O(1)
 \end{lstlisting}
 Jeg har afskaffet begge while-loops og erstattet dem med et enkelt for-loop, som tjekker om alle elementer er i øget- eller lig rækkefølge.\\
 For-loopet kører til n-1, og er det højeste asymptotiske led, hvilket giver os en worst-case running time: $cn + c \Rightarrow O(n)$.
@@ -163,42 +163,55 @@ return found
 \subsection[]{Explain in plain language what the algorithm above does. In particular, when does it
 return a positive value, and, if it does, what is the meaning of this value?}
     
-Algoritmet søgerer først for, at alle elementer i array'en A kun indeholder værdier der er imellem 1 og længden (antallet af elementer) af array'en.\\
-
-Kort sagt retunerer algoritmet "failure" hvis A har elementer, der er mindre end 1, eller værdier, som er større end nummeret af elementer. Hvis algoritmet ikke retunerer "failure", retunerer den -1 hvis der ikke er nogle elementer, der har samme værdi som dens index, ellers retunerer den pladsen af elementer, der har samme værdi som dens index.
+Algoritmet søgerer først for, at alle elementer i array'en A kun indeholder værdier der er imellem 1 og længden (antallet af elementer) af array'en. Hvis dette er tilfældet, retuneres "failure". Hvis algoritmet ikke retunerer "failure", retunerer den -1 hvis der ikke er nogle elementer, der peger på et element, som peger tilbage igen (en cyklus). Hvis sådan en cyklus bliver fundet, bliver index'et af det gældende element retuneret.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
 is, state how the worst-case running time scales with n, focusing only on the highest-order
 term, and ignoring the constant factor in front of this term.)}
     
 \begin{lstlisting}
-for i := 1 upto n {             //n running time units
-    if (A[i] < 1 or A[i] > n)   //1 running time unit
-        return "failure"        //1 running time unit
+for i := 1 upto n {             //O(n)
+    if (A[i] < 1 or A[i] > n)   //O(1)
+        return "failure"        //O(1)
 }
-i := 1                          //1 running time unit
-found := -1                     //1 running time unit
-while (i <= n and found < 0) {  //n running time units
-    for j := 1 upto n {         //n running time units
-        B[j] := false           //1 running time unit
+i := 1                          //O(1)
+found := -1                     //O(1)
+while (i <= n and found < 0) {  //O(n^2)
+    for j := 1 upto n {         //O(n)
+        B[j] := false           //O(1)
     }
-    j := 1                      //1 running time unit
-    while (B[j] == false) {     
-        B[j] := true
-        j := A[j]
+    j := 1                      //O(1)
+    while (B[j] == false) {     //O(n)
+        B[j] := true            //O(1)
+        j := A[j]               //O(1)
     }
-    if (A[A[j]] == j)
-        found := j
-    i := i + 1
+    if (A[A[j]] == j)           //O(1)
+        found := j              //O(1)
+    i := i + 1                  //O(1)
 }
-return found
+return found                    //O(1)
 \end{lstlisting}
+Vi ser, at vi har en worst-case asymptotic running time på $cn^2 + cn + c \Rightarrow O(n^2)$, da vi har et for-loop inde i et while-loop, som begge kører n gange.
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
 algorithm. Can you prove that it is asymptotically optimal?}
 
-
+Her er min version af algoritmet:
+\begin{lstlisting}
+for i := 1 upto n               //O(n)
+    if (A[i] < 1 or A[i] > n)   //O(1)
+        return "failure"        //O(1)
+    B[i] := False               //O(1)
+found := -1                     //O(1)
+for j := 1 upto n               //O(n)
+    if (A[A[j]] == j)           //O(1)
+        found := j              //O(1)
+    if (found > 0)              //O(1)
+        return found            //O(1)
+return found                    //O(1)
+\end{lstlisting}
+Dette kører med $cn + c$ asymptotic running time, hvilket svarer til $O(n)$ (linæer) tid.
 
 % Question 4
 \section[Question 4]{Question 4 - In the following snippet of code A is an array indexed from 1 to n > 2 containing integers.}
