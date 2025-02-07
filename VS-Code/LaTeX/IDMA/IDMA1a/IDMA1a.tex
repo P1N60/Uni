@@ -45,7 +45,7 @@ for i := 1 upto n {         //n running time units
     }
 }
 \end{lstlisting}
-Vi ser, at vi har n gentagelser af for-loop'et, som indeholder n gentagelser i endnu et for-loop. Dette resulterer i en worst-case $O(n^2)$
+Vi ser, at vi har n gentagelser af for-loop'et, som indeholder n gentagelser i endnu et for-loop. Dette resulterer i en worst-case $cn^2 + cn + c \Rightarrow O(n^2)$
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
@@ -60,8 +60,9 @@ B[1] := A[1]               //1 running time unit
 for i := 2 upto n          //n running time units
     B[i] := B[i-1] * A[i]  //1 running time unit
 \end{lstlisting} 
-Dette nye algortime vedholder samme funktionalitet som det tidlige, og kører i $O(n)$ asymptotic running time, hvilket er hurtigere, da dette skalerer lineært.\\
-Jeg vil selv mene, at dette er "asymptotically optimal", da jeg ikke ser en anden måde, hvorpå man kan iterere gennem hvert element i en array, som er hurtigere end lineær running time.
+Dette nye algortime vedholder samme funktionalitet som det tidlige, og kører i: $cn + c \Rightarrow O(n)$ asymptotic running time, hvilket er hurtigere, da dette skalerer lineært.\\
+Jeg vil selv mene, at dette er "asymptotically optimal", da jeg ikke ser en anden måde, hvorpå man kan iterere gennem hvert element i en array, som er hurtigere end lineær running time.\\
+Dog kan jeg ikke bevise, at dette er den hurtigste måde.
 
 % Question 2
 \section[Question 2]{Question 2 - In the following snippet of code A is an array indexed from 1 to n that contain elements
@@ -88,7 +89,7 @@ about the array A when "success" or "failure" is returned, respectively?}
 
 Algoritmet retunerer "success" eller "failure", afhængigt af om alle elementers værdi i array'en A øges i tagt med elementnummeret, eller har samme værdi.
 Når "success" er retuneret, ved vi, at array'en A kun indeholder elementer, der har samme eller højere værdi end elementet før for hvert element i A. Sagt med andre ord er elle elementer i A sorteret fra laveste til højeste værdi, hvis "success" er retuneret.\\
-Når "failure" er retuneret, er der et eller flere elementer, hvis værdi ikke øges i tagt med elementnummeret eller ikke er den samme. Med andre ord er array'en ikke sorteret.
+Når "failure" er retuneret, er der et eller flere elementer, hvis værdi ikke øges i tagt med elementnummeret eller ikke er den samme. Med andre ord er array'en ikke sorteret i increasing rækkefølge.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
 is, state how the worst-case running time scales with n, focusing only on the highest-order
@@ -109,6 +110,7 @@ if (good)                   //1 running time unit
 else                        //1 running time unit
     return "failure"        //1 running time unit
 \end{lstlisting}
+$cn^2 + cn + c \Rightarrow O(n^2)$
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
@@ -116,7 +118,20 @@ algorithm. Can you prove that it is asymptotically optimal? (That is, that no al
 solving this problem can run faster except possibly for a constant factor in the highest-order
 term or improvements in lower-order terms. )}
 
-
+Min forbedrede version af algoritmet er som følgende:\\
+(Bemærk at snytax'en for pseudokoden ikke er den samme som i opgaven)
+\begin{lstlisting}
+sorted := True          //1 running time unit
+for i := 1 upto n-1     //n running time units
+    if (A[i] > A[i+1])  //1 running time unit
+        sorted := False //1 running time unit
+if (sorted)             //1 running time unit
+    return "success"    //1 running time unit
+else                    //1 running time unit
+    return "failure"    //1 running time unit
+\end{lstlisting}
+Jeg har afskaffet begge while-loops og erstattet dem med et enkelt for-loop, som tjekker om alle elementer er i øget- eller lig rækkefølge.\\
+For-loopet kører til n-1, og er det højeste asymptotiske led, hvilket giver os en worst-case running time: $cn + c \Rightarrow O(n)$.
 
 % Question 3
 \section[Question 3]{Question 3 - In the following snippet of code A is an array indexed from 1 to n that contains integers,
@@ -156,7 +171,28 @@ Kort sagt retunerer algoritmet "failure" hvis A har elementer, der er mindre end
 is, state how the worst-case running time scales with n, focusing only on the highest-order
 term, and ignoring the constant factor in front of this term.)}
     
-    
+\begin{lstlisting}
+for i := 1 upto n {             //n running time units
+    if (A[i] < 1 or A[i] > n)   //1 running time unit
+        return "failure"        //1 running time unit
+}
+i := 1                          //1 running time unit
+found := -1                     //1 running time unit
+while (i <= n and found < 0) {  //n running time units
+    for j := 1 upto n {         //n running time units
+        B[j] := false           //1 running time unit
+    }
+    j := 1                      //1 running time unit
+    while (B[j] == false) {     
+        B[j] := true
+        j := A[j]
+    }
+    if (A[A[j]] == j)
+        found := j
+    i := i + 1
+}
+return found
+\end{lstlisting}
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
