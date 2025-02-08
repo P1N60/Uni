@@ -228,7 +228,6 @@ search (A, lo, hi)
         else
             search (A, mid, hi)
 \end{lstlisting}
-
 \begin{itemize}
     \item[] \textbf{The first call to the algorithm is search (A, 1, n), where n is whatever size (at least 2) the
     array has.}
@@ -236,11 +235,24 @@ search (A, lo, hi)
 
 \subsection[]{Explain in plain language what the algorithm above does. If the algorithm returns something other than "failure", then what is the meaning of the value returned?}
     
-    
+
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n.}
     
-    
+\begin{lstlisting}
+search (A, lo, hi)                  //O(log(n))
+    if (A[lo] >= A[hi])             //O(1)
+        return "failure"            //O(1)
+    else if (lo + 1 == hi)          //O(1)
+        return lo                   //O(1)
+    else                            //O(1)
+        mid = floor ((lo + hi) / 2) //O(1)
+        if (A[mid] > A[lo])         //O(1)
+            search (A, lo, mid)     //O(log(n))
+        else                        //O(1)
+            search (A, mid, hi)     //O(log(n))
+\end{lstlisting}
+Uafhængigt af størrelsen ved vi, at vi rekursivt kører search på en størrelse, der svarer til halvdelen af den sidste rekursion. Dette betyder, at n halveres ved hver rekursion, hvilket kan beskrives i asymptotic worst-case running time som: $O(log(n))$
 
 \subsection[]{Could it be the case that recursive calls of the algorithm also return "failure", or would it
 be sufficient to check just once before making the first recursive call? If we get the additional
