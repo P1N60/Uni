@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1739045143.65415 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex" "IDMA1a.pdf" "IDMA1a" 1739045145.83053 0
+["pdflatex"] 1739045609.83813 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex" "IDMA1a.pdf" "IDMA1a" 1739045612.12991 0
   "../../sty/cover.sty" 1733427792 163 436897a4ab4d2c392892635d95c28ab9 ""
   "../../sty/header.sty" 1733427914 262 109f752decd82b9a012e4fb5550a366a ""
   "../../sty/setup.sty" 1738935318 10182 7c28c9fea5957339fd9a07cb21c98ced ""
@@ -39,6 +39,7 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -269,10 +270,10 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "IDMA1a.aux" 1739045145 4025 576c109ebf3d9da3290a5c05ac14ade3 "pdflatex"
-  "IDMA1a.tex" 1739045142 12400 b4b0edeaacfc7daa57634b9b3813233f ""
-  "IDMA1a.toc" 1739045145 1056 47752d446b26caac9fe86563a25e1e95 "pdflatex"
-  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex" 1739045142 12400 b4b0edeaacfc7daa57634b9b3813233f ""
+  "IDMA1a.aux" 1739045611 4025 b7690c3b0af9b8db62fa7496f4495941 "pdflatex"
+  "IDMA1a.tex" 1739045608 12470 57480ff676f7ed08595556416dd39cec ""
+  "IDMA1a.toc" 1739045611 1056 47752d446b26caac9fe86563a25e1e95 "pdflatex"
+  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex" 1739045608 12470 57480ff676f7ed08595556416dd39cec ""
   (generated)
   "IDMA1a.aux"
   "IDMA1a.log"

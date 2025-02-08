@@ -252,7 +252,7 @@ search (A, lo, hi)                  //O(log(n))
         else                        //O(1)
             search (A, mid, hi)     //O(log(n))
 \end{lstlisting}
-Uafhængigt af størrelsen ved vi, at vi rekursivt kører search på en størrelse, der svarer til halvdelen af den sidste rekursion. Dette betyder, at n halveres ved hver rekursion, hvilket kan beskrives i asymptotic worst-case running time som: $O(log(n))$
+Uafhængigt af størrelsen ved vi, at vi rekursivt kører search på en størrelse, der svarer til halvdelen $(\lfloor\frac{lo + hi}{2}\rfloor)$ af den sidste rekursion. Dette betyder, at nedre (lo) eller øvre (hi) grænse halveres ved hver rekursion, hvilket kan beskrives i asymptotic worst-case running time som: $O(log(n))$
 
 \subsection[]{Could it be the case that recursive calls of the algorithm also return "failure", or would it
 be sufficient to check just once before making the first recursive call? If we get the additional
