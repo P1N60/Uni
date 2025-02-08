@@ -148,7 +148,7 @@ while (i <= n and found < 0) {
     for j := 1 upto n {
         B[j] := false
     }
-    j := 1
+    j := i
     while (B[j] == false) {
         B[j] := true
         j := A[j]
@@ -180,7 +180,7 @@ while (i <= n and found < 0) {  //O(n^2)
     for j := 1 upto n {         //O(n)
         B[j] := false           //O(1)
     }
-    j := 1                      //O(1)
+    j := i                      //O(1)
     while (B[j] == false) {     //O(n)
         B[j] := true            //O(1)
         j := A[j]               //O(1)
@@ -199,16 +199,15 @@ algorithm. Can you prove that it is asymptotically optimal?}
 
 Her er min version af algoritmet:
 \begin{lstlisting}
-for i := 1 upto n               //O(n)
-    if (A[i] < 1 or A[i] > n)   //O(1)
-        return "failure"        //O(1)
-found := -1                     //O(1)
-for j := 1 upto n               //O(n)
-    if (A[A[j]] == j)           //O(1)
-        found := j              //O(1)
-    if (found > 0)              //O(1)
-        return found            //O(1)
-return found                    //O(1)
+for i := 1 upto n                       //O(n)
+    if (A[i] < 1 or A[i] > n)           //O(1)
+        return "failure"                //O(1)
+found := -1                             //O(1)
+for j := 1 upto n                       //O(n)
+    if (A[j] == j or A[A[j]] == A[j])   //O(1)
+        found := j                      //O(1)
+        return found                    //O(1)
+return found                            //O(1)
 \end{lstlisting}
 Dette kører med $cn + c$ asymptotic running time, hvilket svarer til $O(n)$ (linæer) tid.
 
