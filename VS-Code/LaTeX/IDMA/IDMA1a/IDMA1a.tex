@@ -163,7 +163,7 @@ return found
 \subsection[]{Explain in plain language what the algorithm above does. In particular, when does it
 return a positive value, and, if it does, what is the meaning of this value?}
     
-Algoritmet søgerer først for, at alle elementer i array'en A kun indeholder værdier der er imellem 1 og længden (antallet af elementer) af array'en. Hvis dette er tilfældet, retuneres "failure". Hvis algoritmet ikke retunerer "failure", retunerer den -1 hvis der ikke er nogle elementer, der peger på et element, som peger tilbage igen (en cyklus). Hvis sådan en cyklus bliver fundet, bliver index'et af det gældende element retuneret.
+Algoritmet søgerer først for, at alle elementer i array'en A kun indeholder værdier der er imellem 1 og længden (antallet af elementer) af array'en. Hvis dette ikke er tilfældet retuneres "failure", da vi senere ellers ville få en out-of-bounds error. Hvis algoritmet ikke retunerer "failure", retunerer den -1 hvis der ikke er nogle elementer, der peger på et element, som peger tilbage igen (en cyklus). Hvis sådan en cyklus bliver fundet, bliver index'et af det gældende element retuneret.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
 is, state how the worst-case running time scales with n, focusing only on the highest-order
@@ -197,19 +197,20 @@ Vi ser, at vi har en worst-case asymptotic running time på $cn^2 + cn + c \Righ
 much faster can you get the algorithm to run? Analyse the time complexity of your new
 algorithm. Can you prove that it is asymptotically optimal?}
 
+Jeg laver den antagelse, at vi ikke behøver auxiliary array'en B, da det vigtige er elementerne som udgør A, samt værdien af outputten 'found'.
 Her er min version af algoritmet:
 \begin{lstlisting}
-for i := 1 upto n                       //O(n)
-    if (A[i] < 1 or A[i] > n)           //O(1)
-        return "failure"                //O(1)
-found := -1                             //O(1)
-for j := 1 upto n                       //O(n)
-    if (A[j] == j or A[A[j]] == A[j])   //O(1)
-        found := j                      //O(1)
-        return found                    //O(1)
-return found                            //O(1)
+for i := 1 upto n                   //O(n)
+    if (A[i] < 1 or A[i] > n)       //O(1)
+        return "failure"            //O(1)
+found := -1                         //O(1)
+for j := 1 upto n                   //O(n)
+    if (A[j] == j or A[A[j]] == j)  //O(1)
+        found := j                  //O(1)
+        return found                //O(1)
+return found                        //O(1)
 \end{lstlisting}
-Dette kører med $cn + c$ asymptotic running time, hvilket svarer til $O(n)$ (linæer) tid.
+Dette kører med $cn + c$ worst-case running time, hvilket svarer til $O(n)$ (linæer) tid. Dette er en markant forbedring frem for $O(n^2)$, præcist som i de andre opgaver.
 
 % Question 4
 \section[Question 4]{Question 4 - In the following snippet of code A is an array indexed from 1 to n > 2 containing integers.}
