@@ -235,7 +235,12 @@ search (A, lo, hi)
 
 \subsection[]{Explain in plain language what the algorithm above does. If the algorithm returns something other than "failure", then what is the meaning of the value returned?}
     
-
+Algoritmet er rekursivt, da den kalder på sig selv. For hver rekursion er der 3 mulige cases:
+\begin{itemize}
+    \item Hvis den første værdi i A er større end den sidste, retuneres "failure".
+    \item Ellers hvis den nedre grænse (lo) + 1 er lig med den øvre grænse (hi), retuneres den nedre grænse.
+    \item Ellers udregnes mid til midten mellem den nedre- og øvre grænse $(\lfloor\frac{lo + hi}{2}\rfloor)$. Hvis værdien i denne midte er strængt større end værdien i den nedre grænse, køres algoritmet igen med lo og mid, ellers køreres algoritmet med mid og hi.
+\end{itemize}
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n.}
     
