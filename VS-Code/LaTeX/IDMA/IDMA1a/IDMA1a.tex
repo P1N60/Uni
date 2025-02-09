@@ -237,10 +237,11 @@ search (A, lo, hi)
     
 Algoritmet er rekursivt, da den kalder på sig selv. For hver rekursion er der 3 mulige cases:
 \begin{itemize}
-    \item Hvis den første værdi i A er større end den sidste, retuneres "failure".
-    \item Ellers hvis den nedre grænse (lo) + 1 er lig med den øvre grænse (hi), retuneres den nedre grænse.
+    \item Hvis værdien i den nedre grænse (lo) er større end- eller lig den i den øvre grænse (hi), retuneres "failure". 
+    \item Ellers hvis den nedre grænse + 1 er lig med den øvre grænse, retuneres den nedre grænse. Sagt med andre ord er der kun 2 elementer tilbage, og vi vælger den første.
     \item Ellers udregnes mid til midten mellem den nedre- og øvre grænse $(\lfloor\frac{lo + hi}{2}\rfloor)$. Hvis værdien i denne midte er strængt større end værdien i den nedre grænse, køres algoritmet igen med lo og mid, ellers køreres algoritmet med mid og hi.
 \end{itemize}
+Hvis alle rekursioner opfylder, at A[lo] < A[hi], vil vi til sidst ende med, at lo bliver retuneret. I disse tilfælde er lo index'et hvor den mindste værdi i array'en A findes.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n.}
     
@@ -257,7 +258,8 @@ search (A, lo, hi)                  //O(log(n))
         else                        //O(1)
             search (A, mid, hi)     //O(log(n))
 \end{lstlisting}
-Uafhængigt af størrelsen ved vi, at vi rekursivt kører search på en størrelse, der svarer til halvdelen $(\lfloor\frac{lo + hi}{2}\rfloor)$ af den sidste rekursion. Dette betyder, at nedre (lo) eller øvre (hi) grænse halveres ved hver rekursion, hvilket kan beskrives i asymptotic worst-case running time som: $O(log(n))$
+Uafhængigt af størrelsen ved vi, at vi rekursivt kører search på en størrelse, der svarer til halvdelen $(\lfloor\frac{lo + hi}{2}\rfloor)$ af den sidste rekursion. Dette betyder, at nedre (lo) eller øvre (hi) grænse halveres ved hver rekursion, hvilket kan beskrives i asymptotic worst-case running time som: $O(log(n))$\\
+Dette kan sammenlignes med \textit{binary search}, som har samme worst-case running time $O(log(n))$, bort set fra at vi ikke leder efter en specifik værdi i det ovenstående algoritme.
 
 \subsection[]{Could it be the case that recursive calls of the algorithm also return "failure", or would it
 be sufficient to check just once before making the first recursive call? If we get the additional

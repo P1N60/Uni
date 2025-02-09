@@ -12,5 +12,5 @@
 \contentsline {subsection}{\numberline {3.c}}{6}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Question 4}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.a}}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.b}}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.b}}{8}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.c}}{8}{subsection.4.3}%
