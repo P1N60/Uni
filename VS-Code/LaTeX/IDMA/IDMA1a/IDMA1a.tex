@@ -32,20 +32,14 @@ for i := 1 upto n {
 
 \subsection[]{Explain in plain language what the algorithm above does. In particular, what is the meaning of the entries B [i] after the algorithm has terminated? }
 
-Algoritmet ændrer hvert element i array'en B til produktet af alle elementer i A op til samme nummer element (i).
+Algoritmet ændrer hvert element i array'en B til produktet af alle elementer i A op til samme nummer element ($i$). Dette gøres ved at iterere fra $i=1\dots n$ og heraf fra $j=1\dots  i$, hvor hver iteration sætter $B[i] := 1$, og derefter $B[i] := B[i] \cdot A[j]$
 
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That is, state how the worst-case running time scales with n, focusing only on the highest-order term, and ignoring the constant factor in front of this term.)}
 
-Lad os kigge på hvordan running time fordeles i vores algoritme:
-\begin{lstlisting}
-for i := 1 upto n {         //O(n^2)
-    B[i] := 1               //O(1)
-    for j := 1 upto i {     //O(n)
-        B[i] := B[i] * A[j] //O(1)
-    }
-}
-\end{lstlisting}
-Vi ser, at vi har n gentagelser af for-loop'et, som indeholder n gentagelser i endnu et for-loop. Dette resulterer i en worst-case $cn^2 + cn + c \Rightarrow O(n^2)$
+Vi ser, at vi har $n$ gentagelser af for-loop'et, som indeholder $i$ gentagelser i endnu et for-loop. 
+Rent notationsmæssigt, kan dette beskrives matematisk som:\\
+\[\sum_{i=1}^{n}i=\dfrac{n^2+n}{2}\]
+Dette resulterer i en worst-case asymptotic running time complexcity på: $cn^2 + cn + c \Rightarrow O(n^2)$
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
@@ -53,16 +47,17 @@ algorithm. Can you prove that it is asymptotically optimal? (That is, that no al
 solving this problem can run faster except possibly for a constant factor in the highest-order
 term or improvements in lower-order terms. )}
 
-For at gøre vores algoritme betydligt hurtigere, bør vi se, om vi kan få en worst-case asymptotic time complexcity på n eller bedre.\\
+For at gøre vores algoritme hurtigere end $O(n^2)$, bør vi se, om vi kan få en worst-case asymptotic running time complexcity på $n$ eller bedre.\\
 (Bemærk at jeg bruger en anden snytax for min egen pseudokode)
 \begin{lstlisting}
-B[1] := A[1]               //O(1)
-for i := 2 upto n          //O(n)
-    B[i] := B[i-1] * A[i]  //O(1)
+B[1] := A[1]     
+for i := 2 upto n     
+    B[i] := B[i-1] * A[i]
 \end{lstlisting} 
-Dette nye algortime vedholder samme funktionalitet som det tidlige, og kører i: $cn + c \Rightarrow O(n)$ asymptotic running time, hvilket er hurtigere, da dette skalerer lineært.\\
-Jeg vil selv mene, at dette er "asymptotically optimal", da jeg ikke ser en anden måde, hvorpå man kan iterere gennem hvert element i en array, som er hurtigere end lineær running time.\\
-Dog kan jeg ikke bevise, at dette er den hurtigste måde.
+Dette nye algortime vedholder samme funktionalitet som det tidlige, og kan beskrives som:
+\[\sum_{i=2}^{n}1 = n \Rightarrow O(n)\]
+asymptotic running time, hvilket er hurtigere, da dette skalerer lineært.\\
+Jeg vil selv mene, at dette er "asymptotically optimal", da jeg ikke ser en anden måde, hvorpå man kan iterere gennem hvert element i en array, som er hurtigere end lineær running time.
 
 % Question 2
 \section[Question 2]{Question 2 - In the following snippet of code A is an array indexed from 1 to n that contain elements
@@ -87,30 +82,16 @@ else
 \subsection[]{Explain in plain language what the algorithm above does. In particular, what do we know
 about the array A when "success" or "failure" is returned, respectively?}
 
-Algoritmet retunerer "success" eller "failure", afhængigt af om alle elementers værdi i array'en A øges i tagt med elementnummeret, eller har samme værdi.
-Når "success" er retuneret, ved vi, at array'en A kun indeholder elementer, der har samme eller højere værdi end elementet før for hvert element i A. Sagt med andre ord er elle elementer i A sorteret fra laveste til højeste værdi, hvis "success" er retuneret.\\
+Algoritmet retunerer "success" eller "failure", afhængigt af om alle elementers værdi i array'en $A$ øges i tagt med elementnummeret, eller har samme værdi.
+Når "success" er retuneret, ved vi, at array'en $A$ kun indeholder elementer, der har samme eller højere værdi end elementet før for hvert element i $A$. Sagt med andre ord er elle elementer i $A$ sorteret fra laveste til højeste værdi, hvis "success" er retuneret.\\
 Når "failure" er retuneret, er der et eller flere elementer, hvis værdi ikke øges i tagt med elementnummeret eller ikke er den samme. Med andre ord er array'en ikke sorteret i increasing rækkefølge.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
 is, state how the worst-case running time scales with n, focusing only on the highest-order
 term, and ignoring the constant factor in front of this term.)}
-    
-\begin{lstlisting}
-j := n                      //O(1)
-good := TRUE                //O(1)
-while (j > 1 and good)      //O(n^2)
-    i := j - 1              //O(1)
-    while (i >= 1 and good) //O(n)
-        if (A[i] > A[j])    //O(1)
-            good := FALSE   //O(1)
-        i := i - 1          //O(1)
-    j := j - 1              //O(1)
-if (good)                   //O(1)
-    return "success"        //O(1)
-else                        //O(1)
-    return "failure"        //O(1)
-\end{lstlisting}
-$cn^2 + cn + c \Rightarrow O(n^2)$
+
+Hvis while-loop'et aldrig bliver terminated tidligt, kørerer vi ydre while-loop $n-1$ gange, da vi starter fra $j = n$, og sidste iteration køres ikke, da $j > 1$ ikke opfyldes. Heraf kører det indre while-loop $i=j-1$ gange. Det indre while-loop kan derfor i værste tilfælde beskrives som:
+\[\sum_{j=2}^{n}(j-n)=\dfrac{n^2+n}{2}\Rightarrow O(n^2)\]
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
@@ -121,17 +102,18 @@ term or improvements in lower-order terms. )}
 Min forbedrede version af algoritmet er som følgende:\\
 (Bemærk at snytax'en for pseudokoden ikke er den samme som i opgaven)
 \begin{lstlisting}
-sorted := True          //O(1)
-for i := 1 upto n-1     //O(n)
-    if (A[i] > A[i+1])  //O(1)
-        sorted := False //O(1)
-if (sorted)             //O(1)
-    return "success"    //O(1)
-else                    //O(1)
-    return "failure"    //O(1)
+sorted := True          
+for i := 1 upto n-1     
+    if (A[i] > A[i+1])  
+        sorted := False 
+if (sorted)             
+    return "success"    
+else                    
+    return "failure"  
 \end{lstlisting}
 Jeg har afskaffet begge while-loops og erstattet dem med et enkelt for-loop, som tjekker om alle elementer er i øget- eller lig rækkefølge.\\
-For-loopet kører til n-1, og er det højeste asymptotiske led, hvilket giver os en worst-case running time: $cn + c \Rightarrow O(n)$.
+For-loopet kører til $n-1$, og er det højeste led, hvilket giver os en worst-case running time: $cn + c \Rightarrow O(n)$.\\
+Jeg forsøgte at gøre dette endnu hurtigere, ved at dele array'en op i flere dele, og sammenligne flere elementer på samme tid, men kunne ikke få det til at blive hurtigere en linæer tid.
 
 % Question 3
 \section[Question 3]{Question 3 - In the following snippet of code A is an array indexed from 1 to n that contains integers,
@@ -163,35 +145,14 @@ return found
 \subsection[]{Explain in plain language what the algorithm above does. In particular, when does it
 return a positive value, and, if it does, what is the meaning of this value?}
     
-Algoritmet søgerer først for, at alle elementer i array'en A kun indeholder værdier der er imellem 1 og længden (antallet af elementer) af array'en. Hvis dette ikke er tilfældet retuneres "failure", da vi senere ellers ville få en out-of-bounds error. Hvis algoritmet ikke retunerer "failure", retunerer den -1 hvis der ikke er nogle elementer, der peger på et element, som peger tilbage igen (en cyklus). Hvis sådan en cyklus bliver fundet, bliver index'et af det gældende element retuneret.
+Algoritmet søgerer først for, at alle elementer i array'en $A$ kun indeholder værdier der er imellem $1$ og længden (antallet af elementer) af array'en. Hvis dette ikke er tilfældet retuneres "failure", da vi senere ellers ville få en out-of-bounds error. Hvis algoritmet ikke retunerer "failure", retunerer den $-1$ hvis der ikke er nogle elementer, der peger på et element, som peger tilbage igen (en cyklus). Hvis sådan en cyklus bliver fundet, bliver index'et af det gældende element retuneret.
     
 \subsection[]{Provide an asymptotic analysis of the running time as a function of the array size n. (That
 is, state how the worst-case running time scales with n, focusing only on the highest-order
 term, and ignoring the constant factor in front of this term.)}
-    
-\begin{lstlisting}
-for i := 1 upto n {             //O(n)
-    if (A[i] < 1 or A[i] > n)   //O(1)
-        return "failure"        //O(1)
-}
-i := 1                          //O(1)
-found := -1                     //O(1)
-while (i <= n and found < 0) {  //O(n^2)
-    for j := 1 upto n {         //O(n)
-        B[j] := false           //O(1)
-    }
-    j := i                      //O(1)
-    while (B[j] == false) {     //O(n)
-        B[j] := true            //O(1)
-        j := A[j]               //O(1)
-    }
-    if (A[A[j]] == j)           //O(1)
-        found := j              //O(1)
-    i := i + 1                  //O(1)
-}
-return found                    //O(1)
-\end{lstlisting}
-Vi ser, at vi har en worst-case asymptotic running time på $cn^2 + cn + c \Rightarrow O(n^2)$, da vi har et for-loop inde i et while-loop, som begge kører n gange.
+
+I det værste tilfælde, kører vi det ydre while-loop $n$ gange, da $i$ går fra $i=1\dots n$. Det indre for-loop køreres fra $j=1\dots n$, så dette for-loop kan beskrives som:
+\[\sum_{i=1}^{n}i = \dfrac{n^2+n}{2} \Rightarrow O(n^2)\]
 
 \subsection[]{Can you improve the code to run faster while retaining the same functionality? How
 much faster can you get the algorithm to run? Analyse the time complexity of your new
@@ -200,15 +161,15 @@ algorithm. Can you prove that it is asymptotically optimal?}
 Jeg laver den antagelse, at vi ikke behøver auxiliary array'en B, da det vigtige er elementerne som udgør A, samt værdien af outputten 'found'.
 Her er min version af algoritmet:
 \begin{lstlisting}
-for i := 1 upto n                   //O(n)
-    if (A[i] < 1 or A[i] > n)       //O(1)
-        return "failure"            //O(1)
-found := -1                         //O(1)
-for j := 1 upto n                   //O(n)
-    if (A[j] == j or A[A[j]] == j)  //O(1)
-        found := j                  //O(1)
-        return found                //O(1)
-return found                        //O(1)
+for i := 1 upto n                   
+    if (A[i] < 1 or A[i] > n)       
+        return "failure"            
+found := -1                         
+for j := 1 upto n                   
+    if (A[j] == j or A[A[j]] == j)  
+        found := j                  
+        return found                
+return found                        
 \end{lstlisting}
 Dette kører med $cn + c$ worst-case running time, hvilket svarer til $O(n)$ (linæer) tid. Dette er en markant forbedring frem for $O(n^2)$, præcist som i de andre opgaver.
 
@@ -268,7 +229,17 @@ completely, since we would be guaranteed to never have this answer returned anyw
 What about if we get the additional guarantee that the array is sorted in increasing order?
 What if both of these extra guarantees apply?}
 
-
-
+Vi kan godt sætte vores tjek om: $A[lo] >= A[hi]$ ude fra rekursion-delen, og blot køre det i begyndelsen, da rekursionen altid sker, så $A[lo]$ ikke er $>= A[hi]$. Nede under refererer jeg til $A[lo] >= A[hi]$ som $A[lo] < A[hi]$, da dette er det ønskede scenarie, som får algoritmet til at fortsætte.\\
+Vi kan bevise dette ved at se på hvornår $mid$ bliver sat som hhv. den øvre- og nedre grænse.
+Givet at vi i første iteration ved at: $A[lo] < A[hi]$ må følgende også gælde:
+\begin{center}
+    $A[mid] > A[lo] \Rightarrow search(A, lo, mid) \Rightarrow$ næste rekursion: $A[lo] < A[hi]$
+\end{center}
+og
+\begin{center}
+    $A[mid] <= A[lo] \Rightarrow search(A, mid, hi) \Rightarrow$ næste rekursion: $A[lo] < A[hi]$ 
+\end{center}
+Selvom vi måske ved, at alle elementer er unikke, betyder det ikke at vi kan fjerne tjekket i starten, da ikke alle mulige kombinationer af elementerne i A nødtvendigvis opretholder betingelsen: $A[lo] < A[hi]$. Hvis vi derimod ved, at alle elementer er sorteret i øget rækkefølge, vil dette i kombination med, at alle elementer er unikke (hvis elementerne bare var sorteret ville der stadig være mulighed for at $A[lo] == A[hi]$), gøre det muligt, at afskaffe verificeringen, at: $A[lo] < A[hi]$, da alle mulige kombinationer af disse, ville opfylde kravet på forhånd.\\
+Så ja, det er muligt at flytte betingelsen ud fra rekursionen med den information, som var givet tidligere. Hvis vi vil fjerne betingelsen helt, skal vi derudover også have informationen, at A er sorteret i øget rækkefølge, og at alle elementer er unikke.
 
 \end{document}
