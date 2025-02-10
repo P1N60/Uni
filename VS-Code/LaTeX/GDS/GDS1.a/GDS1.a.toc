@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Part 1: Regular expression warmup}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.a}Danish CPR numbers}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.b}}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Part 2: Processing the FakeNewsCorpus data set}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.a}}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.b}}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.c}}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.d}}{3}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.e}}{4}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Part 3: Descriptive frequency analysis of the data}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.a}}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.b}}{4}{subsection.3.2}%
