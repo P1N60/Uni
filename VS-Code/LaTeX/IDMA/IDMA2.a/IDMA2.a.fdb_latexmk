@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1739120104.88369 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex" "IDMA1a.pdf" "IDMA1a" 1739120106.12054 0
+["pdflatex"] 1739197904.90151 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA2.a/IDMA2.a.tex" "IDMA2.a.pdf" "IDMA2.a" 1739197906.12169 0
   "../../sty/cover.sty" 1733469646.88083 155 436897a4ab4d2c392892635d95c28ab9 ""
   "../../sty/header.sty" 1733469646.88098 250 109f752decd82b9a012e4fb5550a366a ""
   "../../sty/setup.sty" 1738754755.96935 9853 7c28c9fea5957339fd9a07cb21c98ced ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA1a/IDMA1a.tex" 1739120104.63281 13818 d666b1f8d42abf3ecc9f4e767268d425 ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA2.a/IDMA2.a.tex" 1739197904.67994 13818 0c2cae9ba100f94262363ec1b404d91c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -280,12 +280,12 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "IDMA1a.aux" 1739120105.996 4025 aa1fc5d4c6f8782eead651c0e64eb889 "pdflatex"
-  "IDMA1a.tex" 1739120104.63281 13818 d666b1f8d42abf3ecc9f4e767268d425 ""
-  "IDMA1a.toc" 1739120105.99807 1056 47752d446b26caac9fe86563a25e1e95 "pdflatex"
+  "IDMA2.a.aux" 1739197905.9948 4057 428990ff13360f5c1aaefc5e1b3d172c "pdflatex"
+  "IDMA2.a.tex" 1739197904.67994 13818 0c2cae9ba100f94262363ec1b404d91c ""
+  "IDMA2.a.toc" 1739197905.99688 1056 47752d446b26caac9fe86563a25e1e95 "pdflatex"
   (generated)
-  "IDMA1a.aux"
-  "IDMA1a.log"
-  "IDMA1a.pdf"
-  "IDMA1a.toc"
+  "IDMA2.a.aux"
+  "IDMA2.a.log"
+  "IDMA2.a.pdf"
+  "IDMA2.a.toc"
   (rewritten before read)
