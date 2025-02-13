@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  12 FEB 2025 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  13 FEB 2025 10:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1059,4 +1059,151 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 28.
 <../../pictures/IDMA/IDMA2a/IMG_2074.jpg, id=100, 3035.34pt x 4047.12pt>
-File: ../../pictures/IDMA/IDMA2a/IMG_2074.jpg Graphic file (type j
+File: ../../pictures/IDMA/IDMA2a/IMG_2074.jpg Graphic file (type jpg)
+<use ../../pictures/IDMA/IDMA2a/IMG_2074.jpg>
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2074.jpg  used on input line 50.
+(pdftex.def)             Requested size: 394.60805pt x 526.14407pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5 <../../pictures/IDMA/IDMA2a/IMG_2074.jpg>]
+<../../pictures/IDMA/IDMA2a/IMG_2073.jpg, id=127, 4047.12pt x 3035.34pt>
+File: ../../pictures/IDMA/IDMA2a/IMG_2073.jpg Graphic file (type jpg)
+<use ../../pictures/IDMA/IDMA2a/IMG_2073.jpg>
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2073.jpg  used on input line 57.
+(pdftex.def)             Requested size: 526.14407pt x 394.60805pt.
+ [6
+
+ <../../pictures/IDMA/IDMA2a/IMG_2073.jpg>]
+<../../pictures/IDMA/IDMA2a/IMG_2075.jpg, id=134, 4047.12pt x 3035.34pt>
+File: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg Graphic file (type jpg)
+<use ../../pictures/IDMA/IDMA2a/IMG_2075.jpg>
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg  used on input line 66.
+(pdftex.def)             Requested size: 526.14407pt x 394.60805pt.
+ [7
+
+ <../../pictures/IDMA/IDMA2a/IMG_2075.jpg>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 81.
+
+[8
+
+]
+Overfull \vbox (187.11412pt too high) has occurred while \output is active []
+
+ [9] (./IDMA2.a.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 41693 strings out of 474116
+ 936124 string characters out of 5743681
+ 2028187 words of memory out of 5000000
+ 63321 multiletter control sequences out of 15000+600000
+ 572324 words of font info for 80 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 125i,11n,121p,12013b,1236s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on IDMA2.a.pdf (9 pages, 6143302 bytes).
+PDF statistics:
+ 237 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+
