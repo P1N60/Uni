@@ -20,7 +20,7 @@ Introduktion til diskret matematik og algoritmer - Problem set 2}
 
 \section[Question 1]{Question 1 - In this problem we wish to compare different sorting algorithms.}
 
-\subsection{The exercises in Chapter 2 of CLRS mention the bubblesort algorithm, which can be further optimized as follows:}
+\subsection[]{The exercises in Chapter 2 of CLRS mention the bubblesort algorithm, which can be further optimized as follows:}
 \begin{lstlisting}
 OptimizedBubbleSort (A)
     i := 1
@@ -59,7 +59,19 @@ OptimizedBubbleSort (A)
 
 \clearpage
 
-\subsection{Run merge sort by hand on the array in (1) (as in the notes for the lectures). Show in every step of the algorithm what recursive calls are made and how the results from these recursive calls are combined, and make sure to explain the final (and most interesting) merge step carefully. (Any clear way of explaining is fine—you do not have to learn how to draw pictures in \LaTeX\ if you do not want to.)} 
+Vi kan argumentere for at algoritmet altid sorterer array'en korrekt, ved at analysere følgende:
+\begin{itemize}
+    \item Initialization: It is true prior to the first iteration of the loop.
+    \item Maintenance: If it is true before an iteration of the loop, it remains true before the next iteration.
+    \item Termination: The loop terminates, and when it terminates, the invariant - usually along with the reason that the loop terminated - gives us a useful property that helps show that the algorithm is correct.
+\end{itemize}
+Første iteration køres altid fra index $1\dots n$, da swapped er true, og for-loop'et kører optil $n$. Dette gøres på grund af, at for-loop'et kører til $size(A) - i$, hvor $i = 1$ og vi sammenligner elementer med $A[j] > A[j+1]$, hvor $j = i$.\\
+Vi kan derfor konkludere, at vi efter første iteration, har det største element i index'et $n$ (sidste element).\\
+Antag, at array'en ikke nu er sorteret, og at swapped nu er true, ellers vil vi terminere algoritmet, og arrayen er sorteret.\\
+Vi nu ved, at det sidste element, er det største. I næste iteration køres while-loop'et nu på $i$ += $1$, og for-loop'et optil denne længden - $i$. Resultatet er igen, at array'en, er sorteret fra længen - $i$.\\ 
+Således kører while-loop'et, og vi ved dermed, at array'en mindst er sorteret, fra index: (længden - $i$) til $n$.\\
+
+\subsection[]{Run merge sort by hand on the array in (1) (as in the notes for the lectures). Show in every step of the algorithm what recursive calls are made and how the results from these recursive calls are combined, and make sure to explain the final (and most interesting) merge step carefully. (Any clear way of explaining is fine—you do not have to learn how to draw pictures in \LaTeX\ if you do not want to.)} 
 
 \begin{figure}[h]
     \centering
@@ -68,21 +80,42 @@ OptimizedBubbleSort (A)
 
 \clearpage
 
-\subsection{Suppose that we are given another array $B$ of size $n$ that is already sorted in increasing order. How fast do the merge sort and optimized bubblesort algorithms run in this case? Is any of them asymptotically faster than the other as the size of the array $B$ grows?}
+I sidste step, har vi to sorterede arrays:\\
+\[[2, 5, 6, 7, 19]\] og \[[10, 12, 13, 14, 17]\] \\
+Lad os hhv. kalde dem $L$ og $R$.\\
+Vi sammenligner nu de første elementer i de to arrays:\\
+\[L[1] \leq R[1]\]
+Da $L[1] \leq R[1]$ kopirer vi dette element til A[1].\\
+\[A = [2, 2, 19, 7, 6, 12, 10, 18, 13, 14]\]
+Da det mindre element var I $L$ kigger vi nu på næste element i $L$:
+\[L[2] \leq R[1]\]
+Da $L[2] \leq R[1]$ kopirer vi dette element til A[2].\\
+\[A = [2, 5, 19, 7, 6, 12, 10, 18, 13, 14]\]
+Da det mindre element var I $L$ kigger vi nu på næste element i $L$:
+\[\vdots\]
+\[L[5] > R[5]\]
+Da $L[5] > R[5]$ kopirer vi dette element til A[9].\\
+\[A = [2, 5, 6, 7, 10, 12, 13, 14, 17, 14]\]
+Til sidst bliver sidste element af $R$ kopieret til $A[10]$, da der ikke er flere elemnter i $L$.\\
+Således ender vi med den sorterede array $A$:\\
+\[A = [2, 5, 6, 7, 10, 12, 13, 14, 17, 19]\]
 
-\subsection{Suppose that we are given a third array $C$ of size $n$ that is sorted in decreasing order, so that it needs to be reversed to be sorted in the order that we prefer, namely increasing. How fast do the merge sort and optimized bubblesort algorithms run in this case? Is any of them asymptotically faster than the other as the size of the array $C$ grows?}
 
-\section{In 2021 DIKU celebrated its 50th anniversary with a lot of pomp, although slightly less emphasis was given to the fact that it was done one year late due to the Covid pandemic. Even less publicity was given to the public outreach day organized in F\ae lledsparken for school children by the Algorithms and Complexity Section as part of the anniversary, for reasons that might become clearer after you have studied the problems below.}
+\subsection[]{Suppose that we are given another array $B$ of size $n$ that is already sorted in increasing order. How fast do the merge sort and optimized bubblesort algorithms run in this case? Is any of them asymptotically faster than the other as the size of the array $B$ grows?}
 
-\subsection{In one of the events of the AC Section outreach day, Jakob had arranged so that 51 children were given brightly coloured balls, and were positioned in a field in such a way that all the pairwise distances between the children were distinct. The children were then asked to identify which other child was closest to them and, at a given signal, to throw their ball to this child (and hopefully also receive an incoming ball from somewhere). This turned out to be a public relations catastrophe. However, the children were positioned as described above, every time at least one child ended up without a ball (but instead with tears in the eyes). This did not at all generate the goodwill DIKU was hoping for. What went wrong? Was Jakob just immensely unlucky? Or can you prove mathematically that it was unavoidable that at least one child would end up without a ball? Would this have been different if Jakob had not insisted on 51 children, but had accepted the proposal by his colleagues to have 50 children? Or if not all distances would have had to be different?}
+\subsection[]{Suppose that we are given a third array $C$ of size $n$ that is sorted in decreasing order, so that it needs to be reversed to be sorted in the order that we prefer, namely increasing. How fast do the merge sort and optimized bubblesort algorithms run in this case? Is any of them asymptotically faster than the other as the size of the array $C$ grows?}
+
+\section[Question 2]{In 2021 DIKU celebrated its 50th anniversary with a lot of pomp, although slightly less emphasis was given to the fact that it was done one year late due to the Covid pandemic. Even less publicity was given to the public outreach day organized in F\ae lledsparken for school children by the Algorithms and Complexity Section as part of the anniversary, for reasons that might become clearer after you have studied the problems below.}
+
+\subsection[]{In one of the events of the AC Section outreach day, Jakob had arranged so that 51 children were given brightly coloured balls, and were positioned in a field in such a way that all the pairwise distances between the children were distinct. The children were then asked to identify which other child was closest to them and, at a given signal, to throw their ball to this child (and hopefully also receive an incoming ball from somewhere). This turned out to be a public relations catastrophe. However, the children were positioned as described above, every time at least one child ended up without a ball (but instead with tears in the eyes). This did not at all generate the goodwill DIKU was hoping for. What went wrong? Was Jakob just immensely unlucky? Or can you prove mathematically that it was unavoidable that at least one child would end up without a ball? Would this have been different if Jakob had not insisted on 51 children, but had accepted the proposal by his colleagues to have 50 children? Or if not all distances would have had to be different?}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.13]{figur.png}
+    \includegraphics[scale=0.5]{figur.png}
 \end{figure}
 
-\subsection{In another event, Jakob built a 5-kilometre car track across the park. On this track, 51 electric cars were placed at random locations (but all pointing in the same direction clockwise around the circuit). One car battery was sufficient for exactly one full lap if charged to 100\% capacity. However, instead the batteries of all the cars were charged partially in such a way that the total charge of all the batteries together was sufficient for one car to travel exactly the full distance of 5 kilometres. After this, the batteries were distributed to the cars in some random way.}
+\subsection[]{In another event, Jakob built a 5-kilometre car track across the park. On this track, 51 electric cars were placed at random locations (but all pointing in the same direction clockwise around the circuit). One car battery was sufficient for exactly one full lap if charged to 100\% capacity. However, instead the batteries of all the cars were charged partially in such a way that the total charge of all the batteries together was sufficient for one car to travel exactly the full distance of 5 kilometres. After this, the batteries were distributed to the cars in some random way.}
 
-\subsection{In the final event of the day, a big $2^n$-by-$2^n$ grid was constructed, after which one cell in the grid was removed by placing a black square on it as illustrated in Figure 1a. The children were then given the task to cover all the other cells in the grid by placing L-shaped tiles in such a way that every cell was covered exactly once, and nothing outside of the grid was covered, as shown in Figure 1b. By now the children were fairly fed up with these strange games, however, and Jakob’s colleagues also started getting a bit annoyed, wondering if the strange shape of the tiles was somehow a not-so-subtle attempt to push for a competing foreign university at the other side of the Øresund strait instead, and the day did not end on a festive note at all. Disregarding this unfortunate turn of events, can you prove that it is actually true that for any $2^n$-by-$2^n$ grid, regardless of how it is punctured by removing a cell, it is always possible to tile the rest of the grid with L-shaped tiles?}
+\subsection[]{In the final event of the day, a big $2^n$-by-$2^n$ grid was constructed, after which one cell in the grid was removed by placing a black square on it as illustrated in Figure 1a. The children were then given the task to cover all the other cells in the grid by placing L-shaped tiles in such a way that every cell was covered exactly once, and nothing outside of the grid was covered, as shown in Figure 1b. By now the children were fairly fed up with these strange games, however, and Jakob’s colleagues also started getting a bit annoyed, wondering if the strange shape of the tiles was somehow a not-so-subtle attempt to push for a competing foreign university at the other side of the Øresund strait instead, and the day did not end on a festive note at all. Disregarding this unfortunate turn of events, can you prove that it is actually true that for any $2^n$-by-$2^n$ grid, regardless of how it is punctured by removing a cell, it is always possible to tile the rest of the grid with L-shaped tiles?}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  19 FEB 2025 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  19 FEB 2025 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1047,18 +1047,18 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )) (../../sty/header.sty [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./IDMA2.a.toc [2])
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./IDMA2.a.toc)
 \tf@toc=\write4
 \openout4 = `IDMA2.a.toc'.
 
- [3])
+ [2])
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 24.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 28.
-<../../pictures/IDMA/IDMA2a/IMG_2074.jpg, id=100, 3035.34pt x 4047.12pt>
+<../../pictures/IDMA/IDMA2a/IMG_2074.jpg, id=39, 3035.34pt x 4047.12pt>
 File: ../../pictures/IDMA/IDMA2a/IMG_2074.jpg Graphic file (type jpg)
 <use ../../pictures/IDMA/IDMA2a/IMG_2074.jpg>
 Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2074.jpg  used on input line 50.
@@ -1067,145 +1067,85 @@ Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2074.jpg  used on input 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4] [5 <../../pictures/IDMA/IDMA2a/IMG_2074.jpg>]
-<../../pictures/IDMA/IDMA2a/IMG_2073.jpg, id=127, 4047.12pt x 3035.34pt>
+[3] [4 <../../pictures/IDMA/IDMA2a/IMG_2074.jpg>]
+<../../pictures/IDMA/IDMA2a/IMG_2073.jpg, id=66, 4047.12pt x 3035.34pt>
 File: ../../pictures/IDMA/IDMA2a/IMG_2073.jpg Graphic file (type jpg)
 <use ../../pictures/IDMA/IDMA2a/IMG_2073.jpg>
 Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2073.jpg  used on input line 57.
 (pdftex.def)             Requested size: 526.14407pt x 394.60805pt.
- [6
+ [5
 
  <../../pictures/IDMA/IDMA2a/IMG_2073.jpg>]
-<../../pictures/IDMA/IDMA2a/IMG_2075.jpg, id=134, 4047.12pt x 3035.34pt>
+Underfull \hbox (badness 10000) in paragraph at lines 68--73
+
+ []
+
+<../../pictures/IDMA/IDMA2a/IMG_2075.jpg, id=72, 4047.12pt x 3035.34pt>
 File: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg Graphic file (type jpg)
 <use ../../pictures/IDMA/IDMA2a/IMG_2075.jpg>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg  used on input line 66.
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg  used on input line 78.
 (pdftex.def)             Requested size: 526.14407pt x 394.60805pt.
- [7
 
- <../../pictures/IDMA/IDMA2a/IMG_2075.jpg>]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 71.
+[6
 
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [7 <../../pictures/IDMA/IDMA2a/IMG_2075.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 71.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 71.
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 71.
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 71.
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 71.
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
+Underfull \hbox (badness 10000) in paragraph at lines 98--101
 
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
-
-<../../pictures/IDMA/IDMA2a/figur.png, id=142, 640.3925pt x 299.1175pt>
+<../../pictures/IDMA/IDMA2a/figur.png, id=88, 640.3925pt x 299.1175pt>
 File: ../../pictures/IDMA/IDMA2a/figur.png Graphic file (type png)
 <use ../../pictures/IDMA/IDMA2a/figur.png>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/figur.png  used on input line 81.
-(pdftex.def)             Requested size: 83.25394pt x 38.88663pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 86.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 86.
-
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/figur.png  used on input line 114.
+(pdftex.def)             Requested size: 320.19547pt x 149.55838pt.
 [8
 
- <../../pictures/IDMA/IDMA2a/figur.png>] [9] (./IDMA2.a.aux)
+] [9 <../../pictures/IDMA/IDMA2a/figur.png>] [10] (./IDMA2.a.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41703 strings out of 474116
- 936470 string characters out of 5743681
- 2028187 words of memory out of 5000000
- 63330 multiletter control sequences out of 15000+600000
- 572324 words of font info for 80 fonts, out of 8000000 for 9000
+ 41707 strings out of 474116
+ 936548 string characters out of 5743681
+ 2022187 words of memory out of 5000000
+ 63332 multiletter control sequences out of 15000+600000
+ 571897 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,11n,121p,12013b,1236s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on IDMA2.a.pdf (9 pages, 6191201 bytes).
+ 125i,11n,121p,1191b,1236s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on IDMA2.a.pdf (10 pages, 6194847 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
