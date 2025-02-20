@@ -70,6 +70,11 @@ Vi kan derfor konkludere, at vi efter første iteration, har det største elemen
 Antag, at array'en ikke nu er sorteret, og at swapped nu er true, ellers vil vi terminere algoritmet, og arrayen er sorteret.\\
 Vi nu ved, at det sidste element, er det største. I næste iteration køres while-loop'et nu på $i$ += $1$, og for-loop'et optil denne længden - $i$. Resultatet er igen, at array'en, er sorteret fra længen - $i$.\\ 
 Således kører while-loop'et, og vi ved dermed, at array'en mindst er sorteret, fra index: (længden - $i$) til $n$.\\
+\\
+Lad os nu analysere time complexity'en af algoritmet.\\
+I det værste tilfælde, køres for-loop'et $n$ gange, da det køres en grang for hvert element i array'en $A$. While-loopet køres også $n$ gange, da det iteres fra $1\dots size(A)$. For-loop'et findes inde i while-loop'et, hvilket giver os en worst case asympototic tim complexity på:\\
+\[\sum_{j=1}^{n}j^2 = \dfrac{n(n+1)}{2} = O(n^2)\]
+\centering \textit{Konstante led og led af lavere grad ignorares.}
 
 \subsection[]{Run merge sort by hand on the array in (1) (as in the notes for the lectures). Show in every step of the algorithm what recursive calls are made and how the results from these recursive calls are combined, and make sure to explain the final (and most interesting) merge step carefully. (Any clear way of explaining is fine—you do not have to learn how to draw pictures in \LaTeX\ if you do not want to.)} 
 
@@ -82,7 +87,7 @@ Således kører while-loop'et, og vi ved dermed, at array'en mindst er sorteret,
 
 I sidste step, har vi to sorterede arrays:\\
 \[[2, 5, 6, 7, 19]\] og \[[10, 12, 13, 14, 17]\] \\
-Lad os hhv. kalde dem $L$ og $R$.\\
+Lad os kalde dem hhv. $L$ og $R$.\\
 Vi sammenligner nu de første elementer i de to arrays:\\
 \[L[1] \leq R[1]\]
 Da $L[1] \leq R[1]$ kopirer vi dette element til A[1].\\
@@ -101,7 +106,7 @@ Således ender vi med den sorterede array $A$:\\
 \[A = [2, 5, 6, 7, 10, 12, 13, 14, 17, 19]\]
 
 
-\subsection[]{Suppose that we are given another array $B$ of size $n$ that is already sorted in increasing order. How fast do the merge sort and optimized bubblesort algorithms run in this case? Is any of them asymptotically faster than the other as the size of the array $B$ grows?}
+\subsection[]{}
 
 \subsection[]{Suppose that we are given a third array $C$ of size $n$ that is sorted in decreasing order, so that it needs to be reversed to be sorted in the order that we prefer, namely increasing. How fast do the merge sort and optimized bubblesort algorithms run in this case? Is any of them asymptotically faster than the other as the size of the array $C$ grows?}
 
