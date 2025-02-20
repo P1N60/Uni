@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  20 FEB 2025 12:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  20 FEB 2025 14:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -942,6 +942,13 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count402
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count403
+) (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count404
+\float@exts=\toks68
+\float@box=\box140
+\@float@everytoks=\toks69
+\@floatcapt=\box141
 ) (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
@@ -950,7 +957,7 @@ File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\c@scount=\count404
+\c@scount=\count405
  (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
  (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
@@ -978,17 +985,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
  (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count405
+\scratchcounter=\count406
 \scratchdimen=\dimen334
-\scratchbox=\box140
-\nofMPsegments=\count406
-\nofMParguments=\count407
-\everyMPshowfont=\toks68
-\MPscratchCnt=\count408
+\scratchbox=\box142
+\nofMPsegments=\count407
+\nofMParguments=\count408
+\everyMPshowfont=\toks70
+\MPscratchCnt=\count409
 \MPscratchDim=\dimen335
-\MPnumerator=\count409
-\makeMPintoPDFobject=\count410
-\everyMPtoPDFconversion=\toks69
+\MPnumerator=\count410
+\makeMPintoPDFobject=\count411
+\everyMPtoPDFconversion=\toks71
 ) (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1030,10 +1037,11 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 12.
-\c@lstlisting=\count411
+\c@lstlisting=\count412
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (../../sty/cover.sty
 LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
@@ -1067,92 +1075,127 @@ Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2074.jpg  used on input 
 (pdftex.def)             Requested size: 394.60805pt x 526.14407pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 [3]
-
-[4 <../../pictures/IDMA/IDMA2a/IMG_2074.jpg>]
-<../../pictures/IDMA/IDMA2a/IMG_2073.jpg, id=65, 4047.12pt x 3035.34pt>
+<../../pictures/IDMA/IDMA2a/IMG_2073.jpg, id=60, 4047.12pt x 3035.34pt>
 File: ../../pictures/IDMA/IDMA2a/IMG_2073.jpg Graphic file (type jpg)
 <use ../../pictures/IDMA/IDMA2a/IMG_2073.jpg>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2073.jpg  used on input line 57.
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2073.jpg  used on input line 56.
 (pdftex.def)             Requested size: 526.14407pt x 394.60805pt.
 
 
-[5
-
- <../../pictures/IDMA/IDMA2a/IMG_2073.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 68--76
+[4 <../../pictures/IDMA/IDMA2a/IMG_2074.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 66--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--76
+Underfull \hbox (badness 10000) in paragraph at lines 66--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
-\T1/cmr/bx/n/12 draw pic-tures in L[]T[]X if you do not want to.)|
- []
 
-<../../pictures/IDMA/IDMA2a/IMG_2075.jpg, id=71, 4047.12pt x 3035.34pt>
+[5 <../../pictures/IDMA/IDMA2a/IMG_2073.jpg>]
+<../../pictures/IDMA/IDMA2a/IMG_2075.jpg, id=72, 4047.12pt x 3035.34pt>
 File: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg Graphic file (type jpg)
 <use ../../pictures/IDMA/IDMA2a/IMG_2075.jpg>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg  used on input line 83.
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/IMG_2075.jpg  used on input line 81.
 (pdftex.def)             Requested size: 526.14407pt x 394.60805pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
 
 
-
-[6
-
-]
 
 [7 <../../pictures/IDMA/IDMA2a/IMG_2075.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
-\T1/cmr/bx/n/12 other as the size of the ar-ray $\OML/cmm/m/it/12 B$ \T1/cmr/bx/n/12 grows?|
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
-\T1/cmr/bx/n/14.4 low.|
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
+
  []
 
-<../../pictures/IDMA/IDMA2a/figur.png, id=91, 640.3925pt x 299.1175pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
+
+ []
+
+
+
+[8]
+<../../pictures/IDMA/IDMA2a/even.jpg, id=94, 576.65437pt x 498.36188pt>
+File: ../../pictures/IDMA/IDMA2a/even.jpg Graphic file (type jpg)
+<use ../../pictures/IDMA/IDMA2a/even.jpg>
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/even.jpg  used on input line 125.
+(pdftex.def)             Requested size: 288.32648pt x 249.18033pt.
+
+
+[9]
+<../../pictures/IDMA/IDMA2a/odd.jpg, id=99, 711.4078pt x 623.32875pt>
+File: ../../pictures/IDMA/IDMA2a/odd.jpg Graphic file (type jpg)
+<use ../../pictures/IDMA/IDMA2a/odd.jpg>
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/odd.jpg  used on input line 131.
+(pdftex.def)             Requested size: 284.55807pt x 249.32707pt.
+
+
+[10 <../../pictures/IDMA/IDMA2a/even.jpg> <../../pictures/IDMA/IDMA2a/odd.jpg>]
+<../../pictures/IDMA/IDMA2a/figur.png, id=108, 640.3925pt x 299.1175pt>
 File: ../../pictures/IDMA/IDMA2a/figur.png Graphic file (type png)
 <use ../../pictures/IDMA/IDMA2a/figur.png>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/figur.png  used on input line 120.
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/figur.png  used on input line 149.
 (pdftex.def)             Requested size: 320.19547pt x 149.55838pt.
 
 
-[8
+[11 <../../pictures/IDMA/IDMA2a/figur.png>]
 
-]
-
-[9 <../../pictures/IDMA/IDMA2a/figur.png>]
-
-[10] (IDMA2.a.aux)
+[12] (IDMA2.a.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-10-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41889 strings out of 473701
- 946088 string characters out of 5719417
+ 41970 strings out of 473701
+ 947757 string characters out of 5719417
  1511671 words of memory out of 5000000
- 64215 multiletter control sequences out of 15000+600000
+ 64288 multiletter control sequences out of 15000+600000
  572581 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,11n,121p,1916b,1236s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on IDMA2.a.pdf (10 pages, 6197611 bytes).
+ 125i,12n,121p,1916b,1236s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on IDMA2.a.pdf (12 pages, 6314043 bytes).
 PDF statistics:
- 486 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 510 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 115 words of extra memory for PDF output out of 10000 (max. 10000000)
 

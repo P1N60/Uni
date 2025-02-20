@@ -396,6 +396,8 @@ INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.st
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\latex\caption\subcaption.sty
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\latex\caption\subcaption.sty
+INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryarrows.code.tex
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryarrows.code.tex
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.code.tex
@@ -492,7 +494,6 @@ INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2073.jpg
 INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2073.jpg
 INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2073.jpg
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0800.tfm
 INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2075.jpg
 INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2075.jpg
@@ -500,6 +501,19 @@ INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2075.jpg
 INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2075.jpg
 INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2075.jpg
 INPUT ..\..\pictures\IDMA\IDMA2a\IMG_2075.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\even.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\even.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\even.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\even.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\even.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\even.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\odd.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\odd.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\odd.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\odd.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\odd.jpg
+INPUT ..\..\pictures\IDMA\IDMA2a\odd.jpg
+INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT ..\..\pictures\IDMA\IDMA2a\figur.png
 INPUT ..\..\pictures\IDMA\IDMA2a\figur.png
 INPUT ..\..\pictures\IDMA\IDMA2a\figur.png
@@ -507,10 +521,10 @@ INPUT ..\..\pictures\IDMA\IDMA2a\figur.png
 INPUT ..\..\pictures\IDMA\IDMA2a\figur.png
 INPUT ..\..\pictures\IDMA\IDMA2a\figur.png
 INPUT IDMA2.a.aux
-INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk
-INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk
 INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk
+INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0800.pk
 INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Gamer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
@@ -537,3 +551,5 @@ INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Users\Gamer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
