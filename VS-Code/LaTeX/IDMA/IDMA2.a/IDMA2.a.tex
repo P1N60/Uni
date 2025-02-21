@@ -108,14 +108,24 @@ Således ender vi med den sorterede array $A$:\\
 Kigger vi på bubblesort, ser vi, at for-loop'et kun køres en gang, da swapped ikke bliver sat til $true$, og while-loop'et dermed termineres efter kun en kørsel.\\
 Dette kan beskrives som en worst case asympototic time complexity på:
 \[\sum_{j=1}^{n}1=n=O(n)\]
-
-merge sort: $O(n \cdot log(n))$\\
+\\
+Merge sort opdeler vores array $A$ som tidligere vist. Mængden af gange vi opdeler svarer til $log_2(n)$, da arrayet bliver halveret for hver rekursion. Når arrayet er delt op i arrays af størrelse 1, sammensættes og sorteres disse rekursivt ved at merge de sorterede halvdele. Dette betyder, at alle elementer bliver gennemgået og sammenlignet i merge-trinnene, uanset om de oprindeligt var sorteret eller ej. I form af asymptotic running time complexity kan dette beskrives ved rekursionsrelationen:
+\[T(n) = 2T(\dfrac{n}{2}) + O(n)\]
+Som sagt påvirker sorteringen ikke merge-sorts running time, så vi har:
+\[O(n \cdot log(n))\]
+\\
+Da $O(n)$ skalerer langsommere end $O(n \cdot log(n))$ i takt med at $n$ vokser, er OptimizedBubbleSort hurtigere i tilfældet af array $B$.
 
 \subsection[]{Suppose that we are given a third array $C$ of size $n$ that is sorted in decreasing order, so that it needs to be reversed to be sorted in the order that we prefer, namely increasing. How fast do the merge sort and optimized bubblesort algorithms run in this case? Is any of them asymptotically faster than the other as the size of the array $C$ grows?}
 
-For bubblesort er en arrat, som er sorteret i decreasing order den worst case, da for-loop'et kører gennem alle elementer i array'en, og while-loop'et kører $n$ gange. Vi har derfor den samme worst case asympototic time complexity som jeg redegjorde for tidligere, nemlig $O(n^2)$.\\
+For bubblesort er en arrat, som er sorteret i decreasing order den worst case, da for-loop'et kører gennem alle elementer i array'en, og while-loop'et kører $n$ gange. Vi har derfor den samme worst case asympototic time complexity som jeg redegjorde for tidligere, nemlig:
+\[O(n^2)\]
 \\
-merge sort: $O(n \cdot log(n))$\\
+Merge sort vil igen have en worst case asympototic time complexity på: 
+\[O(n \cdot log(n))\]
+da det ikke er afhængigt af array'ets oprindelige sortering.\\
+\\
+Denne gang ser vi, at merge sort er hurtigere, da $O(n^2)$ skalerer langsommere end $O(n \cdot log(n))$ i takt med at $n$ vokser. Så hvis OptimizedBubbleSort køres på en array, der ikke er sorteret i increasing order, vil merge sort være hurtigere.
 
 \section[Question 2]{In 2021 DIKU celebrated its 50th anniversary with a lot of pomp, although slightly less emphasis was given to the fact that it was done one year late due to the Covid pandemic. Even less publicity was given to the public outreach day organized in F\ae lledsparken for school children by the Algorithms and Complexity Section as part of the anniversary, for reasons that might become clearer after you have studied the problems below.}
 
