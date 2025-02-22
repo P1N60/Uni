@@ -47,14 +47,14 @@ OptimizedBubbleSort (A)
 
 \begin{figure}[H] 
     \centering
-    \includegraphics[scale=0.13]{IMG_2074.jpg}
-    \caption{Insertion sort 1/2}
+    \includegraphics[width=0.8\textwidth]{IMG_2074.jpg}
+    \caption{Insertion sort [1/2]}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.13, angle=-90]{IMG_2073.jpg}
-    \caption{Insertion sort 2/2}
+    \includegraphics[width=1.08\textwidth, angle=-90]{IMG_2073.jpg}
+    \caption{Insertion sort [2/2]}
 \end{figure}
 
 Vi kan argumentere for at algoritmet altid sorterer array'en korrekt, ved at analysere følgende:
@@ -79,7 +79,7 @@ I det værste tilfælde, køres for-loop'et $n$ gange, da det køres en grang fo
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.13, angle=-90]{IMG_2075.jpg}
+    \includegraphics[width=1\textwidth, angle=-90]{IMG_2075.jpg}
     \caption{Merge sort}
 \end{figure}
 \par
@@ -131,39 +131,36 @@ Denne gang ser vi, at merge sort er hurtigere, da $O(n^2)$ skalerer langsommere 
 
 \subsection[]{In one of the events of the AC Section outreach day, Jakob had arranged so that 51 children were given brightly coloured balls, and were positioned in a field in such a way that all the pairwise distances between the children were distinct. The children were then asked to identify which other child was closest to them and, at a given signal, to throw their ball to this child (and hopefully also receive an incoming ball from somewhere). This turned out to be a public relations catastrophe. However, the children were positioned as described above, every time at least one child ended up without a ball (but instead with tears in the eyes). This did not at all generate the goodwill DIKU was hoping for. What went wrong? Was Jakob just immensely unlucky? Or can you prove mathematically that it was unavoidable that at least one child would end up without a ball? Would this have been different if Jakob had not insisted on 51 children, but had accepted the proposal by his colleagues to have 50 children? Or if not all distances would have had to be different?}
 
+Vi kan modellere problemet som en rettet graf, hvor hvert barn repræsenterer en vertex, og en edge \( A \to B \) eksisterer, hvis barn \( A \) kaster sin bold til barn \( B \) (dvs. den nærmeste til \( A \)). Da alle parvise afstande er forskellige, har hvert barn præcis en unik nærmeste nabo, hvilket betyder, at hver vertex i grafen har præcis en edge.\\
 Jeg har lavet en grafisk repræsentation af problemet:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{even.jpg}
+    \includegraphics[width=0.75\textwidth]{even.jpg}
     \caption{Lige antal børn}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{odd.jpg}
+    \includegraphics[width=0.69\textwidth]{odd.jpg}
     \caption{Ulige antal børn}
 \end{figure}
 \begin{center}
-    \textit{Børnene er repræsenteret som vertices, og afstanden mellem de 2 nærmeste er repræsenteret som tal.}
+    \textit{Børnene er repræsenteret som vertices, og afstanden mellem de 2 nærmeste vertices er repræsenteret som tal.}
 \end{center}
 \n
-Alle lige antal af børn vil ende med en bold.\\
-Bevis ved induktion:\\
-Defination af et lige heltal:\\
-$z$ $\exists n\in \Z$ således $z=2n$\\
-Antag, at \textit{alle børn får en bold, hvis antallet af børn er lige}.\\
-Lad $k$ være antallet af børn.\\
-Base case ($k = 2$):
-\[2 \cdot 2 = 4\]
 
+Da hvert barn kun kaster bolden til et andet barn, har hver vertex i grafen en udgående edge på 1. Den indgående edge er dog ikke nødvendigvis 1, da nogle børn kan modtage flere bolde, mens andre ikke får nogen.
+Da vi har 51 børn (et ulige antal), kan grafen ikke kun bestå af cykler, da en fuldstændig partitionering i disjunkte cykler kun er mulig, hvis antallet af vertices er lige.
 
+Hvis der i stedet var 50 børn (et lige antal), ville det være muligt at arrangere dem i kun cykler, hvilket ville sikre, at alle modtager en bold. Det er dog afhængigt af placeringen af børnene.
 
+Hvis afstandene ikke var unikke, kunne der være flere nærmeste vertices, hvilket kunne give mulighed for, at et unikt antal børn også kan resultere i, at alle får en bold. Man kan forestille sig, at hvis alle børn stod med en afstand på $1$ i en cirkel, kunne alle bare kaste til den der står foran dem, så alle får en bold.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{figur.png}
-    \caption*{}
+    \includegraphics[width=1\textwidth]{figur.png}
+    \caption{Tiling a punctured $2^n$-by-$2^n$ grid with L-shaped tiles (for $n = 3$).}
 \end{figure}
 
 \subsection[]{In another event, Jakob built a 5-kilometre car track across the park. On this track, 51 electric cars were placed at random locations (but all pointing in the same direction clockwise around the circuit). One car battery was sufficient for exactly one full lap if charged to 100\% capacity. However, instead the batteries of all the cars were charged partially in such a way that the total charge of all the batteries together was sufficient for one car to travel exactly the full distance of 5 kilometres. After this, the batteries were distributed to the cars in some random way. The children were given the challenge to start driving one car in such a way that one full lap of the track would covered. The rules were that if one car travelled far enough to bump into the rear of the car in front, then this next car could continue, and also the battery from the car behind could be shifted to the car in front so that the front car could use any remaining charge (and similarly for any other batteries picked up along the way). If, however, a car would run out of batteries before reaching the car in front, or before the full lap was completed by all the cars together, this was a failure. This event went slightly better, in that the children were able to figure out a solution to the challenge most of the time. Jakob prided himself with that this was thanks to the fact that he had given the friendly advice, to avoid more embarrassment as in Problem 2a, that a good strategy was to start with the car with the most charge in its battery. Were the children just lucky this time, or can you prove that there is always a solution to this challenge? And is it a good idea to follow Jakob’s advice, or does it seem more likely that the children figured out something smarter?}

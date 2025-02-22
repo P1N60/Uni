@@ -5,5 +5,5 @@
 \contentsline {subsection}{\numberline {1.d}}{9}{subsection.1.4}%
 \contentsline {section}{\numberline {2}Question 2}{10}{section.2}%
 \contentsline {subsection}{\numberline {2.a}}{10}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.b}}{12}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.c}}{12}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.b}}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.c}}{13}{subsection.2.3}%
