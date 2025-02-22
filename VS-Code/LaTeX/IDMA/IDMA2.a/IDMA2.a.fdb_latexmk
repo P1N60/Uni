@@ -1,10 +1,11 @@
 # Fdb version 4
-["pdflatex"] 1740223469.49329 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA2.a/IDMA2.a.tex" "IDMA2.a.pdf" "IDMA2.a" 1740223471.76857 0
+["pdflatex"] 1740243359.20794 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA2.a/IDMA2.a.tex" "IDMA2.a.pdf" "IDMA2.a" 1740243361.60838 0
   "../../pictures/IDMA/IDMA2a/IMG_2073.jpg" 1739879610 1951453 e485fe5d984af522d97be6f5bde69e07 ""
   "../../pictures/IDMA/IDMA2a/IMG_2074.jpg" 1739879610 2117447 4e65df3a523b6df9e8e63e89e7ff3969 ""
   "../../pictures/IDMA/IDMA2a/IMG_2075.jpg" 1739879610 1891683 4b4f1e7dd8bcf25f871db74652c05246 ""
   "../../pictures/IDMA/IDMA2a/even.jpg" 1740054645 46320 ea70c24efc2e36df9e2a04802c6c3c1f ""
   "../../pictures/IDMA/IDMA2a/figur.png" 1740043144 89464 0602da6b6dccb9e4f42f8d48e186d341 ""
+  "../../pictures/IDMA/IDMA2a/figur2.png" 1740238818 142241 b1db952723169c50409d8a67b9c17ffe ""
   "../../pictures/IDMA/IDMA2a/odd.jpg" 1740054766 57415 e57ebf3f9e921a1d688669bc1c84e373 ""
   "../../sty/cover.sty" 1739211780 187 b29fc44a470130a2f0632995e82a9f4d ""
   "../../sty/header.sty" 1733427914 262 109f752decd82b9a012e4fb5550a366a ""
@@ -55,6 +56,7 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -283,10 +285,10 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "IDMA2.a.aux" 1740223471 3245 1913c3f735a19b694241eff59b43dc3d "pdflatex"
-  "IDMA2.a.tex" 1740223468 14599 abd770bf022dbe80cad6aabc5bf14f27 ""
-  "IDMA2.a.toc" 1740223471 598 6957ea1afe62d0ada327d9c25927204b "pdflatex"
-  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA2.a/IDMA2.a.tex" 1740223468 14599 abd770bf022dbe80cad6aabc5bf14f27 ""
+  "IDMA2.a.aux" 1740243361 3372 89d70a14e92fb92df6a8600b5a0ae573 "pdflatex"
+  "IDMA2.a.tex" 1740243355 16395 5aebedf75be87e3d44420dd5ffcf132c ""
+  "IDMA2.a.toc" 1740243361 598 042e93d4f70478e8ed19439147f9811b "pdflatex"
+  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA2.a/IDMA2.a.tex" 1740243355 16395 5aebedf75be87e3d44420dd5ffcf132c ""
   (generated)
   "IDMA2.a.aux"
   "IDMA2.a.log"

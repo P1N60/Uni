@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  22 FEB 2025 12:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  22 FEB 2025 17:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1161,33 +1161,41 @@ Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/odd.jpg  used on input line 
 
 
 [11 <../../pictures/IDMA/IDMA2a/even.jpg> <../../pictures/IDMA/IDMA2a/odd.jpg>]
-<../../pictures/IDMA/IDMA2a/figur.png, id=111, 640.3925pt x 299.1175pt>
+<../../pictures/IDMA/IDMA2a/figur2.png, id=111, 876.27374pt x 619.56468pt>
+File: ../../pictures/IDMA/IDMA2a/figur2.png Graphic file (type png)
+<use ../../pictures/IDMA/IDMA2a/figur2.png>
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/figur2.png  used on input line 165.
+(pdftex.def)             Requested size: 407.66833pt x 288.24585pt.
+
+
+[12]
+<../../pictures/IDMA/IDMA2a/figur.png, id=117, 640.3925pt x 299.1175pt>
 File: ../../pictures/IDMA/IDMA2a/figur.png Graphic file (type png)
 <use ../../pictures/IDMA/IDMA2a/figur.png>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/figur.png  used on input line 162.
+Package pdftex.def Info: ../../pictures/IDMA/IDMA2a/figur.png  used on input line 184.
 (pdftex.def)             Requested size: 452.9679pt x 211.57617pt.
 
 
-[12 <../../pictures/IDMA/IDMA2a/figur.png>]
+[13 <../../pictures/IDMA/IDMA2a/figur2.png>]
 
-[13] (IDMA2.a.aux)
+[14 <../../pictures/IDMA/IDMA2a/figur.png>] (IDMA2.a.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-10-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41971 strings out of 473701
- 947764 string characters out of 5719417
+ 41982 strings out of 473701
+ 948126 string characters out of 5719417
  1511671 words of memory out of 5000000
- 64288 multiletter control sequences out of 15000+600000
+ 64297 multiletter control sequences out of 15000+600000
  572581 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,12n,121p,1916b,1236s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on IDMA2.a.pdf (13 pages, 6316068 bytes).
+ <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on IDMA2.a.pdf (14 pages, 6468645 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 531 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
