@@ -178,13 +178,26 @@ da vi i såfald ved, at $n_i$ bil har nok strøm til at køre i mål, eller ramm
 Dette forhold må holde i alle tilfælde, da vi ved, at summen af alle strømniveauerne er lig med summen af alle kørebanerne, hvilket kan besrkrives som:
 \[\sum_{j=1}^{51}s_j = \sum_{j=1}^{51}k_j = 1 = 100\%\]
 
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figur.png}
     \caption{Tiling a punctured $2^n$-by-$2^n$ grid with L-shaped tiles (for $n = 3$).}
 \end{figure}
 
-\subsection[]{In the final event of the day, a big $2^n$-by-$2^n$ grid was constructed, after which one cell in the grid was removed by placing a black square on it as illustrated in Figure 6. The children were then given the task to cover all the other cells in the grid by placing L-shaped tiles in such a way that every cell was covered exactly once, and nothing outside of the grid was covered, as shown in Figure 1b. By now the children were fairly fed up with these strange games, however, and Jakob’s colleagues also started getting a bit annoyed, wondering if the strange shape of the tiles was somehow a not-so-subtle attempt to push for a competing foreign university at the other side of the Øresund strait instead, and the day did not end on a festive note at all. Disregarding this unfortunate turn of events, can you prove that it is actually true that for any $2^n$-by-$2^n$ grid, regardless of how it is punctured by removing a cell, it is always possible to tile the rest of the grid with L-shaped tiles?}
+\subsection[]{In the final event of the day, a big $2^n$-by-$2^n$ grid was constructed, after which one cell in the grid was removed by placing a black square on it as illustrated in Figure 7a. The children were then given the task to cover all the other cells in the grid by placing L-shaped tiles in such a way that every cell was covered exactly once, and nothing outside of the grid was covered, as shown in Figure 7b. By now the children were fairly fed up with these strange games, however, and Jakob’s colleagues also started getting a bit annoyed, wondering if the strange shape of the tiles was somehow a not-so-subtle attempt to push for a competing foreign university at the other side of the Øresund strait instead, and the day did not end on a festive note at all. Disregarding this unfortunate turn of events, can you prove that it is actually true that for any $2^n$-by-$2^n$ grid, regardless of how it is punctured by removing a cell, it is always possible to tile the rest of the grid with L-shaped tiles?}
+
+Vi vil gerne vise følgende:
+\[3 \mid (2^n \cdot 2^n - 1), \forall n\in Z^+\]
+da vi i såfald ved, at alle celler er dækket til, da resten er 0.\\
+Direkte bevis\\
+$3 \mid z$ betyder, at $\exists q \in Z$ således at $z = q \cdot 3$\\
+Antag, at $\exists n$ således at $(2^n \cdot 2^n - 1) \cdot 3 = z.$ $n,z \in Z$. Så ville vi kunne omskrive dette til:
+\[(2^n \cdot 2^n - 1) \cdot 3\]
+\[(2^{n+n} - 1) \cdot 3\]
+\[(2^{2n} - 1) \cdot 3\]
+Vi ved, at alle heltal ganget med et lige heltal, giver et lige heltal. $2n$ er altså et lige heltal.
+\[3 \mid \]
+
+\[Q.E.D\]
 
 \end{document}
