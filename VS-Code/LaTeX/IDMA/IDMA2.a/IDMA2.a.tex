@@ -48,13 +48,13 @@ OptimizedBubbleSort (A)
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.8\textwidth]{IMG_2074.jpg}
-    \caption{Insertion sort [1/2]}
+    \caption{Optimized bubblesort [1/2]}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.08\textwidth, angle=-90]{IMG_2073.jpg}
-    \caption{Insertion sort [2/2]}
+    \caption{Optimized bubblesort [2/2]}
 \end{figure}
 
 Vi kan argumentere for at algoritmet altid sorterer array'en korrekt, ved at analysere følgende:
@@ -63,7 +63,17 @@ Vi kan argumentere for at algoritmet altid sorterer array'en korrekt, ved at ana
     \item Maintenance: If it is true before an iteration of the loop, it remains true before the next iteration.
     \item Termination: The loop terminates, and when it terminates, the invariant - usually along with the reason that the loop terminated - gives us a useful property that helps show that the algorithm is correct.
 \end{itemize}
-Første iteration køres altid fra index $1\dots n$, da swapped er true, og for-loop'et kører optil $n$. Dette gøres på grund af, at for-loop'et kører til $size(A) - i$, hvor $i = 1$ og vi sammenligner elementer med $A[j] > A[j+1]$, hvor $j = i$.\\
+
+\textbf{Initialization:}\\
+Vi starter med at initialisere $i = 1$ og $swapped = true$. Vi ved, at array'en er sorteret korrekt, hvis den kun indeholder et element, da et array med et element er per definition sorteret.\\
+
+\textbf{Maintenance:}\\
+Hvis vi efter sidste iteration ikke har termineret while-loop'et, incrementer vi $i$ med $1$, og kører igen for-loop'et. Efter hver iteration ved vi, at $(size(A)-i)$-element er sorteret i increasing rækkefølge.\\
+
+\textbf{Termination:}\\
+Vi ved, at array'en er sorteret, da swapped ikke blev sat til $true$ igen, hvilket kun sker, når alle elementerne fra $1\dots size(A)-i$ er blevet sammenlignet, og var sorteret i increasing rækkefølge.\\
+
+Sagt med andre ord ved vi, at første iteration altid køres altid fra index $1\dots n$, da swapped er true, og for-loop'et kører op til $n$. Dette gøres på grund af, at for-loop'et kører til $size(A) - i$, hvor $i = 1$ og vi sammenligner elementer med $A[j] > A[j+1]$, hvor $j = i$.\\
 Vi kan derfor konkludere, at vi efter første iteration, har det største element i index'et $n$ (sidste element).\\
 Antag, at array'en ikke nu er sorteret, og at swapped nu er true, ellers vil vi terminere algoritmet, og arrayen er sorteret.\\
 Vi nu ved, at det sidste element, er det største. I næste iteration køres while-loop'et nu på $i$ += $1$, og for-loop'et optil denne længden - $i$. Resultatet er igen, at array'en, er sorteret fra længen - $i$.\\ 
@@ -159,10 +169,10 @@ Hvis afstandene ikke var unikke, kunne der være flere nærmeste vertices, hvilk
 
 \subsection[]{In another event, Jakob built a 5-kilometre car track across the park. On this track, 51 electric cars were placed at random locations (but all pointing in the same direction clockwise around the circuit). One car battery was sufficient for exactly one full lap if charged to 100\% capacity. However, instead the batteries of all the cars were charged partially in such a way that the total charge of all the batteries together was sufficient for one car to travel exactly the full distance of 5 kilometres. After this, the batteries were distributed to the cars in some random way. The children were given the challenge to start driving one car in such a way that one full lap of the track would covered. The rules were that if one car travelled far enough to bump into the rear of the car in front, then this next car could continue, and also the battery from the car behind could be shifted to the car in front so that the front car could use any remaining charge (and similarly for any other batteries picked up along the way). If, however, a car would run out of batteries before reaching the car in front, or before the full lap was completed by all the cars together, this was a failure. This event went slightly better, in that the children were able to figure out a solution to the challenge most of the time. Jakob prided himself with that this was thanks to the fact that he had given the friendly advice, to avoid more embarrassment as in Problem 2a, that a good strategy was to start with the car with the most charge in its battery. Were the children just lucky this time, or can you prove that there is always a solution to this challenge? And is it a good idea to follow Jakob’s advice, or does it seem more likely that the children figured out something smarter?}
 
-Børnene var heldige. Her er et eksempel på hvorfor deres strategi ikke altid vil virke:
+Her er et eksempel på hvorfor børnenes strategi ikke altid vil virke:
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figur2.png}
+    \includegraphics[width=1.2\textwidth, trim={5.75cm 0 0 0},clip]{figur2.png}
     \caption{}
 \end{figure}
 
