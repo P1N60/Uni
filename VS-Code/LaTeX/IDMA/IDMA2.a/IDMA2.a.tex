@@ -176,13 +176,6 @@ Her er et eksempel på hvorfor børnenes strategi ikke altid vil virke:
     \caption{}
 \end{figure}
 
-Bevis ved strong induction:\\
-Lad $n$ være antallet af biler. Vi vil vise, at der altid er en løsning, uanset hvordan batterierne er fordelt.\\
-\textbf{Base case $n = 1$:}\\
-
-
-\textbf{Base case $n = 2$:}\\
-
 Selvom børnene startede med den bil, der havde mest strøm, er der ikke altid en garanti for, at de når en i mål. I det viste eksempel, vil den gule bil løbe tør for strøm inden den når at ramme den næste.\\
 Børnenes strategi vil dog ofte virke, da der skal meget til, for at en bil løber tør for strøm, før den rammer den næste bil. Vi kan dog opstille en bedre strategi.\\
 Lad bilerne være nummereret fra $n_1, n_2, \dots n_{50}, n_{51}$, hvor $n_1$ er bilen, der skal køre kortest for at komme i mål, og $n_2$ er bilen, der har næest kortest til målet osv.\\
@@ -203,6 +196,8 @@ Dette forhold må holde i alle tilfælde, da vi ved, at summen af alle strømniv
 
 \subsection[]{In the final event of the day, a big $2^n$-by-$2^n$ grid was constructed, after which one cell in the grid was removed by placing a black square on it as illustrated in Figure 7a. The children were then given the task to cover all the other cells in the grid by placing L-shaped tiles in such a way that every cell was covered exactly once, and nothing outside of the grid was covered, as shown in Figure 7b. By now the children were fairly fed up with these strange games, however, and Jakob’s colleagues also started getting a bit annoyed, wondering if the strange shape of the tiles was somehow a not-so-subtle attempt to push for a competing foreign university at the other side of the Øresund strait instead, and the day did not end on a festive note at all. Disregarding this unfortunate turn of events, can you prove that it is actually true that for any $2^n$-by-$2^n$ grid, regardless of how it is punctured by removing a cell, it is always possible to tile the rest of the grid with L-shaped tiles?}
 
+Problemet kan omformuleres til at vi skal vise, at det er muligt, at dække alle celler i et $2^n$-by-$2^n$ grid med L-shaped tiles, der hver dækker 3 celler. Der udtages en celle af de $2^n \cdot 2^n$ celler hvilket betyder, at vi har $2^n \cdot 2^n - 1$ celler i alt.\\
+
 Vi vil gerne vise følgende:
 \[3 \mid (2^n \cdot 2^n - 1), \forall n\in \Z^+\]
 da vi i såfald ved, at alle celler er dækket til, da resten er 0.\\
@@ -213,6 +208,7 @@ Base case $n = 1$:\\
 \[3 \mid (2^1 \cdot 2^1 - 1)=\]
 \[3 \mid (4 - 1)=\]
 \[3 \mid 3 \quad  \checkmark\] 
+Dette holder, da resten er 0.\\
 
 Induktionshypotese:\\
 Antag, at der for et vilkårligt $k \in \Z^+$ gælder følgende:\\
@@ -226,6 +222,8 @@ Induction step:\\
 Vi vil nu vise, at det også gælder for $k+1$:\\
 \[2^{2(k+1)} - 1 = \]
 \[2^{2k+2} - 1 = \]
+\[\brr{2^{k+1}}^2 - 1\]
+Dette kan ses som $a^2-b^2$, så vi kan omskrive til:
 \[(2^{k+1} - 1)(2^{k+1} + 1)=\]
 \[(2 \cdot 2^{k} - 1)(2 \cdot 2^{k} + 1)=\]
 \[( 2^{k} +  2^{k} - 1)( 2^{k} +  2^{k} + 1)=\]
@@ -234,9 +232,10 @@ Vi vil nu vise, at det også gælder for $k+1$:\\
 Ifølge vores induktionshypotese ved vi, at $2^{k+1} - 1 = 3m$, så vi kan skrive ovenstående som:
 \[2^{2k} + 2^{2k} + 2^{2k} + 3m =\]
 \[3(2^{2k}) + 3m = \]
-\[3(2^{2k} + m)\]
-hvilket er et tal, som er dividerbart med $3$, da det følger definitionen af sidan et tal. $\square\ $\\
-
+\[3(2^{2k} + m) \quad \square\]
+Hvilket bekræfter vores induktionshypotese.\\
 Vi er nu færdige, da vi har vist, at det gælder for $n = 1$ og $n = k+1$, hvilket må betyde, at det også gælder for $n = k$.
+
+Det er altså muligt at dække alle celler i et $2^n$-by-$2^n$ grid med L-shaped tiles.
 
 \end{document}
