@@ -85,6 +85,35 @@ make sure to motivate your answers clearly.
 
 
 
-\section[Question 5]{}
+\section[Question 5]{Recall that an undirected graph $G = (V, E)$ consists of a set of vertices $V$ connected by
+edges $E$, where every edge is an unordered pair of vertices. If there is an edge $(u, v)$ between two
+vertices $u$ and $v$, then we say that $u$ and $v$ are the endpoints of the edge, and the two vertices are
+said to be neighbours. We say that a sequence of edges $(v_1, v_2), (v_2, v_3), (v_3, v_4), \ldots, (v_{k-1}, v_k)$,
+in $E$ is a path from $v_1$ to $v_k$. In this problem, we wish to express properties of graphs in both natural language and pred-
+icate logic, and to translate between the two forms. We do this as follows:
+\begin{itemize}
+\item The universe is the set of vertices $V$ of $G$.
+\item The binary predicate $E(u, v)$ holds if and only if there is an edge between $u$ and $v$ in $G$.
+\item The unary predicate $S(v)$ is used to identify a subset of vertices $S = \{v \mid v \in V, S(v) \text{ is true}\}$
+for which some property might or might not hold.
+\end{itemize}
+For example, we can write the natural language statement "$S$ is a set containing exactly $k$ distinct
+elements" as a formula
+\[\text{setsize}(S, k) := \exists u_1 \cdots \exists u_k \left(\bigwedge_{i=1}^{k-1} \bigwedge_{j=i+1}^{k} (u_i \neq u_j) \wedge \bigwedge_{i=1}^{k} S(u_i) \right)\]
+\[\wedge \neg \exists u_1 \cdots \exists u_{k+1} \left(\bigwedge_{i=1}^{k} \bigwedge_{j=i+1}^{k+1} (u_i \neq u_j) \wedge \bigwedge_{i=1}^{k} S(u_i) \right) \tag{1}\]
+where $\bigwedge_{i=1}^{k} \phi_i$ is shorthand for $\phi_1 \wedge \phi_2 \wedge \cdots \wedge \phi_k$, and where we use standard notation $\neg$ for
+logical negation. In natural language, this formula can be read as: "There exist $k$ elements $u_1$ to
+$u_k$ such that (i) for every pair $(u_i, u_j), i \neq j$, the elements themselves are also distinct $(u_i \neq u_j)$;
+and (ii) all the $u_i$ for $i = 1, \ldots, k$ are members of $S$, but no such set of $k+1$ elements $u_1$ to $u_{k+1}$
+exists."
+Below you find six graph properties defined in natural language and six graph properties
+written as predicate logic formulas. Most of the natural language definitions have equivalent
+predicate logic formulas, but not all.
+Your task is to translate each predicate logic formula (a), $\ldots$, (f) into a natural language
+description, and argue which—if any—of the natural language definitions (1), $\ldots$, (6) it matches.}
+
+
+
+
 
 \end{document}
