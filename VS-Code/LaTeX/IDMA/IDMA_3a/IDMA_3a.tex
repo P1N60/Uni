@@ -27,7 +27,28 @@ problem, we assume that you are dealt $5$ cards from a perfectly shuffled deck o
 sequence with respect to rank? (Because five cards of the same suit in sequential rank
 would be a straight flush.)}
 
-
+Først skal vi finde ud af, hvor mange mulige hænder vi kan trække. Siden vi får 5 tilfældige kort uden tilbagelægning, og rækkefølgen ikke betyder noget, kan vi beskrive dette som en binomialkoefficient:
+\[ _{52}C_5 = {52 \choose 5} =\]
+\[\dfrac{52!}{(52-5)! \cdot 5!} =\]
+\[\dfrac{52!}{47! \cdot 5!} = 2.598.960\]
+Nu skal vi bestemme mængden af hænder, der laver en flush. Der er 4 forskellige kulører, og vi skal bruge 5 af samme kulør:
+\[ _{13}C_5 = {13 \choose 5} = \]
+\[ \dfrac{13!}{(13-5)! \cdot 5!} = \]
+\[ \dfrac{13!}{8! \cdot 5!} = 1287 \]
+Vi skal dog også huske, at der er 4 forskellige kulører, så vi vælger 1 af de 4:
+\[ _4C_1 \cdot 1287 = {4 \choose 1} \cdot 1287 = \]
+\[ \dfrac{4!}{(4-1)! \cdot 1!} \cdot 1287 = \]
+\[ \dfrac{4!}{3!} \cdot 1287 = \]
+\[ 4 \cdot 1287 = 5148\]
+Der er dog også mulighed for at trække en straight flush, som vi skal trække fra:
+\[ _{10}C_1 \cdot _4C1 = {10 \choose 1} \cdot {4 \choose 1} = \]
+\[ \dfrac{10!}{(10-1)! \cdot 1!} \cdot \dfrac{4!}{(4-1)! \cdot 1!} = \]
+\[ \dfrac{10!}{9!} \cdot \dfrac{4!}{3!} = \]
+\[ 10 \cdot 4 = 40\]
+Så den samlede mængde af hænder, der laver en flush uden en straight flush, er:
+\[ 5148 - 40 = 5108\]
+Så sandsynligheden for at trække en flush er:
+\[ \dfrac{5108}{2598960} \approx 0.00197\]
 
 \subsection[]{What is the probability that you get a straight, i.e., $5$ 
 cards of sequential rank but not all of the same suit? (Because if the latter condition also held, 
@@ -111,8 +132,6 @@ written as predicate logic formulas. Most of the natural language definitions ha
 predicate logic formulas, but not all.
 Your task is to translate each predicate logic formula (a), $\ldots$, (f) into a natural language
 description, and argue which—if any—of the natural language definitions (1), $\ldots$, (6) it matches.}
-
-
 
 
 
