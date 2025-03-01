@@ -19,6 +19,72 @@ Introduktion til diskret matematik og algoritmer - Problem set 3}
 \maketitle % This command will actually insert the title into the document
 
 
+\section[Question 1]{Recall that a standard deck of cards has $52$ cards partitioned into four suits (hearts,
+spades, clubs, and diamonds) with $13$ ranks each (2-10 plus jack, queen, king, and ace). In this
+problem, we assume that you are dealt $5$ cards from a perfectly shuffled deck of cards.}
 
+\subsection[]{What is the probability that you get a flush, i.e., $5$ cards of the same suit but not all in
+sequence with respect to rank? (Because five cards of the same suit in sequential rank
+would be a straight flush.)}
+
+
+
+\subsection[]{What is the probability that you get a straight, i.e., $5$ 
+cards of sequential rank but not all of the same suit? (Because if the latter condition also held, 
+we would again have a straight flush.)
+}
+
+
+
+\section[Question 2]{Prove mathematically that among all numbers on the form $11...100...0$, i.e., numbers
+consisting of $m$ ones followed by $n$ zeros for some $m,n \in N^+$ (sometimes notation like $1^m0^n$ is
+used to describe text strings constructed in such a way), there is some number that is divisible
+by 2025. Hint: Look at all numbers $1^m = 11 ... 1$ and consider what their remainders can be modulo $2025$.}
+
+
+
+\section[Question 3]{Let $a \in R^+$ be any positive real number. Show that for any integer $n \geq 2$ there is a
+rational number $\frac{c}{d}, c,d \in \Z, d \leq n$, that approximates $a$ to within error $\frac{1}{dn}$, ie., $|a - \frac{c}{d}| \leq \frac{1}{dn}$.
+Hint: Consider the numbers $a, 2a, \dots ,n \cdot a$ and show that one of these numbers is at distance at most $\frac{1}{n}$ from some integer.}
+
+
+
+\section[Question 4]{In this problem we focus on relations. Suppose that $A = \{e_0,e_1,\dots,e_5\}$ is a set of
+$6$ elements and consider the relation $R$ on $A$ represented by the matrix
+\[M_R = \brr{
+    \begin{bmatrix}
+        0 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 1 \\
+        1 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 & 0 & 0 \\
+    \end{bmatrix}}
+\]
+(where element $e_i$ corresponds to the row and column $i+1$).}
+
+
+\subsection[]{Let us write $S$ to denote the symmetric closure of the relation $R$. 
+What is the matrix representation of $S$? Can you explain in words what the relation $S$ is by describing how it can be interpreted?
+}
+
+
+
+\subsection[]{Now let $T$ be the transitive closure of the relation $S$. What is the matrix representation of $T$? 
+Can you explain in words what the relation $T$ is by describing how it can be interpreted?
+}
+
+
+
+\subsection[]{Suppose that we instead let $T^\prime$ be the transitive closure of the relation $R$, and then let
+$S^\prime$ be the symmetric closure of $T^\prime$. Are $S^\prime$ and $T$ the same relation? If they are not the
+same, show some way in which they differ. If they are the same, is it true that $S^\prime$ and $T$
+constructed in this way from some relation $R$ on a set $A$ will always be the same? Please
+make sure to motivate your answers clearly.
+}
+
+
+
+\section[Question 5]{}
 
 \end{document}
