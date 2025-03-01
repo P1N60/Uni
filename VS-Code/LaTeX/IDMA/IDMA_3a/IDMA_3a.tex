@@ -1,0 +1,24 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{standalone}
+\usepackage{amsmath} % Package for advanced math typesetting
+\input{../../sty/setup.sty} % Assuming these files exist and are correctly referenced
+\graphicspath{ {../../pictures/IDMA/IDMA2a}} % Assuming a pictures folder has been made and is correctly referenced
+
+% \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
+
+% Changes sections from 1.1 to 1.a
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\begin{document}
+% \includepdf[pages=-]{../../pictures/forside}
+
+\title{Københavns Universitet\\
+Introduktion til diskret matematik og algoritmer - Problem set 3}
+\input{../../sty/cover.sty} % Assuming this file contains the cover page setup
+\input{../../sty/header.sty} % Assuming this file contains the header setup
+\maketitle % This command will actually insert the title into the document
+
+
+
+
+\end{document}
