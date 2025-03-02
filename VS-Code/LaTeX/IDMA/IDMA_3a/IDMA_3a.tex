@@ -55,6 +55,19 @@ cards of sequential rank but not all of the same suit? (Because if the latter co
 we would again have a straight flush.)
 }
 
+Vi bestemmer mængden af hænder, der laver en straight. Den laveste straight vi kan lave er $A, 2, 3, 4, 5$, og den højeste er $10, J, Q, K, A$. Fra $A$ til 10 er der 10 måder at lave en straight, hvis vi bare tæller fra og med laveste kort tal af straight'en op til de 10.
+\[ _{10}C_1 = {10 \choose 1} = \]
+\[ \dfrac{10!}{(10-1)! \cdot 5!} = \]
+\[ \dfrac{10!}{9! \cdot 1!} = 10 \]
+Vi skal dog også huske, at der er 4 forskellige kulører, så vi vælger 1 af de 4, for hvert af de 5 kort.
+\[ _4C_1 \cdot _4C_1 \cdot _4C_1 \cdot _4C_1 \cdot _4C_1 \cdot 10 = {4 \choose 1} \cdot {4 \choose 1} \cdot {4 \choose 1} \cdot {4 \choose 1} \cdot {4 \choose 1} \cdot 10 = \]
+\[ \dfrac{4!}{(4-1)! \cdot 1!} \cdot \dfrac{4!}{(4-1)! \cdot 1!} \cdot \dfrac{4!}{(4-1)! \cdot 1!} \cdot \dfrac{4!}{(4-1)! \cdot 1!} \cdot \dfrac{4!}{(4-1)! \cdot 1!} \cdot  10 = \]
+\[ \dfrac{4!}{3!} \cdot \dfrac{4!}{3!} \cdot \dfrac{4!}{3!} \cdot \dfrac{4!}{3!} \cdot \dfrac{4!}{3!} \cdot 10 = \]
+\[ 4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 \cdot 10 = 10240\]
+Der er dog også mulighed for at trække en straight flush, som vi skal trække fra:
+\[ 10240 - 40 = 10200\]
+Så sandsynligheden for at trække en straight er:
+\[ \dfrac{10200}{2598960} \approx 0.00393\]
 
 
 \section[Question 2]{Prove mathematically that among all numbers on the form $11...100...0$, i.e., numbers
