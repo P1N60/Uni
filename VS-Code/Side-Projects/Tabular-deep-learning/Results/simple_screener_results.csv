@@ -1,41 +1,43 @@
 Ticker,short_name,value_score,analyst_mean%,insider_buy%,sector,industry,P/E (TTM),ROA%
-MATAS.CO,Matas A/S,0.351,30.624,<NA>,Consumer Cyclical,Specialty Retail,21.838,3.835
-TRIFOR.CO,Trifork Group AG,0.250,38.716,<NA>,Technology,Information Technology Services,12.697,1.588
-SAF.PA,SAFRAN,0.142,2.459,<NA>,Industrials,Aerospace & Defense,67.421,4.785
-QQ.L,QINETIQ GROUP PLC ORD 1P,0.726,10.208,<NA>,Industrials,Aerospace & Defense,18.975,6.888
-RNMBY,Rheinmetall AG,0.112,0.000,<NA>,Industrials,Aerospace & Defense,106.479,5.966
-DRS,"Leonardo DRS, Inc.",0.241,24.834,0.003,Industrials,Aerospace & Defense,37.550,4.519
-HAGHY,HENSOLDT AG,0.010,0.000,<NA>,Industrials,Aerospace & Defense,531.071,2.786
-SAABF,Saab AB,0.151,0.000,<NA>,Industrials,Aerospace & Defense,50.069,3.783
-BCKIY,Babcock International Group Plc,0.501,0.000,<NA>,Industrials,Engineering & Construction,20.277,5.078
-EADSY,Airbus SE,0.146,-2.026,<NA>,Industrials,Aerospace & Defense,33.214,2.421
-BAESY,BAE Systems PLC,0.330,-21.214,<NA>,Industrials,Aerospace & Defense,26.861,4.433
-BAH,Booz Allen Hamilton Holding Cor,1.520,50.427,-0.006,Industrials,Consulting Services,15.331,11.649
-DUAVF,DASSAULT AVIATION,0.060,0.000,<NA>,Industrials,Aerospace & Defense,29.248,0.882
-ETN,"Eaton Corporation, PLC",0.519,33.703,0.004,Industrials,Specialty Industrial Machinery,29.312,7.605
-IVSO.ST,INVISIO AB,0.680,-14.170,<NA>,Technology,Communication Equipment,59.687,20.302
-NSKFF,Kongsberg Gruppen ASA,0.224,0.000,<NA>,Industrials,Aerospace & Defense,59.426,6.656
-LHX,"L3Harris Technologies, Inc.",0.299,24.037,0.005,Industrials,Aerospace & Defense,26.391,3.940
-LDOS,"Leidos Holdings, Inc.",1.255,33.030,0.079,Technology,Information Technology Services,14.013,8.794
-NOC,Northrop Grumman Corporation,0.854,15.733,0.073,Industrials,Aerospace & Defense,16.693,7.128
-NVO,Novo Nordisk A/S,1.585,24.618,<NA>,Healthcare,Drug Manufacturers - General,28.282,22.408
-GMAB,Genmab A/S,1.606,49.777,<NA>,Healthcare,Biotechnology,13.586,10.911
-GN.CO,GN Store Nord A/S,0.442,61.752,<NA>,Healthcare,Medical Devices,17.482,3.861
-AAPL,Apple Inc.,1.194,6.257,0.001,Technology,Consumer Electronics,37.723,22.519
-NVDA,NVIDIA Corporation,2.960,51.550,-0.001,Technology,Semiconductors,38.796,57.417
-MSFT,Microsoft Corporation,0.934,30.518,-0.005,Technology,Software - Infrastructure,31.355,14.649
-GOOGL,Alphabet Inc.,1.610,30.487,0.004,Communication Services,Internet Content & Information,20.798,16.740
-AMZN,"Amazon.com, Inc.",0.402,29.753,-0.015,Consumer Cyclical,Internet Retail,37.007,7.438
-TSLA,"Tesla, Inc.",0.060,20.478,0.000,Consumer Cyclical,Auto Manufacturers,138.854,4.186
-JNJ,Johnson & Johnson,0.563,0.726,0.041,Healthcare,Drug Manufacturers - General,28.891,8.126
-LLY,Eli Lilly and Company,0.386,7.734,-0.130,Healthcare,Drug Manufacturers - General,79.395,15.329
-PFE,"Pfizer, Inc.",0.498,18.448,<NA>,Healthcare,Drug Manufacturers - General,18.617,4.640
-DANSKE.CO,Danske Bank A/S,0.150,4.237,<NA>,Financial Services,Banks - Regional,8.481,0.635
-CARL-B.CO,Carlsberg B A/S,0.674,3.288,<NA>,Consumer Defensive,Beverages - Brewers,17.559,5.915
-MAERSK-B.CO,A.P. Møller - Mærsk B A/S,1.971,-12.034,<NA>,Industrials,Marine Shipping,4.471,4.406
-RBREW.CO,Royal UNIBREW A/S,0.729,9.005,<NA>,Consumer Defensive,Beverages - Brewers,18.932,6.898
-ISS.CO,ISS A/S,0.892,0.810,<NA>,Industrials,Specialty Business Services,11.236,5.012
-DSV.CO,DSV A/S,0.351,27.241,<NA>,Industrials,Integrated Freight & Logistics,29.808,5.229
-SCHO.CO,Schouw & Co. A/S,0.563,19.416,<NA>,Industrials,Conglomerates,14.346,4.041
-NETC.CO,Netcompany Group A/S,0.409,12.761,<NA>,Technology,Information Technology Services,29.698,6.070
-JYSK.CO,Jyske Bank A/S,0.196,3.492,<NA>,Financial Services,Banks - Regional,7.066,0.694
+MATAS.CO,Matas A/S,0.354,31.772,<NA>,Consumer Cyclical,Specialty Retail,21.648,3.835
+TRIFOR.CO,Trifork Group AG,0.252,39.583,<NA>,Technology,Information Technology Services,12.618,1.588
+SAF.PA,SAFRAN,0.147,2.941,<NA>,Industrials,Aerospace & Defense,65.051,4.785
+QQ.L,QINETIQ GROUP PLC ORD 1P,0.729,10.597,<NA>,Industrials,Aerospace & Defense,18.908,6.888
+RNMBY,Rheinmetall AG,0.111,0.000,<NA>,Industrials,Aerospace & Defense,107.893,5.966
+DRS,"Leonardo DRS, Inc.",0.243,25.776,0.003,Industrials,Aerospace & Defense,37.269,4.519
+HAGHY,HENSOLDT AG,0.010,0.000,<NA>,Industrials,Aerospace & Defense,534.000,2.786
+SAABF,Saab AB,0.153,0.000,<NA>,Industrials,Aerospace & Defense,49.375,3.783
+BCKIY,Babcock International Group Plc,0.509,0.000,<NA>,Industrials,Engineering & Construction,19.957,5.078
+EADSY,Airbus SE,0.148,-0.441,<NA>,Industrials,Aerospace & Defense,32.686,2.421
+BAESY,BAE Systems PLC,0.344,-17.882,<NA>,Industrials,Aerospace & Defense,25.746,4.433
+BAH,Booz Allen Hamilton Holding Cor,1.470,45.525,-0.006,Industrials,Consulting Services,15.848,11.649
+DUAVF,DASSAULT AVIATION,0.062,0.000,<NA>,Industrials,Aerospace & Defense,28.524,0.882
+ETN,"Eaton Corporation, PLC",0.519,33.790,0.004,Industrials,Specialty Industrial Machinery,29.287,7.605
+IVSO.ST,INVISIO AB,0.673,-15.123,<NA>,Technology,Communication Equipment,60.358,20.302
+NSKFF,Kongsberg Gruppen ASA,0.225,0.000,<NA>,Industrials,Aerospace & Defense,59.160,6.656
+LHX,"L3Harris Technologies, Inc.",0.296,22.848,0.005,Industrials,Aerospace & Defense,26.647,3.940
+LDOS,"Leidos Holdings, Inc.",1.222,29.551,0.079,Technology,Information Technology Services,14.389,8.794
+NOC,Northrop Grumman Corporation,0.858,16.336,0.073,Industrials,Aerospace & Defense,16.606,7.128
+NVO,Novo Nordisk A/S,1.620,28.142,<NA>,Healthcare,Drug Manufacturers - General,27.668,22.408
+GMAB,Genmab A/S,1.576,46.992,<NA>,Healthcare,Biotechnology,13.843,10.911
+GN.CO,GN Store Nord A/S,0.448,63.962,<NA>,Healthcare,Medical Devices,17.246,3.861
+AAPL,Apple Inc.,1.195,6.322,0.001,Technology,Consumer Electronics,37.704,22.519
+NVDA,NVIDIA Corporation,2.879,47.395,-0.001,Technology,Semiconductors,39.889,57.417
+MSFT,Microsoft Corporation,0.937,30.869,-0.005,Technology,Software - Infrastructure,31.271,14.649
+GOOGL,Alphabet Inc.,1.564,26.775,0.004,Communication Services,Internet Content & Information,21.407,16.740
+AMZN,"Amazon.com, Inc.",0.403,30.178,-0.015,Consumer Cyclical,Internet Retail,36.887,7.438
+TSLA,"Tesla, Inc.",0.062,24.141,0.000,Consumer Cyclical,Auto Manufacturers,134.757,4.186
+JNJ,Johnson & Johnson,0.565,1.258,0.041,Healthcare,Drug Manufacturers - General,28.739,8.126
+LLY,Eli Lilly and Company,0.393,9.573,-0.130,Healthcare,Drug Manufacturers - General,78.063,15.329
+PFE,"Pfizer, Inc.",0.504,19.840,<NA>,Healthcare,Drug Manufacturers - General,18.401,4.640
+DANSKE.CO,Danske Bank A/S,0.150,4.592,<NA>,Financial Services,Banks - Regional,8.453,0.635
+CARL-B.CO,Carlsberg B A/S,0.669,2.609,<NA>,Consumer Defensive,Beverages - Brewers,17.675,5.915
+MAERSK-B.CO,A.P. Møller - Mærsk B A/S,1.964,-12.878,<NA>,Industrials,Marine Shipping,4.488,4.406
+RBREW.CO,Royal UNIBREW A/S,0.723,8.126,<NA>,Consumer Defensive,Beverages - Brewers,19.086,6.898
+ISS.CO,ISS A/S,0.890,0.562,<NA>,Industrials,Specialty Business Services,11.264,5.012
+DSV.CO,DSV A/S,0.351,27.286,<NA>,Industrials,Integrated Freight & Logistics,29.798,5.229
+SCHO.CO,Schouw & Co. A/S,0.564,19.621,<NA>,Industrials,Conglomerates,14.321,4.041
+NETC.CO,Netcompany Group A/S,0.411,13.078,<NA>,Technology,Information Technology Services,29.553,6.070
+JYSK.CO,Jyske Bank A/S,0.198,4.230,<NA>,Financial Services,Banks - Regional,7.016,0.694
+DAC.CO,Danish Aerospace Company A/S,0.090,0.000,<NA>,Industrials,Aerospace & Defense,109.091,4.907
+PLTR,Palantir Technologies Inc.,0.016,3.512,-0.189,Technology,Software - Infrastructure,444.271,3.572
