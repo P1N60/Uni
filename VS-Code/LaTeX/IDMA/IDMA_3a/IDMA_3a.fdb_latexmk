@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1741188895.94906 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" "IDMA_3a.pdf" "IDMA_3a" 1741188897.11263 0
+["pdflatex"] 1741281961.24413 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" "IDMA_3a.pdf" "IDMA_3a" 1741281962.39395 0
   "../../sty/cover.sty" 1739198275.20438 178 b29fc44a470130a2f0632995e82a9f4d ""
   "../../sty/header.sty" 1733469646.88098 250 109f752decd82b9a012e4fb5550a366a ""
   "../../sty/setup.sty" 1740076293.67121 9872 b08c51a520027064a15544b633cd2aa8 ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" 1741188895.70858 10594 62c03ccb713b49ed180f6cad4cffe92b ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" 1741281961.73135 11678 75c326b4979cc2284e3a8437e5bb37c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -40,8 +40,10 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb" 1215737283 140176 d4962f948b4cc0adf4d3dde77a128c95 ""
@@ -279,9 +281,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "IDMA_3a.aux" 1741188896.99207 3947 3fc0050a4fb3a8ed97c95ab0980e6c1e "pdflatex"
-  "IDMA_3a.tex" 1741188895.70858 10594 62c03ccb713b49ed180f6cad4cffe92b ""
-  "IDMA_3a.toc" 1741188896.99383 840 876649fe094bc666670f501409a48a39 "pdflatex"
+  "IDMA_3a.aux" 1741281962.27389 3947 d0155f6c0b5cee6a8984734befdf1e96 "pdflatex"
+  "IDMA_3a.tex" 1741281961.73135 11678 75c326b4979cc2284e3a8437e5bb37c8 ""
+  "IDMA_3a.toc" 1741281962.2757 840 876649fe094bc666670f501409a48a39 "pdflatex"
   (generated)
   "IDMA_3a.aux"
   "IDMA_3a.log"

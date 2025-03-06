@@ -102,9 +102,10 @@ $6$ elements and consider the relation $R$ on $A$ represented by the matrix
 What is the matrix representation of $S$? Can you explain in words what the relation $S$ is by describing how it can be interpreted?
 }
 
-Vi får givet en matrice med relationen $R$ på $A$. Vi ser, at hvis vi repræsenterer matricen som en graf, ender vi med en directed graf, da der ikke er nogle 
-
-\[M_{R}^T = 
+Vi får givet en matrice med relationen $R$ på $A$. Vi ser, at hvis vi repræsenterer matricen som en graf, ender vi med en directed graf, da alle vertices har en directed edge, og ingen af disse går tilbage igen. Grafisk er dette 2 'lukkede' trekanter. Den symetriske closure af en matrix består af dens relation $R$ og dens transposed relation $R^{-1}$. For en relation er dette defineret som: 
+\[(a,b)\in R \quad (b,a)=R^{-1}\]
+hvilket for en matrix beskrives som:
+\[M_{R^{-1}} = M_{R}^T = 
     \begin{bmatrix}
         0 & 0 & 0 & 0 & 1 & 0 \\
         0 & 0 & 0 & 0 & 0 & 1 \\
@@ -115,8 +116,27 @@ Vi får givet en matrice med relationen $R$ på $A$. Vi ser, at hvis vi repræse
     \end{bmatrix}
 \]
 
+Vi bemærker, at vi har de samme 2 lukkede trekanter som før, dog er retningerne af edges'ne omvendt.
 
 \[M_S = M_R \lor M_{R}^T = 
+    \begin{bmatrix}
+        0 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 1 \\
+        1 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 & 0 & 0 \\
+    \end{bmatrix}
+    \lor
+    \begin{bmatrix}
+        0 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 1 \\
+        1 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 & 0 \\
+    \end{bmatrix}
+    = 
     \begin{bmatrix}
         0 & 0 & 1 & 0 & 1 & 0 \\
         0 & 0 & 0 & 1 & 0 & 1 \\
@@ -126,6 +146,8 @@ Vi får givet en matrice med relationen $R$ på $A$. Vi ser, at hvis vi repræse
         0 & 1 & 0 & 1 & 0 & 0 \\
     \end{bmatrix}
 \]
+
+Resultatet er, at de 2 lukkede trekanter nu både har $M_R$ udgående retninger, og $M^T_{R}$ udgående retninger. Edges'ne går nu bidirectional for alle edges i grafen.
 
 \subsection[]{Now let $T$ be the transitive closure of the relation $S$. What is the matrix representation of $T$? 
 Can you explain in words what the relation $T$ is by describing how it can be interpreted?
