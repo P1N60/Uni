@@ -189,27 +189,57 @@ Below you find six graph properties defined in natural language and six graph pr
 written as predicate logic formulas. Most of the natural language definitions have equivalent
 predicate logic formulas, but not all.
 Your task is to translate each predicate logic formula (a), $\ldots$, (f) into a natural language
-description, and argue which—if any—of the natural language definitions (1), $\ldots$, (6) it matches.}
+description, and argue which—if any—of the natural language definitions (1), $\ldots$, (6) it matches.\\
+\n
+\textbf{Natural Language Definitions:}\\
+\n
+(1) A \emph{dominating set} of size $k$ for a graph $G = (V, E)$ is a set $S$ of $k$ distinct vertices such that every vertex $v$ in the graph either is in $S$ or is a neighbour of a vertex in $S$.\\
+\n
+(2) A \emph{clique} $S$ of size $k$ in a graph $G = (V, E)$ is a set $S$ of $k$ distinct vertices such that all vertices in $S$ are neighbours with each other.\\
+\n
+(3) A \emph{disconnected vertex set} of size $k$ in a graph $G = (V, E)$ is a set $S$ of $k$ distinct vertices such that there are no edges from any $u \in S$ to any $v \in V \setminus S$. [Here $V \setminus S$ denotes set subtraction, so that $V \setminus S = \{v \mid v \in V \text{ and } v \not\in S\}$.]\\
+\n
+(4) A \emph{vertex cover} of size $k$ of a graph $G = (V, E)$ is a set $S$ of $k$ distinct vertices such that for every edge $(u, v) \in E$ it holds that at least one of the endpoints is in $S$.\\
+\n
+(5) A graph $G = (V, E)$ is \emph{bipartite}, with one of the parts in the bipartition having size $k$, if there a set $S$ of $k$ distinct vertices such that all edges in the graph go between $S$ and $V \setminus S$.\\
+\n
+(6) A \emph{connected component} $S$ of size $k$ in a graph $G = (V, E)$ is a set $S$ of $k$ distinct vertices such that for every pair of distinct vertices $u$ and $v$ in $S$ there is a path from $u$ to $v$ consisting of vertices in $S$.\\
+\n
+\textbf{Predicate Logic Formulas:}\\
+\n
+(a) $setsize(S, k) \wedge \forall v \forall w \left(E(v, w) \rightarrow S(v) \vee S(w)\right)$\\
+\n
+(b) $setsize(S, k) \wedge \forall v \left(S(v) \vee \exists w(S(w) \wedge E(v, w))\right)$\\
+\n
+(c) $setsize(S, k) \wedge \forall u \forall w\left((u \neq w \wedge S(u) \wedge S(w)) \rightarrow \exists v(E(u, v) \wedge E(v, w))\right)$\\
+\n
+(d) $setsize(S, k) \wedge \forall v \forall w\left(E(v, w) \rightarrow ((S(v) \wedge \neg S(w)) \vee (\neg S(v) \wedge S(w)))\right)$\\
+\n
+(e) $setsize(S, k) \wedge \forall v\left(S(v) \rightarrow \exists w(\neg S(w) \wedge E(v, w))\right)$\\
+\n
+(f) $setsize(S, k) \wedge \forall v \forall w\left((v \neq w \wedge S(v) \wedge S(w)) \rightarrow E(v, w)\right)$\\
+\n
+For every predicate logic formula that matches a natural language description, explain clearly why there is a match. For formulas that do not match a description, write a natural language definition along the lines of (1), \ldots, (6) that describes the property that the formula encodes.}
 
 
 \subsection{Predicate Logic Formulas}
 Vi oversætter først formlerne, hvorefter vi finder den bedst passende beskrivelse til dem.\\
 
-(a) I et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, indeholder $S$ alle vertices $v$, der danner en udgående edge og/eller dens modtagende nabo vertex $w$.\\
+(a) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor mindst en af alle de vetices der danner en edge med i $S$.\\
 
-(b) I et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, indeholder $S$ alle vertices $v$ og/eller alle vertices $w$, som $v$ danner en directed edge til.\\
+(b) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor enhver vertex i grafen enten selv er i $S$ eller er nabo til mindst en vertex i $S$.\\
 
-(c) I et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, indeholder $S$ alle vertices $u,w$, der har en path til vertex $w$.\\
+(c) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor for ethvert par af forskellige vertices $u,w \in S$ findes der en vertex $v$ i grafen, som er forbundet direkte til både $u$ og $w$.\\
 
-(d) I et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, indeholder $S$ alle vertices\\
+(d) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor for enhver edge $(v,w) \in E$ gælder det, at præcis et af vertices'ne er i $S$ (altså enten $v \in S$ og $w \notin S$, eller $v \notin S$ og $w \in S$). Dette beskriver en bipartition graf, hvor $S$ udgør den ene del af opdelingen.\\
 
-(e) I et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, indeholder $S$ alle vertices\\
+(e) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor enhver vertex $v \in S$ har mindst en edge med en vertex $w$ som ikke er i $S$.\\
 
-(f) I et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, indeholder $S$ alle vertices\\
+(f) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor alle vetices har en edge med en vertex, som ikke er sig selv.\\
 
 \subsection{Natural Language Definitions}
-(a) = ?
-(b) = 1
+(a) = ?\\
+(b) = beskrivelse 1
 
 
 
