@@ -1,29 +1,31 @@
 Ticker,short_name,in_portfolio,value_score,recommendation_score,analyst_mean%,insider_buy%,sector,industry,P/E (TTM),ROA%
-MATAS.CO,Matas A/S,No,0.85,1.74,35.54,0,Consumer Cyclical,Specialty Retail,21.05,3.84
-TRIFOR.CO,Trifork Group AG,No,0.75,1.75,39.92,0,Technology,Information Technology Services,12.78,1.59
-QQ.L,QINETIQ GROUP PLC ORD 1P,Yes,1.13,1.04,-3.48,0,Industrials,Aerospace & Defense,21.67,6.89
-RNMBY,Rheinmetall AG,Yes,0.02,0.02,0.00,0,Industrials,Aerospace & Defense,106.47,5.97
-DRS,"Leonardo DRS, Inc.",No,0.63,1.27,25.67,0.00,Industrials,Aerospace & Defense,37.30,4.64
-SAABF,Saab AB,Yes,0.36,0.36,0.00,0,Industrials,Aerospace & Defense,49.01,3.70
-BCKIY,Babcock International Group Plc,No,0.97,0.97,0.00,0,Industrials,Engineering & Construction,21.31,5.08
-BAESY,BAE Systems PLC,No,0.81,0.54,-10.89,0,Industrials,Aerospace & Defense,25.76,4.40
-IVSO.ST,INVISIO AB,No,1.26,0.90,-14.58,0,Technology,Communication Equipment,62.74,20.30
-NSKFF,Kongsberg Gruppen ASA,Yes,0.50,0.50,0.00,0,Industrials,Aerospace & Defense,61.45,6.66
-NVO,Novo Nordisk A/S,Yes,1.86,2.63,30.73,0,Healthcare,Drug Manufacturers - General,26.84,22.41
-GMAB,Genmab A/S,Yes,1.62,2.57,38.13,0,Healthcare,Biotechnology,13.47,10.91
-GN.CO,GN Store Nord A/S,Yes,0.91,2.28,54.96,0,Healthcare,Medical Devices,18.27,3.86
-NVDA,NVIDIA Corporation,No,2.50,3.89,55.76,0.00,Technology,Semiconductors,37.61,57.42
-LLY,Eli Lilly and Company,No,0.88,0.78,10.28,-0.18,Healthcare,Drug Manufacturers - General,78.15,15.33
-DANSKE.CO,Danske Bank A/S,No,0.71,0.77,2.40,0,Financial Services,Banks - Regional,8.67,0.64
-CARL-B.CO,Carlsberg B A/S,No,1.14,1.26,4.63,0,Consumer Defensive,Beverages - Brewers,17.34,5.92
-MAERSK-B.CO,A.P. Møller - Mærsk B A/S,No,1.35,0.99,-14.30,0,Industrials,Marine Shipping,4.64,4.41
-RBREW.CO,Royal UNIBREW A/S,No,1.20,1.44,9.80,0,Consumer Defensive,Beverages - Brewers,18.81,6.90
-ISS.CO,ISS A/S,No,1.22,1.34,4.69,0,Industrials,Specialty Business Services,11.04,5.01
-DSV.CO,DSV A/S,No,0.81,1.45,25.71,0,Industrials,Integrated Freight & Logistics,30.16,5.23
-SCHO.CO,Schouw & Co. A/S,No,1.01,1.44,17.02,0,Industrials,Conglomerates,14.96,4.04
-NETC.CO,Netcompany Group A/S,No,0.89,1.12,9.23,0,Technology,Information Technology Services,30.66,6.07
-JYSK.CO,Jyske Bank A/S,No,0.76,0.77,0.55,0,Financial Services,Banks - Regional,7.35,0.69
-PLTR,Palantir Technologies Inc.,No,-1.46,-1.63,8.60,-0.19,Technology,Software - Infrastructure,423.47,3.57
-ABBN.SW,ABB LTD N,No,1.16,1.14,-0.65,0,Industrials,Electrical Equipment & Parts,25.97,8.29
-TER,"Teradyne, Inc.",No,1.14,1.93,29.84,0.02,Technology,Semiconductor Equipment & Materials,31.74,9.52
+MATAS.CO,Matas A/S,No,0.85,1.73,35.14,0,Consumer Cyclical,Specialty Retail,21.11,3.84
+TRIFOR.CO,Trifork Group AG,No,0.75,1.75,40.09,0,Technology,Information Technology Services,12.76,1.59
+QQ.L,QINETIQ GROUP PLC ORD 1P,Yes,1.14,1.08,-2.36,0,Industrials,Aerospace & Defense,21.42,6.89
+RNMBY,Rheinmetall AG,Yes,0.08,0.08,0.00,0,Industrials,Aerospace & Defense,98.73,5.97
+DRS,"Leonardo DRS, Inc.",No,0.61,1.12,20.20,0.00,Industrials,Aerospace & Defense,39.00,4.64
+SAABF,Saab AB,Yes,0.39,0.39,0.00,0,Industrials,Aerospace & Defense,46.67,3.70
+BCKIY,Babcock International Group Plc,No,1.03,1.03,0.00,0,Industrials,Engineering & Construction,19.04,5.08
+BAESY,BAE Systems PLC,No,0.83,0.62,-8.35,0,Industrials,Aerospace & Defense,25.05,4.40
+IVSO.ST,INVISIO AB,No,1.25,0.87,-15.18,0,Technology,Communication Equipment,63.19,20.30
+NSKFF,Kongsberg Gruppen ASA,Yes,0.56,0.56,0.00,0,Industrials,Aerospace & Defense,55.98,6.66
+NVO,Novo Nordisk A/S,Yes,1.87,2.67,31.81,0,Healthcare,Drug Manufacturers - General,26.57,22.41
+GMAB,Genmab A/S,Yes,1.61,2.50,35.61,0,Healthcare,Biotechnology,13.72,10.91
+GN.CO,GN Store Nord A/S,Yes,0.91,2.25,53.60,0,Healthcare,Medical Devices,18.44,3.86
+NVDA,NVIDIA Corporation,No,2.49,3.82,53.26,0.00,Technology,Semiconductors,38.22,57.42
+LLY,Eli Lilly and Company,No,0.91,0.94,15.50,-0.18,Healthcare,Drug Manufacturers - General,74.62,15.33
+DANSKE.CO,Danske Bank A/S,No,0.71,0.77,2.57,0,Financial Services,Banks - Regional,8.66,0.64
+CARL-B.CO,Carlsberg B A/S,No,1.14,1.22,3.15,0,Consumer Defensive,Beverages - Brewers,17.59,5.92
+MAERSK-B.CO,A.P. Møller - Mærsk B A/S,No,1.35,0.96,-15.67,0,Industrials,Marine Shipping,4.72,4.41
+RBREW.CO,Royal UNIBREW A/S,No,1.19,1.42,9.01,0,Consumer Defensive,Beverages - Brewers,18.95,6.90
+ISS.CO,ISS A/S,No,1.22,1.32,3.90,0,Industrials,Specialty Business Services,11.12,5.01
+DSV.CO,DSV A/S,No,0.81,1.44,25.01,0,Industrials,Integrated Freight & Logistics,30.33,5.23
+SCHO.CO,Schouw & Co. A/S,No,1.01,1.41,16.07,0,Industrials,Conglomerates,15.08,4.04
+NETC.CO,Netcompany Group A/S,No,0.88,1.10,8.94,0,Technology,Information Technology Services,30.74,6.07
+JYSK.CO,Jyske Bank A/S,No,0.76,0.78,0.72,0,Financial Services,Banks - Regional,7.33,0.69
+PLTR,Palantir Technologies Inc.,No,-1.51,-1.81,3.24,-0.19,Technology,Software - Infrastructure,445.47,3.57
+ABBN.SW,ABB LTD N,No,1.15,1.13,-0.71,0,Industrials,Electrical Equipment & Parts,26.05,8.29
+TER,"Teradyne, Inc.",No,1.12,1.83,26.80,0.02,Technology,Semiconductor Equipment & Materials,32.50,9.52
 PARKEN.CO,PARKEN Sport & Entertainment A/,No,1.94,1.94,0.00,0,Communication Services,Entertainment,2.85,10.98
+NFLX,"Netflix, Inc.",No,1.13,1.63,20.04,0.00,Communication Services,Entertainment,44.97,12.72
+TRMD,TORM plc,No,2.00,2.82,32.67,0,Energy,Oil & Gas Midstream,3.02,11.98
