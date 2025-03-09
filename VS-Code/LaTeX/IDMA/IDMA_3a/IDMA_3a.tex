@@ -2,7 +2,7 @@
 \usepackage{standalone}
 \usepackage{amsmath} % Package for advanced math typesetting
 \input{../../sty/setup.sty} % Assuming these files exist and are correctly referenced
-\graphicspath{ {../../pictures/IDMA/IDMA2a}} % Assuming a pictures folder has been made and is correctly referenced
+\graphicspath{ {../../pictures/IDMA/IDMA3_a}} % Assuming a pictures folder has been made and is correctly referenced
 
 % \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
 
@@ -299,10 +299,34 @@ Derefter finder vi $S'$ som den symmetriske lukning af $T'$. Da $T'$ allerede er
 \end{bmatrix}
 \]
 
-hvilket også er den samme relation som den givet i $M_T$. Relationerne på $M_{S'}$ og på $M_T$ er altså ens.
+hvilket også er den samme relation som den givet i $M_T$. Relationerne $S'$ og $T$ er altså ens.
+Det er dog ikke altid tilfældet, at vi ender med samme relation, hvis vi tager den symmetric closure før den transitive closure. Eksempelvis, hvis vi havde en relation:
+\[R=\{(a,b),(b,c)\}\]
+og vi tog dens symmetric relation $aRb \Rightarrow bRa $, ville vi få:
+\[S=\{(a,b),(b,a),(b,c),(c,b)\}\]
+og hvis vi derefter brugte transitivity ($aRb \wedge bRc) \Rightarrow aRc$ får vi:
+\[T'=\{(a,a),(a,b),(a,c),(b,a),(b,b),(b,c),(c,a),(c,b),(c,c)\}\]
 
-\[aRb \Rightarrow bRa \quad bRc \Rightarrow aRc \]
-\[aRb \quad bRc \Rightarrow aRc \Rightarrow cRa \]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{img1.png}
+    \caption{}
+\end{figure}
+
+Lad os nu gøre det samme, men vi tager transitivity først:
+\[R=\{(a,b),(b,c)\}\]
+\[transitivity\]
+\[T=\{(a,b),(a,c),(b,c)\}\]
+\[symmetri\]
+\[S'=\{(a,b),(a,c),(b,a),(b,c),(c,a),(c,b)\}\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{img2.png}
+    \caption{}
+\end{figure}
+
+Det er altså ikke altid tilfældet, at $S'$ og $T$ vil være ens, hvis vi tager den symmetric closure før den transitive closure.
 
 
 \section[Question 5]{Recall that an undirected graph $G = (V, E)$ consists of a set of vertices $V$ connected by
