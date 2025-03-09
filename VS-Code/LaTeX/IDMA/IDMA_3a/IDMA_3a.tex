@@ -162,7 +162,7 @@ eller
 Rent sprogligt kan vi fortolke dette som at vi har alle de edges $M_T$, som er i $M_S$, og alle de edges, der kan nås fra $M_S$ i $n$ steps. Dette betyder, at hvis vi har en edge fra $e_1$ til $e_2$ i $M_S$, og en edge fra $e_2$ til $e_3$ i $M_S$, så vil der også være en edge fra $e_1$ til $e_3$ i $M_T$.\\
 Vi kender i forvejen $M_S$, så vi går videre til $M^2_S$
 
-\[M^2_S = M_S \times M_S = 
+\[M^2_S = M_S \lor M_S = 
 \begin{bmatrix}
     0 & 0 & 1 & 0 & 1 & 0 \\
     0 & 0 & 0 & 1 & 0 & 1 \\
@@ -171,7 +171,7 @@ Vi kender i forvejen $M_S$, så vi går videre til $M^2_S$
     1 & 0 & 1 & 0 & 0 & 0 \\
     0 & 1 & 0 & 1 & 0 & 0 \\
 \end{bmatrix}
-\times
+\lor
 \begin{bmatrix}
     0 & 0 & 1 & 0 & 1 & 0 \\
     0 & 0 & 0 & 1 & 0 & 1 \\
@@ -211,8 +211,71 @@ constructed in this way from some relation $R$ on a set $A$ will always be the s
 make sure to motivate your answers clearly.
 }
 
+Vi udregner $R$ transitive closure på samme måde vi gjorde for $S$ tidligere. Vi kender $M_R$, så lad os udregne $M^2_R$:
+
+\[M^2_R = M_R \lor M_R =
+\begin{bmatrix}
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+\lor
+\begin{bmatrix}
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    0 & 0 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
+\end{bmatrix}
+\]
+
+Vi bestemmer nu næste matrix potens, $M^3_R$:
+\[M^3_R = M^2_R \lor M_R =
+\begin{bmatrix}
+    0 & 0 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
+\end{bmatrix}
+\lor
+\begin{bmatrix}
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+\end{bmatrix}
+\]
+
+Vi får en identity matrix for $M^3_R$, hvilket betyder at vi har nået et punkt, hvor yderligere matrix potenser vil ikke ændre resultatet.
+
 \[
-M_{T'} =
+M_{T'} = M^3_R \lor M^2_R \lor M_R =
 \begin{bmatrix}
     1 & 0 & 1 & 0 & 1 & 0 \\
     0 & 1 & 0 & 1 & 0 & 1 \\
@@ -223,7 +286,7 @@ M_{T'} =
 \end{bmatrix}
 \]
 
-Derefter finder vi $S'$ som den symmetriske lukning af $T'$. Da $T'$ allerede er symmetrisk (vi kan se dette fordi hver række i $T'$ allerede er identisk med den tilsvarende kolonne), vil $S'$ være præcis den samme som $T'$.
+Derefter finder vi $S'$ som den symmetriske lukning af $T'$. Da $T'$ allerede er symmetrisk (vi kan se dette fordi hver row i $T'$ allerede er identisk med den tilsvarende column), vil $S'$ være præcis den samme som $T'$.
 
 \[M_{S'} = M_{T'} =
 \begin{bmatrix}
@@ -235,6 +298,12 @@ Derefter finder vi $S'$ som den symmetriske lukning af $T'$. Da $T'$ allerede er
     0 & 1 & 0 & 1 & 0 & 1 \\
 \end{bmatrix}
 \]
+
+hvilket også er den samme relation som den givet i $M_T$. Relationerne på $M_{S'}$ og på $M_T$ er altså ens.
+
+\[aRb \Rightarrow bRa \quad bRc \Rightarrow aRc \]
+\[aRb \quad bRc \Rightarrow aRc \Rightarrow cRa \]
+
 
 \section[Question 5]{Recall that an undirected graph $G = (V, E)$ consists of a set of vertices $V$ connected by
 edges $E$, where every edge is an unordered pair of vertices. If there is an edge $(u, v)$ between two
