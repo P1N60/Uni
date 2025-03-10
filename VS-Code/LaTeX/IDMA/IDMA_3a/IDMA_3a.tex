@@ -387,8 +387,8 @@ description, and argue which—if any—of the natural language definitions (1),
 For every predicate logic formula that matches a natural language description, explain clearly why there is a match. For formulas that do not match a description, write a natural language definition along the lines of (1), \ldots, (6) that describes the property that the formula encodes.}
 
 
-\subsection{Predicate Logic Formulas}
-Vi oversætter først formlerne, hvorefter vi finder den bedst passende beskrivelse til dem.\\
+\subsection{Oversættelse af Predicate Logic Formulas}
+Jeg vælger at oversætte alle formlerne først, hvorefter vi finder den bedst passende beskrivelse til dem.\\
 
 (a) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor alle de vetices der har en edge er med i $S$.\\
 
@@ -402,14 +402,17 @@ Vi oversætter først formlerne, hvorefter vi finder den bedst passende beskrive
 
 (f) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor alle vetices har en edge med en vertex, som ikke er sig selv.\\
 
-\subsection{Natural Language Definitions}
-(a) = beskrivelse 4\\
-(b) = beskrivelse 1\\
-(C) = None\\
-(d) = beskrivelse 5\\
-(e) = None\\
-(f) = beskrivelse 2
-
-
+\subsection{Matching af Natural Language Definitions}
+(a) Dette beskriver et sæt $S$ af størrelse $k$, hvor for enhver edge $E(v,w)$ er mindst et af endepunkterne $v$ eller $w$ i $S$. Dette svarer præcis til definition ($4$) for et vertex cover.\\
+\\
+(b) Dette beskriver et sæt $S$ af størrelse $k$, hvor enhver vertex $v$ enten selv er i $S$ eller har en nabo $w$ der er i $S$. Dette svarer til definition (1) for et dominating set.\\
+\\
+(c) Dette beskriver, at for ethvert par af forskellige vertices $u$,$w$ i $S$ findes der en vertex $v$, som er forbundet direkte til både $u$ og $w$. Dette matcher ikke direkte nogen af definitionerne.\\
+\\
+(d) Dette beskriver at for enhver edge $E(v,w)$ er præcis et af endepunkterne i $S$. Dette svarer til definition (5) for en bipartite graf.\\
+\\
+(e) Dette beskriver at enhver vertex $v$ i $S$ har mindst en edge til en vertex $w$ som ikke er i $S$. Dette matcher ikke direkte nogen af definitionerne.\\
+\\
+(f) Dette beskriver at for ethvert par af forskellige vertices $v$,$w$ i $S$, er de forbundet med en edge. Dette svarer til definition (2) for en clique.\\
 
 \end{document}
