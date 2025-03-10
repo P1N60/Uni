@@ -1,11 +1,11 @@
 # Fdb version 4
-["pdflatex"] 1741612269.77012 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" "IDMA_3a.pdf" "IDMA_3a" 1741612271.29495 0
+["pdflatex"] 1741616482.94018 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" "IDMA_3a.pdf" "IDMA_3a" 1741616484.41962 0
   "../../pictures/IDMA/IDMA3_a/img1.png" 1741521040.16747 274666 b15560a38bf0419b7d5b658935072de2 ""
   "../../pictures/IDMA/IDMA3_a/img2.png" 1741521040.1678 277130 3b002c59dd37f04d24f1ce71541fbd36 ""
   "../../sty/cover.sty" 1739198275.20438 178 b29fc44a470130a2f0632995e82a9f4d ""
   "../../sty/header.sty" 1733469646.88098 250 109f752decd82b9a012e4fb5550a366a ""
   "../../sty/setup.sty" 1740076293.67121 9872 b08c51a520027064a15544b633cd2aa8 ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" 1741612269.54016 20301 d26a3800e48f9b324604b57e060645e9 ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" 1741616482.71409 20288 fb8772a0f6d9359d1e66128205fb5afe ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -285,9 +285,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "IDMA_3a.aux" 1741612271.16386 4203 d356c3a8a7f8b6dad97214516727b8f7 "pdflatex"
-  "IDMA_3a.tex" 1741612269.54016 20301 d26a3800e48f9b324604b57e060645e9 ""
-  "IDMA_3a.toc" 1741612271.16571 843 e0a9215acccd22a18a7ca43b834aee22 "pdflatex"
+  "IDMA_3a.aux" 1741616484.29107 4203 d356c3a8a7f8b6dad97214516727b8f7 "pdflatex"
+  "IDMA_3a.tex" 1741616482.71409 20288 fb8772a0f6d9359d1e66128205fb5afe ""
+  "IDMA_3a.toc" 1741616484.29288 843 e0a9215acccd22a18a7ca43b834aee22 "pdflatex"
   (generated)
   "IDMA_3a.aux"
   "IDMA_3a.log"
