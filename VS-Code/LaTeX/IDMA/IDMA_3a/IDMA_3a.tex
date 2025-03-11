@@ -385,34 +385,18 @@ description, and argue which—if any—of the natural language definitions (1),
 For every predicate logic formula that matches a natural language description, explain clearly why there is a match. For formulas that do not match a description, write a natural language definition along the lines of (1), \ldots, (6) that describes the property that the formula encodes.}
 
 
-\subsection[]{Oversættelse af Predicate Logic Formulas}
-Jeg vælger at oversætte alle formlerne først, hvorefter vi finder den bedst passende beskrivelse til dem.\\
-
-(a) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor alle de vetices der har en edge er med i $S$.\\
-
-(b) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor enhver vertex i grafen enten selv er i $S$ eller er nabo til mindst en vertex i $S$.\\
-
-(c) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor for ethvert par af forskellige vertices $u,w \in S$ findes der en vertex $v$ i grafen, som er forbundet direkte til både $u$ og $w$.\\
-
-(d) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor for enhver edge $(v,w) \in E$ gælder det, at præcis et af vertices'ne er i $S$ (altså enten $v \in S$ og $w \notin S$, eller $v \notin S$ og $w \in S$). Dette beskriver en bipartition graf, hvor $S$ udgør den ene del af opdelingen.\\
-
-(e) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor enhver vertex $v \in S$ har mindst en edge med en vertex $w$ som ikke er i $S$.\\
-
-(f) Et sæt $S$ af en graf $G=(V,E)$ bestående af $k$ unikke vertices, hvor alle vetices har en edge med en vertex, som ikke er sig selv.\\
-
-\subsection[]{Matching af Natural Language Definitions}
-Nedenfor gennemg\r{a}r jeg hver predicate logic formulas natural language definition (a)--(f) som jeg har lavet, og forklarer hvis de matcher en af de givne natural language definitions (1)--(6).\\
-
-(a) \emph{Vertex cover} Formlen best\aa{r} af to dele: \( setsize(S, k) \) angiver, at \( S \) har pr\ae{cis} \( k \) unikke knuder, og \( \forall v \forall w (E(v, w) \rightarrow S(v) \vee S(w)) \) betyder, at for hver kant \( (v, w) \) i grafen \( G = (V, E) \) skal mindst \'{e}n af de to knuder \( v \) eller \( w \) v\ae{re} i \( S \). Dette er pr\ae{cis}, hvad et \emph{vertex cover} handler om i grafteori: et s\ae{t} knuder, der ``d\ae{kker}'' alle kanter i grafen ved at sikre, at hver kant har mindst \'{e}t endepunkt i s\ae{ttet}. Den logiske implikation \( E(v, w) \rightarrow S(v) \vee S(w) \) kan omskrives som ``hvis der er en kant mellem \( v \) og \( w \), s\aa{} er enten \( v \) i \( S \), \( w \) i \( S \), eller begge''. Dette matcher definition (4) direkte, da den kr\ae{ver}, at ``for hver kant \( (u, v) \in E \) g\ae{lder} det, at mindst \'{e}n af endepunkterne er i \( S \)''. Der er ingen yderligere krav i formlen, som f.eks. at begge endepunkter skal v\ae{re} i \( S \) eller lignende, at dette er et match.
+Nedenfor gennemgås hver predicate logic formel (a)--(f), oversættes til naturligt sprog, og matches med de givne definitioner (1)--(6). Hvis ingen match findes, laver jeg en ny beskrivelse.\\
 \\
-(b) Dette beskriver et sæt $S$ af størrelse $k$, hvor enhver vertex $v$ enten selv er i $S$ eller har en nabo $w$ der er i $S$. Dette svarer til definition (1) for et dominating set.\\
+(a) Formlen består af \( setsize(S, k) \), som betyder, at \( S \) indeholder præcis \( k \) forskellige vertices, og \( \forall v \forall w (E(v, w) \rightarrow S(v) \vee S(w)) \), som siger, at for hver edge \( (v, w) \) i grafen \( G = (V, E) \) skal mindst en af verticesne \( v \) eller \( w \) være i \( S \). Dette afspejler definitionen af et \emph{vertex cover} i (4), som kræver, at for hver edge \( (u, v) \in E \) er mindst et endepunkt (\( u \) eller \( v \)) i \( S \). Logisk set betyder implikationen \( E(v, w) \rightarrow S(v) \vee S(w) \), at hvis der eksisterer en edge, så er \( S(v) \) eller \( S(w) \) sand (eller begge), hvilket præcist dækker alle edges i grafen. Så denne passer med beskrviesle (4).\\
 \\
-(c) Dette beskriver, at for ethvert par af forskellige vertices $u$,$w$ i $S$ findes der en vertex $v$, som er forbundet direkte til både $u$ og $w$. Dette matcher ikke direkte nogen af definitionerne.\\
+(b) Formlen \( setsize(S, k) \) angiver, at \( S \) har præcis \( k \) forskellige vertices, mens \( \forall v (S(v) \vee \exists w (S(w) \wedge E(v, w))) \) betyder, at for hver vertex \( v \) i grafen gælder, at enten er \( v \) i \( S \), eller der findes en vertex \( w \) i \( S \), som er en nabo til \( v \) (\( E(v, w) \) er sand). Dette matcher definition (1) for et \emph{dominating set}, som kræver, at hver vertex i grafen enten er i \( S \) eller har en nabo i \( S \). Formlen dækker præcist dette krav, så den svarer til beskrivelse (1).\\
 \\
-(d) Dette beskriver at for enhver edge $E(v,w)$ er præcis et af endepunkterne i $S$. Dette svarer til definition (5) for en bipartite graf.\\
+(c) Formlen \( setsize(S, k) \) angiver, at \( S \) har \( k \) forskellige vertices, og \( \forall u \forall w ((u \neq w \wedge S(u) \wedge S(w)) \rightarrow \exists v (E(u, v) \wedge E(v, w))) \) betyder, at for ethvert par af forskellige vertices \( u \) og \( w \) i \( S \) skal der findes en vertex \( v \) (ikke nødvendigvis i \( S \)), som er en fælles nabo til både \( u \) og \( w \). Dette kræver en slags ‘forbundethed’ gennem fælles naboer, men det matcher ikke direkte nogen af definitionerne (1)--(6). Det ligner ikke et \emph{connected component} (6), da det ikke kræver en sti inden for \( S \), og det er svagere end en \emph{clique} (2), da verticesne i \( S \) ikke selv skal være direkte forbundne. En passende ny definition kunne være: "Et sæt \( S \) af størrelse \( k \) i grafen \( G = (V, E) \), hvor ethvert par af forskellige vertices i \( S \) har mindst en fælles nabo i grafen."\\
 \\
-(e) Dette beskriver at enhver vertex $v$ i $S$ har mindst en edge til en vertex $w$ som ikke er i $S$. Dette matcher ikke direkte nogen af definitionerne.\\
+(d) Formlen \( setsize(S, k) \) betyder, at \( S \) har \( k \) forskellige vertices, og \( \forall v \forall w (E(v, w) \rightarrow ((S(v) \wedge \neg S(w)) \vee (\neg S(v) \wedge S(w)))) \) siger, at for hver edge \( (v, w) \) i grafen skal præcis en af verticesne \( v \) og \( w \) være i \( S \) (og den anden i \( V \setminus S \)). Dette betyder, at alle edges i grafen går mellem \( S \) og \( V \setminus S \), og der kan ikke være edges inden for \( S \) eller inden for \( V \setminus S \). Dette passer perfekt til definition (5) for en bipartit graf, hvor \( S \) er den ene del af bipartitionen af størrelse \( k \), og alle edges forbinder de to dele. Så denne passer til beskrivelse (5)\\
 \\
-(f) Dette beskriver at for ethvert par af forskellige vertices $v$,$w$ i $S$, er de forbundet med en edge. Dette svarer til definition (2) for en clique.\\
+(e) Formlen \( setsize(S, k) \) angiver, at \( S \) har \( k \) forskellige vertices, og \( \forall v (S(v) \rightarrow \exists w (\neg S(w) \wedge E(v, w))) \) betyder, at hver vertex \( v \) i \( S \) skal have mindst en nabo \( w \) uden for \( S \). Dette udelukker, at \( S \) er isoleret (som i (3)), men det kræver ikke, at alle edges går til \( V \setminus S \) (som i (5)), og det siger intet om forbundethed eller dækning af edges. Ingen af beskrivelserne passer. En ny beskrivelse kunne være: "Et sæt \( S \) af størrelse \( k \) i grafen \( G = (V, E) \), hvor hver vertex i \( S \) har mindst en nabo uden for \( S \)."\\
+\\
+(f) Formlen \( setsize(S, k) \) angiver, at \( S \) har \( k \) forskellige vertices, og \( \forall v \forall w ((v \neq w \wedge S(v) \wedge S(w)) \rightarrow E(v, w)) \) betyder, at for ethvert par af forskellige vertices \( v \) og \( w \) i \( S \) skal der være en edge \( (v, w) \). Dette sikrer, at alle vertices i \( S \) er direkte forbundne med hinanden, hvilket præcist matcher definition (2) for en \emph{clique}: et sæt af \( k \) vertices, hvor alle par er naboer. Dette passer med beskrivelse (2).\\
 
 \end{document}
