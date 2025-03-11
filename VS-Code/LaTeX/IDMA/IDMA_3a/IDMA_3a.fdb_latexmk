@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741627173.20981 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" "IDMA_3a.pdf" "IDMA_3a" 1741627175.71082 0
+["pdflatex"] 1741679987.03112 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" "IDMA_3a.pdf" "IDMA_3a" 1741679989.40315 0
   "../../pictures/IDMA/IDMA3_a/img1.png" 1741514400 274666 13fcf7ebd7c53c13971f78bde3b23e31 ""
   "../../pictures/IDMA/IDMA3_a/img2.png" 1741514278 277130 2dec8d1d87250a372371d443986cea38 ""
   "../../sty/cover.sty" 1739211780 187 b29fc44a470130a2f0632995e82a9f4d ""
@@ -12,6 +12,7 @@
   "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk" 1730815923 28440 9fc1538aca9e9e801eb011ac54d753a9 ""
   "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1440.pk" 1730815804 34320 3ce11285825aa1e8a9378068e553c9d1 ""
   "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm2074.pk" 1730815805 53736 a4c944544773947812283b201c04350d ""
+  "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecti1200.pk" 1739096030 39120 1b55381d90193b9bde1ed8b2525e0011 ""
   "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1440.pk" 1741108589 16968 7291fa36038700ff50b605709d215db8 ""
   "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1730815799 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1730816381 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -25,6 +26,7 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm1200.tfm" 993062126 3152 4850ff0163852b7fab34bd55e1197f28 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm1440.tfm" 993062128 3168 3bd7b08ba4330af81521911744311212 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm2074.tfm" 993062130 3184 b2541675eba9fa86d240ec0ecc913558 ""
+  "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecti1200.tfm" 993062324 2832 28bbd97ca29f46e76c87a158a9915203 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1440.tfm" 993062510 1460 05250f74aea2bdcfe9d6766811b8b7b2 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -282,10 +284,10 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "IDMA_3a.aux" 1741627175 4542 e8ea9dcf886774aba683bca31679914e "pdflatex"
-  "IDMA_3a.tex" 1741627172 21696 c47d6b57a185c054e634d157bba26426 ""
-  "IDMA_3a.toc" 1741627175 872 eccf4e74cc5561f1f8275b60ba0c2864 "pdflatex"
-  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" 1741627172 21696 c47d6b57a185c054e634d157bba26426 ""
+  "IDMA_3a.aux" 1741679988 3574 ced88ce56c6dcbdb712cde265e405853 "pdflatex"
+  "IDMA_3a.tex" 1741679986 22648 72135bc5e215dc710dcd2ef23636bb0a ""
+  "IDMA_3a.toc" 1741679988 791 f7c887518fba156180658a7d3547f5dd "pdflatex"
+  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_3a/IDMA_3a.tex" 1741679986 22648 72135bc5e215dc710dcd2ef23636bb0a ""
   (generated)
   "IDMA_3a.aux"
   "IDMA_3a.log"
