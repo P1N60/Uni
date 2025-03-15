@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  15 MAR 2025 11:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  15 MAR 2025 14:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -963,6 +963,18 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
  (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ))) (IDMA_4a.aux)
+Runaway argument?
+{5C3337365C3337375C303030535C303030755C303030705C303030705C3030306F5C\ETC.
+c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex:12: File ended while scanning use of \BKM@entry.
+<inserted text> 
+                \par 
+l.12 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
 \openout1 = `IDMA_4a.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -983,7 +995,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
- (C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\Gamer\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count406
 \scratchdimen=\dimen334
@@ -1069,7 +1081,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 LaTeX Warning: Reference `fig:graph1' on page 3 undefined on input line 25.
 
-<../../pictures/IDMA/IDMA_4a/1.png, id=39, 463.7325pt x 187.70125pt>
+<../../pictures/IDMA/IDMA_4a/1.png, id=18, 463.7325pt x 187.70125pt>
 File: ../../pictures/IDMA/IDMA_4a/1.png Graphic file (type png)
 <use ../../pictures/IDMA/IDMA_4a/1.png>
 Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/1.png  used on input line 28.
@@ -1077,7 +1089,7 @@ Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/1.png  used on input line 2
 
 
 [3 <../../pictures/IDMA/IDMA_4a/1.png>]
-<../../pictures/IDMA/IDMA_4a/2.png, id=53, 462.72874pt x 180.675pt>
+<../../pictures/IDMA/IDMA_4a/2.png, id=39, 462.72874pt x 180.675pt>
 File: ../../pictures/IDMA/IDMA_4a/2.png Graphic file (type png)
 <use ../../pictures/IDMA/IDMA_4a/2.png>
 Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/2.png  used on input line 60.
@@ -1116,4 +1128,108 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 64.
 
 
-Package hyperref Warning: Token not allow
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not 
