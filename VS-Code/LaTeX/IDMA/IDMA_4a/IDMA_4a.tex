@@ -20,9 +20,12 @@ Introduktion til diskret matematik og algoritmer - Problem set 3}
 
 
 
-\section[Question 1]{The purpose of this problem is to gain an understanding of strongly connected components in directed graphs.}
+\section[Question 1]{}
 
-\subsection[]{Compute the strongly connected components of the graph in Figure~\ref{fig:graph1} by making a dry-run of the algorithm in CLRS. Make sure to explain carefully the different steps in the algorithm execution, including in which order vertices are dealt with during graph traversal and why, and also what the final output is. We assume that the graph is given to us in adjacency list representation, with the out-neighbours in each adjacency list sorted in lexicographic order, so that this is the order in which vertices are encountered when going through neighbour lists. (For instance, the out-neighbour list of $a$ is $(b, d, e)$ sorted in this order.)}
+\subsection[]{}
+
+
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{1.png}
@@ -31,49 +34,29 @@ Introduktion til diskret matematik og algoritmer - Problem set 3}
 
 
 
-\subsection[]{In order to get a deeper understanding of operations on Boolean matrices, Jakob has performed some fairly extensive experiments on adjacency matrices $A_G$ for small directed graphs $G$. He now claims to have made the discovery that if he computes
-\[
-\bigvee_{i=1}^{\infty} (A_G)^i = A_G \vee (A_G \odot A_G) \vee (A_G \odot A_G \odot A_G) \vee (A_G \odot A_G \odot A_G \odot A_G) \vee \cdots,
-\]
-then it holds (possibly after reordering the vertices in $G$, corresponding to swapping rows and columns in $A_G$) that this matrix can be written on the form
-\[
-\bigvee_{i=1}^{\infty} (A_G)^i = 
-\begin{pmatrix}
-M_{1,1} & M_{1,2} & \cdots & M_{1,s} \\
-M_{2,1} & M_{2,2} & \cdots & M_{2,s} \\
-\vdots & \vdots & \ddots & \vdots \\
-M_{s,1} & M_{s,2} & \cdots & M_{s,s}
-\end{pmatrix},
-\]
-where the submatrices $M_{i,j}$ provide information about the strongly connected components of $G$ in the following sense. If $G$ has $s$ strongly connected components $C_1, C_2, \ldots, C_s$ of sizes $n_1, n_2, \ldots, n_s$, respectively, then:
-\begin{itemize}
-    \item Each matrix $M_{i,j}$ has dimensions $n_i \times n_j$.
-    \item If there is a path from some $u \in C_i$ to some $v \in C_j$ in $G$, then $M_{i,j}$ contains 1s everywhere. (In particular, all matrices $M_{i,i}$ on the diagonal contain only 1s.)
-    \item If there is no path from any $u \in C_i$ to any $v \in C_j$ in $G$, then $M_{i,j}$ contains 0s everywhere.
-\end{itemize}
-Sadly, Jakob is completely unable to explain this amazing fact, and he also cannot determine any upper bound on the time complexity of computing $\bigvee_{i=1}^{\infty} (A_G)^i$. Is Jakob right about his claim? If so, present a concise and clear explanation to help Jakob see why this is so. If he is wrong, give a simple, concrete counter-example. Also, regardless of whether Jakob is correct or not, can you provide an efficient algorithm for computing $\bigvee_{i=1}^{\infty} (A_G)^i$ (for the plain adjacency matrix $A_G$ without any row or column swaps) together with as tight an upper bound as possible for the time complexity?}
+\subsection[]{}
 
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{2.png}
-    \caption{Undirected graph for which to compute minimum spanning tree in Problem 2a.}
+    \caption{}
 \end{figure}
-\section[Question 2]{The purpose of this problem is to deepen our understanding of minimum spanning trees in undirected graphs.}
-\subsection{Generate a minimum spanning tree by running Kruskal's algorithm by hand on the graph in Figure 2. Assume that edges of the same weight are sorted in lexicographic order (so that for three hypothetical edges $(u, v)$, $(u, w)$, and $(v, w)$ of the same weight, we would have $(u, v)$ coming before $(u, w)$, which would in turn come before $(v, w)$). Describe how the forest changes at each step (but you do not need to describe in detail how the set operations are implemented). Also show the final tree produced by the algorithm.}
+\section[Question 2]{}
+\subsection[]{}
 
 
 
-\subsection{Suppose that some vertex $v$ with several neighbours in a graph $G$ has a unique neighbour $u$ such that the edge $(u, v)$ has strictly smaller weight than any other edge incident to $v$. Is it true that the edge $(u, v)$ must be included in any minimum spanning tree? Prove this or give a simple counter-example.}
+\subsection[]{}
 
 
 
-\subsection{Suppose that some vertex $v$ with several neighbours in a graph $G$ has a unique neighbour $u$ such that the edge $(u, v)$ has strictly larger weight than any other edge incident to $v$. Is it true that the edge $(u, v)$ can never be included in any minimum spanning tree? Prove this or give a simple counter-example.}
+\subsection[]{}
 
 
 
-\subsection{Suppose that $T$ is a minimum spanning tree for a weighted, undirected graph $G$. Modify $G$ by adding some constant $c \in \mathbb{R}^+$ to all edge weights. Is $T$ still a minimum spanning tree? Prove this or give a simple counter-example.}
+\subsection[]{}
 
 
 
@@ -82,5 +65,21 @@ Sadly, Jakob is completely unable to explain this amazing fact, and he also cann
     \includegraphics[width=0.8\textwidth]{3.png}
     \caption{Directed graph Dijkstra's algorithm in Problem 3a.}
 \end{figure}
+\section[Question 3]{}
+\subsection[]{}
+
+
+
+\subsection[]{}
+
+
+
+\subsection[]{}
+
+
+
+\subsection[]{}
+
+
 
 \end{document}
