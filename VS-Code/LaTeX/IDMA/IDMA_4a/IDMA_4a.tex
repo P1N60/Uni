@@ -68,7 +68,101 @@ Introduktion til diskret matematik og algoritmer - Problem set 3}
 \section[Question 3]{}
 \subsection[]{}
 
+Jeg opskriver vores weighted directed graph som adjacency list representation $(vertex, weight)$:
+\[
+\begin{aligned}
+&(a,0) \rightarrow (b,1) \rightarrow (d,5) \rightarrow (e,6) \rightarrow (g,9)\\
+&(b,0) \rightarrow (c,1) \rightarrow (e,2) \rightarrow (f,9)\\
+&(c,0) \rightarrow (e,4) \rightarrow (f,7)\\
+&(d,0) \rightarrow (e,6) \rightarrow (g,5) \rightarrow (h,2)\\
+&(e,0) \rightarrow (f,5) \rightarrow (h,4)\\
+&(f,0) \rightarrow (e,3)\\
+&(g,0)\\
+&(h,0) \rightarrow (f,1)\\
+\end{aligned}
+\]
 
+Udregning af distancer for $a's$ naboer:
+\[
+[(b,1),(d,5),(e,6),(g,9)]
+\]
+Vi opdaterer nu de laveste værdier i grafen:
+\[
+[(A,0),(b,1),(d,5),(e,6),(g,9),(c,\infty),(f,\infty),(h,\infty)]
+\]
+$a$ er nu besøgt, så det har jeg markeret ved at skrive $A$ i stedet.\\
+
+Vi ser, at $b$ er den ubesøgte vertex med kortest afstand fra $a.$\\
+Udregning af nye distancer for $b's$ naboer:
+\[
+[(c,1+1),(e,1+2),(f,1+9)] = [(c,2),(e,3),(f,10)]
+\]
+Vi opdaterer nu de laveste værdier i grafen:
+\[
+[(A,0),(B,1),(c,2),(e,3),(d,5),(g,9),(f,10),(h,\infty)]
+\]
+$b$ er nu besøgt, så det har jeg markeret ved at skrive $B$ i stedet.\\
+
+Vi ser, at $c$ er den ubesøgte vertex med kortest afstand fra $a$.\\
+Udregning af nye distancer for $c's$ naboer:
+\[
+[(e,2+4),(f,2+7)] = [(e,6),(f,9)]
+\]
+Vi opdaterer nu de laveste værdier i grafen:
+\[
+[(A,0),(B,1),(C,2),(e,3),(d,5),(f,9),(g,9),(h,\infty)]
+\]
+$c$ er nu besøgt, så det har jeg markeret ved at skrive $C$ i stedet.\\
+
+Vi ser, at $e$ er den ubesøgte vertex med kortest afstand fra $a$.\\
+Udregning af nye distancer for $e's$ naboer:
+\[
+[(f,3+5),(h,3+4)] = [(f,8),(h,7)]
+\]
+Vi opdaterer nu de laveste værdier i grafen:
+\[
+[(A,0),(B,1),(C,2),(E,3),(d,5),(h,7),(f,8),(g,9)]
+\]
+$e$ er nu besøgt, så det har jeg markeret ved at skrive $E$ i stedet.\\
+
+Vi ser, at $d$ er den ubesøgte vertex med kortest afstand fra $a$.\\
+Udregning af nye distancer for $d's$ naboer:
+\[
+[(g,5+5),(h,5+5),(e,5+6)] = [(g,10),(h,10),(e,11)]
+\]
+Vi opdaterer nu de laveste værdier i grafen, men ser, at der ikke nogen kortere afstande:
+\[
+[(A,0),(B,1),(C,2),(E,3),(D,5),(h,7),(f,8),(g,9)]
+\]
+$d$ er nu besøgt, så det har jeg markeret ved at skrive $D$ i stedet.\\
+
+Vi ser, at $h$ er den ubesøgte vertex med kortest afstand fra $a$.\\
+Udregning af nye distancer for $h's$ naboer:
+\[
+[(f,7+1)] = [(f,8)]
+\]
+Vi opdaterer nu de laveste værdier i grafen, men ser, at der ikke nogen kortere afstande:
+\[
+[(A,0),(B,1),(C,2),(E,3),(D,5),(H,7),(f,8),(g,9)]
+\]
+$h$ er nu besøgt, så det har jeg markeret ved at skrive $H$ i stedet.\\
+
+Vi ser, at $f$ er den ubesøgte vertex med kortest afstand fra $a$.\\
+Udregning af nye distancer for $f's$ naboer:
+\[
+[(e,8+3)] = [(e,11)]
+\]
+Vi opdaterer nu de laveste værdier i grafen, men ser, at der ikke nogen kortere afstande:
+\[
+[(A,0),(B,1),(C,2),(E,3),(D,5),(H,7),(F,8),(g,9)]
+\]
+$f$ er nu besøgt, så det har jeg markeret ved at skrive $F$ i stedet.\\
+
+Vi ser, at $g$ er den sidste ubesøgte vertex, og at $g$ ikke har nogen naboer.\\
+\[
+[(A,0),(B,1),(C,2),(E,3),(D,5),(H,7),(F,8),(G,9)]
+\]
+Vi markerer $g$ som besøgt med $G$.
 
 \subsection[]{}
 
