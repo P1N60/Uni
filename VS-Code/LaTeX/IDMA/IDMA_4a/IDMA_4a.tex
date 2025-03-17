@@ -28,6 +28,19 @@ Introduktion til diskret matematik og algoritmer - Problem set 3}
 \end{figure}
 
 \subsection[]{}
+Vi opskriver vores directed graph som en adjacency list representation i lexicographic order:
+\[
+\begin{aligned}
+&a \rightarrow (b, d, e)\\
+&b \rightarrow (a, c, d)\\
+&c \rightarrow (a, e, f)\\
+&d \rightarrow (e, f)\\
+&e \rightarrow (d, f, h)\\
+&f \rightarrow (g)\\
+&g \rightarrow (h)\\
+&h \rightarrow (f)\\
+\end{aligned}
+\]
 
 \begin{figure}[h]
     \centering
@@ -99,13 +112,13 @@ Introduktion til diskret matematik og algoritmer - Problem set 3}
 Jeg opskriver vores weighted directed graph som adjacency list representation $(vertex, weight)$:
 \[
 \begin{aligned}
-&(a,0) \rightarrow (b,1) \rightarrow (d,5) \rightarrow (e,6) \rightarrow (g,9)\\
-&(b,0) \rightarrow (c,1) \rightarrow (e,2) \rightarrow (f,9)\\
-&(c,0) \rightarrow (e,4) \rightarrow (f,7)\\
-&(d,0) \rightarrow (e,6) \rightarrow (g,5) \rightarrow (h,2)\\
-&(e,0) \rightarrow (f,5) \rightarrow (h,4)\\
+&(a,0) \rightarrow ((b,1), (d,5), (e,6), (g,9))\\
+&(b,0) \rightarrow ((c,1), (e,2), (f,9))\\
+&(c,0) \rightarrow ((e,4), (f,7))\\
+&(d,0) \rightarrow ((e,6), (g,5), (h,2))\\
+&(e,0) \rightarrow ((f,5), (h,4))\\
 &(f,0) \rightarrow (e,3)\\
-&(g,0)\\
+&(g,0) \rightarrow ()\\
 &(h,0) \rightarrow (f,1)\\
 \end{aligned}
 \]

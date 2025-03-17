@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  17 MAR 2025 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.5)  17 MAR 2025 21:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1074,86 +1074,89 @@ Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/1.png  used on input line 2
 <../../pictures/IDMA/IDMA_4a/2.png, id=48, 462.72874pt x 180.675pt>
 File: ../../pictures/IDMA/IDMA_4a/2.png Graphic file (type png)
 <use ../../pictures/IDMA/IDMA_4a/2.png>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/2.png  used on input line 71.
+Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/2.png  used on input line 84.
 (pdftex.def)             Requested size: 452.9679pt x 176.86453pt.
-<../../pictures/IDMA/IDMA_4a/3.png, id=49, 318.18875pt x 350.30875pt>
+
+
+[3 <../../pictures/IDMA/IDMA_4a/1.png>]
+<../../pictures/IDMA/IDMA_4a/3.png, id=59, 318.18875pt x 350.30875pt>
 File: ../../pictures/IDMA/IDMA_4a/3.png Graphic file (type png)
 <use ../../pictures/IDMA/IDMA_4a/3.png>
-Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/3.png  used on input line 93.
+Package pdftex.def Info: ../../pictures/IDMA/IDMA_4a/3.png  used on input line 106.
 (pdftex.def)             Requested size: 362.37569pt x 398.95523pt.
 
 
-[3 <../../pictures/IDMA/IDMA_4a/1.png> <../../pictures/IDMA/IDMA_4a/2.png>]
-Overfull \hbox (24.2352pt too wide) in paragraph at lines 99--100
+[4 <../../pictures/IDMA/IDMA_4a/2.png>]
+Overfull \hbox (24.2352pt too wide) in paragraph at lines 112--113
 []\T1/cmr/m/n/12 Jeg op-skriver vores weighted di-rected graph som ad-ja-cency list rep-re-sen-ta-tion $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 vertex; weight\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 : 
  []
 
 
 
-[4 <../../pictures/IDMA/IDMA_4a/3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 120--122
+[5 <../../pictures/IDMA/IDMA_4a/3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
-
- []
-
-
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 165--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
 
  []
 
 
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
-[7] (IDMA_4a.aux)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+
+
+[7]
+
+[8] (IDMA_4a.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-10-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 41800 strings out of 473701
- 948261 string characters out of 5719417
+ 41801 strings out of 473701
+ 948267 string characters out of 5719417
  1428671 words of memory out of 5000000
  64142 multiletter control sequences out of 15000+600000
  570158 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,13n,121p,865b,1179s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Gamer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Gamer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on IDMA_4a.pdf (7 pages, 244733 bytes).
+Output written on IDMA_4a.pdf (8 pages, 246393 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 296 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

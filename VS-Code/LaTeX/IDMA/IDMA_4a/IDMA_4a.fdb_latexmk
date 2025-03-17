@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742231750.9754 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" "IDMA_4a.pdf" "IDMA_4a" 1742231753.2846 0
+["pdflatex"] 1742241852.23927 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" "IDMA_4a.pdf" "IDMA_4a" 1742241854.46807 0
   "../../pictures/IDMA/IDMA_4a/1.png" 1742033647 62300 dd489607371e21277f8f914148712e5e ""
   "../../pictures/IDMA/IDMA_4a/2.png" 1742033647 49371 b899edf8a82fee22c2f9e555d73e6fba ""
   "../../pictures/IDMA/IDMA_4a/3.png" 1742033647 77454 51b2538a3679ade578dbd72e97557962 ""
@@ -269,10 +269,10 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "IDMA_4a.aux" 1742231752 3810 2831220b3eb3fc59e231cdc5896854f8 "pdflatex"
-  "IDMA_4a.tex" 1742231750 6370 3d95379da70d1d82afc72cae802fec86 ""
-  "IDMA_4a.toc" 1742231752 858 7d49c61e095995bc6df4613d59cfee98 "pdflatex"
-  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" 1742231750 6370 3d95379da70d1d82afc72cae802fec86 ""
+  "IDMA_4a.aux" 1742241854 3813 77cfa4a7ddd6446a9e9b1177c2dd6196 "pdflatex"
+  "IDMA_4a.tex" 1742241851 6634 1d435d8fad396bbd7de002c903b310cc ""
+  "IDMA_4a.toc" 1742241854 858 14e4ff348b1dd342d4b959f2400a5449 "pdflatex"
+  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" 1742241851 6634 1d435d8fad396bbd7de002c903b310cc ""
   (generated)
   "IDMA_4a.aux"
   "IDMA_4a.log"
