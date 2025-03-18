@@ -42,39 +42,13 @@ Vi opskriver vores directed graph som en adjacency list representation i lexicog
 \end{aligned}
 \]
 
-\begin{figure}[h]
+
+\begin{figure}[H]
     \centering
-    \begin{tikzpicture}
-        \node[circle, draw] (a) at (0,2) {$a$};
-        \node[circle, draw] (b) at (0,0) {$b$};
-        \node[circle, draw] (c) at (2,2) {$c$};
-        \node[circle, draw] (d) at (2,0) {$d$};
-        \node[circle, draw] (e) at (4,2) {$e$};
-        \node[circle, draw] (f) at (4,0) {$f$};
-        \node[circle, draw] (g) at (6,2) {$g$};
-        \node[circle, draw] (h) at (6,0) {$h$};
-        \draw[->] (b) -- (d);
-        \draw[->] (c) -- (a);
-        \draw[->] (c) -- (e);
-        \draw[->] (d) -- (f);
-        \draw[->] (e) -- (f);
-        \draw[->] (e) -- (h);
-        \draw[->] (f) -- (d);
-        \draw[->] (g) -- (h);
-        \draw[->] (h) -- (f);
-        \draw[->] (f) -- (g);
-        \draw[->] (a) -- (d);
-        \draw[->] (a) -- (d);
-        \draw[->] (c) -- (f);
-        \draw[->] (b) -- (c);
-        \draw[->] (a) to[bend left=20] (b);
-        \draw[->] (b) to[bend left=20] (a);
-        \draw[->] (a) to[bend left=40] (e);
-        \draw[->] (d) to[bend left=20] (e);
-        \draw[->] (e) to[bend left=20] (d);
-    \end{tikzpicture}
-    \caption*{}
-    \end{figure}
+    \includegraphics[width=1\textwidth]{SCC.jpg}
+    \caption{}
+\end{figure}
+
 \subsection[]{}
 
 
