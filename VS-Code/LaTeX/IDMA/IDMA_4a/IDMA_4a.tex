@@ -46,21 +46,281 @@ Vi opskriver vores directed graph som en adjacency list representation i lexicog
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{SCC.jpg}
-    \caption{}
+    \caption{Gennemgang af $SCC(G)$.}
 \end{figure}
 
 \subsection[]{}
 
 
 
+\section[Question 2]{}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{2.png}
-    \caption{}
+    \caption{Undirected graph for which to compute minimum spanning tree in Problem 2a.}
 \end{figure}
-\section[Question 2]{}
 \subsection[]{}
 
+Vi har følgende vertices:
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[red, circle, draw] (a) at (0,2) {$a$};
+        \node[red, circle, draw] (b) at (0,0) {$b$};
+        \node[red, circle, draw] (c) at (2,2) {$c$};
+        \node[red, circle, draw] (d) at (2,0) {$d$};
+        \node[red, circle, draw] (e) at (4,2) {$e$};
+        \node[red, circle, draw] (f) at (4,0) {$f$};
+        \node[red, circle, draw] (g) at (6,2) {$g$};
+        \node[red, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        % \draw (a) -- (d) node[midway, above left, yshift=10pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        % \draw (b) -- (c) node[midway, below left, yshift=11pt] {1};
+        % \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        % \draw (e) -- (f) node[midway, right] {4};
+        % \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        % \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        % \draw (d) -- (e) node[midway, below left, yshift=-10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi ser, at $(b,c)\in E$ har lavest vægt, sammen med $(g,h)\in E$. I lexicographic order vælger vi først $(b,c)\in E$.\\
+$(b,c)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[red, circle, draw] (a) at (0,2) {$a$};
+        \node[green, circle, draw] (b) at (0,0) {$b$};
+        \node[green, circle, draw] (c) at (2,2) {$c$};
+        \node[red, circle, draw] (d) at (2,0) {$d$};
+        \node[red, circle, draw] (e) at (4,2) {$e$};
+        \node[red, circle, draw] (f) at (4,0) {$f$};
+        \node[red, circle, draw] (g) at (6,2) {$g$};
+        \node[red, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        % \draw (a) -- (d) node[midway, above left, yshift=10pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        \draw (b) -- (c) node[midway, below left, yshift=11pt] {1};
+        % \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        % \draw (e) -- (f) node[midway, right] {4};
+        % \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        % \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        % \draw (d) -- (e) node[midway, below left, yshift=-10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi kigger derefter på $(g,h)\in E$, da denne edge er den næste i acending order af weight.\\
+$(g,h)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[red, circle, draw] (a) at (0,2) {$a$};
+        \node[green, circle, draw] (b) at (0,0) {$b$};
+        \node[green, circle, draw] (c) at (2,2) {$c$};
+        \node[red, circle, draw] (d) at (2,0) {$d$};
+        \node[red, circle, draw] (e) at (4,2) {$e$};
+        \node[red, circle, draw] (f) at (4,0) {$f$};
+        \node[green, circle, draw] (g) at (6,2) {$g$};
+        \node[green, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        % \draw (a) -- (d) node[midway, above left, yshift=10pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        \draw (b) -- (c) node[midway, below left, yshift=11pt] {1};
+        % \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        % \draw (e) -- (f) node[midway, right] {4};
+        % \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        % \draw (d) -- (e) node[midway, below left, yshift=-10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi kigger derefter på $(c,d)\in E$, da denne edge er den næste i acending order af weight.\\
+$(c,d)\in E$ connecter $d$, som ikke er connected gennem andre edges, så vi connecter dem.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[red, circle, draw] (a) at (0,2) {$a$};
+        \node[green, circle, draw] (b) at (0,0) {$b$};
+        \node[green, circle, draw] (c) at (2,2) {$c$};
+        \node[green, circle, draw] (d) at (2,0) {$d$};
+        \node[red, circle, draw] (e) at (4,2) {$e$};
+        \node[red, circle, draw] (f) at (4,0) {$f$};
+        \node[green, circle, draw] (g) at (6,2) {$g$};
+        \node[green, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        % \draw (a) -- (d) node[midway, above left, yshift=10pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        \draw (b) -- (c) node[midway, below left, yshift=11pt] {1};
+        \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        % \draw (e) -- (f) node[midway, right] {4};
+        % \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        % \draw (d) -- (e) node[midway, below left, yshift=-10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi kigger derefter på $(b,d)\in E$, da denne edge er den næste i acending order af weight.\\
+$b$ og $d$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+Vi kigger derefter på $(a,d)\in E$, da denne edge er den næste i acending order af weight.\\
+$(a,d)\in E$ connecter $a$, som ikke er connected gennem andre edges, så vi connecter dem.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[green, circle, draw] (a) at (0,2) {$a$};
+        \node[green, circle, draw] (b) at (0,0) {$b$};
+        \node[green, circle, draw] (c) at (2,2) {$c$};
+        \node[green, circle, draw] (d) at (2,0) {$d$};
+        \node[red, circle, draw] (e) at (4,2) {$e$};
+        \node[red, circle, draw] (f) at (4,0) {$f$};
+        \node[green, circle, draw] (g) at (6,2) {$g$};
+        \node[green, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        \draw (a) -- (d) node[midway, above left, yshift=11pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        \draw (b) -- (c) node[midway, below left, yshift=-11pt] {1};
+        \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        % \draw (e) -- (f) node[midway, right] {4};
+        % \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        % \draw (d) -- (e) node[midway, below left, yshift=-10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi kigger derefter på $(e,f)\in E$, da denne edge er den næste i acending order af weight.\\
+$(e,f)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[green, circle, draw] (a) at (0,2) {$a$};
+        \node[green, circle, draw] (b) at (0,0) {$b$};
+        \node[green, circle, draw] (c) at (2,2) {$c$};
+        \node[green, circle, draw] (d) at (2,0) {$d$};
+        \node[green, circle, draw] (e) at (4,2) {$e$};
+        \node[green, circle, draw] (f) at (4,0) {$f$};
+        \node[green, circle, draw] (g) at (6,2) {$g$};
+        \node[green, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        \draw (a) -- (d) node[midway, above left, yshift=11pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        \draw (b) -- (c) node[midway, below left, yshift=-11pt] {1};
+        \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        \draw (e) -- (f) node[midway, right] {4};
+        % \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        % \draw (d) -- (e) node[midway, below left, yshift=-10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi kigger derefter på $(a,b)\in E$, da denne edge er den næste i acending order af weight.\\
+$a$ og $b$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+Vi kigger derefter på $(a,c)\in E$, da denne edge er den næste i acending order af weight.\\
+$a$ og $c$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+Vi kigger derefter på $(d,e)\in E$, da denne edge er den næste i acending order af weight.\\
+$(d,e)\in E$ connecter både $e$ og $f$, som ikke er connected gennem andre edges så vi connecter dem.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[green, circle, draw] (a) at (0,2) {$a$};
+        \node[green, circle, draw] (b) at (0,0) {$b$};
+        \node[green, circle, draw] (c) at (2,2) {$c$};
+        \node[green, circle, draw] (d) at (2,0) {$d$};
+        \node[green, circle, draw] (e) at (4,2) {$e$};
+        \node[green, circle, draw] (f) at (4,0) {$f$};
+        \node[green, circle, draw] (g) at (6,2) {$g$};
+        \node[green, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        \draw (a) -- (d) node[midway, above left, yshift=11pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        \draw (b) -- (c) node[midway, below left, yshift=-11pt] {1};
+        \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        \draw (e) -- (f) node[midway, right] {4};
+        % \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        \draw (d) -- (e) node[midway, below left, yshift=10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi kigger derefter på $(c,e)\in E$, da denne edge er den næste i acending order af weight.\\
+$c$ og $e$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+Vi kigger derefter på $(d,f)\in E$, da denne edge er den næste i acending order af weight.\\
+$d$ og $f$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+Vi kigger derefter på $(c,f)\in E$, da denne edge er den næste i acending order af weight.\\
+$c$ og $f$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+Vi kigger derefter på $(e,g)\in E$, da denne edge er den næste i acending order af weight.\\
+$(e,g)\in E$ connecter både $e$ og $g$, som ikke er connected gennem andre edges så vi connecter dem.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2]
+        \node[green, circle, draw] (a) at (0,2) {$a$};
+        \node[green, circle, draw] (b) at (0,0) {$b$};
+        \node[green, circle, draw] (c) at (2,2) {$c$};
+        \node[green, circle, draw] (d) at (2,0) {$d$};
+        \node[green, circle, draw] (e) at (4,2) {$e$};
+        \node[green, circle, draw] (f) at (4,0) {$f$};
+        \node[green, circle, draw] (g) at (6,2) {$g$};
+        \node[green, circle, draw] (h) at (6,0) {$h$};
+        % \draw (a) -- (c) node[midway, above] {6};
+        % \draw (a) -- (b) node[midway, left] {5};
+        \draw (a) -- (d) node[midway, above left, yshift=11pt] {4};
+        % \draw (b) -- (d) node[midway, below] {3};
+        \draw (b) -- (c) node[midway, below left, yshift=-11pt] {1};
+        \draw (c) -- (d) node[midway, right] {2};
+        % \draw (c) -- (e) node[midway, above] {7};
+        % \draw (c) -- (f) node[midway, above left, , yshift=10pt] {8};
+        \draw (e) -- (f) node[midway, right] {4};
+        \draw (e) -- (g) node[midway, above] {8};
+        % \draw (f) -- (h) node[midway, below] {9};
+        \draw (g) -- (h) node[midway, right] {1};
+        % \draw (d) -- (f) node[midway, below] {7};
+        \draw (d) -- (e) node[midway, below left, yshift=10pt] {6};
+    \end{tikzpicture}
+    \caption*{}
+\end{figure}
+
+Vi ser, at antallet af edges svarer til antallet af vertices - 1. Vi er dermed færdige, da vi har 7 edges og 8 vertices.
 
 
 \subsection[]{}
