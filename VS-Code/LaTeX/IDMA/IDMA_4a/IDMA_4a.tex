@@ -366,7 +366,7 @@ Jeg opskriver vores weighted directed graph som adjacency list representation $(
 &(b,0) \rightarrow ((c,1), (e,2), (f,9))\\
 &(c,0) \rightarrow ((e,4), (f,7))\\
 &(d,0) \rightarrow ((e,6), (g,5), (h,2))\\
-&(e,0) \rightarrow ((f,5), (h,4))\\
+&(e,0) \rightarrow ((d,1)(f,5), (h,4))\\
 &(f,0) \rightarrow (e,3)\\
 &(g,0) \rightarrow ()\\
 &(h,0) \rightarrow (f,1)\\
@@ -420,11 +420,11 @@ $c$ er nu besøgt, så det har jeg markeret ved at skrive $C$ i stedet.\\
 Vi ser, at $e$ er den ubesøgte vertex med kortest afstand fra $a$.\\
 Udregning af nye distancer for $e's$ naboer:
 \[
-[(f,3+5),(h,3+4)] = [(f,8),(h,7)]
+[(d,3+1),(f,3+5),(h,3+4)] = [(d,4),(f,8),(h,7)]
 \]
 Vi opdaterer nu de laveste værdier i grafen:
 \[
-[(A,0),(B,1),(C,2),(E,3),(d,5),(h,7),(f,8),(g,9)]
+[(A,0),(B,1),(C,2),(E,3),(d,4),(h,7),(f,8),(g,9)]
 \]
 $e$ er nu besøgt, så det har jeg markeret ved at skrive $E$ i stedet.\\
 
@@ -435,7 +435,7 @@ Udregning af nye distancer for $d's$ naboer:
 \]
 Vi opdaterer nu de laveste værdier i grafen, men ser, at der ikke nogen kortere afstande:
 \[
-[(A,0),(B,1),(C,2),(E,3),(D,5),(h,7),(f,8),(g,9)]
+[(A,0),(B,1),(C,2),(E,3),(D,4),(h,7),(f,8),(g,9)]
 \]
 $d$ er nu besøgt, så det har jeg markeret ved at skrive $D$ i stedet.\\
 
@@ -446,7 +446,7 @@ Udregning af nye distancer for $h's$ naboer:
 \]
 Vi opdaterer nu de laveste værdier i grafen, men ser, at der ikke nogen kortere afstande:
 \[
-[(A,0),(B,1),(C,2),(E,3),(D,5),(H,7),(f,8),(g,9)]
+[(A,0),(B,1),(C,2),(E,3),(D,4),(H,7),(f,8),(g,9)]
 \]
 $h$ er nu besøgt, så det har jeg markeret ved at skrive $H$ i stedet.\\
 
@@ -457,13 +457,13 @@ Udregning af nye distancer for $f's$ naboer:
 \]
 Vi opdaterer nu de laveste værdier i grafen, men ser, at der ikke nogen kortere afstande:
 \[
-[(A,0),(B,1),(C,2),(E,3),(D,5),(H,7),(F,8),(g,9)]
+[(A,0),(B,1),(C,2),(E,3),(D,4),(H,7),(F,8),(g,9)]
 \]
 $f$ er nu besøgt, så det har jeg markeret ved at skrive $F$ i stedet.\\
 
 Vi ser, at $g$ er den sidste ubesøgte vertex, og at $g$ ikke har nogen naboer.\\
 \[
-[(A,0),(B,1),(C,2),(E,3),(D,5),(H,7),(F,8),(G,9)]
+[(A,0),(B,1),(C,2),(E,3),(D,4),(H,7),(F,8),(G,9)]
 \]
 Vi markerer $g$ som besøgt med $G$.
 
