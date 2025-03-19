@@ -90,9 +90,11 @@ Vi har følgende vertices:
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Som vi kan skrive op som subsets med alle connectede vertices. I begyndelsen har vi bare:
+\[\{a\},\{b\},\{c\},\{d\},\{e\},\{f\},\{g\},\{h\}\]
 
 Vi ser, at $(b,c)\in E$ har lavest vægt, sammen med $(g,h)\in E$. I lexicographic order vælger vi først $(b,c)\in E$.\\
-$(b,c)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
+$(b,c)\in E$ connecter kun ikke-connetede vertices sammen, da disse er de eneste elementer i deres subsets, så vi connecter dem.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2]
@@ -121,9 +123,11 @@ $(b,c)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
+\[\{b,c\},\{a\},\{d\},\{e\},\{f\},\{g\},\{h\}\]
 
 Vi kigger derefter på $(g,h)\in E$, da denne edge er den næste i acending order af weight.\\
-$(g,h)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
+$(g,h)\in E$ connecter kun ikke-connetede vertices sammen, da disse vertices er i forskellige subsets, så vi connecter dem.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2]
@@ -152,9 +156,11 @@ $(g,h)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
+\[\{b,c\},\{g,h\},\{a\},\{d\},\{e\},\{f\}\]
 
 Vi kigger derefter på $(c,d)\in E$, da denne edge er den næste i acending order af weight.\\
-$(c,d)\in E$ connecter $d$, som ikke er connected gennem andre edges, så vi connecter dem.
+$(c,d)\in E$ connecter $d$, som ikke er connected gennem andre edges, da disse vertices er i forskellige subsets, så vi connecter dem.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2]
@@ -183,11 +189,13 @@ $(c,d)\in E$ connecter $d$, som ikke er connected gennem andre edges, så vi con
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
+\[\{b,c,d\},\{g,h\},\{a\},\{e\},\{f\}\]
 
 Vi kigger derefter på $(b,d)\in E$, da denne edge er den næste i acending order af weight.\\
-$b$ og $d$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+$b$ og $d$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
 Vi kigger derefter på $(a,d)\in E$, da denne edge er den næste i acending order af weight.\\
-$(a,d)\in E$ connecter $a$, som ikke er connected gennem andre edges, så vi connecter dem.
+$(a,d)\in E$ connecter $a$, som ikke er connected gennem andre edges, da disse vertices er i forskellige subsets, så vi connecter dem.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2]
@@ -216,9 +224,11 @@ $(a,d)\in E$ connecter $a$, som ikke er connected gennem andre edges, så vi con
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
+\[\{a,b,c,d\},\{g,h\},\{e\},\{f\}\]
 
 Vi kigger derefter på $(e,f)\in E$, da denne edge er den næste i acending order af weight.\\
-$(e,f)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
+$(e,f)\in E$ connecter kun ikke-connetede vertices sammen, da disse vertices er i forskellige subsets, så vi connecter dem.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2]
@@ -247,13 +257,15 @@ $(e,f)\in E$ connecter kun ikke-connetede vertices sammen, så vi connecter dem.
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
+\[\{a,b,c,d\},\{e,f\},\{g,h\}\]
 
 Vi kigger derefter på $(a,b)\in E$, da denne edge er den næste i acending order af weight.\\
-$a$ og $b$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+$a$ og $b$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
 Vi kigger derefter på $(a,c)\in E$, da denne edge er den næste i acending order af weight.\\
-$a$ og $c$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+$a$ og $c$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
 Vi kigger derefter på $(d,e)\in E$, da denne edge er den næste i acending order af weight.\\
-$(d,e)\in E$ connecter både $e$ og $f$, som ikke er connected gennem andre edges så vi connecter dem.
+$(d,e)\in E$ connecter både $e$ og $f$, som ikke er connected gennem andre edges, da disse vertices er i forskellige subsets, så vi connecter dem.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2]
@@ -282,15 +294,17 @@ $(d,e)\in E$ connecter både $e$ og $f$, som ikke er connected gennem andre edge
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
+\[\{a,b,c,d,e,f\},\{g,h\}\]
 
 Vi kigger derefter på $(c,e)\in E$, da denne edge er den næste i acending order af weight.\\
-$c$ og $e$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+$c$ og $e$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
 Vi kigger derefter på $(d,f)\in E$, da denne edge er den næste i acending order af weight.\\
-$d$ og $f$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+$d$ og $f$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
 Vi kigger derefter på $(c,f)\in E$, da denne edge er den næste i acending order af weight.\\
-$c$ og $f$, er allerede connected gennem andre edges, så vi ignorerer den edge.\\
+$c$ og $f$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
 Vi kigger derefter på $(e,g)\in E$, da denne edge er den næste i acending order af weight.\\
-$(e,g)\in E$ connecter både $e$ og $g$, som ikke er connected gennem andre edges så vi connecter dem.
+$(e,g)\in E$ connecter både $e$ og $g$, som ikke er connected gennem andre edges, da disse vertices er i forskellige subsets, så vi connecter dem.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2]
@@ -319,8 +333,10 @@ $(e,g)\in E$ connecter både $e$ og $g$, som ikke er connected gennem andre edge
     \end{tikzpicture}
     \caption*{}
 \end{figure}
+Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
+\[\{a,b,c,d,e,f,g,h\}\]
 
-Vi ser, at antallet af edges svarer til antallet af vertices - 1. Vi er dermed færdige, da vi har 7 edges og 8 vertices.
+Vi ser, at vi har 7 edges og 8 vertices. Vi er dermed færdige, da antallet af edges svarer til antallet af vertices - 1, og alle vores vertices er i samme set, hvilket vil sige, at de er connected.
 
 
 \subsection[]{}
