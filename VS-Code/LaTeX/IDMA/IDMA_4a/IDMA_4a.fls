@@ -482,11 +482,10 @@ INPUT ../../pictures/IDMA/IDMA_4a/1.png
 INPUT ../../pictures/IDMA/IDMA_4a/1.png
 INPUT ../../pictures/IDMA/IDMA_4a/1.png
 INPUT ../../pictures/IDMA/IDMA_4a/1.png
-INPUT ./SCC.jpg
-INPUT ./SCC.jpg
-INPUT ./SCC.jpg
-INPUT ./SCC.jpg
-INPUT ./SCC.jpg
+INPUT ../../pictures/IDMA/IDMA_4a/SCC.jpg
+INPUT ../../pictures/IDMA/IDMA_4a/SCC.jpg
+INPUT ../../pictures/IDMA/IDMA_4a/SCC.jpg
+INPUT ../../pictures/IDMA/IDMA_4a/SCC.jpg
 INPUT ../../pictures/IDMA/IDMA_4a/2.png
 INPUT ../../pictures/IDMA/IDMA_4a/2.png
 INPUT ../../pictures/IDMA/IDMA_4a/2.png
@@ -497,6 +496,7 @@ INPUT ../../pictures/IDMA/IDMA_4a/3.png
 INPUT ../../pictures/IDMA/IDMA_4a/3.png
 INPUT IDMA_4a.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

@@ -13,7 +13,7 @@
 % \includepdf[pages=-]{../../pictures/forside}
 
 \title{Københavns Universitet\\
-Introduktion til diskret matematik og algoritmer - Problem set 3}
+Introduktion til diskret matematik og algoritmer - Problem set 4}
 \input{../../sty/cover.sty} % Assuming this file contains the cover page setup
 \input{../../sty/header.sty} % Assuming this file contains the header setup
 \maketitle % This command will actually insert the title into the document
@@ -48,6 +48,13 @@ Vi opskriver vores directed graph som en adjacency list representation i lexicog
     \includegraphics[width=1\textwidth]{SCC.jpg}
     \caption{Gennemgang af $SCC(G)$.}
 \end{figure}
+
+For at beregne alle strongly connected components i en graf, skal vi køre DFS på grafen, og opbevare finish time'en for alle recursions. Dette har jeg gjort som vist i billedet ovenover hvor der står $DFS(G)$. Jeg har noteret start og sluttiderne hvor hver vertex med $starttid/sluttid$ over hver vertex. Starttiden bliver talt når recursion'en bliver kaldt på vertex'en, og sluttiden bliver noteret når recursion'en er færdig (DFS peger på en sort vertex).\\
+
+Efter vi har kørt $DFS$ noterer vi sluttiderne i decending order:
+\[a,b,c,e,d,f,g,h\]
+
+Nu transposer vi grafen, hvilket rent grafisk blot betyder, at vi 'vender' hver directed edge i grafen, således at $(v,u)\in E \rightarrow (u,v)\in E$. Herefter kører vi igen $DPS$, men vi køerer algoritmet på $G^T$. Vores start vertex sætter vi til den edge med højst sluttid fra tidligere ($a$ i vores tildfælde). Herfra noterer vi hver visited vertex, og når en vertex peger på en sort vertex i en recursion, putter vi alle vertices, som ikke er i en ssc sammen i en ny ssc. Eksempelvis ser vi, at når vi har besøgt $\{a,b,c\}$ peger $c$ på $b$, som er sort. Vi noterer derfor $\{a,b,c\}$ som en ssc.
 
 \subsection[]{}
 
