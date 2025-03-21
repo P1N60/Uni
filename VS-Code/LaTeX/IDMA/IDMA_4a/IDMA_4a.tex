@@ -54,7 +54,11 @@ For at beregne alle strongly connected components i en graf, skal vi køre DFS p
 Efter vi har kørt $DFS$ noterer vi sluttiderne i decending order:
 \[a,b,c,e,d,f,g,h\]
 
-Nu transposer vi grafen, hvilket rent grafisk blot betyder, at vi 'vender' hver directed edge i grafen, således at $(v,u)\in E \rightarrow (u,v)\in E$. Herefter kører vi igen $DPS$, men vi køerer algoritmet på $G^T$. Vores start vertex sætter vi til den edge med højst sluttid fra tidligere ($a$ i vores tildfælde). Herfra noterer vi hver visited vertex, og når en vertex peger på en sort vertex i en recursion, putter vi alle vertices, som ikke er i en ssc sammen i en ny ssc. Eksempelvis ser vi, at når vi har besøgt $\{a,b,c\}$ peger $c$ på $b$, som er sort. Vi noterer derfor $\{a,b,c\}$ som en ssc.
+Nu transposer vi grafen, hvilket rent grafisk blot betyder, at vi 'vender' hver directed edge i grafen, således at $(v,u)\in E \rightarrow (u,v)\in E$. Herefter kører vi igen $DPS$, men vi køerer algoritmet på $G^T$. Vores start vertex sætter vi til den edge med højst sluttid fra tidligere ($a$ i vores tildfælde). Herfra noterer vi hver visited vertex, og når en vertex peger på en sort vertex i en recursion, putter vi alle vertices, som ikke er i en ssc sammen i en ny ssc.\\
+
+Vi ser, at når vi har besøgt $\{a,b,c\}$, peger $c$ på $b$, som er sort, hvorefter $a$ peger på $c$, som er sort. Vi noterer derfor $\{a,b,c\}$ som en ssc. Vi fortsætter med samme metode, så $DFS$ nu køres på $e$, da $e$ nu er den med højst sluttid, som ikke er blevet kørt endnu. Efter vi har kørt $DFS(G^T)$ ender vi med følgende subsets:
+\[\{a,b,c\} \{e,d\} \{f,g,h\}\]
+
 
 \subsection[]{}
 
@@ -97,8 +101,8 @@ Vi har følgende vertices:
     \end{tikzpicture}
     \caption*{}
 \end{figure}
-Som vi kan skrive op som subsets med alle connectede vertices. I begyndelsen har vi bare:
-\[\{a\},\{b\},\{c\},\{d\},\{e\},\{f\},\{g\},\{h\}\]
+som vi kan skrive op som subsets med alle connectede vertices. I begyndelsen har vi bare:
+\[\{a\}\{b\}\{c\}\{d\}\{e\}\{f\}\{g\}\{h\}\]
 
 Vi ser, at $(b,c)\in E$ har lavest vægt, sammen med $(g,h)\in E$. I lexicographic order vælger vi først $(b,c)\in E$.\\
 $(b,c)\in E$ connecter kun ikke-connetede vertices sammen, da disse er de eneste elementer i deres subsets, så vi connecter dem.
@@ -131,7 +135,7 @@ $(b,c)\in E$ connecter kun ikke-connetede vertices sammen, da disse er de eneste
     \caption*{}
 \end{figure}
 Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
-\[\{b,c\},\{a\},\{d\},\{e\},\{f\},\{g\},\{h\}\]
+\[\{b,c\}\{a\}\{d\}\{e\}\{f\}\{g\}\{h\}\]
 
 Vi kigger derefter på $(g,h)\in E$, da denne edge er den næste i acending order af weight.\\
 $(g,h)\in E$ connecter kun ikke-connetede vertices sammen, da disse vertices er i forskellige subsets, så vi connecter dem.
@@ -164,7 +168,7 @@ $(g,h)\in E$ connecter kun ikke-connetede vertices sammen, da disse vertices er 
     \caption*{}
 \end{figure}
 Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
-\[\{b,c\},\{g,h\},\{a\},\{d\},\{e\},\{f\}\]
+\[\{b,c\}\{g,h\}\{a\}\{d\}\{e\}\{f\}\]
 
 Vi kigger derefter på $(c,d)\in E$, da denne edge er den næste i acending order af weight.\\
 $(c,d)\in E$ connecter $d$, som ikke er connected gennem andre edges, da disse vertices er i forskellige subsets, så vi connecter dem.
@@ -197,7 +201,7 @@ $(c,d)\in E$ connecter $d$, som ikke er connected gennem andre edges, da disse v
     \caption*{}
 \end{figure}
 Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
-\[\{b,c,d\},\{g,h\},\{a\},\{e\},\{f\}\]
+\[\{b,c,d\}\{g,h\}\{a\}\{e\}\{f\}\]
 
 Vi kigger derefter på $(b,d)\in E$, da denne edge er den næste i acending order af weight.\\
 $b$ og $d$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
@@ -232,7 +236,7 @@ $(a,d)\in E$ connecter $a$, som ikke er connected gennem andre edges, da disse v
     \caption*{}
 \end{figure}
 Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
-\[\{a,b,c,d\},\{g,h\},\{e\},\{f\}\]
+\[\{a,b,c,d\}\{g,h\}\{e\}\{f\}\]
 
 Vi kigger derefter på $(e,f)\in E$, da denne edge er den næste i acending order af weight.\\
 $(e,f)\in E$ connecter kun ikke-connetede vertices sammen, da disse vertices er i forskellige subsets, så vi connecter dem.
@@ -265,7 +269,7 @@ $(e,f)\in E$ connecter kun ikke-connetede vertices sammen, da disse vertices er 
     \caption*{}
 \end{figure}
 Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
-\[\{a,b,c,d\},\{e,f\},\{g,h\}\]
+\[\{a,b,c,d\}\{e,f\}\{g,h\}\]
 
 Vi kigger derefter på $(a,b)\in E$, da denne edge er den næste i acending order af weight.\\
 $a$ og $b$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
@@ -302,7 +306,7 @@ $(d,e)\in E$ connecter både $e$ og $f$, som ikke er connected gennem andre edge
     \caption*{}
 \end{figure}
 Nu har vi nogle nye connectede vertices, så vi samler deres subsets:
-\[\{a,b,c,d,e,f\},\{g,h\}\]
+\[\{a,b,c,d,e,f\}\{g,h\}\]
 
 Vi kigger derefter på $(c,e)\in E$, da denne edge er den næste i acending order af weight.\\
 $c$ og $e$, er allerede connected gennem andre edges, da de er i samme subset, så vi ignorerer den edge.\\
@@ -348,11 +352,36 @@ Vi ser, at vi har 7 edges og 8 vertices. Vi er dermed færdige, da antallet af e
 
 \subsection[]{}
 
+Proof by contradiction:\\
+For et minimum spanning tree gælder det:
+\[\forall cut\in G(V,E): light \ edge(cut) \in MST(G)\]
+Ifølge informationen i opgave, har vi en edge $(u,v) \in E$, hvor $u, v$ er unikke vertices og $w(u,v)\in E $ er strængt mindre end weight'en af alle andre edges connected til $v$.\\
+Antag, at 
+\[((u,v)\in E ) \notin MST(G)\]
+så må det betyde 
+\[light \ edge(cut(v)) \ne (u,v)\in E\]
+og
+\[\exists ((k,j) \in E)\in G \ : \ (w((k,j) \in E) \leq w(u,v)\in E)\in G\]
+men ifølge vores information fra opgavebeskrivelsen kan dette ikke være tilfældet, da $w(u,v)\in E$ er strængt mindre end alle andre edges connected til $v$. Hvis $(u,v)\notin E$ er en del af $MST(G)$ går dette imod vores definition af et minimum spanning tree, og vi ender dermed en crontradiction $\square$\\
+
+Vi er nu færdige, da vi ved, at $(u,v)\in E$ altid er med i $MST(G)$.
 
 
 \subsection[]{}
 
+Proof by contradiction:\\
+Præcist som før, gælder der for ethvert minimum spanning tree:
+\[\forall cut\in G(V,E): light \ edge(cut) \in MST(G)\]
+Ifølge informationen i opgave, har vi en edge $(u,v) \in E$, hvor $u, v$ er unikke vertices og $w(u,v)\in E $ er strængt større end weight'en af alle andre edges connected til $v$.\\
+Antag, at 
+\[((u,v)\in E ) \in MST(G)\]
+så må det betyde 
+\[light \ edge(cut(v)) = (u,v)\in E\]
+og
+\[\nexists ((k,j) \in E)\in G \ : \ (w((k,j) \in E) \leq w(u,v)\in E)\in G\]
+men ifølge vores information fra opgavebeskrivelsen kan dette ikke være tilfældet, da $v$ har andre unikke naboer, og $w(u,v)\in E$ er strængt større end alle andre edges connected til $v$. Hvis $(u,v)\in E$ er en del af $MST(G)$ går dette imod vores definition af et minimum spanning tree, og vi ender dermed en crontradiction $\square$\\
 
+Vi er nu færdige, da vi ved, at $(u,v)\in E$ aldrig er en del af $MST(G)$.
 
 \subsection[]{}
 
