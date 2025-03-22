@@ -387,12 +387,13 @@ Vi er nu færdige, da vi ved, at $(u,v)\in E$ aldrig er en del af $MST(G)$.
 
 
 
+
+\section[Question 3]{}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{3.png}
     \caption{Directed graph Dijkstra's algorithm in Problem 3a.}
 \end{figure}
-\section[Question 3]{}
 \subsection[]{}
 
 Jeg opskriver vores weighted directed graph som adjacency list representation $(vertex, weight)$:
@@ -415,21 +416,21 @@ Udregning af distancer for $a's$ naboer:
 \]
 Vi opdaterer nu de laveste værdier i grafen:
 \[
-[(A,0),(b,1),(c,\infty),(d,5),(e,6),(f,\infty),(g,9),(h,\infty)]
+[(a,0),(b,1),(c,\infty),(d,5),(e,6),(f,\infty),(g,9),(h,\infty)]
 \]
-$a$ er nu besøgt, så det har jeg markeret ved at skrive $A$ i stedet.\\
 \[
 \begin{tikzpicture}[heap]
-    \node {$(A,0)$}
-        child{node{$(b,1)$}
-            child{node{$(e,6)$} child{node{$(h,\infty)$}}} 
-            child{node{$(g,9)$}}}
-        child{node{$(d,5)$}
-            child{node{$(c,\infty)$}} 
-            child{node{$(f,\infty)$}}}
+    \node {$a,0$}
+        child{node{$b,1$}
+            child{node{$e,6$} child{node{$h,\infty$}}} 
+            child{node{$g,9$}}}
+        child{node{$d,5$}
+            child{node{$c,\infty$}} 
+            child{node{$f,\infty$}}}
     ;
 \end{tikzpicture}
 \]
+$a$ er nu besøgt.\\
 
 Vi ser, at $b$ er den ubesøgte vertex med kortest afstand fra $a.$\\
 Udregning af nye distancer for $b's$ naboer:
