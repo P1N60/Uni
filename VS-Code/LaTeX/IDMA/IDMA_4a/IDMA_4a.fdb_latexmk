@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742632146.16037 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" "IDMA_4a.pdf" "IDMA_4a" 1742632147.62906 0
+["pdflatex"] 1742651053.42973 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" "IDMA_4a.pdf" "IDMA_4a" 1742651055.00674 0
   "../../pictures/IDMA/IDMA_4a/1.png" 1742032113.05879 62300 52ae69a9ed473b98134b894a77d4becd ""
   "../../pictures/IDMA/IDMA_4a/2.png" 1742032310.56765 49371 a1fbb889714ec06e0d056da26c87aa44 ""
   "../../pictures/IDMA/IDMA_4a/3.png" 1742032319.91966 77454 0bd224b4427d7b016fe02cdb5d38f7e4 ""
@@ -7,7 +7,7 @@
   "../../sty/cover.sty" 1739198275.20438 178 b29fc44a470130a2f0632995e82a9f4d ""
   "../../sty/header.sty" 1733469646.88098 250 109f752decd82b9a012e4fb5550a366a ""
   "../../sty/setup.sty" 1742631755.39667 10116 d98a39bdc68cec8671b773bc2674f50b ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" 1742632144.27518 23397 5dc45d44e7fc42cadd4d9c1f99d98108 ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/IDMA/IDMA_4a/IDMA_4a.tex" 1742651053.19972 25079 087798e7a7388448c79dfbf039864bc4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -276,9 +276,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "IDMA_4a.aux" 1742632147.51467 4035 7e55eb0fa872bb1d54c5bae48016ae29 "pdflatex"
-  "IDMA_4a.tex" 1742632144.27518 23397 5dc45d44e7fc42cadd4d9c1f99d98108 ""
-  "IDMA_4a.toc" 1742632147.51746 866 1061bcba1715d117b8c6599d3d6d8121 "pdflatex"
+  "IDMA_4a.aux" 1742651054.89325 4035 59552350ed6ce1d1ab1254a5fc67d16f "pdflatex"
+  "IDMA_4a.tex" 1742651053.19972 25079 087798e7a7388448c79dfbf039864bc4 ""
+  "IDMA_4a.toc" 1742651054.89537 866 11ac9d5c2f56e0ddbe8caa47506eceac "pdflatex"
   (generated)
   "IDMA_4a.aux"
   "IDMA_4a.log"

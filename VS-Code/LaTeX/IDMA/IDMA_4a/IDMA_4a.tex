@@ -409,25 +409,88 @@ Jeg opskriver vores weighted directed graph som adjacency list representation $(
 &(h,0) \rightarrow (f,1)\\
 \end{aligned}
 \]
+Vi tilføjer alle vores vertices til vores priority queue, som vi laver som en min-heap:
+\[
+\begin{tikzpicture}[heap]
+    \node {$a,0$}
+        child{node{$b,\infty$}
+            child{node{$d,\infty$} child{node{$h,\infty$}}} 
+            child{node{$e,\infty$}}}
+        child{node{$c,\infty$}
+            child{node{$f,\infty$}} 
+            child{node{$g,\infty$}}}
+            ;
+\end{tikzpicture}
+\]
 
+Vi extracter $a$:
+
+\[
+\begin{tikzpicture}[heap]
+    \node {}
+        child{node{$b,\infty$}
+            child{node{$d,\infty$} child{node{$h,\infty$}}} 
+            child{node{$e,\infty$}}}
+        child{node{$c,\infty$}
+            child{node{$f,\infty$}} 
+            child{node{$g,\infty$}}}
+            ;
+\end{tikzpicture}
+\]
+og flytter sidste element forest:
+\[
+\begin{tikzpicture}[heap]
+    \node {$h,\infty$}
+        child{node{$b,\infty$}
+            child{node{$d,\infty$}} 
+            child{node{$e,\infty$}}}
+        child{node{$c,\infty$}
+            child{node{$f,\infty$}} 
+            child{node{$g,\infty$}}}
+            ;
+\end{tikzpicture}
+\]
+vi kører min-heapify:
+\[
+\begin{tikzpicture}[heap]
+    \node {$b,\infty$}
+        child{node{$h,\infty$}
+            child{node{$d,\infty$}} 
+            child{node{$e,\infty$}}}
+        child{node{$c,\infty$}
+            child{node{$f,\infty$}} 
+            child{node{$g,\infty$}}}
+            ;
+\end{tikzpicture}
+\]
+\[
+\begin{tikzpicture}[heap]
+    \node {$b,\infty$}
+        child{node{$d,\infty$}
+            child{node{$h,\infty$}} 
+            child{node{$e,\infty$}}}
+        child{node{$c,\infty$}
+            child{node{$f,\infty$}} 
+            child{node{$g,\infty$}}}
+            ;
+\end{tikzpicture}
+\]
+Vi sætter vores extracted vertex i et set $S = \{(a,0)\}$
 Udregning af distancer for $a's$ naboer:
 \[
 [(b,1),(d,5),(e,6),(g,9)]
 \]
-Vi opdaterer nu de laveste værdier i grafen:
-\[
-[(a,0),(b,1),(c,\infty),(d,5),(e,6),(f,\infty),(g,9),(h,\infty)]
-\]
+Vi opdaterer nu alle værdier der er lavere i vores priority queue:
 \[
 \begin{tikzpicture}[heap]
-    \node {$a,0$}
-        child{node{$b,1$}
-            child{node{$e,6$} child{node{$h,\infty$}}} 
-            child{node{$g,9$}}}
+    \node {$b,1$}
         child{node{$d,5$}
-            child{node{$c,\infty$}} 
-            child{node{$f,\infty$}}}
-    ;
+            child{node{$h,\infty$}} 
+            child{node{$e,6$}}}
+        child{node{$c,\infty$}
+            child{node{$f,\infty$}} 
+            child{node{$g,9$}}}
+            ;
 \end{tikzpicture}
 \]
 $a$ er nu besøgt.\\
