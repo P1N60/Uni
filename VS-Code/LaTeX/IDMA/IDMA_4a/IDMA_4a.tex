@@ -680,7 +680,6 @@ Vi kan nu tegne et directed tree ud fra vores set $S = \{(a,0),(b,1),(c,2),(e,3)
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=3.5]
-        % Noder
         \node[circle, draw] (a) at (0,2) {$a,0$};
         \node[circle, draw] (b) at (0,1) {$b,1$};
         \node[circle, draw] (c) at (0,0) {$c,2$};
@@ -689,8 +688,6 @@ Vi kan nu tegne et directed tree ud fra vores set $S = \{(a,0),(b,1),(c,2),(e,3)
         \node[circle, draw] (f) at (1,0) {$f,7$};
         \node[circle, draw] (g) at (2,2) {$g,8$};
         \node[circle, draw] (h) at (2,1) {$h,6$};
-
-        % Kanter
         \draw[thick, -latex]  (a) to node[midway, above]  {} (b);
         \draw[thick, -latex]  (b) to node[midway, above]  {} (e);
         \draw[thick, -latex]  (b) to node[midway, above]  {} (c);
@@ -704,14 +701,22 @@ Vi kan nu tegne et directed tree ud fra vores set $S = \{(a,0),(b,1),(c,2),(e,3)
 
 \subsection[]{}
 
-Hvis vi kigger på første iteration
+Hvis vi tilføjer en konstant $c \in \R^+$ til alle edges' weights, vil vi ikke altid have samme generede directed tree som $T$. Dette skyldes, at der i nogle paths i $T$ som eksempelvis $a\rightarrow b \rightarrow e$, der har kortere weighted afstand som andre paths, der kræver færre hop, eksempelvis $a \rightarrow e$. Når vi nemlig tilføjer en konstant til disse to paths, vil konstanten have en effekt, der svarer til $antallet \ af \ vertices\ i \ pathen - 1$.\\
+Hvis vi tager udgangspunkt i det nævnte eksempel. Vil path'en $a\rightarrow b\rightarrow e$ med en konstant $c = 10$ have en samlet vægt på $11 + 12 = 23$, mens path'en $a\rightarrow e$ have en summeret vægt på 16. $a\rightarrow e$ vejer nu mindre end $a\rightarrow b \rightarrow e$, og vi får derfor ikke samme directed tree som $T$, med en konstant på $c = 10$.
 
 \subsection[]{}
 
 
 
 \subsection[]{}
+Som vi kiggede på i $3.a$, kan dette problem faktisk løses ved at tilføje en konstant (1 i dette tilfælde) til hver edges' weight. Dette gør, at vi for hver ekstra edge i vores path, bliver straffet med +1 til vores samlet weight af vores path. Vi kan derfor blot tilføje 1 til hver weight $w$ i grafen $G$, inden vi køerer $DIJKSTRA(G,w,s)$:
 
+\begin{lstlisting}
+1   w += 1
+2   DIJKSTRA(G,w,s)
+\end{lstlisting}
+hvor $DIJKSTRA(G,w,s)$ er algoritmet fra CLRS figur 22.6.\\
 
+$w\ += 1$ køerer i $O(1)$ konstant time, og vi ved fra CLRS side 623, at $DIJKSTRA$ køerer i $O((V+E)\ log (V))$ time complexity. Vi ender altså med en worst-case running time complexity på $O((V+E)\ log (V))$, da $O(1)$ er konstant og påvirker ikke resten af algoritmet betydeligt.
 
 \end{document}
