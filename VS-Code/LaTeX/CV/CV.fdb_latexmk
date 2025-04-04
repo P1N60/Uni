@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743771675.45301 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" "CV.pdf" "CV" 1743771677.43236 0
+["pdflatex"] 1743784990.30368 "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" "CV.pdf" "CV" 1743784992.45585 0
   "../pictures/CV/profilbillede.jpg" 1740342583 1263492 84836bf08ed3aeacf70ce1dbb4987dcd ""
   "../sty/setup.sty" 1743771656 10643 cfa0b3ce899d4228e45c40e23ae3efc0 ""
   "C:/Users/Gamer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743771662 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -251,9 +251,9 @@
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Gamer/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "CV.aux" 1743771677 402 09da210db45ceebff7acbc390b07b566 "pdflatex"
-  "CV.tex" 1743771674 2582 b8352b2adcce73a1b8bceec8abb1aad3 ""
-  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" 1743771674 2582 b8352b2adcce73a1b8bceec8abb1aad3 ""
+  "CV.aux" 1743784992 402 09da210db45ceebff7acbc390b07b566 "pdflatex"
+  "CV.tex" 1743784990 2585 c660d9fdfe2841e552b1a3eeb89e35ee ""
+  "c:/Users/Gamer/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" 1743784990 2585 c660d9fdfe2841e552b1a3eeb89e35ee ""
   (generated)
   "CV.aux"
   "CV.log"
