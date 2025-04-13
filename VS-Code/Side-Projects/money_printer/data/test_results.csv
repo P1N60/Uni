@@ -1,0 +1,57 @@
+No train_test_split:
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-0.8429977993535365,0.33552550117408103,0.33458054740940846,500,500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-0.77964330653825,0.32399154928280094,0.32022502924941165,"(500, 500)",500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-0.008522613099654963,0.1836057836446413,0.30388776382150134,"(500, 500, 500)",500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-0.4766109415263604,0.2688232326530982,0.40501864957334366,"(500, 500, 500, 500)",500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-0.9255262026074644,0.3505501441077751,0.3392341764022934,1000,500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-0.16116471528071008,0.2113949203720582,0.3306343767943155,"(1000, 1000)",500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-0.12626477845289208,0.20504124008052185,0.31441926533246733,"(1000, 1000, 1000)",500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,batch_size,tol,alpha,shuffle
+-1.1723493130480174,0.39548532952197424,0.34535777851874166,100,500,10,adaptive,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.08208254616382127,0.19699767885815903,0.308104438951902,"(100, 100, 100)",500,10,constant,0.001,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.2262318103666925,0.2232406587100658,0.34501243000454473,"(100, 100, 100)",100,100,constant,0.001,auto,0.001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.10671580677221737,0.20148226756145698,0.3052039349013204,"(100, 100, 100)",150,9,constant,0.001,auto,0.001,0.0001,False
+Tandom train_test_split:
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.09139621953526955,0.25788284352057117,0.3462667086208111,"(100, 100, 100)",150,9,constant,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.14017705604845232,0.1890847843701102,0.31417534482417914,"(100, 100, 100)",150,9,adaptive,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.06410668354013693,0.17646941914557304,0.3040429305843095,"(1000, 1000, 1000)",150,9,adaptive,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.016521613971504534,0.16857800213196916,0.30052268892537254,"(1000, 1000, 1000)",150,9,adaptive,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.012283318234328044,0.2371445053275901,0.3230842292290977,"(1000, 1000, 1000)",150,9,adaptive,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.03816322875016298,0.22459055778206488,0.3253776970017649,"(5000, 5000)",150,4,adaptive,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.44508683507687397,0.265963146473884,0.3797340337492861,"(500, 500)",150,4,adaptive,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.08033317162876585,0.24829359301557893,0.34202911040374323,"(500, 500)",150,9,adaptive,0.001,auto,0.001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.4439834087504395,0.36105280103475745,0.35228544560548525,"(500, 500)",150,9,adaptive,0.001,auto,0.0001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.07431110988158074,0.2988933515216322,0.352102542579833,"(234, 234)",150,9,adaptive,0.001,auto,0.0001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.22556680956907105,0.30157955611261394,0.3641734116510958,"(234, 234)",150,9,adaptive,0.001,auto,0.0001,0.0001,False
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.20688010314083494,0.29370934192019427,0.3997445025834134,"(234, 234)",150,9,adaptive,0.001,auto,0.0001,0.0001,False
+Implemented grid search:
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.23954667964909993,0.23626266804824528,0.3280986358269713,"(234, 234)",200,9,adaptive,0.001,auto,0.0001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.33268233541463954,0.32990928339315967,0.37373226877422744,"(234, 234)",200,9,adaptive,0.001,auto,0.0001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.13632533973773953,0.2513950647514982,0.3595578456343838,"(300, 300, 300)",200,9,adaptive,0.001,auto,0.0001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.07600935333613457,0.18440249008847598,0.3037082624809165,"(300, 300, 300)",200,5,adaptive,0.001,auto,0.0001,0.0001,True
