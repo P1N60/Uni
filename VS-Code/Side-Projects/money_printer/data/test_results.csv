@@ -88,7 +88,8 @@ R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_
 0.0014762040999877213,0.22206107183257118,0.2970436371359405,"(400, 400, 400)",200,6,adaptive,0.0005,auto,0.0001,0.0001,True
 R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 0.02769299157059646,0.1830453790527335,0.3013447815448346,"(400, 400, 400)",200,6,adaptive,0.0005,auto,0.0001,0.0001,True
-Removed 'Date' from train:R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+Removed 'Date' from train:
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 -0.13698137431945878,0.29427635857616297,0.35142092175068274,"(400, 400, 400)",200,6,adaptive,0.0005,auto,0.0001,0.0001,True
 R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 -0.15783090351234663,0.1938742392897997,0.3178904912701859,"(400, 400, 400)",200,4,adaptive,0.0005,auto,0.0001,0.0001,True
@@ -108,3 +109,6 @@ R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_
 -0.20178104193300306,0.2278970586715315,0.34029836906098393,"(400, 400, 400)",200,6,adaptive,0.0005,auto,0.0001,5e-05,True
 R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 -0.0016961217507900361,0.2577741006865456,0.34162929151036536,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.00025,True
+Add 'Ticker' to train:
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.0667867807496747,0.21102183488758403,0.3225490346209236,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.0001,True
