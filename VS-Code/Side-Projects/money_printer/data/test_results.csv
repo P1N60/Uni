@@ -112,3 +112,14 @@ R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_
 Add 'Ticker' to train:
 R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 -0.0667867807496747,0.21102183488758403,0.3225490346209236,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.0001,True
+Removed 'Ticker'from train
+Predict 3M instead:
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.09536767000237845,0.0474245885627664,0.1575855480375607,"(500, 500, 500)",200,4,adaptive,0.00075,auto,0.0001,0.0001,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.0033421781597962053,0.21107114352634163,0.17081006234215607,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.00025,True
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.05997781310491246,0.06304936412754981,0.1613628765045394,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.0001,True
+Changed to [3M;1Y]:
+R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.07691420138663185,0.15328810875394158,0.2516412996030032,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.0001,True
