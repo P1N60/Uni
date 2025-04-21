@@ -128,3 +128,7 @@ R²,MSE,MAE,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_
 -0.2159373690942961,0.13455735802025437,0.2541228527810135,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.0001,True
 R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 -0.0821910284965816,0.15826413702639347,0.2610533244887498,advanced,"(500, 500, 500)",200,9,adaptive,0.00075,auto,0.0001,0.00025,True
+R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.012715471399798265,0.16363749609506673,0.25595677416928725,advanced,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.00025,True
+R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.13889569235499066,0.15001186621370424,0.24971030869974806,advanced,"(500, 500, 500)",200,6,adaptive,0.001,auto,0.0001,0.0001,True
