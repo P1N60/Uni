@@ -132,3 +132,8 @@ R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_ra
 -0.012715471399798265,0.16363749609506673,0.25595677416928725,advanced,"(500, 500, 500)",200,4,adaptive,0.001,auto,0.0001,0.00025,True
 R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 -0.13889569235499066,0.15001186621370424,0.24971030869974806,advanced,"(500, 500, 500)",200,6,adaptive,0.001,auto,0.0001,0.0001,True
+Added Ticker to train:
+R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.3238855267890722,0.15132412419034633,0.24623185226153824,advanced,"(600, 600, 600)",200,8,adaptive,0.001,auto,0.0001,0.0001,True
+R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.32531824520964,0.19276733449476655,0.2727447457201035,advanced,"(1000, 1000)",200,6,adaptive,0.001,auto,0.0001,0.0001,True
