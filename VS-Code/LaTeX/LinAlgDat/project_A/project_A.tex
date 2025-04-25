@@ -1,0 +1,98 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{standalone}
+\usepackage{amsmath} % Package for advanced math typesetting
+\input{../../sty/setup.sty} % Assuming these files exist and are correctly referenced
+%\graphicspath{ {../../pictures/IDMA/IDMA3_a}} % Assuming a pictures folder has been made and is correctly referenced
+
+% \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
+
+% Changes sections from 1.1 to 1.a
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\begin{document}
+% \includepdf[pages=-]{../../pictures/forside}
+
+\title{Københavns Universitet\\
+LinAlgDat - Project A}
+\input{../../sty/cover.sty} % Assuming this file contains the cover page setup
+\input{../../sty/header.sty} % Assuming this file contains the header setup
+\maketitle % This command will actually insert the title into the document
+
+
+\section[Opgave]{Opgave}
+Vi omskriver ligningssystemet til totalmatrix-form:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & a \\
+    a & a & 4a & a \\
+    2 & 2 & 2a^2 & 0
+\end{array}\right]
+\]
+Vi benytter Gauss-Jordan elimination til at omskrive totalmatrix'en til en reduceret rækkeeechelonform.\\
+Først vælger vi, at tilføje $-ar_1$ til $r_2$: 
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & a \\
+    0 & -a & -4a & a-a^2 \\
+    2 & 2 & 2a^2 & 0
+\end{array}\right]
+\]
+Herefter tilføjer vi $-2r_1$ til $r_3$:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & a \\
+    0 & -a & -4a & a-a^2 \\
+    0 & -2 & 2a^2-16 & -2a
+\end{array}\right]
+\]
+Vi tilføjer $\dfrac{2r_2}{-a}$ til $r_3$:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & a \\
+    0 & -a & -4a & a-a^2 \\
+    0 & 0 & 2a^2-8 & -2a-\frac{2(a-a^2)}{a} = -2
+\end{array}\right]
+\]
+Vi tilføjer $\dfrac{2r_2}{a}$ til $r_1$:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2-a \\
+    0 & -a & -4a & a-a^2 \\
+    0 & 0 & 2a^2-8 & -2
+\end{array}\right]
+\]
+Vi tilføjer $\dfrac{2ar_3}{a^2-4}$ til $r_2$:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2-a \\
+    0 & -a & 0 & a - a^2 -\frac{4a}{(a^2 - 4)} \\
+    0 & 0 & 2a^2-8 & -2
+\end{array}\right]
+\]
+Vi dividerer $r_3$ med $2a^2-8$:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2-a \\
+    0 & -a & 0 & a - a^2 -\frac{4a}{(a^2 - 4)} \\
+    0 & 0 & 1 & -\frac{2}{2a^2-8} = -\frac{2}{2(a^2-4)} = \frac{1}{(4-a^2)}
+\end{array}\right]
+\]
+Til sidst dividerer vi $r_2$ med $-a$:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2-a \\
+    0 & 1 & 0 & \frac{(a^3 - a^2 - 4a + 8)}{(a^2 - 4)} \\
+    0 & 0 & 1 & \frac{1}{(4-a^2)}
+\end{array}\right]
+\square
+\]
+Vi har nu fået den løsning vi ledte efter, så vi er dermed færdige.
+
+
+\section[Opgave]{Opgave}
+
+\section[Opgave]{Opgave}
+
+\section[Opgave]{Opgave}
+
+\end{document}
