@@ -95,14 +95,95 @@ Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne ga
     0 & 0 & 4\cdot0 & 0 \\
     2 & 2 & 2\cdot0^2 & 0
 \end{array}\right]
-=
+\rightsquigarrow
+\]
+\[
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 0 \\
     0 & 0 & 0 & 0 \\
     2 & 2 & 0 & 0
 \end{array}\right]
+r_2 \ bytttes \ med \ r_3
+\rightsquigarrow
 \]
-Vi ser med det samme, at der ikke er nogen løsninger, da $r_2$ og $r_3$ er unikke, men begge er lig $0$.
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 0 \\
+    2 & 2 & 0 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}\right]
+-2r_1 \ til \ r_2
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 0 \\
+    0 & -2 & -16 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}\right]
+r_2 \cdot \brr{-\dfrac{1}{2}}
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 0 \\
+    0 & 1 & 8 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}\right]
+-2r_2 \ til \ r_1
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & -8 & 0 \\
+    0 & 1 & 8 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\]
+Vi kan nu aflæse løsningerne til:
+\[
+\left[\begin{array}{c}
+    x_1 \\
+    x_2 \\
+    x_3
+\end{array}\right]
+=
+t
+\left[\begin{array}{c}
+    8 \\
+    -8 \\
+    1
+\end{array}\right]
+\]
+Vi ser nu, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 0:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2-a \\
+    0 & 1 & 0 & \frac{(a^3 - a^2 - 4a + 8)}{(a^2 - 4)} \\
+    0 & 0 & 1 & \frac{1}{(4-a^2)}
+\end{array}\right]
+\]
+Vi erstatter $a$ med 0:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2-0 \\
+    0 & 1 & 0 & \frac{(0^3 - 0^2 - 4\cdot0 + 8)}{(0^2 - 4)} \\
+    0 & 0 & 1 & \frac{1}{(4-0^2)}
+\end{array}\right]
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2 \\
+    0 & 1 & 0 & -2 \\
+    0 & 0 & 1 & \frac{1}{4}
+\end{array}\right]
+\]
+Denne matrix antyder en unik løsning, hvilket ikke afspejler hvad vi fandt lige før, hvor vi fandt uendelig mange løsninger. Dette skete sandstnligvis fordi at den rækkereducerede totalmatrix er lavet ud fra antagelsen, at $a \neq 0$.
+
+
+
+
 
 \section[Opgave]{Opgave}
 
