@@ -1,25 +1,24 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{standalone}
-\usepackage{amsmath} % Package for advanced math typesetting
-\input{../../sty/setup.sty} % Assuming these files exist and are correctly referenced
-%\graphicspath{ {../../pictures/IDMA/IDMA3_a}} % Assuming a pictures folder has been made and is correctly referenced
-
-% \renewcommand{\thesection}{5.\arabic{section}} % Substitue 5. for any number
+\usepackage{amsmath}
+\input{../../sty/setup.sty}
 
 % Changes sections from 1.1 to 1.a
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
-
-\begin{document}
-% \includepdf[pages=-]{../../pictures/forside}
-
+\graphicspath{ {../../pictures/IDMA/IDMA3_a}} 
 \title{Københavns Universitet\\
 LinAlgDat - Project A}
-\input{../../sty/cover.sty} % Assuming this file contains the cover page setup
-\input{../../sty/header.sty} % Assuming this file contains the header setup
-\maketitle % This command will actually insert the title into the document
+\author{Victor Vangkilde Jørgensen - kft410\\ 
+kft410@alumni.ku.dk\\
+Hold 13 Mach}
 
+\begin{document}
+\input{../../sty/cover.sty} 
+\input{../../sty/header.sty}
+\maketitle 
 
 \section[Opgave]{Opgave}
+\subsection{}
 Vi omskriver ligningssystemet til totalmatrix-form:
 \[
 \left[\begin{array}{ccc|c}
@@ -88,6 +87,22 @@ Til sidst dividerer vi $r_2$ med $-a$:
 \]
 Vi har nu fået den løsning vi ledte efter, så vi er dermed færdige.
 
+\subsection{}
+Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 0:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 0 \\
+    0 & 0 & 4\cdot0 & 0 \\
+    2 & 2 & 2\cdot0^2 & 0
+\end{array}\right]
+=
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 0 \\
+    0 & 0 & 0 & 0 \\
+    2 & 2 & 0 & 0
+\end{array}\right]
+\]
+Vi ser med det samme, at der ikke er nogen løsninger, da $r_2$ og $r_3$ er unikke, men begge er lig $0$.
 
 \section[Opgave]{Opgave}
 
