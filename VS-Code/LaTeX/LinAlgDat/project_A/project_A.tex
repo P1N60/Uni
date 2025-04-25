@@ -162,8 +162,8 @@ Vi ser nu, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tid
     0 & 1 & 0 & \frac{(a^3 - a^2 - 4a + 8)}{(a^2 - 4)} \\
     0 & 0 & 1 & \frac{1}{(4-a^2)}
 \end{array}\right]
+\rightsquigarrow
 \]
-Vi erstatter $a$ med 0:
 \[
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-0 \\
@@ -181,7 +181,43 @@ Vi erstatter $a$ med 0:
 \]
 Denne matrix antyder en unik løsning, hvilket ikke afspejler hvad vi fandt lige før, hvor vi fandt uendelig mange løsninger. Dette skete sandstnligvis fordi at den rækkereducerede totalmatrix er lavet ud fra antagelsen, at $a \neq 0$.
 
-
+\subsection{}
+Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 2:
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 2 \\
+    0 & 0 & 4\cdot2 & 2 \\
+    2 & 2 & 2\cdot2^2 & 0
+\end{array}\right]
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 2 \\
+    0 & 0 & 8 & 2 \\
+    2 & 2 & 8 & 0
+\end{array}\right]
+r_2 \ bytttes \ med \ r_3
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 2 \\
+    2 & 2 & 8 & 0 \\
+    0 & 0 & 8 & 2
+\end{array}\right]
+-2r_1 \ til \ r_2
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & 2 \\
+    0 & -2 & -8 & -4 \\
+    0 & 0 & 8 & 2
+\end{array}\right]
+r_2 \cdot \brr{-\dfrac{1}{2}}
+\rightsquigarrow
+\]
 
 
 
