@@ -40,16 +40,6 @@ def AugmentRight(A: Matrix, v: Vector) -> Matrix:
 
     return B
 
-print(AugmentRight(
-    Matrix.fromArray([
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-    ]),
-    Vector.fromArray([10, 11, 12])
-))
-
-
 def MatVecProduct(A: Matrix, v: Vector) -> Vector:
     """
     This function computes the matrix-vector product of a matrix A
@@ -62,17 +52,13 @@ def MatVecProduct(A: Matrix, v: Vector) -> Vector:
 
     :return: a size M Vector y such that y = A.v
     """
-    raise NotImplementedError("MatVecProduct is not implemented!")
-
-
-print(MatVecProduct(
-    Matrix.fromArray([
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-    ]),
-    Vector.fromArray([10, 11, 12])
-))
+    M = A.M_Rows
+    N = A.N_Cols
+    y = Vector(M)
+    for i in range(M):
+        for j in range(N):
+            y[i] += A[i, j] * v[j]
+    return y
 
 def MatrixProduct(A: Matrix, B: Matrix) -> Matrix:
     """
@@ -86,8 +72,15 @@ def MatrixProduct(A: Matrix, B: Matrix) -> Matrix:
 
     :returns: the M-by-P Matrix A*B.
     """
-    raise NotImplementedError("MatrixProduct is not implemented!")
-
+    M = A.M_Rows
+    N = A.N_Cols
+    P = B.N_Cols
+    C = Matrix(M, P)
+    for i in range(M):
+        for j in range(N):
+            for k in range(P):
+                C[i, k] += A[i, j] * B[j, k]
+    return C
 
 def Transpose(A: Matrix) -> Matrix:
     """
