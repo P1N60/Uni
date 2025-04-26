@@ -182,43 +182,109 @@ Vi ser nu, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tid
 Denne matrix antyder en unik løsning, hvilket ikke afspejler hvad vi fandt lige før, hvor vi fandt uendelig mange løsninger. Dette skete sandstnligvis fordi at den rækkereducerede totalmatrix er lavet ud fra antagelsen, at $a \neq 0$.
 
 \subsection{}
-Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 2:
-\[
-\left[\begin{array}{ccc|c}
+Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 2:\\
+
+$\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     0 & 0 & 4\cdot2 & 2 \\
     2 & 2 & 2\cdot2^2 & 0
 \end{array}\right]
-\rightsquigarrow
-\]
-\[
-\left[\begin{array}{ccc|c}
+\rightsquigarrow$\\
+
+$\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     0 & 0 & 8 & 2 \\
     2 & 2 & 8 & 0
 \end{array}\right]
 r_2 \ bytttes \ med \ r_3
-\rightsquigarrow
-\]
-\[
-\left[\begin{array}{ccc|c}
+\rightsquigarrow$\\
+
+$\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     2 & 2 & 8 & 0 \\
     0 & 0 & 8 & 2
 \end{array}\right]
 -2r_1 \ til \ r_2
-\rightsquigarrow
-\]
-\[
-\left[\begin{array}{ccc|c}
+\rightsquigarrow$\\
+
+$\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     0 & -2 & -8 & -4 \\
     0 & 0 & 8 & 2
 \end{array}\right]
+-r_3 \ til \ r_1
+\rightsquigarrow$\\
+
+$\left[\begin{array}{ccc|c}
+    1 & 2 & 0 & 0 \\
+    0 & -2 & -8 & -4 \\
+    0 & 0 & 8 & 2
+\end{array}\right]
++r_3 \ til \ r_2
+\rightsquigarrow$\\
+
+$\left[\begin{array}{ccc|c}
+    1 & 2 & 0 & 0 \\
+    0 & -2 & 0 & -2 \\
+    0 & 0 & 8 & 2
+\end{array}\right]
++r_2 \ til \ r_1
+\rightsquigarrow$
+
+$\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & -2 \\
+    0 & -2 & 0 & -2 \\
+    0 & 0 & 8 & 2
+\end{array}\right]
 r_2 \cdot \brr{-\dfrac{1}{2}}
-\rightsquigarrow
+\rightsquigarrow$
+
+$\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & -2 \\
+    0 & 1 & 0 & 1 \\
+    0 & 0 & 8 & 2
+\end{array}\right]
+r_3 \cdot \brr{\dfrac{1}{8}}
+\rightsquigarrow$
+
+$\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & -2 \\
+    0 & 1 & 0 & 1 \\
+    0 & 0 & 1 & \frac{1}{4}
+\end{array}\right]$
+
+Vi kan nu aflæse løsningen til:
+\[
+\left[\begin{array}{c}
+    x_1\\
+    x_2\\
+    x_3
+\end{array}\right]
+=
+\left[\begin{array}{c}
+    -2\\
+    1\\
+    \frac{1}{4}
+\end{array}\right]
 \]
 
+Lad os nu se, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 2:\\
+
+$\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 2-2 \\
+    0 & 1 & 0 & \frac{(2^3 - 2^2 - 4\cdot 2 + 8)}{(2^2 - 4)} \\
+    0 & 0 & 1 & \frac{1}{(4-2^2)}
+\end{array}\right]
+\rightsquigarrow$\\
+
+$\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & \frac{4}{0} \\
+    0 & 0 & 1 & \frac{1}{0}
+\end{array}\right]
+\rightsquigarrow$\\
+
+Vi ser nu, at vi får division med 0, hvilket må betyde, at vi ikke kan bruge den rækkereducerede totalmatrix til at finde løsningerne når $a=2$.\\
 
 
 \section[Opgave]{Opgave}
