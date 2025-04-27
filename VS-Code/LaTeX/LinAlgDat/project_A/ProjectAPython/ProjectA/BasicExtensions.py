@@ -55,8 +55,10 @@ def MatVecProduct(A: Matrix, v: Vector) -> Vector:
     M = A.M_Rows
     N = A.N_Cols
     y = Vector(M)
+    # Iterate through all elements in A and v
     for i in range(M):
         for j in range(N):
+            # Have y[row] be the sum of the product of A[row, column] * v[row]
             y[i] += A[i, j] * v[j]
     return y
 
@@ -76,9 +78,11 @@ def MatrixProduct(A: Matrix, B: Matrix) -> Matrix:
     N = A.N_Cols
     P = B.N_Cols
     C = Matrix(M, P)
+    # Iterate through all elements in A and B
     for i in range(M):
         for j in range(N):
             for k in range(P):
+                # Have C[row, column] be the product of A[row, column] and B[columns, row]
                 C[i, k] += A[i, j] * B[j, k]
     return C
 
@@ -92,8 +96,15 @@ def Transpose(A: Matrix) -> Matrix:
     :param A: A M-by-N Matrix.
     :returns: A N-by-M Matrix B such that B = A^T.
     """
-    raise NotImplementedError("Transpose is not implemented!")
-
+    M = A.M_Rows
+    N = A.N_Cols
+    B = Matrix(N, M)
+    # Iterate through all elements in A
+    for i in range(M):
+        for j in range(N):
+            # Have B be A on the 'opposite' side by flipping row and column index
+            B[j, i] = A[i, j]
+    return B        
 
 def VectorNorm(v: Vector) -> float:
     """
@@ -105,4 +116,12 @@ def VectorNorm(v: Vector) -> float:
     :param v: An N - dimensional Vector.
     :return: The Euclidean norm of the Vector.
     """
-    raise NotImplementedError("VectorNorm is not implemented!")
+    n = v.__len__()
+    norm = 0
+    # Iterate through all elements in v
+    for i in range(n):
+        # Get the sum of all elements squared
+        norm += v[i] * v[i]
+    # Take the root
+    norm = math.sqrt(norm)
+    return norm
