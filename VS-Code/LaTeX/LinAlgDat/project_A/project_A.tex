@@ -251,7 +251,7 @@ $\left[\begin{array}{ccc|c}
     1 & 0 & 0 & -2 \\
     0 & 1 & 0 & 1 \\
     0 & 0 & 1 & \frac{1}{4}
-\end{array}\right]$
+\end{array}\right]$\\
 
 Vi kan nu aflæse løsningen til:
 \[
@@ -284,7 +284,96 @@ $\left[\begin{array}{ccc|c}
 \end{array}\right]
 \rightsquigarrow$\\
 
-Vi ser nu, at vi får division med 0, hvilket må betyde, at vi ikke kan bruge den rækkereducerede totalmatrix til at finde løsningerne når $a=2$.\\
+Vi ser nu, at vi får division med 0, hvilket må betyde, at der ikke er nogen løsninger, når $a=2$.\\
+
+\subsection{}
+Vi omskriver ligningssystemet til koefficientmatrice-form på venstre side, hvor $a=1$, og sættr identitetmatricen på højre side:\\
+\[
+\left[\begin{array}{ccc|ccc}
+    1 & 2 & 8 & 1 & 0 & 0 \\
+    1 & 1 & 4\cdot 1 & 0 & 1 & 0 \\
+    2 & 2 & 2\cdot 1^2 & 0 & 0 & 1
+\end{array}\right]
+reducer
+\rightsquigarrow
+\left[\begin{array}{ccc|ccc}
+    1 & 2 & 8 & 1 & 0 & 0 \\
+    1 & 1 & 4 & 0 & 1 & 0 \\
+    2 & 2 & 2 & 0 & 0 & 1
+\end{array}\right]
+-1r_1 \ til \ r_2
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|ccc}
+    1 & 2 & 8 & 1 & 0 & 0 \\
+    0 & -1 & -4 & -1 & 1 & 0 \\
+    2 & 2 & 2 & 0 & 0 & 1
+\end{array}\right]
+-2r_1 \ til \ r_3
+\rightsquigarrow
+\left[\begin{array}{ccc|ccc}
+    1 & 2 & 8 & 1 & 0 & 0 \\
+    0 & -1 & -4 & -1 & 1 & 0 \\
+    0 & -2 & -14 & -2 & 0 & 1
+\end{array}\right]
+-2r_2 \ til \ r_3
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|ccc}
+    1 & 2 & 8 & 1 & 0 & 0 \\
+    0 & -1 & -4 & -1 & 1 & 0 \\
+    0 & 0 & -6 & 0 & -2 & 1
+\end{array}\right]
+r_1 \cdot 3,\ r_2 \cdot (-3)
+\rightsquigarrow
+\left[\begin{array}{ccc|ccc}
+    3 & 6 & 24 & 3 & 0 & 0 \\
+    0 & 3 & 12 & 3 & -3 & 0 \\
+    0 & 0 & -6 & 0 & -2 & 1
+\end{array}\right]
++4r_3 \ til \ r_1
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|ccc}
+    3 & 6 & 0 & 3 & -8 & 4 \\
+    0 & 3 & 12 & 3 & -3 & 0 \\
+    0 & 0 & -6 & 0 & -2 & 1
+\end{array}\right]
++2r_3 \ til \ r_2
+\rightsquigarrow
+\left[\begin{array}{ccc|ccc}
+    3 & 6 & 0 & 3 & -8 & 4 \\
+    0 & 3 & 0 & 3 & -7 & 2 \\
+    0 & 0 & -6 & 0 & -2 & 1
+\end{array}\right]
+-2r_2 \ til \ r_1
+\rightsquigarrow
+\]
+\[
+\left[\begin{array}{ccc|ccc}
+    3 & 0 & 0 & -3 & 6 & 0 \\
+    0 & 3 & 0 & 3 & -7 & 2 \\
+    0 & 0 & -6 & 0 & -2 & 1
+\end{array}\right]
+r_1 \cdot \brr{\frac{1}{3}},\ r_2 \cdot \brr{\frac{1}{3}},\ r_3 \cdot \brr{-\frac{1}{6}}
+\rightsquigarrow
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & -1 & 2 & 0 \\
+    0 & 1 & 0 & 1 & -\frac{7}{3} & \frac{2}{3} \\
+    0 & 0 & 1 & 0 & \frac{1}{3} & -\frac{1}{6}
+\end{array}\right]
+\]
+
+
+\section[Opgave]{Opgave}
+\subsection{}
+
+
+\subsection{}
+
 
 \subsection{}
 
@@ -336,17 +425,83 @@ A =
 \]
 
 \subsection{}
-
-
-\section[Opgave]{Opgave}
-\subsection{}
-
-
-\subsection{}
-
-
-\subsection{}
-
+Vi opskriver vores ligningssystem som en totalmatrix:\\
+\[
+\left[\begin{array}{ccccc|c}
+    -1 & \frac{1}{2} & 1 & 0 & 0 & 0 \\
+    \frac{1}{2} & -1 & 0 & 0 & \frac{1}{2} & 0 \\
+    \frac{1}{2} & 0 & -1 & 0 & 0 & 0 \\
+    \frac{1}{2} & \frac{1}{2} & 1 & -1 & \frac{1}{2} & 0 \\
+    \frac{1}{2} & 0 & 0 & \frac{1}{4} & -1 & 0
+\end{array}\right]
+r_1 \cdot 2, r_2 \cdot 4,\ r_3 \cdot 4,\ r_4 \cdot 4,\ r_5 \cdot 4
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    2 & -4 & 0 & 0 & 2 & 0 \\
+    2 & 0 & -4 & 0 & 0 & 0 \\
+    2 & 2 & 4 & -4 & 2 & 0 \\
+    2 & 0 & 0 & 1 & -4 & 0
+\end{array}\right]
+\]
+\[
++r_1 \ til \ r_2, r_3, r_4, r_5  
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    0 & -3 & 2 & 0 & 2 & 0 \\
+    0 & 1 & -2 & 0 & 0 & 0 \\
+    0 & 3 & 6 & -4 & 2 & 0 \\
+    0 & 1 & 2 & 1 & -4 & 0
+\end{array}\right]
+r_3 \cdot 3, r_5 \cdot 3
+\leadsto
+\]
+\[
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    0 & -3 & 2 & 0 & 2 & 0 \\
+    0 & 3 & -6 & 0 & 0 & 0 \\
+    0 & 3 & 6 & -4 & 2 & 0 \\
+    0 & 3 & 6 & 3 & -12 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \\
+    \\
+    +r_2\\
+    +r_2\\
+    +r_2
+\end{array}
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    0 & -3 & 2 & 0 & 2 & 0 \\
+    0 & 0 & -4 & 0 & 2 & 0 \\
+    0 & 0 & 8 & -4 & 4 & 0 \\
+    0 & 0 & 8 & 3 & -10 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \cdot 2
+\end{array}
+\leadsto
+\]
+\[
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    0 & -3 & 2 & 0 & 2 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 8 & -4 & 4 & 0 \\
+    0 & 0 & 8 & 3 & -10 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \\
+    \\
+    \\
+    +r_3\\
+    +r_3
+\end{array}
+\leadsto
+\]
 
 \section[Opgave]{Opgave}
 Se vedhæftede python-fil.
