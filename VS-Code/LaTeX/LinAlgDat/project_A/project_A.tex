@@ -291,13 +291,49 @@ Vi ser nu, at vi får division med 0, hvilket må betyde, at vi ikke kan bruge d
 
 \section[Opgave]{Opgave}
 \subsection{}
+Vi sætter et 1-tal i hver $e_{uv}$-element i matricen for hver edge $E(u,v)$ i grafen $G_N$:\\
 
+\[
+N = 
+\left[\begin{array}{ccccc}
+    0 & 1 & 1 & 0 & 0 \\
+    1 & 0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 0 \\
+    1 & 1 & 1 & 0 & 1 \\
+    1 & 0 & 0 & 1 & 0 
+\end{array}\right]
+\]\\
+
+For at finde antallet af veje fra knude 4 til knude 1 med netop længde 8, skal vi kigge på element $(4,1)$ i $N^8$. Vi kan finde $(N^8)_{4,1}$ ved:\\
+\[
+69 \cdot 0 + 45 \cdot 1 + 45 \cdot 1 + 18 \cdot 1 + 29 \cdot 1 = 137
+\]
+unikke veje fra knude 4 til knude 1 med længde 8.\\
 
 \subsection{}
+Linkmatricen $A$ findes ved at tage $N^T$ og dividere hvert element med antallet af udgående edges i dens column.\\
+\[
+N^T =
+\left[\begin{array}{ccccc}
+    0 & 1 & 1 & 1 & 1 \\
+    1 & 0 & 0 & 1 & 0 \\
+    1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 1 & 0
+\end{array}\right]
+\]
 
 
-\subsection{}
-
+\[
+A =
+\left[\begin{array}{ccccc}
+    0 & \frac{1}{2} & 1 & \frac{1}{4} & \frac{1}{2} \\
+    \frac{1}{2} & 0 & 0 & \frac{1}{4} & 0 \\
+    \frac{1}{2} & 0 & 0 & \frac{1}{4} & 0 \\
+    0 & 0 & 0 & 0 & \frac{1}{2} \\
+    0 & \frac{1}{2} & 0 & \frac{1}{4} & 0
+\end{array}\right]
+\]
 
 \subsection{}
 
@@ -313,5 +349,6 @@ Vi ser nu, at vi får division med 0, hvilket må betyde, at vi ikke kan bruge d
 
 
 \section[Opgave]{Opgave}
+Se vedhæftede python-fil.
 
 \end{document}
