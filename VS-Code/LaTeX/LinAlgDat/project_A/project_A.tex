@@ -28,118 +28,161 @@ Vi omskriver ligningssystemet til totalmatrix-form:
 \end{array}\right]
 \]
 Vi benytter Gauss-Jordan elimination til at omskrive totalmatrix'en til en reduceret rækkeeechelonform.\\
-Først vælger vi, at tilføje $-ar_1$ til $r_2$: 
-\[
+
+$
+\left[\begin{array}{ccc|c}
+    1 & 2 & 8 & a \\
+    a & a & 4a & a \\
+    2 & 2 & 2a^2 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -ar_1\\
+    \\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & a \\
     0 & -a & -4a & a-a^2 \\
     2 & 2 & 2a^2 & 0
 \end{array}\right]
-\]
-Herefter tilføjer vi $-2r_1$ til $r_3$:
-\[
+\begin{array}{ccc}
+    \\
+    \\
+    -2r_1\\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & a \\
     0 & -a & -4a & a-a^2 \\
     0 & -2 & 2a^2-16 & -2a
 \end{array}\right]
-\]
-Vi tilføjer $\dfrac{2r_2}{-a}$ til $r_3$:
-\[
+\begin{array}{ccc}
+    \\
+    \\
+    r_2\cdot \frac{2}{-a}\\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & a \\
     0 & -a & -4a & a-a^2 \\
     0 & 0 & 2a^2-8 & -2a-\frac{2(a-a^2)}{a} = -2
 \end{array}\right]
-\]
-Vi tilføjer $\dfrac{2r_2}{a}$ til $r_1$:
-\[
+\begin{array}{ccc}
+    r_2\cdot \dfrac{2}{a}\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-a \\
     0 & -a & -4a & a-a^2 \\
     0 & 0 & 2a^2-8 & -2
 \end{array}\right]
-\]
-Vi tilføjer $\dfrac{2ar_3}{a^2-4}$ til $r_2$:
-\[
+\begin{array}{ccc}
+    \\
+    r_3\cdot\frac{2a}{a^2-4}\\
+    \\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-a \\
     0 & -a & 0 & a - a^2 -\frac{4a}{(a^2 - 4)} \\
     0 & 0 & 2a^2-8 & -2
 \end{array}\right]
-\]
-Vi dividerer $r_3$ med $2a^2-8$:
-\[
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot \frac{1}{2a^2-8}\\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-a \\
     0 & -a & 0 & a - a^2 -\frac{4a}{(a^2 - 4)} \\
     0 & 0 & 1 & -\frac{2}{2a^2-8} = -\frac{2}{2(a^2-4)} = \frac{1}{(4-a^2)}
 \end{array}\right]
-\]
-Til sidst dividerer vi $r_2$ med $-a$:
-\[
+\begin{array}{ccc}
+    \\
+    \cdot \frac{1}{-a}\\
+    \\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-a \\
     0 & 1 & 0 & \frac{(a^3 - a^2 - 4a + 8)}{(a^2 - 4)} \\
     0 & 0 & 1 & \frac{1}{(4-a^2)}
 \end{array}\right]
 \square
-\]
+$\\
+
 Vi har nu fået den løsning vi ledte efter, så vi er dermed færdige.
 
 \subsection{}
-Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 0:
-\[
+Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 0:\\
+$
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 0 \\
     0 & 0 & 4\cdot0 & 0 \\
     2 & 2 & 2\cdot0^2 & 0
 \end{array}\right]
-\rightsquigarrow
-\]
-\[
+reducer
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 0 \\
     0 & 0 & 0 & 0 \\
     2 & 2 & 0 & 0
 \end{array}\right]
-r_2 \ bytttes \ med \ r_3
-\rightsquigarrow
-\]
-\[
+\begin{array}{cccc}
+    \\
+    \\
+    > byttes\\
+    \\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 0 \\
     2 & 2 & 0 & 0 \\
     0 & 0 & 0 & 0
 \end{array}\right]
--2r_1 \ til \ r_2
-\rightsquigarrow
-\]
-\[
+\begin{array}{ccc}
+    \\
+    -2r_1\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 0 \\
     0 & -2 & -16 & 0 \\
     0 & 0 & 0 & 0
 \end{array}\right]
-r_2 \cdot \brr{-\dfrac{1}{2}}
-\rightsquigarrow
-\]
-\[
+\cdot (-\frac{1}{2})
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 0 \\
     0 & 1 & 8 & 0 \\
     0 & 0 & 0 & 0
 \end{array}\right]
--2r_2 \ til \ r_1
-\rightsquigarrow
-\]
-\[
+\begin{array}{ccc}
+    -2r_1\\
+    \\
+    \\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 0 & -8 & 0 \\
     0 & 1 & 8 & 0 \\
     0 & 0 & 0 & 0
 \end{array}\right]
-\]
+$\\
+
 Vi kan nu aflæse løsningerne til:
 \[
 \left[\begin{array}{c}
@@ -155,103 +198,132 @@ t
     1
 \end{array}\right]
 \]
-Vi ser nu, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 0:
-\[
+Vi ser nu, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 0:\\
+
+$
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-a \\
     0 & 1 & 0 & \frac{(a^3 - a^2 - 4a + 8)}{(a^2 - 4)} \\
     0 & 0 & 1 & \frac{1}{(4-a^2)}
 \end{array}\right]
-\rightsquigarrow
-\]
-\[
+a=0
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-0 \\
     0 & 1 & 0 & \frac{(0^3 - 0^2 - 4\cdot0 + 8)}{(0^2 - 4)} \\
     0 & 0 & 1 & \frac{1}{(4-0^2)}
 \end{array}\right]
-\rightsquigarrow
-\]
-\[
+reducer
+\leadsto
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2 \\
     0 & 1 & 0 & -2 \\
     0 & 0 & 1 & \frac{1}{4}
 \end{array}\right]
-\]
+$\\
+
 Denne matrix antyder en unik løsning, hvilket ikke afspejler hvad vi fandt lige før, hvor vi fandt uendelig mange løsninger. Dette skete sandstnligvis fordi at den rækkereducerede totalmatrix er lavet ud fra antagelsen, at $a \neq 0$.
 
 \subsection{}
 Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 2:\\
 
-$\left[\begin{array}{ccc|c}
+$
+\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     0 & 0 & 4\cdot2 & 2 \\
     2 & 2 & 2\cdot2^2 & 0
 \end{array}\right]
-\rightsquigarrow$\\
-
-$\left[\begin{array}{ccc|c}
+reducer
+\leadsto
+\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     0 & 0 & 8 & 2 \\
     2 & 2 & 8 & 0
 \end{array}\right]
-r_2 \ bytttes \ med \ r_3
-\rightsquigarrow$\\
-
-$\left[\begin{array}{ccc|c}
+\begin{array}{ccc}
+    \\
+    \\
+    +r_2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     2 & 2 & 8 & 0 \\
     0 & 0 & 8 & 2
 \end{array}\right]
--2r_1 \ til \ r_2
-\rightsquigarrow$\\
+\begin{array}{ccc}
+    \\
+    -2r_1\\
+    \\
+\end{array}
+\leadsto
+$
 
-$\left[\begin{array}{ccc|c}
+$
+\left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
     0 & -2 & -8 & -4 \\
     0 & 0 & 8 & 2
 \end{array}\right]
--r_3 \ til \ r_1
-\rightsquigarrow$\\
-
-$\left[\begin{array}{ccc|c}
+\begin{array}{ccc}
+    -r_3\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
     1 & 2 & 0 & 0 \\
     0 & -2 & -8 & -4 \\
     0 & 0 & 8 & 2
 \end{array}\right]
-+r_3 \ til \ r_2
-\rightsquigarrow$\\
-
-$\left[\begin{array}{ccc|c}
+\begin{array}{ccc}
+    \\
+    +r_3\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
     1 & 2 & 0 & 0 \\
     0 & -2 & 0 & -2 \\
     0 & 0 & 8 & 2
 \end{array}\right]
-+r_2 \ til \ r_1
-\rightsquigarrow$
+\begin{array}{ccc}
+    +r_2\\
+    \\
+    \\
+\end{array}
+\leadsto
+$
 
-$\left[\begin{array}{ccc|c}
+$
+\left[\begin{array}{ccc|c}
     1 & 0 & 0 & -2 \\
     0 & -2 & 0 & -2 \\
     0 & 0 & 8 & 2
 \end{array}\right]
-r_2 \cdot \brr{-\dfrac{1}{2}}
-\rightsquigarrow$
-
-$\left[\begin{array}{ccc|c}
+\begin{array}{ccc}
+    \\
+    \cdot(-\frac{1}{2})\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
     1 & 0 & 0 & -2 \\
     0 & 1 & 0 & 1 \\
     0 & 0 & 8 & 2
 \end{array}\right]
-r_3 \cdot \brr{\dfrac{1}{8}}
-\rightsquigarrow$
-
-$\left[\begin{array}{ccc|c}
+\begin{array}{ccc}
+    \\
+    \cdot\frac{1}{8}\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
     1 & 0 & 0 & -2 \\
     0 & 1 & 0 & 1 \\
     0 & 0 & 1 & \frac{1}{4}
-\end{array}\right]$\\
+\end{array}\right]
+$\\
 
 Vi kan nu aflæse løsningen til:
 \[
@@ -266,106 +338,144 @@ Vi kan nu aflæse løsningen til:
     1\\
     \frac{1}{4}
 \end{array}\right]
-\]
+\]\\
 
 Lad os nu se, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 2:\\
 
-$\left[\begin{array}{ccc|c}
+$
+\left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-2 \\
     0 & 1 & 0 & \frac{(2^3 - 2^2 - 4\cdot 2 + 8)}{(2^2 - 4)} \\
     0 & 0 & 1 & \frac{1}{(4-2^2)}
 \end{array}\right]
-\rightsquigarrow$\\
-
-$\left[\begin{array}{ccc|c}
+\begin{array}{ccc}
+    \\
+    reducer\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
     1 & 0 & 0 & 0 \\
     0 & 1 & 0 & \frac{4}{0} \\
     0 & 0 & 1 & \frac{1}{0}
 \end{array}\right]
-\rightsquigarrow$\\
+$\\
 
 Vi ser nu, at vi får division med 0, hvilket må betyde, at der ikke er nogen løsninger, når $a=2$.\\
 
 \subsection{}
 Vi omskriver ligningssystemet til koefficientmatrice-form på venstre side, hvor $a=1$, og sættr identitetmatricen på højre side:\\
-\[
+
+$
 \left[\begin{array}{ccc|ccc}
     1 & 2 & 8 & 1 & 0 & 0 \\
     1 & 1 & 4\cdot 1 & 0 & 1 & 0 \\
     2 & 2 & 2\cdot 1^2 & 0 & 0 & 1
 \end{array}\right]
 reducer
-\rightsquigarrow
+\leadsto
 \left[\begin{array}{ccc|ccc}
     1 & 2 & 8 & 1 & 0 & 0 \\
     1 & 1 & 4 & 0 & 1 & 0 \\
     2 & 2 & 2 & 0 & 0 & 1
 \end{array}\right]
--1r_1 \ til \ r_2
-\rightsquigarrow
-\]
-\[
+\begin{array}{ccc}
+    \\
+    -1r_1\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|ccc}
     1 & 2 & 8 & 1 & 0 & 0 \\
     0 & -1 & -4 & -1 & 1 & 0 \\
     2 & 2 & 2 & 0 & 0 & 1
 \end{array}\right]
--2r_1 \ til \ r_3
-\rightsquigarrow
+\begin{array}{ccc}
+    \\
+    \\
+    -2r_1\\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|ccc}
     1 & 2 & 8 & 1 & 0 & 0 \\
     0 & -1 & -4 & -1 & 1 & 0 \\
     0 & -2 & -14 & -2 & 0 & 1
 \end{array}\right]
--2r_2 \ til \ r_3
-\rightsquigarrow
-\]
-\[
+\begin{array}{ccc}
+    \\
+    \\
+    -2r_2\\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|ccc}
     1 & 2 & 8 & 1 & 0 & 0 \\
     0 & -1 & -4 & -1 & 1 & 0 \\
     0 & 0 & -6 & 0 & -2 & 1
 \end{array}\right]
-r_1 \cdot 3,\ r_2 \cdot (-3)
-\rightsquigarrow
+\begin{array}{ccc}
+    \cdot 3\\
+    \cdot (-3)\\
+    \\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|ccc}
     3 & 6 & 24 & 3 & 0 & 0 \\
     0 & 3 & 12 & 3 & -3 & 0 \\
     0 & 0 & -6 & 0 & -2 & 1
 \end{array}\right]
-+4r_3 \ til \ r_1
-\rightsquigarrow
-\]
-\[
+\begin{array}{ccc}
+    +4r_3\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|ccc}
     3 & 6 & 0 & 3 & -8 & 4 \\
     0 & 3 & 12 & 3 & -3 & 0 \\
     0 & 0 & -6 & 0 & -2 & 1
 \end{array}\right]
-+2r_3 \ til \ r_2
-\rightsquigarrow
+\begin{array}{ccc}
+    \\
+    +2r_3\\
+    \\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|ccc}
     3 & 6 & 0 & 3 & -8 & 4 \\
     0 & 3 & 0 & 3 & -7 & 2 \\
     0 & 0 & -6 & 0 & -2 & 1
 \end{array}\right]
--2r_2 \ til \ r_1
-\rightsquigarrow
-\]
-\[
+\begin{array}{ccc}
+    -2r_2\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
 \left[\begin{array}{ccc|ccc}
     3 & 0 & 0 & -3 & 6 & 0 \\
     0 & 3 & 0 & 3 & -7 & 2 \\
     0 & 0 & -6 & 0 & -2 & 1
 \end{array}\right]
-r_1 \cdot \brr{\frac{1}{3}},\ r_2 \cdot \brr{\frac{1}{3}},\ r_3 \cdot \brr{-\frac{1}{6}}
-\rightsquigarrow
+\begin{array}{ccc}
+    \cdot \frac{1}{3}\\
+    \cdot \frac{1}{3}\\
+    \cdot (-\frac{1}{6})\\
+\end{array}
+\leadsto
 \left[\begin{array}{ccc|ccc}
     1 & 0 & 0 & -1 & 2 & 0 \\
     0 & 1 & 0 & 1 & -\frac{7}{3} & \frac{2}{3} \\
     0 & 0 & 1 & 0 & \frac{1}{3} & -\frac{1}{6}
 \end{array}\right]
-\]
+$
 
 
 \section[Opgave]{Opgave}
@@ -426,7 +536,7 @@ A =
 
 \subsection{}
 Vi opskriver vores ligningssystem som en totalmatrix:\\
-\[
+$
 \left[\begin{array}{ccccc|c}
     -1 & \frac{1}{2} & 1 & 0 & 0 & 0 \\
     \frac{1}{2} & -1 & 0 & 0 & \frac{1}{2} & 0 \\
@@ -434,7 +544,13 @@ Vi opskriver vores ligningssystem som en totalmatrix:\\
     \frac{1}{2} & \frac{1}{2} & 1 & -1 & \frac{1}{2} & 0 \\
     \frac{1}{2} & 0 & 0 & \frac{1}{4} & -1 & 0
 \end{array}\right]
-r_1 \cdot 2, r_2 \cdot 4,\ r_3 \cdot 4,\ r_4 \cdot 4,\ r_5 \cdot 4
+\begin{array}{ccccc}
+    r_1 \cdot 2\\
+    r_2 \cdot 4\\
+    r_3 \cdot 4\\
+    r_4 \cdot 4\\
+    r_5 \cdot 4\\
+\end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
     -2 & 1 & 2 & 0 & 0 & 0 \\
@@ -443,10 +559,16 @@ r_1 \cdot 2, r_2 \cdot 4,\ r_3 \cdot 4,\ r_4 \cdot 4,\ r_5 \cdot 4
     2 & 2 & 4 & -4 & 2 & 0 \\
     2 & 0 & 0 & 1 & -4 & 0
 \end{array}\right]
-\]
-\[
-+r_1 \ til \ r_2, r_3, r_4, r_5  
+\begin{array}{ccccc}
+    \\
+    +r_1\\
+    +r_1\\
+    +r_1\\
+    +r_1\\
+\end{array}
 \leadsto
+$\\
+$
 \left[\begin{array}{ccccc|c}
     -2 & 1 & 2 & 0 & 0 & 0 \\
     0 & -3 & 2 & 0 & 2 & 0 \\
@@ -454,10 +576,14 @@ r_1 \cdot 2, r_2 \cdot 4,\ r_3 \cdot 4,\ r_4 \cdot 4,\ r_5 \cdot 4
     0 & 3 & 6 & -4 & 2 & 0 \\
     0 & 1 & 2 & 1 & -4 & 0
 \end{array}\right]
-r_3 \cdot 3, r_5 \cdot 3
+\begin{array}{ccccc}
+    \\
+    \\
+    r_3 \cdot 3\\
+    \\
+    r_5 \cdot 3\\
+\end{array}
 \leadsto
-\]
-\[
 \left[\begin{array}{ccccc|c}
     -2 & 1 & 2 & 0 & 0 & 0 \\
     0 & -3 & 2 & 0 & 2 & 0 \\
@@ -473,6 +599,8 @@ r_3 \cdot 3, r_5 \cdot 3
     +r_2
 \end{array}
 \leadsto
+$\\
+$
 \left[\begin{array}{ccccc|c}
     -2 & 1 & 2 & 0 & 0 & 0 \\
     0 & -3 & 2 & 0 & 2 & 0 \\
@@ -484,8 +612,6 @@ r_3 \cdot 3, r_5 \cdot 3
     \cdot 2
 \end{array}
 \leadsto
-\]
-\[
 \left[\begin{array}{ccccc|c}
     -2 & 1 & 2 & 0 & 0 & 0 \\
     0 & -3 & 2 & 0 & 2 & 0 \\
@@ -501,6 +627,146 @@ r_3 \cdot 3, r_5 \cdot 3
     +r_3
 \end{array}
 \leadsto
+$\\
+$
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    0 & -3 & 2 & 0 & 2 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 0 & -4 & 8 & 0 \\
+    0 & 0 & 0 & 3 & -6 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \\
+    \\
+    \\
+    \cdot 3\\
+    \cdot 4
+\end{array}
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    0 & -3 & 2 & 0 & 2 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 0 & -12 & 24 & 0 \\
+    0 & 0 & 0 & 12 & -24 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \\
+    \\
+    \\
+    \\
+    +r_4
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccccc|c}
+    -2 & 1 & 2 & 0 & 0 & 0 \\
+    0 & -3 & 2 & 0 & 2 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 0 & -12 & 24 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \cdot 4\\
+    \cdot 4\\
+    \\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -8 & 4 & 8 & 0 & 0 & 0 \\
+    0 & -12 & 8 & 0 & 8 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 0 & -12 & 24 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    +r_3\\
+    +r_3\\
+    \\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccccc|c}
+    -8 & 4 & 0 & 0 & 4 & 0 \\
+    0 & -12 & 0 & 0 & 12 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 0 & -12 & 24 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \cdot 3\\
+    \\
+    \\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -24 & 12 & 0 & 0 & 12 & 0 \\
+    0 & -12 & 0 & 0 & 12 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 0 & -12 & 24 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    +r_2\\
+    \\
+    \\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccccc|c}
+    -24 & 0 & 0 & 0 & 24 & 0 \\
+    0 & -12 & 0 & 0 & 12 & 0 \\
+    0 & 0 & -8 & 0 & 4 & 0 \\
+    0 & 0 & 0 & -12 & 24 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \cdot (-\frac{1}{24})\\
+    \cdot (-\frac{1}{12})\\
+    \cdot (-\frac{1}{8})\\
+    \cdot (-\frac{1}{12})\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccccc|c}
+    1 & 0 & 0 & 0 & -1 & 0 \\
+    0 & 1 & 0 & 0 & -1 & 0 \\
+    0 & 0 & 1 & 0 & -\frac{1}{2} & 0 \\
+    0 & 0 & 0 & 1 & -2 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+$\\
+
+Vi kan nu aflæse løsningerne til:
+\[
+\left[\begin{array}{c}
+    x_1\\
+    x_2\\
+    x_3\\
+    x_4\\
+    x_5\\
+\end{array}\right]
+=
+t
+\left[\begin{array}{c}
+    1\\
+    1\\
+    \frac{1}{2}\\
+    2\\
+    0\\
+\end{array}\right]
 \]
 
 \section[Opgave]{Opgave}
