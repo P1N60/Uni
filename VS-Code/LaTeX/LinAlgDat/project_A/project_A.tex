@@ -36,92 +36,100 @@ $
     2 & 2 & 2a^2 & 0
 \end{array}\right]
 \begin{array}{ccc}
-    \\
-    -ar_1\\
-    \\
+    \cdot 2a\\
+    \cdot 2\\
+    \cdot a\\
 \end{array}
 \leadsto
 \left[\begin{array}{ccc|c}
-    1 & 2 & 8 & a \\
-    0 & -a & -4a & a-a^2 \\
-    2 & 2 & 2a^2 & 0
+    2a & 4a & 16a & 2a^2 \\
+    2a & 2a & 8a & 2a \\
+    2a & 2a & 2a^3 & 0
 \end{array}\right]
 \begin{array}{ccc}
     \\
-    \\
-    -2r_1\\
+    -r_1\\
+    -r_1\\
 \end{array}
 \leadsto
 $\\
 $
 \left[\begin{array}{ccc|c}
-    1 & 2 & 8 & a \\
-    0 & -a & -4a & a-a^2 \\
-    0 & -2 & 2a^2-16 & -2a
+    2a & 4a & 16a & 2a^2 \\
+    0 & -2a & -8a & 2a-2a^2 \\
+    0 & -2a & 2a^3-16a & -2a^2
 \end{array}\right]
 \begin{array}{ccc}
     \\
     \\
-    r_2\cdot \frac{2}{-a}\\
+    -r_2\\
 \end{array}
 \leadsto
 \left[\begin{array}{ccc|c}
-    1 & 2 & 8 & a \\
-    0 & -a & -4a & a-a^2 \\
-    0 & 0 & 2a^2-8 & -2a-\frac{2(a-a^2)}{a} = -2
+    2a & 4a & 16a & 2a^2 \\
+    0 & -2a & -8a & 2a-2a^2 \\
+    0 & 0 & 2a^3-8a & -2a
 \end{array}\right]
 \begin{array}{ccc}
-    r_2\cdot \dfrac{2}{a}\\
+    +2r_2\\
     \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2a & 0 & 0 & 4a-2a^2 \\
+    0 & -2a & -8a & 2a-2a^2 \\
+    0 & 0 & 2a^3-8a & -2a
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot \frac{1}{-8a}\\
+    \cdot \frac{1}{2a^3-8a}\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2a & 0 & 0 & 4a-2a^2 \\
+    0 & \frac{1}{4} & 1 & \frac{2a-2a^2}{-8a} \\
+    0 & 0 & 1 & -\frac{2a}{2a^3-8a}
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -r_3\\
     \\
 \end{array}
 \leadsto
 $\\
 $
 \left[\begin{array}{ccc|c}
-    1 & 0 & 0 & 2-a \\
-    0 & -a & -4a & a-a^2 \\
-    0 & 0 & 2a^2-8 & -2
+    2a & 0 & 0 & 4a-2a^2 \\
+    0 & \frac{1}{4} & 0 & \frac{a^3 - a^2 - 4a + 8}{4a^2 - 16} \\
+    0 & 0 & 1 & -\frac{2a}{2a^3-8a}
 \end{array}\right]
 \begin{array}{ccc}
-    \\
-    r_3\cdot\frac{2a}{a^2-4}\\
+    \cdot \frac{1}{2a}\\
+    \cdot 4\\
     \\
 \end{array}
 \leadsto
 \left[\begin{array}{ccc|c}
-    1 & 0 & 0 & 2-a \\
-    0 & -a & 0 & a - a^2 -\frac{4a}{(a^2 - 4)} \\
-    0 & 0 & 2a^2-8 & -2
+    1 & 0 & 0 & \frac{4a-2a^2}{2a} \\
+    0 & 1 & 0 & \frac{4a^3 - 4a^2 - 16a + 32}{4a^2 - 16} \\
+    0 & 0 & 1 & -\frac{2a}{2a^3-8a}
 \end{array}\right]
-\begin{array}{ccc}
-    \\
-    \\
-    \cdot \frac{1}{2a^2-8}\\
-\end{array}
+reducer
 \leadsto
 $\\
 $
 \left[\begin{array}{ccc|c}
     1 & 0 & 0 & 2-a \\
-    0 & -a & 0 & a - a^2 -\frac{4a}{(a^2 - 4)} \\
-    0 & 0 & 1 & -\frac{2}{2a^2-8} = -\frac{2}{2(a^2-4)} = \frac{1}{(4-a^2)}
+    0 & 1 & 0 & \frac{a^3 - a^2 - 4a + 8}{a^2 - 4} \\
+    0 & 0 & 1 & \frac{1}{4-a^2}
 \end{array}\right]
-\begin{array}{ccc}
-    \\
-    \cdot \frac{1}{-a}\\
-    \\
-\end{array}
-\leadsto
-\left[\begin{array}{ccc|c}
-    1 & 0 & 0 & 2-a \\
-    0 & 1 & 0 & \frac{(a^3 - a^2 - 4a + 8)}{(a^2 - 4)} \\
-    0 & 0 & 1 & \frac{1}{(4-a^2)}
-\end{array}\right]
-\square
 $\\
 
-Vi har nu fået den løsning vi ledte efter, så vi er dermed færdige.
+Har nu reduceret til echelonform, så vi er dermed færdige.
 
 \subsection{}
 Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne gang $a$ med 0:\\
