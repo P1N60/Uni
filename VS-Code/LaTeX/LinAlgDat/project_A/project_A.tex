@@ -483,18 +483,438 @@ $
     0 & 1 & 0 & 1 & -\frac{7}{3} & \frac{2}{3} \\
     0 & 0 & 1 & 0 & \frac{1}{3} & -\frac{1}{6}
 \end{array}\right]
-$
+$\\
+
+Vi aflæser løsningen til:\\
+\[
+A
+\left[\begin{array}{c}
+    x\\
+    y\\
+    z
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    1\\
+    2\\
+    3
+\end{array}\right]
+\]
+
+\[
+x=A^{-1}b=
+\left[\begin{array}{ccc}
+    -1 & 2 & 0 \\
+    1 & -\frac{7}{3} & \frac{2}{3} \\
+    0 & \frac{1}{3} & -\frac{1}{6}
+\end{array}\right]
+\left[\begin{array}{c}
+    1\\
+    2\\
+    3
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    3\\
+    -\frac{5}{3}\\
+    \frac{1}{6}
+\end{array}\right]
+\]
 
 
 \section[Opgave]{Opgave}
 \subsection{}
+Vi opskriver vores rækkeoperationer som elementærmatricer:\\
+\[
+E_1=
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    -2a & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+\]
+\[
+E_2=
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 5
+\end{array}\right]
+\]
+\[
+E_3=
+\left[\begin{array}{ccc}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+\end{array}\right]
+\]
+\[
+E_4=
+\left[\begin{array}{ccc}
+    1 & 0 & \frac{1}{a^2} \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+\]\\
 
+Når man udfører række­operationerne i rækkefølgen $E_4 \cdot (E_3 \cdot (E_2 \cdot (E_1 \cdot A)))$ svarer det til at gange med elementærmatricerne fra venstre:\\
+
+$
+E_4 \cdot (E_3 \cdot (E_2 \cdot (E_1 \cdot A))) 
+=
+\left[\begin{array}{ccc}
+    1 & 0 & \frac{1}{a^2} \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+\cdot \brr{
+\left[\begin{array}{ccc}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+\end{array}\right]
+\cdot \brr{
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 5
+\end{array}\right]
+\cdot \brr{
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    -2a & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+\cdot A}}}
+$
+$
+=
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+$\\
+
+Ifølge theorem 2.7 op slides'ne i forelæsning 3, er det at lave rækkeoperationer der samme som at gange med elementærmatricerne fra venstre.\\
+Det må betyde, at en mulig opskrivning er:\\
+\[
+E_4  E_3  E_2  E_1 A = I
+\]
+da vi laver rækkeoperationer i rækkefølgen $E_1, E_2, E_3, E_4$.\\
+
+Ifølge definition 2.7 på side 75 i Lineær Algebra i Datalogi, gælder der for en square matrix:\\
+\[
+AX = I, \ XA = I
+\]
+Det må dermed gælde, at:\\ 
+\[
+E_4  E_3  E_2  E_1 A = I = A E_4 E_3 E_2 E_1
+\]
 
 \subsection{}
+$
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & 1 & 0 & 0 \\
+    -2a & 1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    +r_1\cdot 2a\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 2a & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 1
+\end{array}\right]
+\Rightarrow E^{-1}_1 = 
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    2a & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 5 & 0 & 0 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot \frac{1}{5}\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & \frac{1}{5}
+\end{array}\right]
+\Rightarrow E^{-1}_2 = 
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & \frac{1}{5}
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{ccc|ccc}
+    0 & 0 & 1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 1 & 0 \\
+    1 & 0 & 0 & 0 & 0 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    r_1 \leftrightarrow r_3\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 1 & 1 & 0 & 0
+\end{array}\right]
+\Rightarrow E^{-1}_3 = 
+\left[\begin{array}{ccc}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & \frac{1}{a^2} & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    -r_3 \cdot \frac{1}{a^2}\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & 1 & 0 & -\frac{1}{a^2} \\
+    0 & 1 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 1
+\end{array}\right]
+\Rightarrow E^{-1}_4 = 
+\left[\begin{array}{ccc}
+    1 & 0 & -\frac{1}{a^2} \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+$\\
 
+\[
+A = E^{-1}_1E^{-1}_2E^{-1}_3E^{-1}_4 = 
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    2a & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & \frac{1}{5}
+\end{array}\right]
+\left[\begin{array}{ccc}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+\end{array}\right]
+\left[\begin{array}{ccc}
+    1 & 0 & -\frac{1}{a^2} \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    0 & 0 & 1 \\
+    0 & 1 & 2a \\
+    \frac{1}{5} & 0 & -\frac{1}{5a^2}
+\end{array}\right]
+\]
 
 \subsection{}
+\[
+E_1 E_2 E_3 E_4 = 
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    -2a & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 5
+\end{array}\right]
+\left[\begin{array}{ccc}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0
+\end{array}\right]
+\left[\begin{array}{ccc}
+    1 & 0 & \frac{1}{a^2} \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    \frac{1}{a^2} & 0 & 5 \\
+    -2a & 1 & 0 \\
+    1 & 0 & 0
+\end{array}\right]
+\]\\
 
+X er givet som række 1 i X = række 1 i $E_1 E_2 E_3 E_4$, og række 2 i X er = række 3 i $E_1 E_2 E_3 E_4$:\\
+\[
+X =
+\left[\begin{array}{ccc}
+    \frac{1}{a^2} & 0 & 5 \\
+    1 & 0 & 0
+\end{array}\right]
+\]\\
+
+Vi skal nu bestemme, om $X$: er venstreinvers til $V$:
+
+\[
+XV = 
+\left[\begin{array}{ccc}
+    \frac{1}{a^2} & 0 & 5 \\
+    1 & 0 & 0
+\end{array}\right]
+\left[\begin{array}{cc}
+    0 & 1 \\
+    0 & 2a \\
+    \frac{1}{5} & -\frac{1}{5a^2}
+\end{array}\right]
+=
+\left[\begin{array}{cc}
+    1 & 0 \\
+    0 & 1 \\
+\end{array}\right]
+\]
+
+Da $XV$ giver enhedsmatricen, er $X$ venstreinvers til $V$.\\
+
+Vi bestemmer nu alle venstreinverser til $V$, ved at lave et ligningssystem:\\
+$x_3=1$\\
+$x_1+2ax_2-\frac{1}{5a^2}x_3=0$\\
+$\frac{1}{5}x_6=0$\\
+$x_4+2ax_5-\frac{1}{5a^2}x_6=1$\\
+
+Vi opskriver vores ligningssystem som en totalmatrix:\\
+
+$
+\left[\begin{array}{cccccc|c}
+    0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+    1 & 2a & -\frac{1}{5a^2} & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 & \frac{1}{5} & 0 \\
+    0 & 0 & 0 & 1 & 2a & -\frac{1}{5a^2} & 1 \\
+\end{array}\right]
+\begin{array}{cccc}
+    \\
+    r_1 \leftrightarrow r_2\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{cccccc|c}
+    1 & 2a & -\frac{1}{5a^2} & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 0 & 0 & \frac{1}{5} & 0 \\
+    0 & 0 & 0 & 1 & 2a & -\frac{1}{5a^2} & 1 \\
+\end{array}\right]
+\begin{array}{cccc}
+    \\
+    r_3 \leftrightarrow r_4\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{cccccc|c}
+    1 & 2a & -\frac{1}{5a^2} & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 2a & -\frac{1}{5a^2} & 1 \\
+    0 & 0 & 0 & 0 & 0 & \frac{1}{5} & 0 \\
+\end{array}\right]
+\begin{array}{cccc}
+    \\
+    \\
+    \\
+    \cdot 5\\
+\end{array}
+\leadsto
+\left[\begin{array}{cccccc|c}
+    1 & 2a & -\frac{1}{5a^2} & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 2a & -\frac{1}{5a^2} & 1 \\
+    0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+\end{array}\right]
+\begin{array}{cccc}
+    +r_2 \cdot \frac{1}{5a^2}\\
+    \\
+    +r_4 \cdot \frac{1}{5a^2}\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{cccccc|c}
+    1 & 2a & 0 & 0 & 0 & 0 & \frac{1}{5a^2} \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 2a & 0 & 1 \\
+    0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+\end{array}\right]
+$\\
+
+Vi kan nu aflæse løsningerne til:\\
+
+\[
+\left[\begin{array}{c}
+    x_1 \\
+    x_2 \\
+    x_3 \\
+    x_4 \\
+    x_5 \\
+    x_6
+\end{array}\right]
+=
+\left[\begin{array}{c}
+    \frac{1}{5a^2} \\
+    0 \\
+    1 \\
+    1 \\
+    0 \\
+    0
+\end{array}\right]
++
+t
+\left[\begin{array}{c}
+    -2a \\
+    1 \\
+    0 \\
+    0 \\
+    0 \\
+    0
+\end{array}\right]
++
+s
+\left[\begin{array}{c}
+    0 \\
+    0 \\
+    0 \\
+    -2a \\
+    1 \\
+    0
+\end{array}\right]
+\]
 
 \section[Opgave]{Opgave}
 \subsection{}
@@ -783,9 +1203,11 @@ t
     1\\
     \frac{1}{2}\\
     2\\
-    0\\
+    1\\
 \end{array}\right]
 \]
+
+Vi ser nu, at side 4 er vigtigst, 1, 2, 5 næst mest vigtige, og 3 er mindst vigtig.
 
 \section[Opgave]{Opgave}
 Se vedhæftede python-fil.
