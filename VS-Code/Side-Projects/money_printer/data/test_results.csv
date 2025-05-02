@@ -137,3 +137,8 @@ R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_ra
 -0.3238855267890722,0.15132412419034633,0.24623185226153824,advanced,"(600, 600, 600)",200,8,adaptive,0.001,auto,0.0001,0.0001,True
 R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
 -0.32531824520964,0.19276733449476655,0.2727447457201035,advanced,"(1000, 1000)",200,6,adaptive,0.001,auto,0.0001,0.0001,True
+Removed columns <2000 data
+R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.13541774899863998,0.19064950345688225,0.26210491406373937,advanced,"(2000, 2000)",200,6,adaptive,0.001,auto,0.0001,0.0001,True
+R²,MSE,MAE,symbol_list,hidden_layer_sizes,max_iter,n_iter_no_change,learning_rate,learning_rate_init,batch_size,tol,alpha,shuffle
+-0.05455497035021913,0.1341704472471358,0.24715889759736856,advanced,"(2000, 2000)",200,6,adaptive,0.001,auto,0.0001,0.0001,True
