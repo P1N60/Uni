@@ -7,9 +7,9 @@
 \contentsline {section}{\numberline {2}Opgave}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.a}}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.b}}{6}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.c}}{6}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Opgave}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.a}}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2.c}}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Opgave}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.a}}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.b}}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.c}}{8}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Opgave}{9}{section.4}%
+\contentsline {subsection}{\numberline {3.c}}{9}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Opgave}{10}{section.4}%

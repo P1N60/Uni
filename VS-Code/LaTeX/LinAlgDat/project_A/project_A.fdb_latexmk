@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1746024451.26522 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_A/project_A.tex" "project_A.pdf" "project_A" 1746024452.49375 0
+["pdflatex"] 1746260020.5335 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_A/project_A.tex" "project_A.pdf" "project_A" 1746260021.72497 0
   "../../sty/cover.sty" 1745586833.46376 109 6f6f4e9b4e71a8e925d528bbfef8dfbf ""
   "../../sty/header.sty" 1733469646.88098 250 109f752decd82b9a012e4fb5550a366a ""
   "../../sty/setup.sty" 1745561639.96649 10248 1ae041ddec7d3cd2ac88e1cc193720a7 ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_A/project_A.tex" 1746024451.0372 23569 46709d3da0ed75c4d94d97e38628bd2b ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_A/project_A.tex" 1746260019.97006 24477 e716ec33cd4c3c30a1d329b289031ccd ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -279,9 +279,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "project_A.aux" 1746024452.36795 3598 ff228d90724eb3bfbc659a5f50d7da76 "pdflatex"
-  "project_A.tex" 1746024451.0372 23569 46709d3da0ed75c4d94d97e38628bd2b ""
-  "project_A.toc" 1746024452.37009 937 ee030545db383de5109e289c2e1e23d2 "pdflatex"
+  "project_A.aux" 1746260021.60557 3600 63e1f5fd401c88945defbe49343d6c42 "pdflatex"
+  "project_A.tex" 1746260019.97006 24477 e716ec33cd4c3c30a1d329b289031ccd ""
+  "project_A.toc" 1746260021.60769 938 845a1a9096e671725d68541eada425c7 "pdflatex"
   (generated)
   "project_A.aux"
   "project_A.log"

@@ -14,7 +14,7 @@ Hold 13 Mach}
 
 \begin{document}
 \input{../../sty/cover.sty} 
-\input{../../sty/header.sty}
+\input{../../sty/header.sty} 
 \maketitle 
 
 \section[Opgave]{Opgave}
@@ -148,8 +148,7 @@ reducer
 \end{array}\right]
 \begin{array}{cccc}
     \\
-    \\
-    > byttes\\
+    r_2 \leftrightarrow r_3\\
     \\
 \end{array}
 \leadsto
@@ -179,7 +178,7 @@ $
     0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccc}
-    -2r_1\\
+    -2r_2\\
     \\
     \\
 \end{array}
@@ -206,7 +205,7 @@ t
     1
 \end{array}\right]
 \]
-Vi ser nu, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 0:\\
+Vi ser nu, hvad vi får, hvis vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 0:\\
 
 $
 \left[\begin{array}{ccc|c}
@@ -250,8 +249,8 @@ reducer
 \end{array}\right]
 \begin{array}{ccc}
     \\
+    r_2\leftrightarrow r_3\\
     \\
-    +r_2\\
 \end{array}
 \leadsto
 \left[\begin{array}{ccc|c}
@@ -312,18 +311,7 @@ $
 \begin{array}{ccc}
     \\
     \cdot(-\frac{1}{2})\\
-    \\
-\end{array}
-\leadsto
-\left[\begin{array}{ccc|c}
-    1 & 0 & 0 & -2 \\
-    0 & 1 & 0 & 1 \\
-    0 & 0 & 8 & 2
-\end{array}\right]
-\begin{array}{ccc}
-    \\
-    \cdot\frac{1}{8}\\
-    \\
+    \cdot \frac{1}{8}\\
 \end{array}
 \leadsto
 \left[\begin{array}{ccc|c}
@@ -348,7 +336,7 @@ Vi kan nu aflæse løsningen til:
 \end{array}\right]
 \]\\
 
-Lad os nu se, hvad vi får, når vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 2:\\
+Lad os nu se, hvad vi får, hvis vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 2:\\
 
 $
 \left[\begin{array}{ccc|c}
@@ -369,10 +357,10 @@ $
 \end{array}\right]
 $\\
 
-Vi ser nu, at vi får division med 0, hvilket må betyde, at der ikke er nogen løsninger, når $a=2$.\\
+Vi ser nu, at vi får division med 0, hvilket må betyde, at der ikke er nogen løsninger, når $a=2$. Dette må være grunden til, at totalmatricen var lavet under antagelsen, at $a\neq 2$.\\
 
 \subsection{}
-Vi omskriver ligningssystemet til koefficientmatrice-form på venstre side, hvor $a=1$, og sættr identitetmatricen på højre side:\\
+Vi omskriver ligningssystemet til koefficientmatrice-form på venstre side, hvor $a=1$, og sætter identitetmatricen på højre side. Herefter reducerer vi med Gauss-Jordan indtil, at vi har en reduceret rækkeeechelonform:\\
 
 $
 \left[\begin{array}{ccc|ccc}
@@ -485,7 +473,16 @@ $
 \end{array}\right]
 $\\
 
-Vi aflæser løsningen til:\\
+Vi har nu en rduceret rækkeeechelonform, så vi aflæser den inverse matrix af $A$ til:\\
+\[
+A^{-1}=
+\left[\begin{array}{ccc}
+    -1 & 2 & 0 \\
+    1 & -\frac{7}{3} & \frac{2}{3} \\
+    0 & \frac{1}{3} & -\frac{1}{6}
+\end{array}\right]
+\]
+Følgende er på formen $Ax = b$:\\
 \[
 A
 \left[\begin{array}{c}
@@ -500,9 +497,8 @@ A
     3
 \end{array}\right]
 \]
-
+og kan omskrives til $A^{-1}b = x$:\\
 \[
-x=A^{-1}b=
 \left[\begin{array}{ccc}
     -1 & 2 & 0 \\
     1 & -\frac{7}{3} & \frac{2}{3} \\
@@ -520,7 +516,20 @@ x=A^{-1}b=
     \frac{1}{6}
 \end{array}\right]
 \]
-
+Vi ender altså med løsningen:\\
+\[
+\left[\begin{array}{c}
+    x\\
+    y\\
+    z
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    3\\
+    -\frac{5}{3}\\
+    \frac{1}{6}
+\end{array}\right]
+\]
 
 \section[Opgave]{Opgave}
 \subsection{}
@@ -587,33 +596,26 @@ E_4 \cdot (E_3 \cdot (E_2 \cdot (E_1 \cdot A)))
     0 & 0 & 1
 \end{array}\right]
 \cdot A}}}
-$
-$
-=
-\left[\begin{array}{ccc}
-    1 & 0 & 0 \\
-    0 & 1 & 0 \\
-    0 & 0 & 1
-\end{array}\right]
 $\\
 
-Ifølge theorem 2.7 op slides'ne i forelæsning 3, er det at lave rækkeoperationer der samme som at gange med elementærmatricerne fra venstre.\\
 Det må betyde, at en mulig opskrivning er:\\
 \[
 E_4  E_3  E_2  E_1 A = I
 \]
-da vi laver rækkeoperationer i rækkefølgen $E_1, E_2, E_3, E_4$.\\
+
+da vi laver rækkeoperationer på $A$ i rækkefølgen $E_1, E_2, E_3, E_4$, og at dette er givet i opgaven, som lig enhedsmatricen.\\
 
 Ifølge definition 2.7 på side 75 i Lineær Algebra i Datalogi, gælder der for en square matrix:\\
 \[
-AX = I, \ XA = I
+XA = I \Rightarrow AX = I
 \]
 Det må dermed gælde, at:\\ 
 \[
-E_4  E_3  E_2  E_1 A = I = A E_4 E_3 E_2 E_1
+E_4  E_3  E_2  E_1 A = I \Rightarrow A E_4 E_3 E_2 E_1 = I
 \]
 
 \subsection{}
+Vi bestemmer $E^{-1}_1, E^{-1}_2, E^{-1}_3, E^{-1}_4$:\\
 $
 \left[\begin{array}{ccc|ccc}
     1 & 0 & 0 & 1 & 0 & 0 \\
@@ -711,6 +713,7 @@ $
 \end{array}\right]
 $\\
 
+$A$ er givet som produktet af de inverse elementærmatricer:\\
 \[
 A = E^{-1}_1E^{-1}_2E^{-1}_3E^{-1}_4 = 
 \left[\begin{array}{ccc}
@@ -742,6 +745,7 @@ A = E^{-1}_1E^{-1}_2E^{-1}_3E^{-1}_4 =
 \]
 
 \subsection{}
+X er givet som række 1 i X = række 1 i $E_1 E_2 E_3 E_4$, og række 2 i X er = række 3 i $E_1 E_2 E_3 E_4$:\\
 \[
 E_1 E_2 E_3 E_4 = 
 \left[\begin{array}{ccc}
@@ -771,8 +775,6 @@ E_1 E_2 E_3 E_4 =
     1 & 0 & 0
 \end{array}\right]
 \]\\
-
-X er givet som række 1 i X = række 1 i $E_1 E_2 E_3 E_4$, og række 2 i X er = række 3 i $E_1 E_2 E_3 E_4$:\\
 \[
 X =
 \left[\begin{array}{ccc}
@@ -781,7 +783,7 @@ X =
 \end{array}\right]
 \]\\
 
-Vi skal nu bestemme, om $X$: er venstreinvers til $V$:
+Vi skal nu bestemme, om $X$ er venstreinvers til $V$:
 
 \[
 XV = 
@@ -915,6 +917,26 @@ s
     0
 \end{array}\right]
 \]
+For at se, om $V$ har en højre invers, skal $VX$ være lig med enhedsmatricen:\\
+\[
+VX =
+\left[\begin{array}{cc}
+    0 & 1 \\
+    0 & 2a \\
+    \frac{1}{5} & -\frac{1}{5a^2}
+\end{array}\right]
+\left[\begin{array}{ccc}
+    \frac{1}{a^2} & 0 & 5 \\
+    1 & 0 & 0
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    1 & 0 & 0 \\
+    2a & 0 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+\]
+Da vi ikke får enhedsmatricen, har $V$ ikke en højre invers.\\
 
 \section[Opgave]{Opgave}
 \subsection{}
