@@ -940,7 +940,7 @@ Da vi ikke får enhedsmatricen, har $V$ ikke en højre invers.\\
 
 \section[Opgave]{Opgave}
 \subsection{}
-Vi sætter et 1-tal i hver $e_{uv}$-element i matricen for hver edge $E(u,v)$ i grafen $G_N$:\\
+Vi sætter et 1-tal i hver $e_{uv}$-element i matricen $N$ for hver edge $E(u,v)$ i grafen $G_N$:\\
 
 \[
 N = 
@@ -953,7 +953,10 @@ N =
 \end{array}\right]
 \]\\
 
-For at finde antallet af veje fra knude 4 til knude 1 med netop længde 8, skal vi kigge på element $(4,1)$ i $N^8$. Vi kan finde $(N^8)_{4,1}$ ved:\\
+For at finde antallet af veje fra knude 4 til knude 1 med netop længde 8, skal vi kigge på element $(4,1)$ i $N^8$. Vi kan finde $N^8_{4,1}$ ved:\\
+\[
+N^7_{4,1} \cdot N^1_{1,1} + N^7_{4,2} \cdot N^1_{2,1} + N^7_{4,3} \cdot N^1_{3,1} + N^7_{4,4} \cdot N^1_{4,1} + N^7_{4,5} \cdot N^1_{5,1} =
+\]
 \[
 69 \cdot 0 + 45 \cdot 1 + 45 \cdot 1 + 18 \cdot 1 + 29 \cdot 1 = 137
 \]
@@ -985,168 +988,181 @@ A =
 \]
 
 \subsection{}
-Vi kan lave et ligningssystem ud fra $N$, hvor alle elementer nu divideres med mængden af udgående edges den vertex i kolonnen er connected med:\\
+Vi kan lave et ligningssystem ud fra $A$:\\
 
 $
-x_1= \frac{1}{2}x_2 + x_3 \\
-x_2= \frac{1}{2}x_1 + \frac{1}{2}x_5 \\
-x_3= \frac{1}{2}x_1 \\
-x_4= \frac{1}{2}x_1 + \frac{1}{2}x_2 + x_3 + \frac{1}{2}x_5 \\
-x_5= \frac{1}{2}x_1 + \frac{1}{4}x_4
+x_1= \frac{1}{2}x_2 + x_3 + \frac{1}{4}x_4 + \frac{1}{2}x_5\\
+x_2= \frac{1}{2}x_1 + \frac{1}{4}x_4 \\
+x_3= \frac{1}{2}x_1 + \frac{1}{4}x_4 \\
+x_4= \frac{1}{2}x_5 \\
+x_5= \frac{1}{2}x_2 + \frac{1}{4}x_4
 $\\
 
-Vi opskriver vores ligningssystem som en totalmatrix:\\
+Vi omskriver så alle $x$'er ender på samme side af lighedstegnet:\\
+$
+-x_1 + \frac{1}{2}x_2 + x_3 + \frac{1}{4}x_4 + \frac{1}{2}x_5 = 0 \\
+-x_2 + \frac{1}{2}x_1 + \frac{1}{4}x_4 = 0 \\
+-x_3 + \frac{1}{2}x_1 + \frac{1}{4}x_4 = 0 \\
+-x_4 + \frac{1}{2}x_5 = 0 \\
+-x_5 + \frac{1}{2}x_2 + \frac{1}{4}x_4 = 0
+$\\
+
+Vi opskriver vores ligningssystem som en totalmatrix, og reducerer med Gauss-Jordan indtil vi har en reduceret rækkeeechelonform:\\
 $
 \left[\begin{array}{ccccc|c}
-    -1 & \frac{1}{2} & 1 & 0 & 0 & 0 \\
-    \frac{1}{2} & -1 & 0 & 0 & \frac{1}{2} & 0 \\
-    \frac{1}{2} & 0 & -1 & 0 & 0 & 0 \\
-    \frac{1}{2} & \frac{1}{2} & 1 & -1 & \frac{1}{2} & 0 \\
-    \frac{1}{2} & 0 & 0 & \frac{1}{4} & -1 & 0
+    -1 & \frac{1}{2} & 1 & \frac{1}{4} & \frac{1}{2} & 0 \\
+    \frac{1}{2} & -1 & 0 & \frac{1}{4} & 0 & 0 \\
+    \frac{1}{2} & 0 & -1 & \frac{1}{4} & 0 & 0 \\
+    0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+    0 & \frac{1}{2} & 0 & \frac{1}{4} & -1 & 0
 \end{array}\right]
-\begin{array}{ccccc}
-    r_1 \cdot 2\\
-    r_2 \cdot 4\\
-    r_3 \cdot 4\\
-    r_4 \cdot 4\\
-    r_5 \cdot 4\\
+\begin{array}{c}
+    \cdot 4\\
+    \cdot 8\\
+    \cdot 8\\
+    \\
+    \\
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    2 & -4 & 0 & 0 & 2 & 0 \\
-    2 & 0 & -4 & 0 & 0 & 0 \\
-    2 & 2 & 4 & -4 & 2 & 0 \\
-    2 & 0 & 0 & 1 & -4 & 0
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    4 & -8 & 0 & 2 & 0 & 0 \\
+    4 & 0 & -8 & 2 & 0 & 0 \\
+    0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+    0 & \frac{1}{2} & 0 & \frac{1}{4} & -1 & 0
 \end{array}\right]
 \begin{array}{ccccc}
     \\
     +r_1\\
     +r_1\\
-    +r_1\\
-    +r_1\\
+    \\
+    \\
 \end{array}
 \leadsto
 $\\
 $
 \left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    0 & -3 & 2 & 0 & 2 & 0 \\
-    0 & 1 & -2 & 0 & 0 & 0 \\
-    0 & 3 & 6 & -4 & 2 & 0 \\
-    0 & 1 & 2 & 1 & -4 & 0
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    0 & -6 & 4 & 3 & 2 & 0 \\
+    0 & 2 & -4 & 3 & 2 & 0 \\
+    0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+    0 & \frac{1}{2} & 0 & \frac{1}{4} & -1 & 0
 \end{array}\right]
 \begin{array}{ccccc}
-    \\
-    \\
-    r_3 \cdot 3\\
-    \\
-    r_5 \cdot 3\\
-\end{array}
-\leadsto
-\left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    0 & -3 & 2 & 0 & 2 & 0 \\
-    0 & 3 & -6 & 0 & 0 & 0 \\
-    0 & 3 & 6 & -4 & 2 & 0 \\
-    0 & 3 & 6 & 3 & -12 & 0
-\end{array}\right]
-\begin{array}{ccccc}
-    \\
-    \\
-    +r_2\\
-    +r_2\\
-    +r_2
-\end{array}
-\leadsto
-$\\
-$
-\left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    0 & -3 & 2 & 0 & 2 & 0 \\
-    0 & 0 & -4 & 0 & 2 & 0 \\
-    0 & 0 & 8 & -4 & 4 & 0 \\
-    0 & 0 & 8 & 3 & -10 & 0
-\end{array}\right]
-\begin{array}{ccccc}
-    \cdot 2
-\end{array}
-\leadsto
-\left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    0 & -3 & 2 & 0 & 2 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 8 & -4 & 4 & 0 \\
-    0 & 0 & 8 & 3 & -10 & 0
-\end{array}\right]
-\begin{array}{ccccc}
-    \\
-    \\
-    \\
-    +r_3\\
-    +r_3
-\end{array}
-\leadsto
-$\\
-$
-\left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    0 & -3 & 2 & 0 & 2 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 0 & -4 & 8 & 0 \\
-    0 & 0 & 0 & 3 & -6 & 0
-\end{array}\right]
-\begin{array}{ccccc}
-    \\
     \\
     \\
     \cdot 3\\
-    \cdot 4
+    \\
+    \cdot 12\\
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    0 & -3 & 2 & 0 & 2 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 0 & -12 & 24 & 0 \\
-    0 & 0 & 0 & 12 & -24 & 0
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    0 & -6 & 4 & 3 & 2 & 0 \\
+    0 & 6 & -12 & 9 & 6 & 0 \\
+    0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+    0 & 6 & 0 & 3 & -12 & 0
 \end{array}\right]
 \begin{array}{ccccc}
     \\
     \\
+    +r_2\\
     \\
-    \\
-    +r_4
+    +r_2\\
 \end{array}
 \leadsto
 $\\
 $
 \left[\begin{array}{ccccc|c}
-    -2 & 1 & 2 & 0 & 0 & 0 \\
-    0 & -3 & 2 & 0 & 2 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 0 & -12 & 24 & 0 \\
-    0 & 0 & 0 & 0 & 0 & 0
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    0 & -6 & 4 & 3 & 2 & 0 \\
+    0 & 0 & -8 & 12 & 8 & 0 \\
+    0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+    0 & 0 & 4 & 6 & -10 & 0
 \end{array}\right]
 \begin{array}{ccccc}
-    \cdot 4\\
-    \cdot 4\\
     \\
     \\
+    \\
+    \\
+    \cdot 2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    0 & -6 & 4 & 3 & 2 & 0 \\
+    0 & 0 & -8 & 12 & 8 & 0 \\
+    0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+    0 & 0 & 8 & 12 & -20 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \\
+    \\
+    \\
+    \\
+    +r_3\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccccc|c}
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    0 & -6 & 4 & 3 & 2 & 0 \\
+    0 & 0 & -8 & 12 & 8 & 0 \\
+    0 & 0 & 0 & -1 & \frac{1}{2} & 0 \\
+    0 & 0 & 0 & 24 & -12 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \\
+    \\
+    \\
+    \cdot 24\\
     \\
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    -8 & 4 & 8 & 0 & 0 & 0 \\
-    0 & -12 & 8 & 0 & 8 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 0 & -12 & 24 & 0 \\
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    0 & -6 & 4 & 3 & 2 & 0 \\
+    0 & 0 & -8 & 12 & 8 & 0 \\
+    0 & 0 & 0 & -24 & 12 & 0 \\
+    0 & 0 & 0 & 24 & -12 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    \\
+    \\
+    \\
+    \\
+    +r_4\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccccc|c}
+    -4 & 2 & 4 & 1 & 2 & 0 \\
+    0 & -6 & 4 & 3 & 2 & 0 \\
+    0 & 0 & -8 & 12 & 8 & 0 \\
+    0 & 0 & 0 & -24 & 12 & 0 \\
     0 & 0 & 0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccccc}
-    +r_3\\
-    +r_3\\
+    \cdot 6\\
+    \cdot 2\\
+    \cdot \frac{1}{2}\\
+    \cdot \frac{1}{4}\\
     \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccccc|c}
+    -36 & 12 & 24 & 6 & 12 & 0 \\
+    0 & -12 & 8 & 6 & 4 & 0 \\
+    0 & 0 & -4 & 6 & 4 & 0 \\
+    0 & 0 & 0 & -6 & 3 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccccc}
+    +r_4\\
+    +r_4\\
+    +r_4\\
     \\
     \\
 \end{array}
@@ -1154,25 +1170,25 @@ $
 $\\
 $
 \left[\begin{array}{ccccc|c}
-    -8 & 4 & 0 & 0 & 4 & 0 \\
-    0 & -12 & 0 & 0 & 12 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 0 & -12 & 24 & 0 \\
+    -36 & 12 & 24 & 0 & 15 & 0 \\
+    0 & -12 & 8 & 0 & 7 & 0 \\
+    0 & 0 & -4 & 0 & 7 & 0 \\
+    0 & 0 & 0 & -6 & 3 & 0 \\
     0 & 0 & 0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccccc}
-    \cdot 3\\
-    \\
+    +6r_3\\
+    +2r_3\\
     \\
     \\
     \\
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    -24 & 12 & 0 & 0 & 12 & 0 \\
-    0 & -12 & 0 & 0 & 12 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 0 & -12 & 24 & 0 \\
+    -36 & 12 & 0 & 0 & 57 & 0 \\
+    0 & -12 & 0 & 0 & 21 & 0 \\
+    0 & 0 & -4 & 0 & 7 & 0 \\
+    0 & 0 & 0 & -6 & 3 & 0 \\
     0 & 0 & 0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccccc}
@@ -1186,25 +1202,25 @@ $
 $\\
 $
 \left[\begin{array}{ccccc|c}
-    -24 & 0 & 0 & 0 & 24 & 0 \\
-    0 & -12 & 0 & 0 & 12 & 0 \\
-    0 & 0 & -8 & 0 & 4 & 0 \\
-    0 & 0 & 0 & -12 & 24 & 0 \\
+    -36 & 0 & 0 & 0 & 78 & 0 \\
+    0 & -12 & 0 & 0 & 21 & 0 \\
+    0 & 0 & -4 & 0 & 7 & 0 \\
+    0 & 0 & 0 & -6 & 3 & 0 \\
     0 & 0 & 0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccccc}
-    \cdot (-\frac{1}{24})\\
+    \cdot (-\frac{1}{36})\\
     \cdot (-\frac{1}{12})\\
-    \cdot (-\frac{1}{8})\\
-    \cdot (-\frac{1}{12})\\
+    \cdot (-\frac{1}{4})\\
+    \cdot (-\frac{1}{6})\\
     \\
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    1 & 0 & 0 & 0 & -1 & 0 \\
-    0 & 1 & 0 & 0 & -1 & 0 \\
-    0 & 0 & 1 & 0 & -\frac{1}{2} & 0 \\
-    0 & 0 & 0 & 1 & -2 & 0 \\
+    1 & 0 & 0 & 0 & \frac{13}{6} & 0 \\
+    0 & 1 & 0 & 0 & \frac{7}{4} & 0 \\
+    0 & 0 & 1 & 0 & \frac{7}{4} & 0 \\
+    0 & 0 & 0 & 1 & \frac{1}{2} & 0 \\
     0 & 0 & 0 & 0 & 0 & 0
 \end{array}\right]
 $\\
@@ -1221,15 +1237,15 @@ Vi kan nu aflæse løsningerne til:
 =
 t
 \left[\begin{array}{c}
-    1\\
-    1\\
+    \frac{13}{6}\\
+    \frac{7}{4}\\
+    \frac{7}{4}\\
     \frac{1}{2}\\
-    2\\
     1\\
 \end{array}\right]
 \]
 
-Vi ser nu, at side 4 er vigtigst, 1, 2, 5 næst mest vigtige, og 3 er mindst vigtig.
+Vi ser nu, at side 1 er vigtigst, 2 og 3 er næst mest vigtige, 5 er næst mindst vigtig, og 4 er mindst vigtig.
 
 \section[Opgave]{Opgave}
 Se vedhæftede python-fil.
