@@ -237,104 +237,19 @@ Vi opskriver igen vores ligningssystem som en totalmatrix, og erstatter denne ga
 $
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
-    0 & 0 & 4\cdot2 & 2 \\
+    2 & 2 & 4\cdot2 & 2 \\
     2 & 2 & 2\cdot2^2 & 0
 \end{array}\right]
 reducer
 \leadsto
 \left[\begin{array}{ccc|c}
     1 & 2 & 8 & 2 \\
-    0 & 0 & 8 & 2 \\
+    2 & 2 & 8 & 2 \\
     2 & 2 & 8 & 0
-\end{array}\right]
-\begin{array}{ccc}
-    \\
-    r_2\leftrightarrow r_3\\
-    \\
-\end{array}
-\leadsto
-\left[\begin{array}{ccc|c}
-    1 & 2 & 8 & 2 \\
-    2 & 2 & 8 & 0 \\
-    0 & 0 & 8 & 2
-\end{array}\right]
-\begin{array}{ccc}
-    \\
-    -2r_1\\
-    \\
-\end{array}
-\leadsto
-$
-
-$
-\left[\begin{array}{ccc|c}
-    1 & 2 & 8 & 2 \\
-    0 & -2 & -8 & -4 \\
-    0 & 0 & 8 & 2
-\end{array}\right]
-\begin{array}{ccc}
-    -r_3\\
-    \\
-    \\
-\end{array}
-\leadsto
-\left[\begin{array}{ccc|c}
-    1 & 2 & 0 & 0 \\
-    0 & -2 & -8 & -4 \\
-    0 & 0 & 8 & 2
-\end{array}\right]
-\begin{array}{ccc}
-    \\
-    +r_3\\
-    \\
-\end{array}
-\leadsto
-\left[\begin{array}{ccc|c}
-    1 & 2 & 0 & 0 \\
-    0 & -2 & 0 & -2 \\
-    0 & 0 & 8 & 2
-\end{array}\right]
-\begin{array}{ccc}
-    +r_2\\
-    \\
-    \\
-\end{array}
-\leadsto
-$
-
-$
-\left[\begin{array}{ccc|c}
-    1 & 0 & 0 & -2 \\
-    0 & -2 & 0 & -2 \\
-    0 & 0 & 8 & 2
-\end{array}\right]
-\begin{array}{ccc}
-    \\
-    \cdot(-\frac{1}{2})\\
-    \cdot \frac{1}{8}\\
-\end{array}
-\leadsto
-\left[\begin{array}{ccc|c}
-    1 & 0 & 0 & -2 \\
-    0 & 1 & 0 & 1 \\
-    0 & 0 & 1 & \frac{1}{4}
 \end{array}\right]
 $\\
 
-Vi kan nu aflæse løsningen til:
-\[
-\left[\begin{array}{c}
-    x_1\\
-    x_2\\
-    x_3
-\end{array}\right]
-=
-\left[\begin{array}{c}
-    -2\\
-    1\\
-    \frac{1}{4}
-\end{array}\right]
-\]\\
+Vi ser med det samme, at række 2 og 3 har samme variablekonstanter, men er lig 2 forskellige værdier. Dette betyder, at der ikke er nogen løsninger til ligningssystemet, når $a=2$.\\
 
 Lad os nu se, hvad vi får, hvis vi bruger den rækkereducerede totalmatrix fra tidligere, når vi erstatter $a$ med 2:\\
 
@@ -1153,7 +1068,7 @@ $
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    -36 & 12 & 24 & 6 & 12 & 0 \\
+    -24 & 12 & 24 & 6 & 12 & 0 \\
     0 & -12 & 8 & 6 & 4 & 0 \\
     0 & 0 & -4 & 6 & 4 & 0 \\
     0 & 0 & 0 & -6 & 3 & 0 \\
@@ -1170,7 +1085,7 @@ $
 $\\
 $
 \left[\begin{array}{ccccc|c}
-    -36 & 12 & 24 & 0 & 15 & 0 \\
+    -24 & 12 & 24 & 0 & 15 & 0 \\
     0 & -12 & 8 & 0 & 7 & 0 \\
     0 & 0 & -4 & 0 & 7 & 0 \\
     0 & 0 & 0 & -6 & 3 & 0 \\
@@ -1185,7 +1100,7 @@ $
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    -36 & 12 & 0 & 0 & 57 & 0 \\
+    -24 & 12 & 0 & 0 & 57 & 0 \\
     0 & -12 & 0 & 0 & 21 & 0 \\
     0 & 0 & -4 & 0 & 7 & 0 \\
     0 & 0 & 0 & -6 & 3 & 0 \\
@@ -1202,14 +1117,14 @@ $
 $\\
 $
 \left[\begin{array}{ccccc|c}
-    -36 & 0 & 0 & 0 & 78 & 0 \\
+    -24 & 0 & 0 & 0 & 78 & 0 \\
     0 & -12 & 0 & 0 & 21 & 0 \\
     0 & 0 & -4 & 0 & 7 & 0 \\
     0 & 0 & 0 & -6 & 3 & 0 \\
     0 & 0 & 0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccccc}
-    \cdot (-\frac{1}{36})\\
+    \cdot (-\frac{1}{24})\\
     \cdot (-\frac{1}{12})\\
     \cdot (-\frac{1}{4})\\
     \cdot (-\frac{1}{6})\\
@@ -1217,7 +1132,7 @@ $
 \end{array}
 \leadsto
 \left[\begin{array}{ccccc|c}
-    1 & 0 & 0 & 0 & -\frac{13}{6} & 0 \\
+    1 & 0 & 0 & 0 & -\frac{13}{4} & 0 \\
     0 & 1 & 0 & 0 & -\frac{7}{4} & 0 \\
     0 & 0 & 1 & 0 & -\frac{7}{4} & 0 \\
     0 & 0 & 0 & 1 & -\frac{1}{2} & 0 \\
@@ -1237,7 +1152,7 @@ Vi kan nu aflæse løsningerne til:
 =
 t
 \left[\begin{array}{c}
-    \frac{13}{6}\\
+    \frac{13}{4}\\
     \frac{7}{4}\\
     \frac{7}{4}\\
     \frac{1}{2}\\
