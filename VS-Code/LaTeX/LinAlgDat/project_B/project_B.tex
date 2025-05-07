@@ -1,0 +1,288 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{standalone}
+\usepackage{amsmath}
+\input{../../sty/setup.sty}
+
+% Changes sections from 1.1 to 1.a
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\graphicspath{ {../../pictures/IDMA/IDMA3_a}} 
+\title{Københavns Universitet\\
+LinAlgDat - Project B}
+\author{Victor Vangkilde Jørgensen - kft410\\ 
+kft410@alumni.ku.dk\\
+Hold 13 Mach}
+
+\begin{document}
+\input{../../sty/cover.sty} 
+\input{../../sty/header.sty} 
+\maketitle 
+
+\section[Opgave]{Opgave}
+\subsection{}
+
+Vi kan aflæse $M_a$ til:\\
+\[
+\left[\begin{array}{ccc}
+    a & -1 & -1 \\
+    0 & (a-1) & -1 \\
+    0 & 2 & (a+2)
+\end{array}\right]
+\]
+
+
+\subsection{}
+$
+\left[\begin{array}{ccc|c}
+    a & -1 & -1 & 0 \\
+    0 & a-1 & -1 & 0 \\
+    0 & 2 & a+2 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot \frac{1}{a-1} \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    a & -1 & -1 & 0 \\
+    0 & 1 & -\frac{1}{a-1} & 0 \\
+    0 & 2 & a+2 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    -2r_2\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    a & -1 & -1 & 0 \\
+    0 & 1 & -\frac{1}{a-1} & 0 \\
+    0 & 0 & \frac{a^2+a}{a-1} & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot \frac{a-1}{a^2+a}\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    a & -1 & -1 & 0 \\
+    0 & 1 & -\frac{1}{a-1} & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    +r_3\\
+    +r_3 \cdot \frac{1}{a-1}\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    a & -1 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    +r_2\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    a & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot \frac{1}{a}\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+$\\
+
+$T_a$ er altså injektiv.\\
+$T_a$ er surjektiv, da vi har 3 vektoerer. $T_a$ er dermed bijektiv, da den både er injektiv og surjektiv.\\
+
+Vi bestemmer nu $T^{-1}_a$:
+
+$
+\left[\begin{array}{ccc|ccc}
+    a & -1 & -1 & 1 & 0 & 0 \\
+    0 & a-1 & -1 & 0 & 1 & 0 \\
+    0 & 2 & a+2 & 0 & 0 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot \frac{1}{a-1} \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|ccc}
+    a & -1 & -1 & 1 & 0 & 0 \\
+    0 & 1 & -\frac{1}{a-1} & 0 & \frac{1}{a-1} & 0 \\
+    0 & 2 & a+2 & 0 & 0 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    -2r_2\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|ccc}
+    a & -1 & -1 & 1 & 0 & 0 \\
+    0 & 1 & -\frac{1}{a-1} & 0 & \frac{1}{a-1} & 0 \\
+    0 & 0 & \frac{a^2+a}{a-1} & 0 & -\frac{2}{a-1} & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot \frac{a-1}{a^2+a}\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|ccc}
+    a & -1 & -1 & 1 & 0 & 0 \\
+    0 & 1 & -\frac{1}{a-1} & 0 & \frac{1}{a-1} & 0 \\
+    0 & 0 & 1 & 0 & -\frac{2}{a^2+a} & \frac{a-1}{a^2+a}
+\end{array}\right]
+\begin{array}{ccc}
+    +r_3\\
+    +r_3 \cdot \frac{1}{a-1}\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|ccc}
+    a & -1 & 0 & 1 & -\frac{2}{a^2+a} & \frac{a-1}{a^2+a} \\
+    0 & 1 & 0 & 0 & \frac{a+2}{a^2+a} & \frac{1}{a^2+a} \\
+    0 & 0 & 1 & 0 & -\frac{2}{a^2+a} & \frac{a-1}{a^2+a}
+\end{array}\right]
+\begin{array}{ccc}
+    +r_2\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|ccc}
+    a & 0 & 0 & 1 & \frac{1}{a+1} & \frac{1}{a+1} \\
+    0 & 1 & 0 & 0 & \frac{a+2}{a^2+a} & \frac{1}{a^2+a} \\
+    0 & 0 & 1 & 0 & -\frac{2}{a^2+a} & \frac{a-1}{a^2+a}
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot \frac{1}{a}\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|ccc}
+    1 & 0 & 0 & \frac{1}{a} & \frac{1}{a^2+a} & \frac{1}{a^2+a} \\
+    0 & 1 & 0 & 0 & \frac{a+2}{a^2+a} & \frac{1}{a^2+a} \\
+    0 & 0 & 1 & 0 & -\frac{2}{a^2+a} & \frac{a-1}{a^2+a}
+\end{array}\right]
+$\\
+
+\subsection{}
+Vi opstill igen $T_a$, hvor $a = -1$:\\
+
+$
+\left[\begin{array}{ccc|c}
+    -1 & -1 & -1 & 0 \\
+    0 & -1-1 & -1 & 0 \\
+    0 & 2 & -1+2 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    reducer\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    -1 & -1 & -1 & 0 \\
+    0 & -2 & -1 & 0 \\
+    0 & 2 & 1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    -r_2\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    -1 & -1 & -1 & 0 \\
+    0 & -2 & -1 & 0 \\
+    0 & 0 & 2 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot \frac{1}{2}\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    -1 & -1 & -1 & 0 \\
+    0 & -2 & -1 & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    +r_3\\
+    +r_3\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    -1 & -1 & 0 & 0 \\
+    0 & -2 & 0 & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot (-1)\\
+    \cdot (-\frac{1}{2})\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    -r_2\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0
+\end{array}\right]
+$\\
+
+\subsection{}
+
+
+\subsection{}
+
+
+\end{document}
