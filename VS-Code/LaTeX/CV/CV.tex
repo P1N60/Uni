@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11.5pt]{article}
 \usepackage[a4paper,margin=1in]{geometry} % Proper margins
 \usepackage{graphicx}
 \usepackage{enumitem}
@@ -7,6 +7,8 @@
 \input{../sty/setup.sty}
 \graphicspath{ {../pictures/CV}}
 
+\pagestyle{empty}
+
 \newcommand{\name}{Victor Vangkilde Jørgensen}
 \newcommand{\phone}{+45 42 49 40 31}
 \newcommand{\emailBusiness}{victor.guldregn@gmail.com}
@@ -14,17 +16,28 @@
 
 \begin{document}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.19\textwidth, trim={3cm 2cm 1.5cm 4cm}, clip, cfbox=gr 1.25pt 0pt]{profilbillede.jpg}
-\end{figure}
-
 \noindent
-\textbf{Name:} \name\\
-\textbf{Business Email:} \emailBusiness\\
-\textbf{Student Email} \emailStudent\\
-\textbf{GitHub:} \href{https://github.com/P1N60}{\textit{Victor V. Jørgensen}}\\
-\textbf{Phone:} \phone
+\begin{minipage}[t]{0.74\textwidth}
+    \section*{Personal Information}
+    \vspace{0pt}  % force top alignment
+    \textbf{Name:} \\
+    \name\\
+    \textbf{Business Email:}\\
+    \emailBusiness\\
+    \textbf{Student Email:}\\
+    \emailStudent\\
+    \textbf{GitHub:}\\ 
+    \href{https://github.com/P1N60}{\textit{Victor V. Jørgensen}}\\
+    \textbf{Phone:}\\
+    \phone
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.24\textwidth}
+    \vspace{0pt}  % force top alignment
+    \includegraphics[width=0.85\textwidth, trim={3cm 2cm 1.5cm 4cm}, clip, cfbox=black 0.75pt 0.75pt]{profilbillede.jpg}
+\end{minipage}\\
+
+\noindent\rule{\textwidth}{0.6pt}
 
 \section*{Education}
 \textbf{University of Copenhagen, Department of Computer Science} \hfill 2024 -- Present \\
@@ -34,20 +47,24 @@ Biochemistry Program
 
 \section*{Completed Courses}
 \textbf{Introduction to Mathematics for Science} \hfill 7.5 ECTS\\
-\textbf{Programming and Problem Solving} \hfill 15 ECTS\\
+\textbf{Programming and Problem Solving} \hfill 15.0 ECTS\\
 \textbf{Probability Theory and Statistics} \hfill 7.5 ECTS\\
 \textbf{Introduction to Discrete Mathematics \& Algorithms} \hfill 7.5 ECTS\\ 
 \textbf{Fundamentals of Data Science} \hfill 7.5 ECTS
 
 \section*{Technical Skills}
-\textbf{Microsoft Office 365:} Teams, Word, Excel, PowerPoint, Outlook, OneNote, OneDrive. \\
-\textbf{Mathematical software:} Maple, TI-Nspire and RStudio. \\
-\textbf{1+ years of experience in:} Python, Multiple AI libraries like 'Scikit-learn', Jupyter, Git, R, F\# and \LaTeX.
+\textbf{Microsoft Office 365: (and all the google equivalent apps)}\\
+Teams, Word, Excel, PowerPoint, Outlook, OneNote, OneDrive. \\
+\textbf{Mathematical software:}\\
+Maple, TI-Nspire and RStudio. \\
+\textbf{Programming languages and libraries:}\\
+Python, Multiple AI libraries like 'Scikit-learn', Jupyter, Git, SQL, Power BI, R, HTML5, F\# and \LaTeX.
 
 \section*{Previous Data Science Projects}
-\textbf{Supervised natural language model for fake news detection.}\quad \href{https://github.com/P1N60/gdsProjekt}{\textit{GitHub Link}} \\
-\textbf{Supervised regression model for stock price prediction.} \\
-\textbf{Supervised classification model for image recognition.}
+\textbf{Supervised natural language model for fake news detection}\hfill \href{https://github.com/P1N60/fake_news_detection_model}{\textit{GitHub}} \\
+\textbf{Supervised regression model for stock price prediction}\hfill \href{https://github.com/P1N60/stock_predictor}{\textit{GitHub}} \\
+\textbf{Supervised classification model for image recognition}\hfill \href{https://github.com/P1N60/image_classifier}{\textit{GitHub}}\\
+\textbf{Interactive ecosystem simulation for simulation of evolution }\hfill \href{https://github.com/P1N60/ecosystem_simulation}{\textit{GitHub}}
 
 \section*{Work Experience}
 \textbf{Consultant Mentor in Mathematics, MentorDanmark} \hfill 2023 -- Present \\
