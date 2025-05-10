@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1746778600.15023 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" "CV.pdf" "CV" 1746778601.35065 0
+["pdflatex"] 1746884483.63709 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" "CV.pdf" "CV" 1746884484.73324 0
   "../pictures/CV/profilbillede.jpg" 1740382270.29322 1263492 8a487fafff0381f03f4d3ffdc788cb3e ""
-  "../sty/setup.sty" 1746776772.38946 10299 f0730de58d794044e1ba6eb764695869 ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" 1746778599.89847 3119 a5436b13741236fae3dfd99933b4575d ""
+  "../sty/setup.sty" 1746884476.06579 10268 8f4220a4aeead80d2a40accd627c45cb ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/CV/CV.tex" 1746884482.23712 3150 f956b911fe98e808ea64310150c9d4e6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -251,8 +251,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "CV.aux" 1746778601.24722 364 729e127e86ce98c333c30e315e44bfea "pdflatex"
-  "CV.tex" 1746778599.89847 3119 a5436b13741236fae3dfd99933b4575d ""
+  "CV.aux" 1746884484.63551 364 729e127e86ce98c333c30e315e44bfea "pdflatex"
+  "CV.tex" 1746884482.23712 3150 f956b911fe98e808ea64310150c9d4e6 ""
   (generated)
   "CV.aux"
   "CV.log"

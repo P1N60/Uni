@@ -284,5 +284,377 @@ $\\
 
 \subsection{}
 
+\section[Opgave]{Opgave}
+\subsection{}
+Vi opstiller et ligningssystem i form af en totalmatrix, hvor vi sætter $u_1, u_2, u_3$ lig hhv. $v_1, v_2, v_3$, og finder løsningerne til disse, ved brug af Gauss-Jordan elimination.\\
+
+$u_1 + u_2 + u_3 = v_1 \Leftrightarrow$\\
+
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 7\\
+    1 & 1 & -1 & -2\\
+    -1 & -1 & 2 & 3\\
+    1 & 1 & 2 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot 2\\
+    \cdot (-2)\\
+    \cdot 2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 7\\
+    2 & 2 & -2 & -4\\
+    2 & 2 & -4 & -6\\
+    2 & 2 & 4 & 2
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -r_1\\
+    -r_1\\
+    -r_1\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 7\\
+    0 & 2 & -3 & -11\\
+    0 & 2 & -5 & -13\\
+    0 & 2 & 3 & -5
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    -r_2\\
+    -r_2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 7\\
+    0 & 2 & -3 & -11\\
+    0 & 0 & -2 & -2\\
+    0 & 0 & 6 & 6
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \\
+    +3r_3\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 7\\
+    0 & 2 & -3 & -11\\
+    0 & 0 & -2 & -2\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot (-\frac{1}{2})\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 7\\
+    0 & 2 & -3 & -11\\
+    0 & 0 & 1 & 1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    -1r_3\\
+    +3r_3\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 0 & 6\\
+    0 & 2 & 0 & -8\\
+    0 & 0 & 1 & 1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot \frac{1}{2}\\
+    \cdot \frac{1}{2}\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 3\\
+    0 & 1 & 0 & -4\\
+    0 & 0 & 1 & 1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+$\\
+
+Vores første kolonne i $P_{B\leftarrow C}$ er dermed: 
+$\left[\begin{array}{ccc}
+    3\\
+    -4\\
+    1\\
+    0\\
+\end{array}\right]$\\
+
+$u_1 + u_2 + u_3 = v_2 \Leftrightarrow$\\
+
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & -1\\
+    1 & 1 & -1 & 0\\
+    -1 & -1 & 2 & -1\\
+    1 & 1 & 2 & -3
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot 2\\
+    \cdot (-2)\\
+    \cdot 2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & -1\\
+    2 & 2 & -2 & 0\\
+    2 & 2 & -4 & 2\\
+    2 & 2 & 4 & -6
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -r_1\\
+    -r_1\\
+    -r_1\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & -1\\
+    0 & 2 & -3 & 1\\
+    0 & 2 & -5 & 3\\
+    0 & 2 & 3 & -5
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    -r_2\\
+    -r_2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & -1\\
+    0 & 2 & -3 & 1\\
+    0 & 0 & -2 & 2\\
+    0 & 0 & 6 & -6
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \\
+    +3r_3\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & -1\\
+    0 & 2 & -3 & 1\\
+    0 & 0 & -2 & 2\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot (-\frac{1}{2})\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & -1\\
+    0 & 2 & -3 & 1\\
+    0 & 0 & 1 & -1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    -1r_3\\
+    +3r_3\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 0 & 0\\
+    0 & 2 & 0 & -2\\
+    0 & 0 & 1 & -1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot \frac{1}{2}\\
+    \cdot \frac{1}{2}\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & -1\\
+    0 & 0 & 1 & -1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+$\\
+
+Vores anden kolonne i $P_{B\leftarrow C}$ er dermed: 
+$\left[\begin{array}{ccc}
+    0\\
+    -1\\
+    -1\\
+    0\\
+\end{array}\right]$\\
+
+$u_1 + u_2 + u_3 = v_3 \Leftrightarrow$\\
+
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 3\\
+    1 & 1 & -1 & -1\\
+    -1 & -1 & 2 & 2\\
+    1 & 1 & 2 & 2
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot 2\\
+    \cdot (-2)\\
+    \cdot 2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 3\\
+    2 & 2 & -2 & -2\\
+    2 & 2 & -4 & -4\\
+    2 & 2 & 4 & 4
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -r_1\\
+    -r_1\\
+    -r_1\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 3\\
+    0 & 2 & -3 & -5\\
+    0 & 2 & -5 & -7\\
+    0 & 2 & 3 & 1
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    -r_2\\
+    -r_2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 3\\
+    0 & 2 & -3 & -5\\
+    0 & 0 & -2 & -2\\
+    0 & 0 & 6 & 6
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \\
+    +3r_3\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 3\\
+    0 & 2 & -3 & -5\\
+    0 & 0 & -2 & -2\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \cdot (-\frac{1}{2})\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 3\\
+    0 & 2 & -3 & -5\\
+    0 & 0 & 1 & 1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    -1r_3\\
+    +3r_3\\
+    \\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 0 & 2\\
+    0 & 2 & 0 & -2\\
+    0 & 0 & 1 & 1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot \frac{1}{2}\\
+    \cdot \frac{1}{2}\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    1 & 0 & 0 & 1\\
+    0 & 1 & 0 & -1\\
+    0 & 0 & 1 & 1\\
+    0 & 0 & 0 & 0
+\end{array}\right]
+$\\
+
+Vores sidste kolonne i $P_{B\leftarrow C}$ er dermed: 
+$\left[\begin{array}{ccc}
+    1\\
+    -1\\
+    1\\
+    0\\
+\end{array}\right]$\\
+
+Sammensætter vi nu vores tre kolonner til en matrix, får vi:\\
+\[
+P_{B\leftarrow C} = 
+\left[\begin{array}{ccc}
+    3 & 0 & 1\\
+    -4 & -1 & -1\\
+    1 & -1 & 1\\
+\end{array}\right]
+\]
+
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
 
 \end{document}
