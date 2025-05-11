@@ -175,8 +175,8 @@ def BackwardReduction(A: Matrix) -> Matrix:
         ElementaryRowScaling(A, i, 1 / pivot_value)
         # delete the pivot column in all rows above the current row
         for k in range(i - 1, -1, -1):
-            multiplier = -A[k, pivot_column]
-            ElementaryRowReplacement(A, k, multiplier, i)
+            m = -A[k, pivot_column]
+            ElementaryRowReplacement(A, k, m, i)
     return A
 
 def GaussElimination(A: Matrix, v: Vector) -> Vector:
