@@ -647,10 +647,98 @@ P_{B\leftarrow C} =
 \]
 
 \subsection{}
+\[
+x = 
+\left[\begin{array}{ccc}
+    7\\
+    -2\\
+    3\\
+    1
+\end{array}\right]
++
+\left[\begin{array}{ccc}
+    -1\\
+    0\\
+    -1\\
+    -1
+\end{array}\right]
++
+\left[\begin{array}{ccc}
+    3\\
+    -1\\
+    2\\
+    2
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    9\\
+    -3\\
+    4\\
+    0
+\end{array}\right]
+\]\\
 
+Da konstanterne foran $v$ i hvert led er 1, og $v_1, v_2, v_3 \in \mathcal{C}$, er koordinaterne for $x$ med henhold til $\mathcal{C}$:
+\[
+[x]_\mathcal{C} = 
+\left[\begin{array}{ccc}
+    1\\
+    1\\
+    1
+\end{array}\right]
+\]
+
+Vi benytter vores basisskriftmatrice til at transformere vores koordinater til basen $\mathcal{B}$ fra $\mathcal{C}$:
+\[
+[x]_\mathcal{B} = 
+\left[\begin{array}{ccc}
+    3 & 0 & 1\\
+    -4 & -1 & -1\\
+    1 & -1 & 1\\
+\end{array}\right]
+\left[\begin{array}{ccc}
+    1\\
+    1\\
+    1
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    4\\
+    -6\\
+    1
+\end{array}\right]
+\]
 
 \subsection{}
 
+Vi ganger kolonne 2 i vores basisskriftmatrice på $u_1$ og $u_2$:
+\[
+-1 \cdot u_1 + (-1)\cdot u_2 =
+-1 \cdot
+\left[\begin{array}{ccc}
+    0\\
+    1\\
+    -1\\
+    1
+\end{array}\right]
++
+(-1) \cdot
+\left[\begin{array}{ccc}
+    1\\
+    -1\\
+    2\\
+    2
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    -1\\
+    0\\
+    -1\\
+    -3
+\end{array}\right]
+\]\\
+
+Vi får $v_2$, så $v_2$ må dermed række spannet af $u2, u3$.
 
 \subsection{}
 

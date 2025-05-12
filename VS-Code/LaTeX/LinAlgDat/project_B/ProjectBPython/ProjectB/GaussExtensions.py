@@ -118,12 +118,12 @@ def ForwardReduction(A: Matrix) -> Matrix:
     M = A.M_Rows
     N = A.N_Cols
     iter = 0
-    while M - iter > 1:
+    while iter < M:
         # step 1 from the assignment:
         pivot_column = None
         for j in range(iter, N):
             for i in range(iter, M):
-                    if pivot_column == None and A[i, j] != 0:
+                    if abs(pivot_column == None and A[i, j]) > 1e-12:
                         pivot_column = j
         if pivot_column == None:
             iter += 1
@@ -131,7 +131,7 @@ def ForwardReduction(A: Matrix) -> Matrix:
         # step 2 from the assignment:    
         pivot_row = None 
         for i in range(iter, M):
-            if A[i, pivot_column] != 0 and pivot_row == None:
+            if abs(A[i, pivot_column]) > 1e-12 and pivot_row == None:
                 pivot_row = i
         if pivot_row == None:
             iter += 1
@@ -140,8 +140,8 @@ def ForwardReduction(A: Matrix) -> Matrix:
         pivot_row = iter
         r = A[pivot_row, pivot_column]
         for i in range(1 + iter, M):
-            m = A[i, pivot_column] / r
-            ElementaryRowReplacement(A, i, -m, pivot_row)
+            m = -A[i, pivot_column] / r
+            ElementaryRowReplacement(A, i, m, pivot_row)
         # step 3 from the assignment:
         # increment iter with 1 and run the loop again
         iter += 1
@@ -162,21 +162,29 @@ def BackwardReduction(A: Matrix) -> Matrix:
     """
     M = A.M_Rows
     N = A.N_Cols
-    for i in range(M - 1, -1, -1):
+    iter = 0
+    while iter < M:
+        # step 1 from the assignment:
+        pivot = None
+        pivot_row = None
         pivot_column = None
-        for j in range(N):
-            if A[i, j] != 0:
+        for j in range(0, N):
+            if abs(A[M - iter - 1, j]) > 1e-12:
+                pivot = A[M - iter - 1, j]
+                pivot_row = M - iter - 1
                 pivot_column = j
                 break
-        if pivot_column is None: 
+        if pivot == None:
+            iter += 1
             continue
-        # scale the pivot row to make the pivot element 1
-        pivot_value = A[i, pivot_column]
-        ElementaryRowScaling(A, i, 1 / pivot_value)
-        # delete the pivot column in all rows above the current row
-        for k in range(i - 1, -1, -1):
-            m = -A[k, pivot_column]
-            ElementaryRowReplacement(A, k, m, i)
+        c = 1 / pivot
+        ElementaryRowScaling(A, pivot_row, c)
+        for i in range(pivot_row):
+            m = -A[i, pivot_column]
+            ElementaryRowReplacement(A, i, m, pivot_row)
+        # step 2 from the assignment:
+        # increment iter with 1 and run the loop again
+        iter += 1
     return A
 
 def GaussElimination(A: Matrix, v: Vector) -> Vector:
@@ -196,4 +204,12 @@ def GaussElimination(A: Matrix, v: Vector) -> Vector:
     Return:
          M-size solution vector of the system.
     """
-    raise NotImplementedError()
+    A = AugmentRight(A, v)
+    ForwardReduction(A)
+    BackwardReduction(A)
+    N = A.N_Cols
+    n = v.__len__()
+    y = Vector(n)
+    for i in range(n):
+        y[i] = A[i, N - 1]
+    return y
