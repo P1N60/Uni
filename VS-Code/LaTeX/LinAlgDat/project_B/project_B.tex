@@ -747,4 +747,349 @@ Mangler at lave resten af opgaven
 
 \subsection{}
 
+
+\section{}
+\subsection{}
+
+\[
+\left[\begin{array}{ccc}
+    c^F_1\\
+    c^F_2\\
+    s^F_1\\
+    s^F_2
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    c_1\\
+    c_2\\
+    s_1\\
+    s_2
+\end{array}\right]
++
+\left[\begin{array}{ccc}
+    s_1-c_1\\
+    s_2-c_2\\
+    s_1-c_1\\
+    s_2-c_2
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    s_1\\
+    s_2\\
+    2s_1-c_1\\
+    2s_2-c_2
+\end{array}\right]
+\Rightarrow
+\left[\begin{array}{cccc}
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1\\
+    -1 & 0 & 2 & 0\\
+    0 & -1 & 0 & 2
+\end{array}\right]
+\]\\
+
+
+\subsection{}
+Rotation mod venstre er bestemt som:\\
+
+\[
+\left[\begin{array}{ccc}
+    s^L_1\\
+    s^L_2
+\end{array}\right]
+=
+\]
+\[
+\left[\begin{array}{ccc}
+    c_1\\
+    c_2
+\end{array}\right]
++
+\left[\begin{array}{cc}
+    cos(\theta) & -sin(\theta)\\
+    sin(\theta) & cos(\theta)
+\end{array}\right]
+\left[\begin{array}{cc}
+    s_1 -c_1\\
+    s_2 -c_2
+\end{array}\right]
+=
+\]
+\[
+\left[\begin{array}{ccc}
+    c_1\\
+    c_2
+\end{array}\right]
++
+\left[\begin{array}{c}
+    (s_1-c_1)cos(\theta) - (s_2-c_2) sin(\theta) \\
+    (s_1-c_1) sin(\theta) + (s_2-c_2) cos(\theta)
+\end{array}\right]
+=
+\]
+\[
+\left[\begin{array}{c}
+    c_1 +(s_1-c_1)cos(\theta) - (s_2-c_2) sin(\theta) \\
+    c_2 + (s_1-c_1) sin(\theta) + (s_2-c_2) cos(\theta)
+\end{array}\right]
+=
+\]
+\[
+\left[\begin{array}{cccc}
+    c_1 - c_1\cdot cos(\theta) + c_2 \cdot sin(\theta) + s_1 \cdot cos(\theta) - s_2\cdot sin(\theta)\\
+    -c_1\cdot sin(\theta) + c_2 - c_2 \cdot cos(\theta) + s_1 \cdot sin(\theta) + s_2\cdot cos(\theta)\\
+\end{array}\right]
+\Rightarrow
+\]
+\[
+\left[\begin{array}{cccc}
+    1 - cos(\theta) & sin(\theta) & cos(\theta) &  -sin(\theta)\\
+    -sin(\theta) & 1 - cos(\theta) & sin(\theta) & cos(\theta)\\
+\end{array}\right]
+\]\\
+
+Og som der fremkommer i opgaven, er:\\
+\[
+\left[\begin{array}{ccc}
+    c^L_1\\
+    c^L_2
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    c_1\\
+    c_2
+\end{array}\right]
+\]\\
+
+Den endelige matrix for rotation mod venstre er dermed bestemt ved følgende variable:\\
+\[
+L_\theta
+=
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    1 - cos(\theta) & sin(\theta) & cos(\theta) &  -sin(\theta)\\
+    -sin(\theta) & 1 - cos(\theta) & sin(\theta) & cos(\theta)\\
+\end{array}\right]
+\]
+
+
+Rotation mod højre er bestemt som:\\
+
+\[
+R_\theta = L_{-\theta}=
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    1 - cos(\theta) & -sin(\theta) & cos(\theta) &  sin(\theta)\\
+    sin(\theta) & 1 - cos(\theta) & -sin(\theta) & cos(\theta)
+\end{array}\right]
+\]
+
+\subsection{}
+Ved brug af matrixoperationerne fra python i $project \ A$, får vi følgende matricer efter vi ganger hhv. 'fremad', 'rotation til venstre' og 'rotation til højre' matricerne på til venstre:\\
+$
+\left[\begin{array}{cccc}
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1\\
+    -1 & 0 & 2 & 0\\
+    0 & -1 & 0 & 2
+\end{array}\right]
+\left[\begin{array}{cccc}
+    0.00000\\
+    0.00000\\
+    0.00000\\
+    1.00000
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    0.00000\\
+    1.00000\\
+    0.00000\\
+    2.00000
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    1 - cos(\theta) & -sin(\theta) & cos(\theta) &  sin(\theta)\\
+    sin(\theta) & 1 - cos(\theta) & -sin(\theta) & cos(\theta)
+\end{array}\right]
+\left[\begin{array}{cccc}
+    0.00000\\
+    1.00000\\
+    0.00000\\
+    2.00000
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    0.00000\\
+    1.00000\\
+    0.91295\\
+    1.40808
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    1 - cos(\theta) & -sin(\theta) & cos(\theta) &  sin(\theta)\\
+    sin(\theta) & 1 - cos(\theta) & -sin(\theta) & cos(\theta)
+\end{array}\right]
+\left[\begin{array}{cccc}
+    0.00000\\
+    1.00000\\
+    0.91295\\
+    1.40808
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    0.00000\\
+    1.00000\\
+    0.74511\\
+    0.33306
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1\\
+    -1 & 0 & 2 & 0\\
+    0 & -1 & 0 & 2
+\end{array}\right]
+\left[\begin{array}{cccc}
+    0.00000\\
+    1.00000\\
+    0.74511\\
+    0.33306
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    0.74511\\
+    0.33306\\
+    1.49023\\
+    -0.33388
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1\\
+    -1 & 0 & 2 & 0\\
+    0 & -1 & 0 & 2
+\end{array}\right]
+\left[\begin{array}{cccc}
+    0.74511\\
+    0.33306\\
+    1.49023\\
+    -0.33388
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    2.23534\\
+    -1.00081
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    1 - cos(\theta) & sin(\theta) & cos(\theta) &  -sin(\theta)\\
+    -sin(\theta) & 1 - cos(\theta) & sin(\theta) & cos(\theta)\\
+\end{array}\right]
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    2.23534\\
+    -1.00081
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    2.40317\\
+    0.07421
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    1 - cos(\theta) & sin(\theta) & cos(\theta) &  -sin(\theta)\\
+    -sin(\theta) & 1 - cos(\theta) & sin(\theta) & cos(\theta)\\
+\end{array}\right]
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    2.40317\\
+    0.07421
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    1.49023\\
+    0.66612
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    1 - cos(\theta) & sin(\theta) & cos(\theta) &  -sin(\theta)\\
+    -sin(\theta) & 1 - cos(\theta) & sin(\theta) & cos(\theta)\\
+\end{array}\right]
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    1.49023\\
+    0.66612
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    0.57728\\
+    0.07421
+\end{array}\right]
+$\\
+$
+\left[\begin{array}{cccc}
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1\\
+    -1 & 0 & 2 & 0\\
+    0 & -1 & 0 & 2
+\end{array}\right]
+\left[\begin{array}{cccc}
+    1.49023\\
+    -0.33388\\
+    0.57728\\
+    0.07421
+\end{array}\right]
+\leadsto
+\left[\begin{array}{cccc}
+    0.57728\\
+    0.07421\\
+    -0.33566\\
+    0.48229
+\end{array}\right]
+$\\
+
+Efter alle 9 multiplikationer fra venste ender vi med postionen af spilleren svarende til matricen:\\
+\[
+\left[\begin{array}{cccc}
+    0.57728\\
+    0.07421\\
+    -0.33566\\
+    0.48229
+\end{array}\right]
+\]
+
+\subsection{}
+
+
+
 \end{document}

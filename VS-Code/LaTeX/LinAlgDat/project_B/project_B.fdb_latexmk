@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1747142875.74164 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_B/project_B.tex" "project_B.pdf" "project_B" 1747142876.91174 0
+["pdflatex"] 1747241249.44613 "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_B/project_B.tex" "project_B.pdf" "project_B" 1747241250.59929 0
   "../../sty/cover.sty" 1745586833.46376 109 6f6f4e9b4e71a8e925d528bbfef8dfbf ""
   "../../sty/header.sty" 1733469646.88098 250 109f752decd82b9a012e4fb5550a366a ""
   "../../sty/setup.sty" 1746884476.06579 10268 8f4220a4aeead80d2a40accd627c45cb ""
-  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_B/project_B.tex" 1747142873.94484 12621 f339e6b8e45cd98282391cf27b229dad ""
+  "/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_B/project_B.tex" 1747241247.80397 19111 e0a0a486e0af9f0f6e180c4987a9303f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -279,9 +279,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732550961.1107 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732550933 8221432 b8f0c8edf8f2189976ee4ade65409321 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "project_B.aux" 1747142876.79764 3044 2229983a3c299357b0a763caec7623bf "pdflatex"
-  "project_B.tex" 1747142873.94484 12621 f339e6b8e45cd98282391cf27b229dad ""
-  "project_B.toc" 1747142876.79949 813 68f70e5e1117e34f652898124ee28741 "pdflatex"
+  "project_B.aux" 1747241250.48373 4095 89e8c869dd0e3ff0120df62003e73e03 "pdflatex"
+  "project_B.tex" 1747241247.80397 19111 e0a0a486e0af9f0f6e180c4987a9303f ""
+  "project_B.toc" 1747241250.4861 1133 37b32c00fd3606be702a47bd302e71c3 "pdflatex"
   (generated)
   "project_B.aux"
   "project_B.log"

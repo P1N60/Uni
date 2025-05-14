@@ -125,3 +125,59 @@ def VectorNorm(v: Vector) -> float:
     # Take the root
     norm = math.sqrt(norm)
     return norm
+
+start_matrix = (
+Matrix.fromArray(
+    [[0],
+     [0],
+     [0],
+     [1]
+    ]
+))
+
+forward = (
+Matrix.fromArray(
+    [[0, 0, 1, 0],
+     [0, 0, 0, 1],
+     [-1, 0, 2, 0],
+     [0, -1, 0, 2]
+    ]
+))
+
+rotate_left = (
+Matrix.fromArray(
+    [[1, 0, 0, 0],
+     [0, 1, 0, 0],
+     [1-math.cos(20), math.sin(20), math.cos(20), -math.sin(20)],
+     [-math.sin(20), 1-math.cos(20), math.sin(20), math.cos(20)]
+    ]
+))
+
+rotate_right = (
+Matrix.fromArray(
+    [[1, 0, 0, 0],
+     [0, 1, 0, 0],
+     [1-math.cos(20), -math.sin(20), math.cos(20), math.sin(20)],
+     [math.sin(20), 1-math.cos(20), -math.sin(20), math.cos(20)]
+    ]
+))
+
+print(start_matrix)
+matrix = MatrixProduct(forward, start_matrix)
+print(matrix)
+matrix = MatrixProduct(rotate_right, matrix)
+print(matrix)
+matrix = MatrixProduct(rotate_right, matrix)
+print(matrix)
+matrix = MatrixProduct(forward, matrix)
+print(matrix)
+matrix = MatrixProduct(forward, matrix)
+print(matrix)
+matrix = MatrixProduct(rotate_left, matrix)
+print(matrix)
+matrix = MatrixProduct(rotate_left, matrix)
+print(matrix)
+matrix = MatrixProduct(rotate_left, matrix)
+print(matrix)
+matrix = MatrixProduct(forward, matrix)
+print(matrix)
