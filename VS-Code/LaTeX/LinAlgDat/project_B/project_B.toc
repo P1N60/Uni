@@ -9,10 +9,11 @@
 \contentsline {subsection}{\numberline {2.a}}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.b}}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.c}}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.d}}{6}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.e}}{6}{subsection.2.5}%
-\contentsline {section}{\numberline {3}}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.a}}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2.d}}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.e}}{7}{subsection.2.5}%
+\contentsline {section}{\numberline {3}}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.a}}{7}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.b}}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.c}}{7}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.d}}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.c}}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.d}}{9}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Opgave}{9}{section.4}%

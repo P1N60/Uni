@@ -1,1 +1,1 @@
-SELECT * FROM pc;
+SELECT model FROM pc;

@@ -279,6 +279,51 @@ $
 \end{array}\right]
 $\\
 
+Vi gør det samme for $a= 0$:\\
+
+$
+\left[\begin{array}{ccc|c}
+    0 & -1 & -1 & 0\\
+    0 & (0-1) & -1 & 0\\
+    0 & 2 & (0+2) & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    reducer\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    0 & -1 & -1 & 0 \\
+    0 & -1 & -1 & 0 \\
+    0 & 2 & 2 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -r_1\\
+    +2r_2\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    0 & -1 & -1 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot (-1)\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}\right]
+$\\
+
 \subsection{}
 
 
@@ -1078,7 +1123,7 @@ $
 \end{array}\right]
 $\\
 
-Efter alle 9 multiplikationer fra venste ender vi med postionen af spilleren svarende til matricen:\\
+Efter alle 9 multiplikationer fra venste ender vi med postionen af spilleren og sidsen svarende til matricen:\\
 \[
 \left[\begin{array}{cccc}
     0.57728\\
@@ -1089,6 +1134,45 @@ Efter alle 9 multiplikationer fra venste ender vi med postionen af spilleren sva
 \]
 
 \subsection{}
+At gange vores 'rotation mod højre' matrice på sig selv svarer til at gange det antal gange med vinkeln $\theta$, da:
+\[
+R_{\theta 1} \cdot R_{\theta 2} = R_{\theta 1 + \theta 2}
+\]
+og
+\[
+(R_\theta)^{n} = \prod_{i=1}^{n} R_{\theta i} = R_{\theta 1 + \theta 2 + \ \dots \ + \theta n }
+\]
+Vi kan dermed beregne $(R_{20})^{18}$ til:
+\[
+(R_{20})^{18} = \prod_{i=1}^{18} R_{20} = R_{20 \cdot 18} = R_{360}
+\]
+Med vores nye vinkel beregnet, kan vi nu indsætte $360$ på $\theta $-s plads i $R_\theta$:
+\[
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    1 - cos(360) & -sin(360) & cos(360) &  sin(360)\\
+    sin(360) & 1 - cos(360) & -sin(360) & cos(360)
+\end{array}\right]
+=
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    1 - 1 & 0 & 1 &  0\\
+    0 & 1 - 1 & 0 & 1
+\end{array}\right]
+=
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 1
+\end{array}\right]
+\]
+Således ender vi med enhedsmatricen $I_4$.
+
+\section[Opgave]{Opgave}
+Se vedhæftede python-fil.
 
 
 
