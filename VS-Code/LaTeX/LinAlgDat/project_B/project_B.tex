@@ -121,14 +121,14 @@ $\\
 
 Da ker $T_a = \{0\}$, er $T_a$ injektiv.\\
 
-$T_a$ er surjektiv, hvis ran $T_a$ = $\R^3$, da vores vektorer har 3 koordinater.
+$T_a$ er surjektiv, hvis dimensionen af det udspændte rum er det samme som dimensionen af transformationsmatricen.
 
 \[
-rank (T_a) = dim(ran (T_a)) = 3
+dim(ran (T_a)) = rank (T_a) = 3
 \]\\
 da vi har 3 pivotelementer.\\
 
-Da dimissionen af ran $T_a$ er lig dimissionen af vektoerene der udgør $T_a$, er $T_a$ surjektiv. $T_a$ er dermed bijektiv, da den både er injektiv og surjektiv.\\
+Da søjlerne i $T_a$ udspænder hele $\R^3$, er $T_a$ surjektiv. $T_a$ er dermed bijektiv, da den både er injektiv og surjektiv.\\
 
 Vi bestemmer nu $T^{-1}_a$, ved at sætte enhedsmatricen på til højre, og reducere med Gauss-Jordan:\\
 
@@ -307,6 +307,42 @@ t
 \end{array}\right]
 \]
 
+Kigger vi nu på baserne for spannet af $T_{-1}$, ser vi, at vi kun skal benytte $x_1$ og $x_2$, da $x_3$ er en fri variable. 
+
+\[
+span(T_{-1}) = \left\{ 
+\left[\begin{array}{ccc|c}
+    -1 \\
+    0   \\
+    0  
+\end{array}\right]\
+,
+\left[\begin{array}{ccc|c}
+    -1 \\
+    -2   \\
+    2  
+\end{array}\right]
+\right\}
+\Rightarrow
+dim(ran(T_{-1})) = 2
+\]
+hvilket igen giver mening, da vi har 2 pivotelementer.\\
+
+Da vi valgte at løse efter nulrummet for $T_{-1}$, har vi nu de løsninger, som udspænder netop dette:\\
+
+\[
+ker(T_{-1}) = 
+\left[\begin{array}{ccc}
+    -\frac{1}{2}\\
+    -\frac{1}{2}\\
+    1\\
+\end{array}\right]
+\Rightarrow
+dim(ker(T_{-1})) = 1
+\]
+
+Så dimensionen af $ran(T_{-1}) = 2$, og dimensionen af $ker(T_{-1}) = 1$\\
+
 Vi gør det samme for $a= 0$:\\
 
 $
@@ -352,10 +388,203 @@ $
 \end{array}\right]
 $\\
 
+Her kan løsningerne aflæses til:\\
+
+\[
+\left[\begin{array}{ccc}
+    x_1\\
+    x_2\\
+    x_3\\
+\end{array}\right]
+=
+t
+\left[\begin{array}{ccc}
+    1\\
+    0\\
+    0\\
+\end{array}\right]
++
+s
+\left[\begin{array}{ccc}
+    0\\
+    -1\\
+    1\\
+\end{array}\right]
+\]
+
+Vi har 1 pivotelement, som vi finder i 2. søjle.\\
+
+\[
+\left[\begin{array}{ccc|c}
+    -1 \\
+    -1 \\
+    2 
+\end{array}\right]
+= ran(T_{0}) \Rightarrow dim(ran(T_{0})) = 1
+\]
+
+og for kernen:\\
+
+\[
+\left\{
+\left[\begin{array}{ccc|c}
+    0 \\
+    0 \\
+    0
+\end{array}\right]
+,
+\left[\begin{array}{ccc|c}
+    1 \\
+    1 \\
+    -2
+\end{array}\right]
+\right\}
+= ker(T_{0}) \Rightarrow dim(ker(T_{0})) = 2
+\]
+
+\subsection{}
+Ganger vi $M_{-1}$ med sig selv, får vi:\\
+\[
+M_{-1}^2 = M_{-1}\cdot M_{-1}=
+\left[\begin{array}{ccc}
+    -1 & -1 & -1 \\
+    0 & -2 & -1 \\
+    0 & 2 & 1
+\end{array}\right]
+\cdot
+\left[\begin{array}{ccc}
+    -1 & -1 & -1 \\
+    0 & -2 & -1 \\
+    0 & 2 & 1
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    1 & 1 & 1 \\
+    0 & 2 & 1 \\
+    0 & -2 & -1
+\end{array}\right]
+\]
+
+og gør vi det endnu en gang, får vi:\\
+
+\[
+M_{-1}^3 = M_{-1}^2\cdot M_{-1}=
+\left[\begin{array}{ccc}
+    1 & 1 & 1 \\
+    0 & 2 & 1 \\
+    0 & -2 & -1
+\end{array}\right]
+\cdot
+\left[\begin{array}{ccc}
+    -1 & -1 & -1 \\
+    0 & -2 & -1 \\
+    0 & 2 & 1
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    -1 & -1 & -1 \\
+    0 & -2 & -1 \\
+    0 & 2 & 1
+\end{array}\right]
+\]
+hvilket bringer os tilbage hvor vi startede.\\
+
+Hvis vi gentog denne process, ville vi blot skifte fortegn hver gang vi ganger $M_{-1}$ på.\\
+Vi kan dermed sige:\\
+
+\[
+M_{-1}^n = \left\{
+\begin{array}{cc}
+    M_{-1} & hvis \ n \ er \ lige
+    \\
+    M_{-1}^2 & hvis \ n \ er \ ulige
+\end{array}
+\ \forall n\in \N \\
+\right.
+\]
+
+Ganger vi $M_0$ med sig selv, får vi:\\
+\[
+M_{0}^2 = M_{0}\cdot M_{0}=
+\left[\begin{array}{ccc}
+    0 & -1 & -1 \\
+    0 & -1 & -1 \\
+    0 & 2 & 2
+\end{array}\right]
+\cdot
+\left[\begin{array}{ccc}
+    0 & -1 & -1 \\
+    0 & -1 & -1 \\
+    0 & 2 & 2
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    0 & -1 & -1 \\
+    0 & -1 & -1 \\
+    0 & 2 & 2
+\end{array}\right]
+\]
+
+Vi ser, at hvis vi ganger denne matrice med sig selv, får vi blot den samme matrice igen.\\
+Da matricen er uændret, kan vi beskrive dette som:
+\[
+M_{0}^n = M_0 \ \forall n \in \N
+\]
+
 \subsection{}
 
+ \(T_a(\mathcal{L})\subseteq \mathcal{L}\):
+Anvend \(T_a\) på \(\mathcal{L}\):
+  \[
+    T_a\bigl(\mathcal{L})
+    = \left[\begin{array}{ccc}
+        a\,t & - t & -(-2t)\\[6pt]
+        0& (a-1)\,t & -(-2t)\\[6pt]
+        0 & 2t + (a+2)(-2t)
+      \end{array}\right]
+    = \left[\begin{array}{ccc}
+        (a+1)t\\[3pt]
+        (a+1)t\\[3pt]
+        -2(a+1)t
+      \end{array}\right]
+    = (a+1)\,t\,(1,1,-2).
+  \]
+Da \((a+1)\,t\,(1,1,-2)\in L\) for alle \(t\), følger
+  \[
+    T_a(L)\subseteq L.
+  \]
 
-\subsection{}
+\bigskip
+
+\noindent\textbf{2. Bevis for \(T_a(P)\subseteq P\).}
+\begin{itemize}
+  \item[\emph{a)}] Lad \(\mathbf x=(x_1,x_2,x_3)\in P\). Så er
+  \[
+    x_2 + x_3 = 0.
+  \]
+  \item[\emph{b)}] Skriv \(\mathbf y = T_a(\mathbf x) = (y_1,y_2,y_3)\). Ifølge definitionen:
+  \[
+    \begin{aligned}
+      y_2 &= (a-1)\,x_2 - x_3,\\
+      y_3 &= 2\,x_2 + (a+2)\,x_3.
+    \end{aligned}
+  \]
+  \item[\emph{c)}] Beregn
+  \[
+    y_2 + y_3
+    = \bigl((a-1)x_2 - x_3\bigr) + \bigl(2x_2 + (a+2)x_3\bigr)
+    = (a+1)\,x_2 + (a+1)\,x_3
+    = (a+1)\,(x_2 + x_3).
+  \]
+  \item[\emph{d)}] Da \(x_2 + x_3=0\), får vi \(y_2 + y_3 = 0\). Dermed
+  \(\mathbf y\in P\) og
+  \[
+    T_a(P)\subseteq P.
+  \]
+\end{itemize}
+
+
+
 
 \section[Opgave]{Opgave}
 \subsection{}

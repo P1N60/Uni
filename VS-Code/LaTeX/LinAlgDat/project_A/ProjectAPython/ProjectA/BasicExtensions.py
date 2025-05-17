@@ -163,6 +163,7 @@ Matrix.fromArray(
 ))
 
 print(start_matrix)
+matrix = start_matrix
 matrix = MatrixProduct(forward, start_matrix)
 print(matrix)
 matrix = MatrixProduct(rotate_right, matrix)
