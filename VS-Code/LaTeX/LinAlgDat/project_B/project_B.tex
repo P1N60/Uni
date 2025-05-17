@@ -20,17 +20,25 @@ Hold 13 Mach}
 \section[Opgave]{Opgave}
 \subsection{}
 
-Vi kan aflæse $M_a$ til:\\
+Vi forkaster $x_1, x_2, x_3$, og bruger deres konstanter til at aflæse $M_a$ til:\\
 \[
 \left[\begin{array}{ccc}
     a & -1 & -1 \\
-    0 & (a-1) & -1 \\
-    0 & 2 & (a+2)
+    0 & a-1 & -1 \\
+    0 & 2 & a+2
 \end{array}\right]
 \]
+$x_1, x_2, x_3$ droppes, da disse kun indgår, når vi ganger $M_a$ med $\left[\begin{array}{ccc|c}
+    x_1 \\
+    x_2 \\
+    x_3
+\end{array}\right]$.
+
 
 
 \subsection{}
+Vi ser først på, om $T_a$ er injektiv. En transformation er injektiv, hvis kernen af transformationen kun er \{0\}. Det vil sige, at kun nulvektoren transformeret giver nulvektoren.\\
+
 $
 \left[\begin{array}{ccc|c}
     a & -1 & -1 & 0 \\
@@ -111,10 +119,18 @@ $
 \end{array}\right]
 $\\
 
-$T_a$ er altså injektiv.\\
-$T_a$ er surjektiv, da vi har 3 vektoerer. $T_a$ er dermed bijektiv, da den både er injektiv og surjektiv.\\
+Da ker $T_a = \{0\}$, er $T_a$ injektiv.\\
 
-Vi bestemmer nu $T^{-1}_a$:
+$T_a$ er surjektiv, hvis ran $T_a$ = $\R^3$, da vores vektorer har 3 koordinater.
+
+\[
+rank (T_a) = dim(ran (T_a)) = 3
+\]\\
+da vi har 3 pivotelementer.\\
+
+Da dimissionen af ran $T_a$ er lig dimissionen af vektoerene der udgør $T_a$, er $T_a$ surjektiv. $T_a$ er dermed bijektiv, da den både er injektiv og surjektiv.\\
+
+Vi bestemmer nu $T^{-1}_a$, ved at sætte enhedsmatricen på til højre, og reducere med Gauss-Jordan:\\
 
 $
 \left[\begin{array}{ccc|ccc}
@@ -196,6 +212,15 @@ $
 \end{array}\right]
 $\\
 
+\[
+T^{-1}_a=
+\left[\begin{array}{ccc}
+    \frac{1}{a} & \frac{1}{a^2+a} & \frac{1}{a^2+a} \\
+    0 & \frac{a+2}{a^2+a} & \frac{1}{a^2+a} \\
+    0 & -\frac{2}{a^2+a} & \frac{a-1}{a^2+a}
+\end{array}\right]
+\]
+
 \subsection{}
 Vi opstill igen $T_a$, hvor $a = -1$:\\
 
@@ -219,7 +244,7 @@ $
 \begin{array}{ccc}
     \\
     \\
-    -r_2\\
+    +r_2\\
 \end{array}
 \leadsto
 $\\
@@ -227,42 +252,31 @@ $
 \left[\begin{array}{ccc|c}
     -1 & -1 & -1 & 0 \\
     0 & -2 & -1 & 0 \\
-    0 & 0 & 2 & 0
-\end{array}\right]
-\begin{array}{ccc}
-    \\
-    \\
-    \cdot \frac{1}{2}\\
-\end{array}
-\leadsto
-\left[\begin{array}{ccc|c}
-    -1 & -1 & -1 & 0 \\
-    0 & -2 & -1 & 0 \\
-    0 & 0 & 1 & 0
-\end{array}\right]
-\begin{array}{ccc}
-    +r_3\\
-    +r_3\\
-    \\
-\end{array}
-\leadsto
-$\\
-$
-\left[\begin{array}{ccc|c}
-    -1 & -1 & 0 & 0 \\
-    0 & -2 & 0 & 0 \\
-    0 & 0 & 1 & 0
+    0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccc}
     \cdot (-1)\\
-    \cdot (-\frac{1}{2})\\
+    \cdot (-1)\\
     \\
 \end{array}
 \leadsto
 \left[\begin{array}{ccc|c}
-    1 & 1 & 0 & 0 \\
-    0 & 1 & 0 & 0 \\
-    0 & 0 & 1 & 0
+    1 & 1 & 1 & 0 \\
+    0 & 2 & 1 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot \frac{1}{2}\\
+    \\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    1 & 1 & 1 & 0 \\
+    0 & 1 & \frac{1}{2} & 0 \\
+    0 & 0 & 0 & 0
 \end{array}\right]
 \begin{array}{ccc}
     -r_2\\
@@ -270,14 +284,28 @@ $
     \\
 \end{array}
 \leadsto
-$\\
-$
 \left[\begin{array}{ccc|c}
-    1 & 0 & 0 & 0 \\
-    0 & 1 & 0 & 0 \\
-    0 & 0 & 1 & 0
+    1 & 0 & \frac{1}{2} & 0 \\
+    0 & 1 & \frac{1}{2} & 0 \\
+    0 & 0 & 0 & 0
 \end{array}\right]
 $\\
+
+Vi aflæser løsningerne til:\\
+\[
+\left[\begin{array}{ccc}
+    x_1\\
+    x_2\\
+    x_3\\
+\end{array}\right]
+=
+t
+\left[\begin{array}{ccc}
+    -\frac{1}{2}\\
+    -\frac{1}{2}\\
+    1\\
+\end{array}\right]
+\]
 
 Vi gør det samme for $a= 0$:\\
 
@@ -796,6 +824,19 @@ Mangler at lave resten af opgaven
 \section{}
 \subsection{}
 
+Vi får givet, at koordinatforskydningen svarer til:\\
+
+\[
+\left[\begin{array}{ccc}
+    s_1-c_1\\
+    s_2-c_2\\
+    s_1-c_1\\
+    s_2-c_2
+\end{array}\right]
+\]
+
+Tilføjer vi forskydningen til vores nuværende koordinater, kan vi beskrive spillerens nye position som:\\
+
 \[
 \left[\begin{array}{ccc}
     c^F_1\\
@@ -904,6 +945,11 @@ Og som der fremkommer i opgaven, er:\\
     c_1\\
     c_2
 \end{array}\right]
+\Rightarrow
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0
+\end{array}\right]
 \]\\
 
 Den endelige matrix for rotation mod venstre er dermed bestemt ved følgende variable:\\
@@ -918,11 +964,20 @@ L_\theta
 \end{array}\right]
 \]
 
-
-Rotation mod højre er bestemt som:\\
+Vi mindes, at $cos(\theta) = cos(-\theta)$ og $sin(-\theta) = -sin(\theta)$.\\
+Rotation mod højre er dermed bestemt som:\\
 
 \[
 R_\theta = L_{-\theta}=
+\left[\begin{array}{cccc}
+    1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    1 - cos(-\theta) & sin(-\theta) & cos(-\theta) &  -sin(-\theta)\\
+    -sin(-\theta) & 1 - cos(-\theta) & sin(-\theta) & cos(-\theta)\\
+\end{array}\right]
+=
+\]
+\[
 \left[\begin{array}{cccc}
     1 & 0 & 0 & 0 \\
     0 & 1 & 0 & 0 \\
@@ -933,6 +988,7 @@ R_\theta = L_{-\theta}=
 
 \subsection{}
 Ved brug af matrixoperationerne fra python i $project \ A$, får vi følgende matricer efter vi ganger hhv. 'fremad', 'rotation til venstre' og 'rotation til højre' matricerne på til venstre:\\
+
 $
 \left[\begin{array}{cccc}
     0 & 0 & 1 & 0\\
