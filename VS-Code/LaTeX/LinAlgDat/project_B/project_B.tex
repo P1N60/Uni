@@ -532,56 +532,63 @@ M_{0}^n = M_0 \ \forall n \in \N
 \]
 
 \subsection{}
+Først bestemmer vi $T_a(\mathcal{L})$:\\
 
- \(T_a(\mathcal{L})\subseteq \mathcal{L}\):
-Anvend \(T_a\) på \(\mathcal{L}\):
-  \[
-    T_a\bigl(\mathcal{L})
-    = \left[\begin{array}{ccc}
-        a\,t & - t & -(-2t)\\[6pt]
-        0& (a-1)\,t & -(-2t)\\[6pt]
-        0 & 2t + (a+2)(-2t)
-      \end{array}\right]
-    = \left[\begin{array}{ccc}
-        (a+1)t\\[3pt]
-        (a+1)t\\[3pt]
-        -2(a+1)t
-      \end{array}\right]
-    = (a+1)\,t\,(1,1,-2).
-  \]
-Da \((a+1)\,t\,(1,1,-2)\in L\) for alle \(t\), følger
-  \[
-    T_a(L)\subseteq L.
-  \]
+\[
+T_a\bigl(\mathcal{L})
+=
+T_a 
+\left[\begin{array}{c}
+    t\\
+    t\\
+    -2t
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    a\,t  -t  -(-2t)\\[6pt]
+    (a-1)\,t  -(-2t)\\[6pt]
+     2t + (a+2)(-2t)
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    a\,t  - t + 2t\\[6pt]
+    at-t + 2t\\[6pt]
+     2t - 2at -4t
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    a\,t  +t \\
+    at + t \\
+     2at-2t
+\end{array}\right]
+\]
+
 
 \bigskip
-
-\noindent\textbf{2. Bevis for \(T_a(P)\subseteq P\).}
-\begin{itemize}
-  \item[\emph{a)}] Lad \(\mathbf x=(x_1,x_2,x_3)\in P\). Så er
-  \[
-    x_2 + x_3 = 0.
-  \]
-  \item[\emph{b)}] Skriv \(\mathbf y = T_a(\mathbf x) = (y_1,y_2,y_3)\). Ifølge definitionen:
-  \[
-    \begin{aligned}
-      y_2 &= (a-1)\,x_2 - x_3,\\
-      y_3 &= 2\,x_2 + (a+2)\,x_3.
-    \end{aligned}
-  \]
-  \item[\emph{c)}] Beregn
-  \[
-    y_2 + y_3
-    = \bigl((a-1)x_2 - x_3\bigr) + \bigl(2x_2 + (a+2)x_3\bigr)
-    = (a+1)\,x_2 + (a+1)\,x_3
-    = (a+1)\,(x_2 + x_3).
-  \]
-  \item[\emph{d)}] Da \(x_2 + x_3=0\), får vi \(y_2 + y_3 = 0\). Dermed
-  \(\mathbf y\in P\) og
-  \[
-    T_a(P)\subseteq P.
-  \]
-\end{itemize}
+ 
+Dernæst bestemmer vi $T_a(P)$:\\
+\[
+T_a\bigl(\mathcal{P})
+=
+T_a 
+\left[\begin{array}{c}
+    x_1\\
+    x_2\\
+    x_3
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    ax_1  -x_2  -x_3\\
+    (a-1)x_2  -x_3\\
+     2x_2 + (a+2)x_3
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    ax_1  -x_2  -x_3\\
+    ax_2 - x_2  -x_3\\
+     2x_2 + ax_3 + 2x_3
+\end{array}\right]
+\]
 
 
 
