@@ -949,6 +949,8 @@ P_{B\leftarrow C} =
 \]
 
 \subsection{}
+Som givet af opgaven, bestemmes $x$ som $v_1 + v_2 + v_3$:\\
+
 \[
 x = 
 \left[\begin{array}{ccc}
@@ -1015,7 +1017,7 @@ Vi benytter vores basisskriftmatrice til at transformere vores koordinater til b
 
 Vi ganger kolonne 2 i vores basisskriftmatrice på $u_1$ og $u_2$:
 \[
--1 \cdot u_1 + (-1)\cdot u_2 =
+0\cdot u_1 + (-1) \cdot u_2 + (-1)\cdot u_3 =
 -1 \cdot
 \left[\begin{array}{ccc}
     0\\
@@ -1040,9 +1042,23 @@ Vi ganger kolonne 2 i vores basisskriftmatrice på $u_1$ og $u_2$:
 \end{array}\right]
 \]\\
 
-Vi får $v_2$, så $v_2$ må dermed række spannet af $u2, u3$.\\
+Vi får $v_2$, så $v_2$ må dermed række spannet af $u_2$ og $u_3$, da den kan skrives som en linaerkombination af disse.\\
 
-Mangler at lave resten af opgaven
+På samme måde skla vi vise, at $v_1$ hverken tilhører spannet af $\{u_1, u_2\}$, $\{u_2, u_3\}$ eller $\{u_1, u_3\}.$\\
+Hvis vi tænker over hvad dette betyder, så skal vi kigge på basisskriftmatricen:\\
+
+\[
+[v_1]_{\mathcal{B}} =
+\left[\begin{array}{ccc}
+    3 \\
+    -4\\
+    1 
+\end{array}\right]
+=
+3 \cdot u_1 + (-4) \cdot u_2 + 1 \cdot u_3
+\]\\
+
+hvilket betyder, at $v_1$ kun kan skrives som en linearkombination af $u_1, u_2$ og $u_3$, hvis de alle tre indgår. Ingen kombination af 2 vektorer af $u_1, u_2, u_3$ kan dermed række spannet af $v_1$.
 
 \subsection{}
 

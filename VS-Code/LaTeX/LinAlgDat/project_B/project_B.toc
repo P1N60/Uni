@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.e}}{9}{subsection.2.5}%
 \contentsline {section}{\numberline {3}}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.a}}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.b}}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.c}}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.b}}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.c}}{11}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.d}}{12}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Opgave}{12}{section.4}%
