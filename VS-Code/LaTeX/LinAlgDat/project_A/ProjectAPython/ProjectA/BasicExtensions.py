@@ -126,13 +126,9 @@ def VectorNorm(v: Vector) -> float:
     norm = math.sqrt(norm)
     return norm
 
-start_matrix = (
-Matrix.fromArray(
-    [[0],
-     [0],
-     [0],
-     [1]
-    ]
+start_vector = (
+Vector.fromArray(
+    [0, 0, 0, 1]
 ))
 
 forward = (
@@ -162,23 +158,23 @@ Matrix.fromArray(
     ]
 ))
 
-print(start_matrix)
-matrix = start_matrix
-matrix = MatrixProduct(forward, start_matrix)
+print(start_vector)
+matrix = start_vector
+matrix = MatVecProduct(forward, start_vector)
 print(matrix)
-matrix = MatrixProduct(rotate_right, matrix)
+matrix = MatVecProduct(rotate_right, matrix)
 print(matrix)
-matrix = MatrixProduct(rotate_right, matrix)
+matrix = MatVecProduct(rotate_right, matrix)
 print(matrix)
-matrix = MatrixProduct(forward, matrix)
+matrix = MatVecProduct(forward, matrix)
 print(matrix)
-matrix = MatrixProduct(forward, matrix)
+matrix = MatVecProduct(forward, matrix)
 print(matrix)
-matrix = MatrixProduct(rotate_left, matrix)
+matrix = MatVecProduct(rotate_left, matrix)
 print(matrix)
-matrix = MatrixProduct(rotate_left, matrix)
+matrix = MatVecProduct(rotate_left, matrix)
 print(matrix)
-matrix = MatrixProduct(rotate_left, matrix)
+matrix = MatVecProduct(rotate_left, matrix)
 print(matrix)
-matrix = MatrixProduct(forward, matrix)
+matrix = MatVecProduct(forward, matrix)
 print(matrix)

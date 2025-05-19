@@ -310,7 +310,7 @@ t
 Kigger vi nu på baserne for spannet af $T_{-1}$, ser vi, at vi kun skal benytte $x_1$ og $x_2$, da $x_3$ er en fri variable. 
 
 \[
-span(T_{-1}) = \left\{ 
+ran(T_{-1}) = \left\{ 
 \left[\begin{array}{ccc|c}
     -1 \\
     0   \\
@@ -556,12 +556,24 @@ T_a
      2t - 2at -4t
 \end{array}\right]
 =
+\]
+\[
 \left[\begin{array}{ccc}
     a\,t  +t \\
     at + t \\
-     2at-2t
+    -2at-2t
+\end{array}\right]
+=
+(a+1)
+\left[\begin{array}{ccc}
+    t \\
+    t \\
+    -2t
 \end{array}\right]
 \]
+
+Som vi kan se, er $T_a(\mathcal{L})$ en delmængde af $\mathcal{L}$, da vi kan faktorisere $(t, t, -2t)$, så det bliver udtrykket af alle $a \in \R$.\\
+
 
 
 \bigskip
@@ -590,7 +602,27 @@ T_a
 \end{array}\right]
 \]
 
+Vi husker, at der for $\mathcal{P}$ gælder, at:
+\[
+x_2+x_3 = 0 \Leftrightarrow x_3 = -x_2
+\]
+og vi kan dermed erstatte $x_3$ med $-x_2$:
 
+\[
+\left[\begin{array}{ccc}
+    ax_1  -x_2 + x_2\\
+    ax_2 - x_2 + x_2\\
+     2x_2 - ax_2 - 2x_2
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    ax_1\\
+    ax_2\\
+    - ax_2
+\end{array}\right]
+\]
+
+Vi ser nu, at $\mathcal{P}$'s betingelse: $x_2 + x_3 = 0$ opfyldes, da $ax_2 - ax_2 = 0$. $T_a(\mathcal{P})$ må dermed vore en delmængde af $\mathcal{P}$.
 
 
 \section[Opgave]{Opgave}
@@ -1129,7 +1161,7 @@ $
     \cdot \frac{1}{2}\\
     \\
     \cdot (-1)\\
-
+    \\
 \end{array}
 \leadsto
 \left[\begin{array}{cc|c}
@@ -1155,14 +1187,137 @@ $
 \end{array}\right]
 \begin{array}{ccc}
     \\
+    -r_1\\
+    \\
+    
+\end{array}
+\left[\begin{array}{cc|c}
+    x & 1 & 0\\
+    1 & x & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
     \\
     \\
     
 \end{array}
 $\\
 
+Vi bemærker, at hvis $x = 1$, kan vi blot tilføje $-r_1$ til $r_2$, så vi ender med et pivotelement i alt.\\
+\[
+\left[\begin{array}{cc|c}
+    1 & 1 & 0\\
+    1 & 1 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -r_1\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{cc|c}
+    1 & 1 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0
+\end{array}\right]
+\]
+
+hvor spannet der rækkes kan beskrives ved basen: $\left\{ \left[\begin{array}{cc|c}
+    1\\
+    0\\
+    0\\
+    0 
+\end{array}\right] \right\}$
+, og dimensionen er 1, da dette er den eneste vektor.\\
+
+Vi kan på samme måde, finde 1 pivotelement, hvis vi sætter $x = -1$:
+
+\[
+\left[\begin{array}{cc|c}
+    -1 & 1 & 0\\
+    1 & -1 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    +r_1\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{cc|c}
+    -1 & 1 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot (-1)\\
+    \\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{cc|c}
+    1 & -1 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0
+\end{array}\right]
+\]
+
+igen er spannet der rækkes beskrevet ved basen: $\left\{ \left[\begin{array}{cc|c}
+    1\\
+    0\\
+    0\\
+    0 
+\end{array}\right] \right\}$
+, og dimensionen er 1, da dette er den eneste vektor.\\
+
+Hvis $x \neq \pm 1$ kan vi se, at vi vil få 2 pivotelementer og dermed 2 baser, hvilket giver en dimension på 2.
+
 \subsection{}
 
+\[
+au_1 + bu_2 + cu_3 = 
+a
+\left[\begin{array}{cc|c}
+    2 \\
+    1 \\
+    -1 \\
+    1 
+\end{array}\right]
++
+b
+\left[\begin{array}{cc|c}
+    0 \\
+    1 \\
+    -1 \\
+    1 
+\end{array}\right]
++
+c
+\left[\begin{array}{cc|c}
+    1 \\
+    -1 \\
+    2 \\
+    2 
+\end{array}\right]
+=
+\left[\begin{array}{cc|c}
+    2a + c \\
+    a+b-c \\
+    -a-b+2c \\
+    a+b+2c
+\end{array}\right]
+\]
 
 \section{}
 \subsection{}
