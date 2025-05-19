@@ -1319,6 +1319,145 @@ c
 \end{array}\right]
 \]
 
+Vi får at vide, at $\mathcal{W} = \{(0,0,x_3,x_4)\in \R \ \vert \ x_3, x_4 \in \R \}$, og det skal derfor gælde, at de to første koordinater er lig 0:\\
+
+$
+\left[\begin{array}{ccc|c}
+    2 & 0 & 1 & 0 \\
+    1 & 1 & -1 & 0\\
+\end{array}\right]
+\begin{array}{ccc}
+    r_1 \leftrightarrow r_2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    1 & 1 & -1 & 0\\
+    2 & 0 & 1 & 0 \\
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    -2r_1\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    1 & 1 & -1 & 0\\
+    0 & -2 & 3 & 0 \\
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \cdot (-\frac{1}{2})\\
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{ccc|c}
+    1 & 1 & -1 & 0\\
+    0 & 1 & -\frac{3}{2} & 0 \\
+\end{array}\right]
+\begin{array}{ccc}
+    -r_2\\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc|c}
+    1 & 0 & \frac{1}{2} & 0\\
+    0 & 1 & -\frac{3}{2} & 0 \\
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+\end{array}
+$\\
+
+Vi kan nu lave en parameterfremstilling ud fra løsningerne:\\
+
+\[
+\left[\begin{array}{cc}
+    t\\
+    s\\
+    g\\
+\end{array}\right]
+=
+g
+\left[\begin{array}{cc}
+    -\frac{1}{2}\\
+    \frac{3}{2}\\
+    1\\
+\end{array}\right]
+\]
+
+og retningsvektoren er dermed givet med koordinaterne som konstanter:
+
+\[
+-\frac{1}{2}u_1 + \frac{3}{2}u_2 + u_3 = 
+-\frac{1}{2}
+\left[\begin{array}{cc}
+    2\\
+    1\\
+    -1\\
+    1\\
+\end{array}\right]
++
+\frac{3}{2}
+\left[\begin{array}{cc}
+    0\\
+    1\\
+    -1\\
+    1\\
+\end{array}\right]
++
+\left[\begin{array}{cc}
+    1\\
+    -1\\
+    2\\
+    2\\
+\end{array}\right]
+=
+\]
+
+\[
+\left[\begin{array}{cc}
+    -1\\
+    -\frac{1}{2}\\
+    \frac{1}{2}\\
+    -\frac{1}{2}\\
+\end{array}\right]
++
+\left[\begin{array}{cc}
+    0\\
+    \frac{3}{2}\\
+    -\frac{3}{2}\\
+    \frac{3}{2}\\
+\end{array}\right]
++
+\left[\begin{array}{cc}
+    1\\
+    -1\\
+    2\\
+    2\\
+\end{array}\right]
+=
+\left[\begin{array}{cc}
+    0\\
+    0\\
+    1\\
+    3\\
+\end{array}\right]
+\]
+
+Retningsvektoren til linjen, som går gennem origo er dermed:
+
+\[
+\left[\begin{array}{cc}
+    0\\
+    0\\
+    1\\
+    3\\
+\end{array}\right]
+\]
+
+At dette er en del af fællesmængden for $\mathcal{U}$ og $\mathcal{W}$ giver god mening, da begge underrum tilhører $\R^4.$
+
 \section{}
 \subsection{}
 
