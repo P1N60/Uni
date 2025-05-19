@@ -1068,7 +1068,98 @@ Hvis vi tænker over hvad dette betyder, så skal vi kigge på basisskriftmatric
 hvilket betyder, at $v_1$ kun kan skrives som en linearkombination af $u_1, u_2$ og $u_3$, hvis de alle tre indgår. Ingen kombination af 2 vektorer af $u_1, u_2, u_3$ kan dermed række spannet af $v_1$.
 
 \subsection{}
+\[
+xu_1 + u_2 = 
+\left[\begin{array}{ccc}
+    2x\\
+    x\\
+    -x\\
+    x
+\end{array}\right]
++
+\left[\begin{array}{ccc}
+    0\\
+    1\\
+    -1\\
+    1
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    2x\\
+    x+1\\
+    -x-1\\
+    x+1
+\end{array}\right]
+\]
 
+\[
+u_1 + xu_2 = 
+\left[\begin{array}{ccc}
+    2\\
+    1\\
+    -1\\
+    1
+\end{array}\right]
++
+\left[\begin{array}{ccc}
+    0\\
+    x\\
+    -x\\
+    x
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    2\\
+    x+1\\
+    -x-1\\
+    x+1
+\end{array}\right]
+\]
+
+Vi løser nu totalmatricen:\\
+
+$
+\left[\begin{array}{cc|c}
+    2x & 2 & 0\\
+    x+1 & x+1 & 0\\
+    -x-1 & -x-1 & 0\\
+    x+1 & x+1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \cdot \frac{1}{2}\\
+    \\
+    \cdot (-1)\\
+
+\end{array}
+\leadsto
+\left[\begin{array}{cc|c}
+    x & 1 & 0\\
+    x+1 & x+1 & 0\\
+    x+1 & x+1 & 0\\
+    x+1 & x+1 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    -r_2\\
+    -r_2
+\end{array}
+\leadsto
+$\\
+$
+\left[\begin{array}{cc|c}
+    x & 1 & 0\\
+    x+1 & x+1 & 0\\
+    0 & 0 & 0\\
+    0 & 0 & 0
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    \\
+    
+\end{array}
+$\\
 
 \subsection{}
 
