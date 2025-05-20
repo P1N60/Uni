@@ -310,7 +310,7 @@ t
 Kigger vi nu på baserne for spannet af $T_{-1}$, ser vi, at vi kun skal benytte $x_1$ og $x_2$, da $x_3$ er en fri variable. 
 
 \[
-ran(T_{-1}) = \left\{ 
+span(T_{-1}) = \left\{ 
 \left[\begin{array}{ccc|c}
     -1 \\
     0   \\
@@ -324,6 +324,7 @@ ran(T_{-1}) = \left\{
 \end{array}\right]
 \right\}
 \Rightarrow
+dim(T_{-1}) = \R^2 \Rightarrow
 dim(ran(T_{-1})) = 2
 \]
 hvilket igen giver mening, da vi har 2 pivotelementer.\\
@@ -415,17 +416,20 @@ s
 Vi har 1 pivotelement, som vi finder i 2. søjle.\\
 
 \[
+span(T_0) = \left\{
 \left[\begin{array}{ccc|c}
     -1 \\
     -1 \\
     2 
 \end{array}\right]
-= ran(T_{0}) \Rightarrow dim(ran(T_{0})) = 1
+\right\}
+\Rightarrow  ran(T_{0}) = \R^1 \Rightarrow dim(ran(T_{0})) = 1
 \]
 
 og for kernen:\\
 
 \[
+ker(T_{0}) = 
 \left\{
 \left[\begin{array}{ccc|c}
     0 \\
@@ -439,7 +443,7 @@ og for kernen:\\
     -2
 \end{array}\right]
 \right\}
-= ker(T_{0}) \Rightarrow dim(ker(T_{0})) = 2
+\Rightarrow dim(ker(T_{0})) = 2
 \]
 
 \subsection{}
@@ -622,7 +626,7 @@ og vi kan dermed erstatte $x_3$ med $-x_2$:
 \end{array}\right]
 \]
 
-Vi ser nu, at $\mathcal{P}$'s betingelse: $x_2 + x_3 = 0$ opfyldes, da $ax_2 - ax_2 = 0$. $T_a(\mathcal{P})$ må dermed vore en delmængde af $\mathcal{P}$.
+Vi ser nu, at $\mathcal{P}$'s betingelse: $x_2 + x_3 = 0$ opfyldes, da $ax_2 - ax_2 = 0$. $T_a(\mathcal{P})$ må dermed være en delmængde af $\mathcal{P}$.
 
 
 \section[Opgave]{Opgave}
@@ -1083,7 +1087,7 @@ Vi ganger kolonne 2 i vores basisskriftmatrice på $u_1$ og $u_2$:
 
 Vi får $v_2$, så $v_2$ må dermed række spannet af $u_2$ og $u_3$, da den kan skrives som en linaerkombination af disse.\\
 
-På samme måde skla vi vise, at $v_1$ hverken tilhører spannet af $\{u_1, u_2\}$, $\{u_2, u_3\}$ eller $\{u_1, u_3\}.$\\
+På samme måde skal vi vise, at $v_1$ hverken tilhører spannet af $\{u_1, u_2\}$, $\{u_2, u_3\}$ eller $\{u_1, u_3\}.$\\
 Hvis vi tænker over hvad dette betyder, så skal vi kigge på basisskriftmatricen:\\
 
 \[
@@ -1097,9 +1101,11 @@ Hvis vi tænker over hvad dette betyder, så skal vi kigge på basisskriftmatric
 3 \cdot u_1 + (-4) \cdot u_2 + 1 \cdot u_3
 \]\\
 
-hvilket betyder, at $v_1$ kun kan skrives som en linearkombination af $u_1, u_2$ og $u_3$, hvis de alle tre indgår. Ingen kombination af 2 vektorer af $u_1, u_2, u_3$ kan dermed række spannet af $v_1$.
+hvilket betyder, at $v_1$ kun kan skrives som en linearkombination af $u_1, u_2$ og $u_3$, hvis de alle tre indgår. Ingen kombination af 2 vektorer blandt $u_1, u_2, u_3$ kan dermed række spannet af $v_1$.
 
 \subsection{}
+Først udregner vi $xu_1 + u_2$ og $u_1 + xu_2$:\\
+
 \[
 xu_1 + u_2 = 
 \left[\begin{array}{ccc}
@@ -1146,9 +1152,9 @@ u_1 + xu_2 =
     -x-1\\
     x+1
 \end{array}\right]
-\]
+\]\\
 
-Vi løser nu totalmatricen:\\
+Vi løser nu totalmatricen med $xu_1 + u_2$ og $u_1 + xu_2$ som kolonner:\\
 
 $
 \left[\begin{array}{cc|c}
@@ -1234,7 +1240,7 @@ hvor spannet der rækkes kan beskrives ved basen: $\left\{ \left[\begin{array}{c
     0\\
     0 
 \end{array}\right] \right\}$
-, og dimensionen er 1, da dette er den eneste vektor.\\
+, og dimensionen er 1, da dette er den eneste basisvektor.\\
 
 Vi kan på samme måde, finde 1 pivotelement, hvis vi sætter $x = -1$:
 
@@ -1273,7 +1279,7 @@ Vi kan på samme måde, finde 1 pivotelement, hvis vi sætter $x = -1$:
 \end{array}\right]
 \]
 
-igen er spannet der rækkes beskrevet ved basen: $\left\{ \left[\begin{array}{cc|c}
+igen er spannet der rækkes beskrevet ved basisvektoren: $\left\{ \left[\begin{array}{cc|c}
     1\\
     0\\
     0\\
@@ -1281,7 +1287,19 @@ igen er spannet der rækkes beskrevet ved basen: $\left\{ \left[\begin{array}{cc
 \end{array}\right] \right\}$
 , og dimensionen er 1, da dette er den eneste vektor.\\
 
-Hvis $x \neq \pm 1$ kan vi se, at vi vil få 2 pivotelementer og dermed 2 baser, hvilket giver en dimension på 2.
+Hvis $x \neq \pm 1$ kan vi se, at vi vil få 2 pivotelementer og dermed 2 baser, hvilket giver en dimension på 2.\\ 
+Vi kan altså beskrive mængden af dimensioner som:\\
+
+\[
+dim(\mathcal{V}_x) = 
+\left\{
+\begin{array}{c}
+    1 \quad for \ x = \pm 1\\
+    \\
+    2 \quad for \ x \neq \pm 1\\
+\end{array}
+\right.
+\]
 
 \subsection{}
 
@@ -1384,7 +1402,7 @@ c
     \frac{3}{2}\\
     1\\
 \end{array}\right]
-\]
+\]\\
 
 og retningsvektoren er dermed givet med koordinaterne som konstanter:
 
@@ -1443,7 +1461,7 @@ og retningsvektoren er dermed givet med koordinaterne som konstanter:
     1\\
     3\\
 \end{array}\right]
-\]
+\]\\
 
 Retningsvektoren til linjen, som går gennem origo er dermed:
 
@@ -1455,8 +1473,6 @@ Retningsvektoren til linjen, som går gennem origo er dermed:
     3\\
 \end{array}\right]
 \]
-
-At dette er en del af fællesmængden for $\mathcal{U}$ og $\mathcal{W}$ giver god mening, da begge underrum tilhører $\R^4.$
 
 \section{}
 \subsection{}
@@ -1510,6 +1526,8 @@ Tilføjer vi forskydningen til vores nuværende koordinater, kan vi beskrive spi
     0 & -1 & 0 & 2
 \end{array}\right]
 \]\\
+
+Hvor matricen skal ganges på fra venstre til spillerens nuværende positioner for at få de nye positioner af spidsen og centrum.
 
 
 \subsection{}
