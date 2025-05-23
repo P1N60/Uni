@@ -42,9 +42,93 @@ u_3 = \left[\begin{array}{c}
 \end{array}\right]
 \]
 
-$
-r_{11} = 
-$
+\[
+r_{11} = norm(u_1) = \sqrt{3^2+0^2+(-2)^2+6^2} = \sqrt{9+4+36} = \sqrt{49} = 7
+\]
+
+\[
+q_1 = \frac{u_1}{r_{11}} = 
+\left[\begin{array}{c}
+    \frac{3}{7}\\
+    0\\
+    \frac{-2}{7}\\
+    \frac{6}{7}
+\end{array}\right]
+\]
+
+\[
+r_{12} = q_1 \cdot u_2 = 
+\left[\begin{array}{c}
+    \frac{3}{7}\\
+    0\\
+    -\frac{2}{7}\\
+    \frac{6}{7}
+\end{array}\right]
+\cdot
+\left[\begin{array}{c}
+    1\\
+    2\\
+    6\\
+    -2
+\end{array}\right]
+=
+\frac{3}{7} \cdot 1 + 0 \cdot 2 + (-\frac{2}{7}\cdot 6) + \frac{6}{7} \cdot (-2) = \frac{3}{7} - \frac{12}{7} - \frac{12}{7} = -\frac{21}{7} = -3
+\]
+
+\[
+q_2' = u_2 - r_{12}q_1 = 
+\left[\begin{array}{c}
+    1\\
+    2\\
+    6\\
+    -2
+\end{array}\right]
+- 
+3
+\left[\begin{array}{c}
+    \frac{3}{7}\\
+    0\\
+    -\frac{2}{7}\\
+    \frac{6}{7}
+\end{array}\right]
+=
+\left[\begin{array}{c}
+    1\\
+    2\\
+    6\\
+    -2
+\end{array}\right]
+-
+\left[\begin{array}{c}
+    \frac{9}{7}\\
+    0\\
+    -\frac{6}{7}\\
+    \frac{18}{7}
+\end{array}\right]
+=
+\left[\begin{array}{c}
+    -\frac{2}{7}\\
+    2\\
+    \frac{48}{7}\\
+    -\frac{32}{7}
+\end{array}\right]
+\]
+
+\[
+r_{22} = norm(q_2') 
+= 
+\sqrt{\brr{-\frac{2}{7}}^2 + 2^2 + \brr{\frac{48}{7}}^2 + \brr{-\frac{32}{7}}^2 }
+= 
+\sqrt{\frac{3528}{49}}
+=
+\sqrt{72}
+\]
+
+\[
+q_2 = 
+\frac{q_2'}{r_{22}} 
+=
+\]
 
 \[
 A = QR = 
