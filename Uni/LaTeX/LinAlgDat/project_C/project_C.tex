@@ -7,7 +7,7 @@
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 \graphicspath{ {../../pictures/IDMA/IDMA3_a}} 
 \title{Københavns Universitet\\
-LinAlgDat - Project B}
+LinAlgDat - Project C}
 \author{Victor Vangkilde Jørgensen - kft410\\ 
 kft410@alumni.ku.dk\\
 Hold 13 Mach}
@@ -19,5 +19,113 @@ Hold 13 Mach}
 
 \section[Opgave]{Opgave}
 \subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+
+\section[Opgave]{Opgave}
+\subsection{}
+
+Vi bestemmer først $\lambda I - M$:
+\[
+\lambda
+\left[\begin{array}{ccc}
+    1 & 0 & 0\\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{array}\right]
+-
+\left[\begin{array}{ccc}
+    -2 & -6 & -3\\
+    3 & 7 & 3 \\
+    -6 & -12 & -5
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    \lambda & 0 & 0\\
+    0 & \lambda & 0 \\
+    0 & 0 & \lambda
+\end{array}\right]
+-
+\left[\begin{array}{ccc}
+    -2 & -6 & -3\\
+    3 & 7 & 3 \\
+    -6 & -12 & -5
+\end{array}\right]
+=
+\left[\begin{array}{ccc}
+    \lambda+2 & 6 & 3\\
+    -3 & \lambda-7 & -3 \\
+    6 & 12 & \lambda+5
+\end{array}\right]
+\]\\
+
+Vi udføerer de rækkeoperationer, som er givet i opgavens vink:\\
+
+$
+\left[\begin{array}{ccc}
+    \lambda+2 & 6 & 3\\
+    -3 & \lambda-7 & -3 \\
+    6 & 12 & \lambda+5
+\end{array}\right]
+\begin{array}{ccc}
+    +r_2\\
+    \\
+    \\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc}
+    \lambda-1 & 6-\lambda & 0\\
+    -3 & \lambda-7 & -3 \\
+    6 & 12 & \lambda+5
+\end{array}\right]
+\begin{array}{ccc}
+    \\
+    \\
+    +2r_2\\
+\end{array}
+\leadsto
+\left[\begin{array}{ccc}
+    \lambda-1 & 6-\lambda & 0\\
+    -3 & \lambda-7 & -3 \\
+    0 & 2\lambda -2 & \lambda-1
+\end{array}\right]
+$\\
+
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+
+
+\section[Opgave]{Opgave}
+\subsection{}
+
+
+\subsection{}
+
+
+\subsection{}
+
+
+\section[Opgave]{Opgave}
+Se vedhæftede python-fil.
 
 \end{document}

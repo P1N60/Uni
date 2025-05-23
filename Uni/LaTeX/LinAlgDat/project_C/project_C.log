@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  21 MAY 2025 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  23 MAY 2025 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_C/project_C.tex
-(/Users/victor/Documents/GitHub/VS-Code/LaTeX/LinAlgDat/project_C/project_C.tex
+**/Users/victor/Documents/GitHub/Uni/LaTeX/LinAlgDat/project_C/project_C.tex
+(/Users/victor/Documents/GitHub/Uni/LaTeX/LinAlgDat/project_C/project_C.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -1073,25 +1073,50 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \tf@toc=\write4
 \openout4 = `project_C.toc'.
 
- [2]) [3] (./project_C.aux)
+ [2])
+Overfull \hbox (59.14833pt too wide) detected at line 71
+\OML/cmm/m/it/12 ^^U [] \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^@ [] \OT1/cmr/m/n/12 = []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+
+Overfull \hbox (42.4602pt too wide) in paragraph at lines 75--104
+[]$[] [] \U/msa/m/n/12   [] []   []$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--104
+
+ []
+
+[3] (./project_C.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 42353 strings out of 474116
- 951146 string characters out of 5743681
- 1929187 words of memory out of 5000000
- 64000 multiletter control sequences out of 15000+600000
+ 42387 strings out of 474116
+ 951528 string characters out of 5743681
+ 1944187 words of memory out of 5000000
+ 64019 multiletter control sequences out of 15000+600000
  570158 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,11n,121p,815b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on project_C.pdf (3 pages, 71322 bytes).
+ 125i,11n,121p,811b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on project_C.pdf (3 pages, 129317 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
