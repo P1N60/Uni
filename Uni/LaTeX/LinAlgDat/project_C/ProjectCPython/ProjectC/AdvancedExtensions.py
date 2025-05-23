@@ -34,8 +34,26 @@ def SquareSubMatrix(A: Matrix, i: int, j: int) -> Matrix:
     Return:
         The resulting (N - 1)-by-(N - 1) submatrix.
     """
-    raise NotImplementedError()
-
+    N = A.N_Cols
+    B = Matrix(N - 1, N - 1)
+    # iterate through all elements in A
+    for r in range(N):
+        # skip the row if it is the row we want to remove
+        if r == i:
+            continue
+        for c in range(N):
+            # skip the column if it is the column we want to remove
+            if c == j:
+                continue
+            if r > i and c > j:
+                B[r - 1, c - 1] = A[r, c]
+            elif r > i:
+                B[r - 1, c] = A[r, c]
+            elif c > j:
+                B[r, c - 1] = A[r, c]
+            else:
+                B[r, c] = A[r, c]
+    return B
 
 def Determinant(A: Matrix) -> float:
     """
@@ -52,7 +70,13 @@ def Determinant(A: Matrix) -> float:
     Return:
         The determinant of the matrix.
     """
-    raise NotImplementedError()
+    N = A.N_Cols
+    if N == 1:
+        return A[0, 0]
+    result = 0
+    for j in range(N):
+        result += A[0, j] * ((-1) ** (1 + j)) * Determinant(SquareSubMatrix(A, 0, j))
+    return result
 
 
 def VectorNorm(v: Vector) -> float:
